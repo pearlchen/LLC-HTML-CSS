@@ -339,16 +339,10 @@
     <article class='slide slide-list'>
       <h2>HTML tags</h2>
       <p>Tags can be "nested" within other tags, like this:</p>
-      <p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;&lt;tag&gt;&lt;/tag&gt;&lt;/tag&gt;</code></p>
-<pre class='prettyprint'>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  <strong>&lt;head&gt;</strong>
-    &lt;title&gt; &lt;/title&gt;
-  <strong>&lt;/head&gt;</strong>
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre> 
-<pre class='prettyprint'>&lt;!DOCTYPE html&gt;
+      <p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
+
+      <p class="centered sidenote">&lt;title&gt; is nested between &lt;head&gt;. And &lt;head&gt; is nested between &lt;html&gt;</p>
+<pre class='prettyprint' style="width: 45%; float: left;">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     <strong>&lt;title&gt;</strong> <strong>&lt;/title&gt;</strong>
@@ -356,7 +350,19 @@
   &lt;body&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre> 
+<pre class='prettyprint' style="width: 45%; float: right;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  <strong>&lt;head&gt;</strong>
+    &lt;title&gt; &lt;/title&gt;
+  <strong>&lt;/head&gt;</strong>
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre> 
+<br clear="all" />
       <p class="centered sidenote">(This relationship is often referred to using the terms "parent" and "child".)</p>
+
+       <p class="centered sidenote"><strong>The innermost tag must be closed before trying to open up a new tag.</strong> <br />
+        This would be incorrect: &lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/html&gt;&lt;/head&gt;&lt;/title&gt; </p>
     </article>
 
     <!-- SLIDE: HTML -->
@@ -505,6 +511,7 @@
       <ul>
         <li><code>href</code> is the <em>attribute</em></li>
         <li><code>http://ladieslearningcode.com</code> is the <em>value</em> of that attribute</li>
+        <li>values are typically surrounded by <em>single or double quotes</em> since occassionally values may contain spaces.</li>
       </ul>
     </article>
 
@@ -538,7 +545,10 @@
       <p>In the <code>exercises/2_WORKING_WITH_IMAGES</code> folder, there's a <code>img</code> folder. It's best practice to organize your images into its own folder.</p>
       <p>Since the image is <em>not</em> in the same folder as <code>index.html</code>, if you wanted to refer to the image you would need to use a <span class="keyword">relative path</span>.</p>
       <pre class="prettyprint">&lt;img src="<strong>img/</strong>llc.gif" /&gt;</pre>
-      <p class="sidenote">The opposite of this (going <em>up</em> a folder level) would be: <code>src="../img/llc.gif"</code></p>
+      <p class="sidenote">The opposite of this (going <em>up</em> a folder level) would be:</p>
+      <pre>src="../img/llc.gif"</pre>
+      <p class="sidenote">Transvering <em>over</em> to a parallel folder level would be:</p>
+      <pre>src="../folder/img/llc.gif"</pre>
     </article>
 
     <!-- SLIDE: HTML -->
@@ -655,7 +665,7 @@
         <li>What's the <strong>very first line</strong> we need to type?</li>
         <li>What <strong>three</strong> HTML tags should every website have?</li>
         <li>How do I update the browser tab with a descriptive tab name?</li>
-        <li>In between which tag do I paste this code so it's <strong>visible to the user</strong></li>
+        <li>In between which tag do I paste this code so it's <strong>visible to the user</strong>?</li>
       </ul>
     </article>
 
@@ -745,6 +755,7 @@
 
 <h1>Social Media</h1>
 <p>Follow me on Twitter!</p>
+
 <style>
   h1 { background-color: black; color: white; }
   p { font-size: 18apx; }
@@ -812,7 +823,7 @@ h2 { font-family: Courier; }</pre>
       <h2>Changing the font family</h2>
       <p>Not all fonts are installed on all computers so it's recommended that you use a list of fonts. If the first font in the list isn't available, it will try to use the next.</p>
 <pre>body { background: gray; color: white; <strong>font-family: Helvetica, Verdana, Arial, sans-serif;</strong> }</pre>
-      <p>(Notice how the font-family for the headers are still Courier?)</p>
+      <p class="sidenote">(Notice how the font-family for the headers are still Courier? That's the "cascading" part of Cascading Style Sheets in action. Inline styles take precedence, then innermost tags, then outer tags.)</p>
     </article>
 
     <!-- SLIDE: CSS -->
@@ -828,7 +839,7 @@ h2 { font-family: Courier; }</pre>
       <p>Headers have default font-sizes defined by the browser. Let's override them. </p>
 <pre>h1 { font-family: Courier; <strong>font-size: 25px;</strong> }
 h2 { font-family: Courier; <strong>font-size: 22px;</strong> }</pre>
-<p class="sidenote"><a href="http://kyleschaeffer.com/best-practices/css-font-size-em-vs-px-vs-pt-vs/" target="_blank">Click here for more info on font unit sizes.</a></p>
+<p class="sidenote">(When you've got more time, read <a href="http://kyleschaeffer.com/best-practices/css-font-size-em-vs-px-vs-pt-vs/" target="_blank">this article</a> for more info on font unit sizes.</p>
     </article>
 
     <!-- SLIDE: CSS -->
@@ -995,6 +1006,7 @@ h1 {
 <div>This is text above the header.</div>
 <h1>Header</h1>
 <div>This is text below the header.</div>
+
 &lt;style&gt;
 h1 { 
     font-family: Courier; 
@@ -1023,6 +1035,7 @@ div {
 <div>This is text above the header.</div>
 <h1>Header</h1>
 <div>This is text below the header.</div>
+
 &lt;style&gt;
 h1 { 
     font-family: Courier; 
@@ -1047,6 +1060,7 @@ div {
 <script type='coder-solution'><div>This is text above the header.</div>
 <h1>Header</h1>
 <div>This is text below the header.</div>
+
 &lt;style&gt;
 h1 { 
     font-family: Courier; 
@@ -1126,8 +1140,7 @@ footer {
     <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
       <h2>Assigning widths</h2>
-      <p>If our site is 960px wide, then we need to ensure that our columns don't add up to a width greater than 960 - <strong>INCLUDING margins and paddings!</strong>.</p>
-      <p><strong><a href="http://paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank">PRO TIP</a>:</strong> Use the box-sizing property for every website you make to make sure your math adds up.</p>
+      <p>If our site is 960px wide, we need to ensure that our columns don't exceed 960 - <strong>including margins!</strong> (e.g. 540 + 30 + 290 = 960)</p>
 <pre>
 section {
   width: 560px;
@@ -1135,7 +1148,8 @@ section {
 }
 
 aside {
-  width: 400px;
+  margin-left: 30px;
+  width: 290px;
   border: 1px solid gray;
 }
 
@@ -1146,6 +1160,7 @@ aside {
   box-sizing: border-box; 
 }</strong>
 </pre>
+      <p class="sidenote"><strong>PRO TIP:</strong> Historically, padding wrecked havoc on our math. To avoid headaches, use the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank">box-sizing property</a> for every website you make to make sure your math adds up.</p>
     </article>
 
     <!-- SLIDE: CSS -->
@@ -1161,7 +1176,8 @@ section {
 }
 
 aside {
-  width: 400px;
+  margin-left: 30px;
+  width: 290px;
   border: 1px solid gray;
   <strong>float: left;</strong>
 }
@@ -1171,7 +1187,6 @@ aside {
     <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
       <h2>Clearing floats</h2>
-      <div>
         <p>You may notice that floats have the ability to affect the rest of the webpage in unexpected ways. It's important to always clear your floats.</p>
         <p>One way is to use the <code>clear</code> property on an element that comes <em>directly</em> after the containers that are floating. Values can be <code>left</code>, <code>right</code>, or <code>both</code>.</p>
 <pre>
@@ -1181,10 +1196,13 @@ footer {
   <strong>clear: both;</strong>
 }
 </pre>
+      <p>If the elements that are floating are enclosed in another container, you can you apply <code>overflow:auto</code> to the parent container:</p>
+<pre>nav {
+  overflow: auto;
+}</pre>
 
-      <p>Another way is via a line break tag with a clear attribute:</p>
-      <pre>&lt;br clear="all" /&gt;</pre>
-      </div>
+      <p class="sidenote">Another way (when all else fails) is via a line break tag with a clear attribute:  <code>&lt;br clear="all" /&gt;</code></p>
+     
     </article>
 
     <!-- SLIDE: CSS -->
@@ -1270,6 +1288,10 @@ footer {
   float: left;
   margin-right: 20px;
 }
+
+nav {
+  overflow: auto; /* clear floats */
+}
 &lt;/style&gt;  
 </pre>
 
@@ -1322,9 +1344,11 @@ footer {
 &lt;style&gt;
   <strong>#centered_on_page</strong> {
     margin: 0 auto;
+    width: 960px;
   }
 &lt;/style&gt;
 </pre>
+      <p class="sidenote">I'm going to add this to my <code>exercise/website/index.html</code> file and wrap everything already currently there within the <code>&lt;body&gt;</code> tag.</p>
     </article>
 
     <!-- SLIDE: CSS -->

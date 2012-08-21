@@ -1,0 +1,65 @@
+header {
+  width: 960px;
+  border: 1px solid gray;
+}
+
+footer {
+  width: 960px;
+  border: 1px solid gray;
+  clear: both;
+}
+
+section {
+  width: 640px;
+  border: 1px solid gray;
+  float: left;
+}
+
+aside {
+  margin-left: 30px;
+  width: 290px;
+  border: 1px solid gray;
+  float: left;
+}
+
+/* apply a natural box layout model to all elements */
+* { 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box; 
+}
+
+.nav_button {
+  font-family: Georgia;
+  background-color: purple;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 10px 5px 10px; 
+  width: 100px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  float: left;
+  margin-right: 20px;
+}
+
+nav {
+  overflow: auto; /* clear floats */
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+a:hover {
+  text-transform: uppercase;
+  color: purple;
+  font-weight: bold;
+}
+
+#centered_on_page {
+  margin: 0 auto;
+  width: 960px;
+}
