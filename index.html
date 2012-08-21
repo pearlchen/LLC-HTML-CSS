@@ -579,13 +579,109 @@
       <p>From YouTube, you can find an <strong>Embed Code</strong> to put into your website <span class="sidenote">(click on "Share" button below video, then "Embed")</span> and YouTube's servers do all the rest of the work via the <code>iframe</code> tag.</p>
       <pre class="prettyprint">&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/tlnFyjpV5Wo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</pre>
       <iframe width="560" height="315" src="http://www.youtube.com/embed/tlnFyjpV5Wo" frameborder="0" allowfullscreen></iframe>
-    </article>   
+    </article>  
+
+    <article class='slide slide-list'>
+      <h2>Generic Container Tags</h2>
+      <p>Sometimes content you might want to group together (and treat differently with CSS) shouldn't be defined as a <code>h1</code> or <code>h2</code> or even a <code>p</code> paragraph. There are two kinds of generic containers available:</p>
+      <ul>
+        <li><code>span</code> - An <span class="keyword">inline</span> container.<br />
+          Good for highlighting keywords like I did in this bullet.</li>
+        <li><code>div</code> - An <span class="keyword">block</span> container.<br />
+          Much like a paragraph, it creates a line break above and below to create a box.</li>
+      </ul>
+<pre>&lt;div&gt;I'm a div!&lt;/div&gt;
+&lt;div&gt;I'm another div!&lt;/div&gt;
+</pre>
+      <div>I'm a div!</div>
+      <div>I'm another div!</div>
+    </article>
+
+    <article class='slide slide-list'>
+      <h2>Semantic HTML Tags</h2>
+      <p>Historically, when making non-trivial websites, it required nesting lots of <code>div</code> tags within <code>div</code> tags (within <code>div</code> tags!) like this:</p>
+<pre>&lt;div&gt;
+  &lt;div&gt;
+    &lt;div&gt;Home&lt;/div&gt; | &lt;div&gt;About&lt;/div&gt; | &lt;div&gt;Contact&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;  
+&lt;div&gt;
+  Welcome to my blog!
+  &lt;div&gt;[...Blog Post...]&lt;div&gt;
+  &lt;div&gt;[...Blog Post...]&lt;div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  [...Sidebar Ad...]
+&lt;/div&gt;
+&lt;div&gt;
+  Copyright 2012
+&lt;/div&gt;
+</pre>
+    </article>
+
+    <article class='slide slide-list'>
+      <h2>Semantic HTML Tags</h2>
+      <p>With HTML5, there are an increasing number of semantic tags that better describe larger blocks of content such as: <code>header</code>, <code>footer</code>, <code>nav</code>, <code>section</code>, <code>article</code>, and <code>aside</code>.</p>
+<pre>&lt;header&gt;
+  &lt;nav&gt;
+    &lt;div&gt;Home&lt;/div&gt; | &lt;div&gt;About&lt;/div&gt; | &lt;div&gt;Contact&lt;/div&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;  
+&lt;section&gt;
+  Welcome to my blog!
+  &lt;article&gt;[...Blog Post...]&lt;article&gt;
+  &lt;article&gt;[...Blog Post...]&lt;article&gt;
+&lt;/section&gt;
+&lt;aside&gt;
+  [...Sidebar Ad...]
+&lt;/aside&gt;
+&lt;footer&gt;
+  Copyright 2012
+&lt;/footer&gt;
+</pre>
+    </article>
+
+    <article class='slide slide-list'>
+      <h2>Semantic HTML Tags</h2>
+      <p>This helps <span class="keyword">web crawlers</span> from search engines like Google or Bing better understand your content.</p>
+      <p>Even better, it helps <strong>you</strong> from missing a closing <code>&lt;/div&gt;</code> tag and makes your HTML easier to read for everyone.</p>
+    </article>
+
+    <article class='slide slide-list'>
+      <h2>Getting ready for Exercise #3</h2>
+      <p>Let's use the previous code sample and make a new <code>index.html</code> in the <code>exercises/website</code> folder.</p>
+      <p>Review:</p>
+      <ul>
+        <li>What's the <strong>very first line</strong> we need to type?</li>
+        <li>What <strong>three</strong> HTML tags should every website have?</li>
+        <li>How do I update the browser tab with a descriptive tab name?</li>
+        <li>In between which tag do I paste this code so it's <strong>visible to the user</strong></li>
+      </ul>
+    </article>
+
+    <article class='slide slide-list'>
+      <h2>Exercise #3 (now until lunch)</h2>
+      <p>Add to your website! Create 2 more pages: an about page (<code>about.html</code>) and a contact page (<code>contact.html</code>)</p> 
+      <ol class="spacey_list">
+        <li>In between the <code>&lt;nav&gt;</code> tags, use the <code>&lt;a&gt;</code> tag with a <code>href</code> attribute to link all your pages together.
+        </li>
+        <li>Make sure that all your webpages have descriptive and unique <code>&lt;title&gt;</code>'s.</li>
+        <li>Update <code>about.html</code> (in between the <code>&lt;section&gt;</code> tags) with your picture/avatar and a bio.</li>
+        <li>Update <code>contact.html</code> (in between the <code>&lt;section&gt;</code> tags) with contact info. (You can even <a href="assets/google_map_embed.jpg" target="_blank">try adding a Google Map</a>.)</li>
+        <li><strong>Don't</strong> update <code>index.html</code>! We'll get to that after lunch.</li>
+      </ol>
+      
+      <h3>Got questions?</h3>
+      <p>
+        Post them to Google Moderator: <a href="http://goo.gl/mod/c4cm" target="_blank" >http://goo.gl/mod/c4cm</a>
+      </p>
+    </article> 
 
     <!-- SLIDE: HTML -->
     <article class='slide slide-list'>
       <h2>HTML reference</h2>
       <ul class="spacey_list">
-        <li>Visit skillcrush.com to download a <a href="http://skillcrush.com/2012/06/26/download-your-html-tag-cheatsheet/" target="_blank">cheatsheet of HTML tags</a>.</li>
+        <li>Download a <a href="http://woorkup.com/2009/12/16/html5-visual-cheat-sheet-reloaded/" target="_blank">cheatsheet of HTML tags</a>. (Copy in the <code>cheatsheets</code> folder.)</li>
         <li>Try looking up individual tags using the HTML sections of <a href="http://www.w3schools.com/html/" target="_blank">w3schools.com</a> or <a href="http://dochub.io/#html/" target="_blank">DocHub</a> for further breakdown.</li>
         <li>For further exploration, use the Hackasaurus X-Ray Goggles to look at any webpage.</li>
         <li>And don't forget the "view source" option!</li>
@@ -606,6 +702,7 @@
         <li>Seperates content (text) from presentation (text colour).</li>
         <li>The "cascading" part of CSS means that it (should) help avoid redundancy in styling your web documents.</li>
       </ul>
+      <!--
       <p>Back in the day...</p>
 <pre class="prettyprint">
 &lt;b&gt;&lt;font color="red"&gt;Red&lt;/font&gt;&lt;/b&gt;
@@ -647,6 +744,7 @@
           <span class="blue">Blue</span>
         </div>
       </div>
+    -->
     </article>    
 
     <!-- SLIDE: HTML -->
@@ -725,16 +823,6 @@
       <div>
         <p>Add this into your style.css</p>
         <pre>h1 { font-size: 40px; }</pre>
-      </div>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Dividing Your Content</h2>
-      <div>
-        <p>HTML has a neat little tag called the <code>&lt;div&gt;</code>.</p>
-        <p>On its own, this tag does nothing. Its purpose is to allow us to categorize our HTML and, later on, target specific areas of our code.</p>
-        <p>For now, let's try and organize our content a little better.</p>
       </div>
     </article>
 
@@ -869,6 +957,16 @@
 
     <!-- SLIDE: FTP -->
     <article class='slide slide-list'>
+      <h2>Déjà vu: What is a website?</h2>
+      <p>Remember how a website is essentially a folder located on a dedicated computer (a <span class="keyword">server</span>)?</p>
+      <div class="centered">
+        <img src="assets/webserver_download.png" width="738" height="531" alt="web request process" />
+      </div>
+    </article>
+
+
+    <!-- SLIDE: FTP -->
+    <article class='slide slide-list'>
       <h2>Using FTP to put your site online</h2>
       <div>
         <p style="line-height: 32px;margin-top: 30px;">If you have access to web hosting and would like to put your site online, there are a few vital pieces of information you need:</p>
@@ -934,6 +1032,10 @@
       <p>Also try out "Incognito Mode" in Chrome: Ctrl/Cmd+Shift+N</p>
     </article>
 
+    <article class='slide slide-subhead'>
+      <h1>Thank you!</h1>
+      <p></p>
+    </article>
 
   <!-- **************************************** -->    
   </div>
