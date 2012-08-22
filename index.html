@@ -1140,7 +1140,7 @@ footer {
     <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
       <h2>Assigning widths</h2>
-      <p>If our site is 960px wide, we need to ensure that our columns don't exceed 960 - <strong>including margins!</strong> (e.g. 540 + 30 + 290 = 960)</p>
+      <p>If our site is 960px wide, we need to ensure that our columns don't exceed 960 - <strong>including margins!</strong> (e.g. 540 + 20 + 300 = 960)</p>
 <pre>
 section {
   width: 560px;
@@ -1148,8 +1148,8 @@ section {
 }
 
 aside {
-  margin-left: 30px;
-  width: 290px;
+  margin-left: 20px;
+  width: 300px;
   border: 1px solid gray;
 }
 
@@ -1176,8 +1176,8 @@ section {
 }
 
 aside {
-  margin-left: 30px;
-  width: 290px;
+  margin-left: 20px;
+  width: 300px;
   border: 1px solid gray;
   <strong>float: left;</strong>
 }
@@ -1377,6 +1377,18 @@ h1 {
 
     <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
+      <h2>Custom colours</h2>
+      <p>Often, the CSS colours "gray", "blue", or "purple" are boring and limiting. You can define your own custom colour using hex colours.</p>
+<pre>h1 {
+  color: <strong>#026873;</strong> /* a unique shade of blue */
+}</pre>
+      <p class="centered"><img src="assets/lg_hex_codes.png" widht="500" height="283" alt="" /></p>
+      <p class="sidenote">Image source: <a href="http://websiteincite.com/create-your-website/hexadecimal-color-codes" target="_blank">http://websiteincite.com/create-your-website/hexadecimal-color-codes</a></p>
+      <p class="sidenote">Chart of many hex colours: <a href="http://www.visibone.com/color/chart_847.gif" target="_blank">http://www.visibone.com/color/chart_847.gif</a></p>
+    </article>    
+
+    <!-- SLIDE: CSS -->
+    <article class='slide slide-list'>
       <h2>Hands-on time (45 minutes)</h2>
       <p>Use this time to apply CSS to your 3-page website. Review the afternoon's slides and experiment with some of the properties on the cheatsheet. If you're stuck, here are some suggestions:</p>
       <ul>
@@ -1404,14 +1416,27 @@ h1 {
 
     <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
-      <h2>Bonus: CSS patterns</h2>
+      <h2>Bonus: CSS patterns for fun</h2>
       <p>CSS is great because it can reduce the number of image files you need to create. You can even create <a href="http://lea.verou.me/css3patterns/#" target="_blank">patterns purely out of CSS</a>!</p>
       <ol>
         <li>Click on a pattern that you like.</li>
         <li>Copy the supplied CSS.</li>
-        <li>Instead of an "ad" in your sidebar, paste the CSS into your <code>aside</code> selector.</li>
-        <li>Or apply it to your <code>body</code> selector to change up the entire page.</li>
+        <li>Instead of an "ad" in your sidebar, paste the CSS into your <code>aside</code> selector. Or apply it to your <code>body</code> selector to change up the entire page.</li>
+        <li>Important: Due to the differences in CSS support in web browsers, you will need to duplicate the <code>background-image</code> property-value set and replace <code>linear-gradient</code> with <code>-webkit-linear-gradient</code>.</li>
       </ol>
+<pre style="font-size: 14px;">
+/* Based on Cicada stripes from http://lea.verou.me/css3patterns/#cicada-stripes */
+background-color: #026873;
+background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+                  linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+                  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+                  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+<strong>background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,.07) 50%, transparent 50%),
+                  -webkit-linear-gradient(0deg, rgba(255,255,255,.13) 50%, transparent 50%),
+                  -webkit-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.17) 50%),
+                  -webkit-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.19) 50%);</strong>
+background-size: 13px, 29px, 37px, 53px;
+</pre>
     </article>
 
     <!-- SLIDE: CSS -->
