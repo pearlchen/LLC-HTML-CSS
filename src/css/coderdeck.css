@@ -30,7 +30,7 @@ html, body {
 .deck-container .slide {
   background: #fff;
   width: 940px;
-  height: 100%;
+  /*height: 100%;*/ /* allow vertical scrolling -- espeically when there's lots of code */
   min-height: 600px;
   border: 3px solid #b1009a;
   border-radius: 10px;
@@ -39,12 +39,26 @@ html, body {
   padding: 30px 50px 40px 50px;
 }
 
+/* Added so code editor areas won't resize in height */
+.CodeMirror-scroll {
+  height: auto !important;
+  overflow-y: hidden;
+  overflow-x: auto;
+  width: 100%;
+  min-height: 200px;
+}
+
+.coder-destination {
+  bottom: auto !important;
+  top: 0 !important;
+}
+
 .deck-container .slide-title {
   font-size: 1em;
   text-align: center; 
 }
 .deck-container .slide-title .workshop_title {
-  margin: 50px 0 0 0;
+  margin: 90px 0 0 0;
 }
 .deck-container .slide-title .download_link {
   font-size: 1.3em; 
@@ -165,7 +179,7 @@ html, body {
   font-size: 1.2em;
 }
 .deck-container code {
-  color: #888; 
+  color: #B1009A; 
 }
 .deck-container blockquote {
   font-size: 2em;
@@ -308,6 +322,21 @@ span.marker {
 	font-size: 1em;
 }
 
+
+.action-item {
+  font-style: italic;
+}
+
+.deck-container .action-item {
+  background: url("../../assets/hash.gif") no-repeat;
+  font-size: 1.2em;
+  min-height: 60px;
+  padding: 8px 0 0 90px;
+}
+.deck-container .action-item p {
+  font-size: 1em;
+}
+
 .var {
 	color: #770088;
 }	
@@ -346,4 +375,18 @@ a#hackasaurus {
 pre.prettyprint {
   padding: 10px;
   border: 1px solid #ccc;
+}
+
+.show-hint {
+  color: #B1009A;
+  font-size: 16px !important;
+  font-style: italic !important;
+  cursor: pointer;
+}
+
+.hint-solution {
+  display: none;
+  color: #888;
+  font-size: 16px !important;
+  font-style: italic !important;
 }

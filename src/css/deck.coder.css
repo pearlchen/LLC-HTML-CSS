@@ -37,7 +37,8 @@
 
 .deck-container .coder-wrapper-split .coder-destination { 
   padding:5px 1%;
-  position:absolute; left:50%; bottom:0px;
+  position:absolute; left:50%; 
+  top: 0px;
   width:48%;
 
 }
