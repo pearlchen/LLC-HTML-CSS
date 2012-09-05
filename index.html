@@ -69,7 +69,7 @@
           <br />
           <a href="http://klab.ca/&plus;" target="_blank">klab.ca/+</a>
           //
-          <a href="http://twitter.com/@androidsNsheep" target="_blank">@androidsNsheep</a>
+          <a href="http://twitter.com/@pearlchen" target="_blank">@pearlchen</a>
         </div>
         
         <br  clear="left" />
@@ -87,11 +87,11 @@
       <ul>
         <li>Make sure your computer is setup</li>
         <li>Web development breakdown</li>
-        <li>Dive into HTML &amp; CSS basics</li>
+        <li>Dive into HTML</li>
       </ul>
       <h3 style="margin-top: 1em;">Afternoon</h3>
       <ul>
-        <li>Go deeper with HTML &amp; CSS</li>
+        <li>CSS basics</li>
         <li>Getting your website online</li>
         <li style="color: #ccc;">Upload your website</li>
       </ul>
@@ -643,10 +643,10 @@
     <article class='slide slide-list'>
       <h2>Working with images</h2>
       <p>Let's look at that again: images are an example of a <span class="keyword">void tag</span> <strong>with</strong> an <span class="keyword">attribute</span>.</p>
-      <pre class="prettyprint">&lt;img src="llc.gif" /&gt;</pre>
+      <pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5" /&gt;</pre>
       <ul>
         <li><code>src</code> is the <em>attribute</em></li>
-        <li><code>llc.gif</code> is the <em>value</em> of that attribute<br />
+        <li><code>http://goo.gl/7eSU5</code> is the <em>value</em> of that attribute<br />
           <span class="sidenote">Values are typically surrounded by <em>single or double quotes</em> since occassionally values may contain spaces.</span></li>
       </ul>
       <p>With an <code>img</code> tag, the value of the <code>src</code> attribute tells the browser what the <em>url source</em> of our image is.</p>
@@ -661,13 +661,13 @@
           <span class="sidenote">(This is useful so the page doesn't jump around when loading very large images, or while on a very slow internet connection such as dial-up or 2G/3G. Also useful to know that width/height values don't necessarily have to match the image's <em>actual</em> width/height.)</span></li>
       </ul>
       <hr />
-      <p class="sidenote">For example, without <code>width</code> and <code>height</code> attributes, the browser displays image at original size. (<a href="exercises/2_WORKING_WITH_IMAGES/img/llc.gif" target="_blank">View actual original image on its own</a>.)</p>
-      <pre class="prettyprint">&lt;img src="llc.gif" /&gt;</pre>
-      <img src="exercises/2_WORKING_WITH_IMAGES/img/llc.gif" />
+      <p class="sidenote">For example, without <code>width</code> and <code>height</code> attributes, the browser displays image at original size.</p>
+      <pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5" /&gt;</pre>
+      <img src="http://goo.gl/7eSU5" />
       <hr />
       <p class="sidenote">Now with a manipulated width and height (about 50% smaller):</p>
-      <pre class="prettyprint">&lt;img src="llc.gif" width="328" height="150" /&gt;</pre>
-      <img src="exercises/2_WORKING_WITH_IMAGES/img/llc.gif" width="328" height="150" />
+      <pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5" width="320" height="262" /&gt;</pre>
+      <img src="http://goo.gl/7eSU5" width="320" height="262" />
     </article>
 
         <!-- SLIDE: HTML -->
@@ -900,9 +900,9 @@
       <h2>HTML reference</h2>
       <ul class="spacey_list">
         <li>Download a <a href="http://woorkup.com/2009/12/16/html5-visual-cheat-sheet-reloaded/" target="_blank">cheatsheet of HTML tags</a>. (Copy in the <code>cheatsheets</code> folder.)</li>
-        <li>Try looking up individual tags using the HTML sections of <a href="http://www.w3schools.com/html/" target="_blank">w3schools.com</a> or <a href="http://dochub.io/#html/" target="_blank">DocHub</a> for further breakdown.</li>
-        <li>For further exploration, use the Hackasaurus X-Ray Goggles to look at any webpage.</li>
-        <li>And don't forget the "view source" option!</li>
+        <li>Try looking up individual tags using the HTML sections of <a href="https://developer.mozilla.org/en-US/docs/HTML/Element" target="_blank">Mozilla's Developer Network</a> or the <a href="http://www.w3.org/community/webed/wiki/HTML/Elements" target="_blank">W3C</a> for further breakdown.</li>
+        <li>For further exploration, use the <a href="http://hackasaurus.org/en-US/goggles/install/" target="_blank">Hackasaurus X-Ray Goggles</a> to look at any webpage.</li>
+        <li>And don't forget the "view source" option of your web browser!</li>
       </ul>
     </article>  
 
@@ -926,21 +926,25 @@
     <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
       <h2>Inline CSS using the <code>style</code> attribute</h2>
-      <p>The <span class="keyword"><code>style</code> attribute</span> can be added to any visible HTML tag.</p>
+      <p>The <code>style</code> <em><strong>attribute</strong></em> can be added to any visible HTML tag.</p>
 
 <textarea class='coder-editor coder-editor-full'>
 <h1>Welcome!</h1>
 <p>This is my website.</p>
 
 <h1>Social Media</h1>
-<p>Follow me on Twitter!</p>
+<p>Follow me on 
+  <a href="http://twitter.com/@pearlchen" target="_blank">Twitter</a>!
+</p>
 </textarea>
-<script type='coder-solution'>
-<h1 style="background-color: black; color: white;">Welcome!</h1>
+<script type='coder-solution'><h1 style="background-color: black; color: white;">Welcome!</h1>
 <p style="font-size: 18px;">This is my website.</p>
 
 <h1 style="background-color: black; color: white;">Social Media</h1>
-<p style="font-size: 18px;">Follow me on Twitter!</p>
+<p style="font-size: 18px;">Follow me on 
+  <a href="http://twitter.com/@pearlchen" target="_blank"
+  style="color: red;">Twitter</a>!
+</p>
 </script>
 
     </article>
@@ -956,18 +960,23 @@
 <p>This is my website.</p>
 
 <h1>Social Media</h1>
-<p>Follow me on Twitter!</p>
+<p>Follow me on 
+  <a href="http://twitter.com/@pearlchen" target="_blank">Twitter</a>!
+</p>
 </textarea>
 <script type='coder-solution'>
 <h1>Welcome!</h1>
 <p>This is my website.</p>
 
 <h1>Social Media</h1>
-<p>Follow me on Twitter!</p>
+<p>Follow me on 
+  <a href="http://twitter.com/@pearlchen" target="_blank">Twitter</a>!
+</p>
 
 <style>
   h1 { background-color: black; color: white; }
   p { font-size: 18apx; }
+  a { color: red; }
 </style>
 </script>
 
@@ -979,8 +988,9 @@
       <p>Here's a CSS declaration dissected:</p>
       <p class="centered"><img src="assets/css.png" /></p>
       <ul>
-        <li>A basic <span class="keyword">selector</span> will match its HTML tag name. In this case, <code>&lt;h1&gt;</code>. (We'll get into more complex ones later.)</li>
-        <li>A <span class="keyword">property</span> is a special label for some visual aspect of the selector. You can see a list of them in this <a href="http://www.cheatography.com/davechild/cheat-sheets/css2/">cheatsheet</a>.</li>
+        <li>A <strong>basic</strong> <span class="keyword">selector</span> will match its HTML tag name. In this case, all content that is a <code>&lt;h1&gt;</code> will be applied this style.<br /><span class="sidenote">(We'll get into more complex ones later.)</span></li>
+        <li>A <span class="keyword">property</span> is a special label for some visual aspect of the selector such as color or size. You can see a list of them in this <a href="http://www.cheatography.com/davechild/cheat-sheets/css2/">cheatsheet</a>.</li>
+        <li>The property <strong>value</strong> is specific to the property type. For example, <code>color</code> properties accept colour values like <code>blue</code> or <code>#FFFF00</code>. <code>font-size</code> properties accept units of measurements like <code>12px</code> (where "px" stands for pixels).</li>
       </ul>
     </article>  
 
@@ -990,9 +1000,8 @@
       <p>Here's a CSS declaration dissected:</p>
       <p class="centered"><img src="assets/css.png" /></p>
       <ul>
-        <li>The <strong>value</strong> of the property is specific to the kind of property it is. <code>color</code> properties accept colour values like <code>blue</code> or <code>#FFFF00</code>. <code>font-size</code> properties accept units of measurements like <code>12px</code> (where "px" stands for pixels).</li>
-        <li>Use <strong>curly braces</strong> to hold all the property:value sets.</li> 
-        <li>You can define multiple property:value sets but you must end each one with a <strong>semi-colon</strong>.</li>
+        <li>Use <strong>curly braces</strong> (<code>{}</code>) to hold a list of the property:value sets.</li> 
+        <li>You can define multiple property:value sets but you must end each one with a <strong>semi-colon</strong> (<code>;</code>).</li>
       </ul>
     </article>  
 
@@ -1040,10 +1049,10 @@ h2 { font-family: Courier; }</pre>
       <h2>Changing the font size</h2>
       <p>Font sizes are typically defined in pixels (px) or "ems" (em).</p>
       <ul>
-        <li style="font-size: 1em;">1em</li>
-        <li style="font-size: 1.5em;">1.5em</li>
-        <li style="font-size: 10px;">10px</li>
-        <li style="font-size: 20px;">20px</li>
+        <li style="font-size: 10px;">20px</li>
+        <li style="font-size: 20px;">45px</li>
+        <li style="font-size: 1em;">0.5em</li>
+        <li style="font-size: 1.5em;">1em</li>
       </ul>
       <p>Headers have default font-sizes defined by the browser. Let's override them. </p>
 <pre>h1 { font-family: Courier; <strong>font-size: 25px;</strong> }
@@ -1097,203 +1106,464 @@ h2 { font-family: Courier; font-size: 22px; <strong>font-weight: normal;</strong
     <article class='slide slide-list'>
       <h2>The "Box Model"</h2>
       <p>Most HTML elements on a webpage look like this to the browser:</p>
+      <p class="centered"><img src="assets/box-model.gif" width="536" height="289" alt="box model" /></p>
+      <p>This is the same but visualized differently:</p>
       <p class="centered"><img src="assets/box-model.png" width="517" height="476" alt="box model" /></p>
     </article>
 
     <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
-      <p style="color: #B1009A;">Example: Make headers look like label tape.</p>
+      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
       <p>To add a border you need to set 3 properties:<br />
         <code>border-weight</code>, <code>border-style</code>, and <code>border-color</code>.</p>
       <p class="sidenote">You can define them seperately, or using shorthand.</p>
       <p class="sidenote">Note: CSS comments use the format <code>/* comment */</code></p>
 
 <textarea class='coder-editor'>
-<h1>Header</h1>
 &lt;style&gt;
-h1 { 
-    font-family: Courier; 
-    font-size: 25px;
-    font-weight: normal;
+a { 
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+&lt;/style&gt;
 
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-}
-&lt;/style&gt;
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
 </textarea>
-<script type='coder-solution'><h1>Header</h1>
-&lt;style&gt;
-h1 { 
-    font-family: Courier; 
-    font-size: 25px;
-    font-weight: normal;
-    /*
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    */
-    border: 1px solid black;
+<script type='coder-solution'>&lt;style&gt;
+a { 
+  /*
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  */
+  border: 1px solid black;
 }
 &lt;/style&gt;
+
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
 </script>
 
     </article>
 
     <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
-      <p style="color: #B1009A;">Example: Make headers look like label tape.</p>
+      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
       <p>To add padding you set 4 properties:<br />
         <code>padding-top</code>, <code>padding-left</code>, <code>padding-bottom</code>, and <code>padding-left</code>.</p>
       <p class="sidenote">You can define them seperately, or using shorthand (in a clockwise direction).</p>
 
 <textarea class='coder-editor'>
-<h1>Header</h1>
 &lt;style&gt;
-h1 { 
-    font-family: Courier; 
-    font-size: 25px;
-    font-weight: normal;
-    border: 1px solid black;
+a { 
+  border: 1px solid black;
 
-    padding-top: 5px;
-    padding-right: 20px;
-    padding-bottom: 8px;
-    padding-left: 20px; 
+  padding-top: 5px;
+  padding-right: 30px;
+  padding-bottom: 5px;
+  padding-left: 30px; 
 }
 &lt;/style&gt;
+
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
 </textarea>
-<script type='coder-solution'><h1>Header</h1>
-&lt;style&gt;
-h1 { 
-    font-family: Courier; 
-    font-size: 25px;
-    font-weight: normal;
-    border: 1px solid black;
-    /*
-    padding-top: 5px;
-    padding-right: 20px;
-    padding-bottom: 8px;
-    padding-left: 20px; 
-    */
-    padding: 5px 20px 8px 20px;
+<script type='coder-solution'>&lt;style&gt;
+a { 
+  border: 1px solid black;
+  /*
+  padding-top: 5px;
+  padding-right: 30px;
+  padding-bottom: 5px;
+  padding-left: 30px; 
+  */
+  padding: 5px 30px 5px 30px;
 }
 &lt;/style&gt;
+
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
 </script>
 
     </article>
 
     <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
-      <p style="color: #B1009A;">Example: Make headers look like label tape.</p>
-      <p>Finally, add a background colour and change the font colour. Center-align the text too.</p>
+      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
+      <p>Add a background colour and change the font colour.</p>
+      <p>To get rid of the underline, use the <code>text-decoration</code> property.</p>
 
 <textarea class='coder-editor'>
-<h1>Header</h1>
 &lt;style&gt;
-h1 { 
-    font-family: Courier; 
-    font-size: 25px;
-    font-weight: normal;
-    border: 1px solid black;
-    padding: 5px 20px 8px 20px;
-
-    color: white;
-    background-color: black;
-    text-align: center;
+a { 
+  border: 1px solid black;
+  padding: 5px 30px 5px 30px;
 }
 &lt;/style&gt;
+
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
 </textarea>
+<script type='coder-solution'>&lt;style&gt;
+a { 
+  border: 1px solid black;
+  padding: 5px 30px 5px 30px;
+
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+&lt;/style&gt;
+
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+</script>
+
     </article>
 
     <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
-      <p>To illustrate margin, I've added two div's with borders.</p>
-      <p class="sidenote">By default, headers already have margin above and below as defined by the browser.</p>
-
-<textarea class='coder-editor'>
-<div>This is text above the header.</div>
-<h1>Header</h1>
-<div>This is text below the header.</div>
-
-&lt;style&gt;
-h1 { 
-    font-family: Courier; 
-    font-size: 25px;
-    font-weight: normal;
-    border: 1px solid black;
-    padding: 5px 20px 8px 20px;
-    color: white;
-    background-color: black;
-    text-align: center;
-}
-div {
-  border: 1px solid gray;
-}
-&lt;/style&gt;
-</textarea>
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
+      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
       <p>To add margins you set 4 properties:<br />
         <code>margin-top</code>, <code>margin-left</code>, <code>margin-bottom</code>, and <code>margin-left</code>.</p>
       <p class="sidenote">You can define them seperately, or using shorthand (in a clockwise direction).</p>
 
+
 <textarea class='coder-editor'>
-<div>This is text above the header.</div>
-<h1>Header</h1>
-<div>This is text below the header.</div>
-
 &lt;style&gt;
-h1 { 
-    font-family: Courier; 
-    font-size: 25px;
-    font-weight: normal;
-    border: 1px solid black;
-    padding: 5px 20px 8px 20px;
-    color: white;
-    background-color: black;
-    text-align: center;
+a { 
+  border: 1px solid black;
+  padding: 5px 30px 5px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
 
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0; 
-}
-div {
-  border: 1px solid gray;
+  margin-top: 15px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  margin-left: 0;
 }
 &lt;/style&gt;
+
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
 </textarea>
-<script type='coder-solution'><div>This is text above the header.</div>
-<h1>Header</h1>
-<div>This is text below the header.</div>
+<script type='coder-solution'>&lt;style&gt;
+a { 
+  border: 1px solid black;
+  padding: 5px 30px 5px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
 
-&lt;style&gt;
-h1 { 
-    font-family: Courier; 
-    font-size: 25px;
-    font-weight: normal;
-    border: 1px solid black;
-    padding: 5px 20px 8px 20px;
-    color: white;
-    background-color: black;
-    text-align: center;
-    /*
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    */
-    margin: 0 0 0 0;
-}
-div {
-  border: 1px solid gray;
+  /*
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  */
+  margin: 15px 10px 0 0;
 }
 &lt;/style&gt;
+
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
 </script>
 
+    </article>
+
+    <!-- SLIDE: CSS -->
+    <article class='slide slide-list'>
+      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
+      <p>Here's the final button code!</p>
+
+<textarea class='coder-editor'>
+&lt;style&gt;
+a { 
+  border: 1px solid black;
+  padding: 5px 30px 5px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin: 15px 10px 0 0;
+}
+&lt;/style&gt;
+
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+</textarea>
+<script type='coder-solution'>&lt;style&gt;
+a { 
+  border: 1px solid black;
+  padding: 5px 30px 5px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin: 15px 10px 0 0;
+
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+&lt;/style&gt;
+
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+</script>
+
+      <br clear="all" />
+      <p class="sidenote"><strong>Advanced topic:</strong> To get it looking even more like a button, use the <code>border-radius</code> property.<br />
+      <span class="sidenote">(We won't get into browser pre-fixes today but do know that newer CSS features require you to re-state the property for each browser vendor.)</span></p>
+    </article>
+
+    <!-- SLIDE: CSS -->
+    <article class='slide slide-list'>
+      <h2>CSS interactions &amp; pseudo selectors</h2>
+      <p>CSS is also able to handle some basic UI interactions in our sites, such as allowing a mouse over or "hover" state on various elements. This is frequently done with items such as links.</p>
+      <p>As part of your selector, you need to use the <code>:hover</code> <span class="keyword">pseudo selector</span>.</p>
+
+<textarea class="coder-editor">
+&lt;style&gt;
+a { 
+  border: 1px solid black;
+  padding: 5px 30px 5px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin: 15px 10px 0 0;
+
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+a:hover {
+
+}
+&lt;/style&gt;
+
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+</textarea>
+<script type='coder-solution'>&lt;style&gt;
+a { 
+  border: 1px solid black;
+  padding: 5px 30px 5px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin: 15px 10px 0 0;
+
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+a:hover {
+  background-color: purple;
+}
+&lt;/style&gt;
+
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+</script>
+
+    </article>
+    
+    <!-- SLIDE: CSS -->
+    <article class='slide slide-list'>
+      <h2>CSS classes</h2>
+      <p>Wait! What happens when we add another link to the page and it's not part of our navigation?
+      <span class="sidenote">Putting all the styles inline wouldn't be wise...</span></p>
+<textarea class="coder-editor">
+&lt;style&gt;
+a { 
+  border: 1px solid black;
+  padding: 5px 30px 5px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin: 15px 10px 0 0;
+}
+
+a:hover {
+  background-color: purple;
+}
+&lt;/style&gt;
+
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+
+&lt;p&gt;Follow me on
+  &lt;a href="http://twitter.com/pearlchen" target="_blank"&gt;Twitter&lt;/a&gt;!
+&lt;/p&gt;
+</textarea>
+<script type='coder-solution'>&lt;a 
+  href="index.html"
+  style="border: 1px solid black;
+  padding: 5px 30px 5px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin: 15px 10px 0 0;"&gt;Home&lt;/a&gt;
+&lt;a 
+  href="about.html"
+  style="border: 1px solid black;
+  padding: 5px 30px 5px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin: 15px 10px 0 0;"&gt;About&lt;/a&gt;
+&lt;a 
+  href="contact.html"
+  style="border: 1px solid black;
+  padding: 5px 30px 5px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin: 15px 10px 0 0;"&gt;Contact&lt;/a&gt;
+
+&lt;p&gt;Follow me on
+  &lt;a href="http://twitter.com/pearlchen" target="_blank"&gt;Twitter&lt;/a&gt;!
+&lt;/p&gt;
+</script>
+      <br clear="all" />
+      <p class="sidenote">Now that's a lot of CSS! What if you change you mind and decide that the background color should be blue now? Plus you can't apply pseudo selectors like <code>:hover</code> inline.</p>
+    </article>    
+
+   <!-- SLIDE: CSS -->
+    <article class='slide slide-list'>
+      <h2>CSS classes</h2>
+      <p>If you know that several elements are going to have similiar styles, use CSS classes! Once you define one CSS class, you can apply it over and over again!</p>
+      <ul>
+        <li>Use a <strong>period</strong> (<code>.</code>) to define CSS selectors that are classes.<br />
+          e.g. <code>.nav_button</code></li>
+        <li>Then apply that class to any element using the <code>class</code> attribute.<br />
+          e.g. <code>class="nav_button"</code></li>
+      </ul>
+
+<pre>
+&lt;a <strong>class="nav_button"</strong>&gt;Home&lt;/a&gt;
+
+&lt;style&gt;
+<strong>.nav_button</strong> {
+  font-family: Georgia;
+}
+&lt;/style&gt;  
+</pre>
+
+    </article>
+
+   <!-- SLIDE: CSS -->
+    <article class='slide slide-list'>
+      <h2>CSS classes</h2>
+      <p>Let's apply a "nav_button" CSS class to our current navigation links:</p>
+      <textarea class="coder-editor">
+&lt;style&gt;
+a { 
+  border: 1px solid black;
+  padding: 5px 30px 5px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin: 15px 10px 0 0;
+}
+
+a:hover {
+  background-color: purple;
+}
+&lt;/style&gt;
+
+&lt;a href="index.html"&gt;Home&lt;/a&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+
+&lt;p&gt;Follow me on
+  &lt;a href="http://twitter.com/pearlchen" target="_blank"&gt;Twitter&lt;/a&gt;!
+&lt;/p&gt;
+</textarea>
+<script type='coder-solution'>&lt;style&gt;
+.nav_button { 
+  border: 1px solid black;
+  padding: 5px 30px 5px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin: 15px 10px 0 0;
+}
+
+.nav_button:hover {
+  background-color: purple;
+}
+&lt;/style&gt;
+
+&lt;a href="index.html" class="nav_button"&gt;Home&lt;/a&gt;
+&lt;a href="about.html" class="nav_button"&gt;About&lt;/a&gt;
+&lt;a href="contact.html" class="nav_button"&gt;Contact&lt;/a&gt;
+
+&lt;p&gt;Follow me on
+  &lt;a href="http://twitter.com/pearlchen" target="_blank"&gt;Twitter&lt;/a&gt;!
+&lt;/p&gt;
+</script>
+    </article>
+
+    <!-- SLIDE: CSS -->
+    <article class='slide slide-list'>
+      <h2>External CSS</h2>
+      <p>Instead of duplicating your <code>&lt;style&gt;</code> content for every webpage, make one single CSS document ending with a <code>.css</code> extension and link to it in the <code>&lt;head&gt;</code> tag instead of (or in addition to) a <code>&lt;style&gt;</code> tag.</p>
+<pre>
+&lt;head&gt;
+  <strong>&lt;link rel="stylesheet" href="styles.css" type="text/css" /&gt;</strong>
+  &lt;style&gt;
+  body {
+    font-size: 14px;
+  }
+  &lt;/style&gt;
+&lt;/head&gt;
+</pre>
+
+      <p>Inside styles.css, there is <strong>no</strong> <code>&lt;style&gt;</code> tag:</p>
+<pre>
+body {
+  background-color: black;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+}
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+</pre>
+
+    </article>
+
+    <!-- SLIDE: CSS -->
+    <article class='slide slide-list'>
+      <h2>Exercise #4 (20 minutes)</h2>
+      <p>Use this time to apply CSS to your 3-page website.</p>
+      <ul>
+        <li>Update your navigation in <code>index.html</code> to look more button-like.</li>
+        <li>Create a single <code>styles.css</code> file and link to this external stylesheet from all 3 webpages using the <code>&lt;link&gt;</code> tag. Consolidate all of your CSS into this external stylesheet.</li>
+        <li>If you've got extra time, try out some new CSS properties from the cheatsheet and other resources listed on the <a href="#slide-94">CSS resources slide</a>.</li>
+      </ul>
+      <h3>Got questions?</h3>
+      <p>
+        Post them to Google Moderator: <a href="http://goo.gl/mod/c4cm" target="_blank" >http://goo.gl/mod/c4cm</a>
+      </p>
     </article>
 
     <!-- SLIDE: CSS -->
@@ -1378,24 +1648,26 @@ div {
       <h2>Preparing for our group exercise</h2>
       <p>Using <code>index.html</code> from the <code>website</code> folder, let's update it with the code below.</p>
       <p>It should replace everything in between the opening and closing <code>&lt;body&gt;</code> tags.</p>
-<pre>&lt;header&gt;
-  &lt;nav&gt;
-    &lt;a href="index.html"&gt;Home&lt;/a&gt;
-    &lt;a href="about.html"&gt;About&lt;/a&gt;
-    &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;  
-&lt;section&gt;
-  Welcome to my blog!
-  &lt;article&gt;[...Blog Post...]&lt;/article&gt;
-  &lt;article&gt;[...Blog Post...]&lt;/article&gt;
-&lt;/section&gt;
-&lt;aside&gt;
-  [...Sidebar Ad...]
-&lt;/aside&gt;
-&lt;footer&gt;
-  Copyright 2012
-&lt;/footer&gt;
+<pre>&lt;div&gt;
+  &lt;header&gt;
+    &lt;nav&gt;
+      &lt;a href="index.html"&gt;Home&lt;/a&gt;
+      &lt;a href="about.html"&gt;About&lt;/a&gt;
+      &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;  
+  &lt;section&gt;
+    Welcome to my blog!
+    &lt;article&gt;[...Blog Post...]&lt;/article&gt;
+    &lt;article&gt;[...Blog Post...]&lt;/article&gt;
+  &lt;/section&gt;
+  &lt;aside&gt;
+    [...Sidebar Ad...]
+  &lt;/aside&gt;
+  &lt;footer&gt;
+    Copyright 2012
+  &lt;/footer&gt;
+&lt;/div&gt;
 </pre>
     </article>
 
@@ -1479,7 +1751,9 @@ footer {
   <strong>clear: both;</strong>
 }
 </pre>
-      <p>If the elements that are floating are enclosed in another container, you can you apply <code>overflow:auto</code> to the parent container:</p>
+      <br /><br /><br />
+      <hr />
+      <p class="sidenote">If the elements that are floating are enclosed in another container, you can you apply <code>overflow:auto</code> to the parent container:</p>
 <pre>nav {
   overflow: auto;
 }</pre>
@@ -1488,174 +1762,67 @@ footer {
      
     </article>
 
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS classes</h2>
-      <p>CSS is great for creating styles that you can apply over and over again.</p>
-      <p>Consider our navigation links. Wouldn't it be great if it looked more button-like?</p>
-
-<textarea class="coder-editor coder-editor-full">
-&lt;nav&gt;
-  &lt;div&gt;Home&lt;/div&gt;
-  &lt;div&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/div&gt;
-&lt;/nav&gt;
-</textarea>
-<script type='coder-solution'>&lt;nav&gt;
-  &lt;div style="font-family: Georgia;
-    background-color: purple;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    padding: 5px 10px 5px 10px; 
-    width: 100px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    float: left;
-    margin-right: 20px;"&gt;Home&lt;/div&gt;
-  &lt;div style="font-family: Georgia;
-    background-color: purple;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    padding: 5px 10px 5px 10px; 
-    width: 100px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    float: left;
-    margin-right: 20px;"&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/div&gt;
-  &lt;div style="font-family: Georgia;
-    background-color: purple;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    padding: 5px 10px 5px 10px; 
-    width: 100px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    float: left;
-    margin-right: 20px;"&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/div&gt;
-&lt;/nav&gt;
-</script>
-
-    </article>    
-
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <p>Now that's a lot of CSS! What if you change you mind and decide that the font-family should be Arial for buttons now?</p>
-      <p>If you know that several containers are going to have similiar styles, use the <code>class</code> attribute and put the CSS into the <code>&lt;style&gt;</code> tag. Use a <strong>period</strong> to denote CSS selectors that are classes. e.g. <code>.nav_button</code></p>
-
-<pre>
-&lt;nav&gt;
-  &lt;div <strong>class="nav_button"</strong>&gt;Home&lt;/div&gt;
-  &lt;div&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/div&gt;
-&lt;/nav&gt;
-
-&lt;style&gt;
-<strong>.nav_button</strong> {
-  font-family: Georgia;
-  background-color: purple;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  padding: 5px 10px 5px 10px; 
-  width: 100px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  float: left;
-  margin-right: 20px;
-}
-
-nav {
-  overflow: auto; /* clear floats */
-}
-&lt;/style&gt;  
-</pre>
-
-    </article>
-
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Some Basic Interaction</h2>
-      <p>CSS is also able to handle some basic UI interactions in our sites, such as allowing a 'hover' or mouse over state on various elements.</p>
-      <p>This is frequently done with items such as links.</p>
-
-<textarea class="coder-editor coder-editor-full">
-&lt;nav&gt;
-  &lt;div&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/div&gt;
-&lt;/nav&gt;
-</textarea>
-<script type='coder-solution'>&lt;nav&gt;
-  &lt;div&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/div&gt;
-&lt;/nav&gt;
-
-&lt;style&gt;
-  a {
-    text-decoration: none;
-    color: gray;
-  }
-
-  a:hover {
-    text-transform: uppercase;
-    color: purple;
-    font-weight: bold;
-  }
-&lt;/style&gt;
-</script>
-
-    </article>
 
     <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
       <h2>CSS id's</h2>
-      <p>It's best practice to not have too many inline &lt;style&gt; attributes in a webpage. Remember that CSS is meant to help keep the presentation layer seperate from the content layer.</p>
-      <p>When you need to target certain containers, use the <code>id</code> attribute and put the CSS into the <code>&lt;style&gt;</code> tag. Use a <strong>hash</strong> to denote CSS selectors that are ids. e.g. <code>#centered_on_page</code></p>
-      <p>You should only have one instance of an ID per page. Any more can cause errors in your page and CSS -- and even later, JavaScript.</p>
-<pre>
-&lt;div <strong>id="centered_on_page"</strong>&gt;Center me&lt;/div&gt;
+      <p>CSS classes are great when you want to re-apply the same style to multiple HTML elements but sometimes you need to only target an HTML container <strong>once</strong>. This is where an <span class="keyword">ID</span> is useful.</p>
+      <ul>
+        <li>Use a <strong>hash</strong> (<code>#</code>) to define CSS selectors that are IDs.<br />
+          e.g. <code>#centered_on_page</code></li>
+        <li>Use the <code>id</code> attribute to apply the styles to that element.<br />
+          e.g. <code>id="centered_on_page"</code><br />
+        </li>
+      </ul>
+      <p class="sidenote"><strong>Important!</strong> You should only have <strong>one</strong> instance of an ID per page. Any more can cause unexpected things to happen with your CSS -- and later, JavaScript.</p>
+<textarea class="coder-editor">
 &lt;style&gt;
-  <strong>#centered_on_page</strong> {
-    margin: 0 auto;
-    width: 960px;
+  #centered_on_page {
+    margin: 0 auto 0 auto;
   }
+  div {
+    width: 200px;
+    border: 1px solid black;
+  } 
 &lt;/style&gt;
-</pre>
-      <p class="sidenote">I'm going to add this to my <code>exercise/website/index.html</code> file and wrap everything already currently there within the <code>&lt;body&gt;</code> tag.</p>
+
+&lt;div&gt;
+  Cupcake ipsum dolor sit amet halvah muffin apple pie. Pastry sweet jelly soufflé icing cake carrot cake tart chupa chups. Topping cookie bear claw.
+&lt;/div&gt;
+</textarea>
+<script type="coder-solution">&lt;style&gt;
+  #centered_on_page {
+    margin: 0 auto 0 auto;
+  }
+  div {
+    width: 200px;
+    border: 1px solid black;
+  } 
+&lt;/style&gt;
+
+&lt;div id="centered_on_page"&gt;
+  Cupcake ipsum dolor sit amet halvah muffin apple pie. Pastry sweet jelly soufflé icing cake carrot cake tart chupa chups. Topping cookie bear claw.
+&lt;/div&gt;
+</script>
     </article>
 
-    <!-- SLIDE: CSS -->
+        <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
-      <h2>External CSS</h2>
-      <p>Instead of duplicating your <code>&lt;style&gt;</code> content for every webpage, make one single CSS document ending with a <code>.css</code> extension and link to it in the <code>&lt;head&gt;</code> tag instead of (or in addition to) a <code>&lt;style&gt;</code> tag.</p>
+      <h2>CSS id's</h2>
+      <p>Let's add <code>#centered_on_page</code> to <code>styles.css</code> and apply the id to the <code>div</code> container immediately after the opening <code>&lt;body&gt;</code> tag in <code>index.html</code>.</p>
 <pre>
-&lt;head&gt;
-  <strong>&lt;link rel="stylesheet" href="styles.css" type="text/css"&gt;</strong>
-&lt;/head&gt;
-</pre>
-
-      <p>Inside styles.css, there is <strong>no</strong> <code>&lt;style&gt;</code> tag:</p>
-<pre>
-body {
-  background-color: black;
-  color: white;
-  font-family: Helvetica, Arial, sans-serif;
-}
-h1 {
-  font-family: Georgia, "Times New Roman", serif;
+#centered_on_page {
+  margin: 0 auto 0 auto;
+  width: 960px;
 }
 </pre>
+<pre>
+&lt;body&gt;
+  &lt;div id="centered_on_page"&gt;
 
+  &lt;/div&gt;
+&lt;/body&gt;
+</pre>
     </article>
 
     <!-- SLIDE: CSS -->
@@ -1672,16 +1839,17 @@ h1 {
 
     <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
-      <h2>Hands-on time (45 minutes)</h2>
+      <h2>Hands-on time (now until end)</h2>
       <p>Use this time to apply CSS to your 3-page website. Review the afternoon's slides and experiment with some of the properties on the cheatsheet. If you're stuck, here are some suggestions:</p>
       <ul>
         <li>Apply <code>width</code>s and <code>float</code>s to <code>&lt;section&gt;</code> and <code>&lt;aside&gt;</code> to make a standard 2-column layout.</li>
-        <li>Create a single <code>styles.css</code> file and link to this external stylesheet using the <code>&lt;link&gt;</code> tag from all 3 webpages.</li>
-        <li>Update your navigation to look more tab- or button-like.</li>
+        <li>Update your <code>about.html</code> and <code>contact.html</code> with some of your own CSS.</li>
+        <li>Apply some custom colours to your text in any of your web pages.</li>
+        <li>Research the <code>background-image</code> property and add a background image to webpages.</li>
       </ul>
       <h3>Got questions?</h3>
       <p>
-        Post them to Google Moderator: <a href="http://goo.gl/mod/c4cm" target="_blank" >http://goo.gl/mod/c4cm</a>
+        Post them to Google Moderator: <a href="http://goo.gl/mod/c4cm" target="_blank">http://goo.gl/mod/c4cm</a>
       </p>
     </article>
 
@@ -1726,8 +1894,8 @@ background-size: 13px, 29px, 37px, 53px;
     <article class='slide slide-list'>
       <h2>CSS reference</h2>
       <ul class="spacey_list">
-        <li>Download a <a href="http://www.cheatography.com/davechild/cheat-sheets/css2/" target="_blank">cheatsheet of CSS selectors</a>.</li>
-        <li>Try looking up individual tags using the CSS sections of <a href="http://www.w3schools.com/css/" target="_blank">w3schools.com</a> or <a href="http://dochub.io/#css/" target="_blank">DocHub</a> for further breakdown.</li>
+        <li>Download a <a href="http://www.cheatography.com/davechild/cheat-sheets/css2/" target="_blank">cheatsheet of CSS selectors and properties</a>.</li>
+        <li>Try looking up individual selectors and propertie using the CSS section of <a href="https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference" target="_blank">Mozilla's Developer Network</a> for further breakdown.</li>
         <li>Read articles from <a href="http://www.alistapart.com/" target="_blank">A List Apart</a>.</li>
         <li>And don't forget the "inspect element" option!</li>
       </ul>
