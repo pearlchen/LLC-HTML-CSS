@@ -68,7 +68,7 @@
           hello@christinatruong.com
           <br />
           <a href="http://christinatruong.com" target="_blank">christinatruong.com</a>
-          <a href="http://twitter.com/@christinatruong" target="_blank">@christinatruong</a>
+          <a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a>
         </div>
         <br  clear="left" />
       </div>
@@ -230,7 +230,7 @@
           <span class="sidenote"><code>about.html</code> instead of <code>About.html</code> or <code>ABOUT.html</code></span>
         </li>
         <li>
-          Avoid <code>s p a c e s</code> in your file name. Use underscores <code>(_)</code> or dashes <code>(-)</code> instead. Dashes are preferred for SEO purposes.<br />
+          Avoid <code>s p a c e s</code> in your file name. Use underscores <code>(_)</code> or dashes <code>(-)</code> instead. Dashes are preferred for SEO.<br />
           <span class="sidenote"><code>business_hours.html</code> or <code>business-hours.html</code> instead of <code>business hours.html</code><br />
             (The browser will interpret it as <code>business%20hours.html</code>)</span>
         </li>
@@ -450,7 +450,7 @@
 
     <!-- SLIDE 25: HTML -->
     <article class='slide slide-list'>
-      <h2>Sidenote: HTML Document Types</h2>
+      <h2>HTML Document Types</h2>
       <p>What about the 1st line?</p>
 <pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
       <p>This is a <span class="keyword">Document Type Declaration</span> a.k.a <code>DOCTYPE</code>.  This indicates to the web browser what <strong>version</strong> of HTML the file is written in. This helps the browser render the content correctly based on the rules denoted by the <code>DOCTYPE</code>.</p>
@@ -577,9 +577,9 @@
     <!-- SLIDE 33: HTML -->
     <article class='slide slide-list'>
       <h2>Void (or empty) HTML Tags</h2>
-      <p><span class="keyword">Void tags</span> don't format content -- instead they are used to render or embed objects in our page.</p>
-      <p>These tags <strong>do not</strong> come in pairs like <code>h1</code> or <code>p</code> tags. You only type the tag once.</p>
-      <p>In some versions of HTML <span class="sidenote">(specifically XHTML... remember <code>DOCTYPE</code>?)</span> they "self-close" with a back slash (<code>/</code>) immediately before the left angled bracket (<code>&gt;</code>). The most often used example of this is the <code>&lt;br /&gt;</code> tag used to create a <strong>line break</strong>.</p>
+      <p><span class="keyword">Void tags</span> don't format content -- instead they are used to render or embed objects in our page. These tags <strong>do not</strong> come in pairs like <code>h1</code> or <code>p</code> tags. You only type the tag once.</p>
+      <p>However, In some versions of HTML <span class="sidenote">(specifically XHTML... remember <code>DOCTYPE</code>?)</span> they "self-close" with a back slash (<code>/</code>) immediately before the left angled bracket (<code>&gt;</code>). In HTML5, it is not required to self close.</p>
+      <p>The most often used example of this is the <code>&lt;br /&gt;</code> or <code>&lt;br&gt;</code> tag used to create a <strong>line break</strong>.</p>
 <pre class="prettyprint">&lt;p&gt;This text&lt;br /&gt;goes over&lt;br /&gt;several&lt;br /&gt;lines.&lt;/p&gt;
 </pre>
       <p>This text<br />goes over<br />several<br />lines.</p>
@@ -590,8 +590,8 @@
       <h2>Void (or empty) HTML Tags</h2>
       <div class="cheatsheet">
         <div>
-          <h3>Void tags</h3>
-          (The HTML5 <code>DOCTYPE</code> accepts either syntax)<br />
+          <br />
+          (Remember, XTHML requires void elements to be self closed, HTML5 <code>DOCTYPE</code> accepts either syntax)<br />
           <code>&lt;hr&gt;</code> or <code>&lt;hr /&gt;</code> - horizontal rule<br />
           <code>&lt;br&gt;</code> or <code>&lt;br /&gt;</code> - line break<br />
           <code>&lt;input&gt;</code> or <code>&lt;input /&gt;</code> - text input boxes<br />
@@ -841,7 +841,7 @@
         <li>What <strong>three</strong> HTML tags should every website have?</li>
         <li>What HTML tag do I need to update the browser tab with a descriptive tab name? And where does it go?</li>
       </ol>
-      <p>Here is the start of your top navigation menu.<br /><span class="sidenote"><code>nav</code> is an HTML5 tag that represents a section with navigation links. <!-- (Don't worry, <code>&lt;nav&gt;</code> is nothing too special but we'll use it later in CSS.) --></span></p>
+      <p>Here is the start of your top navigation menu.<br /><span class="sidenote">NOTE: <code>nav</code> is an HTML5 tag that represents a section with navigation links. <!-- (Don't worry, <code>&lt;nav&gt;</code> is nothing too special but we'll use it later in CSS.) --></span></p>
 <pre class="prettyprint">
   &lt;nav&gt;
     Home About Contact
@@ -870,7 +870,7 @@
       </ol>
     </article> 
 
-    <!-- SLIDE: HTML -->
+    <!-- SLIDE 52: HTML -->
     <article class='slide slide-list'>
       <h2>Bonus: Add video to your webpage</h2>
       <p>As time goes on, it has become easier and easier to embed multimedia content into websites.</p>
@@ -880,7 +880,7 @@
       <p>Adding a Google Map is similiar. <a href="assets/google_map_embed.jpg" target="_blank">Click here for instructional screenshot.</a></p>
     </article>
 
-    <!-- SLIDE: HTML -->
+    <!-- SLIDE 53: HTML -->
     <article class='slide slide-list'>
       <h2>HTML reference</h2>
       <ul class="spacey_list">
@@ -892,26 +892,29 @@
     </article>  
 
 
-    <!-- CSS -->
+    <!-- SLIDE 54: CSS -->
     <article class='slide slide-subhead'>
       <h1>CSS basics</h1>
       <p>The presentation layer</p>
       <p><img src="assets/TRIAD-css.gif" width="261" height="241" alt="Presentation Layer" /></p>
     </article>  
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 55: CSS -->
     <article class='slide slide-list'>
-      <h2>Why use CSS?</h2>
+      <h2>What is CSS?</h2>
       <ul>
-        <li>Seperates content (text) from presentation (text colour).</li>
-        <li>The "cascading" part of CSS means that it (should) help avoid redundancy in styling your web documents.</li>
+        <li>CSS = cascading style sheet</li>
+        <li>stylesheet language with its own syntax rules that are different from HTML</li>
+        <li>Separates content (i.e. text) from presentation (i.e. text colour).</li>
+        <li>a style sheet contains a list of rules that <em>cascade</em> and can help to reduce redundancy and save time</li>
       </ul>
+      <p>There are three ways to include (otherwise known as <em>referencing</em>)<br /> CSS in an HTML page: inline, internal and external.</p>
     </article>    
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 56: CSS -->
     <article class='slide slide-list'>
-      <h2>Inline CSS using the <code>style</code> attribute</h2>
-      <p>The <code>style</code> <em><strong>attribute</strong></em> can be added to any visible HTML tag.</p>
+      <h2>Inline CSS</h2>
+      <p>The <code>style</code> <em><strong>attribute</strong></em> can be added to any visible HTML tag. This allows us to add CSS properties directly to the element.  Let's practice using using the <code>background-color</code>, <code>color</code> and <code>font-size</code> <em><strong>property</strong></em>.</p>
 
 <textarea class='coder-editor coder-editor-full'>
 <h1>Welcome!</h1>
@@ -919,26 +922,26 @@
 
 <h1>Social Media</h1>
 <p>Follow me on 
-  <a href="http://twitter.com/@pearlchen" target="_blank">Twitter</a>!
+  <a href="http://twitter.com/christinatruong" target="_blank">Twitter</a>!
 </p>
 </textarea>
-<script type='coder-solution'><h1 style="background-color: black; color: white;">Welcome!</h1>
+<script type='coder-solution'><h1 style="background-color: yellow;">Welcome!</h1>
 <p style="font-size: 18px;">This is my website.</p>
 
-<h1 style="background-color: black; color: white;">Social Media</h1>
+<h1 style="background-color: pink;">Social Media</h1>
 <p style="font-size: 18px;">Follow me on 
-  <a href="http://twitter.com/@pearlchen" target="_blank"
+  <a href="http://twitter.com/christinatruong" target="_blank"
   style="color: red;">Twitter</a>!
 </p>
 </script>
 
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 57: CSS -->
     <article class='slide slide-list'>
-      <h2>Using selectors to apply CSS</h2>
+      <h2>Internal CSS using selectors</h2>
+      <p>Rather than using a style attribute directly in the element, a <code>&lt;style&gt;</code> tag is declared and the CSS declarations go in between these <code>&lt;style&gt;</code> tags.<p>
       <p>Here's the same result but using CSS <span class="keyword">selectors</span>.</p>
-      <p>The <code>&lt;style&gt;</code> tag (placed between the <code>&lt;head&gt;</code> tags) is where CSS commonly goes.</p>
 
 <textarea class='coder-editor coder-editor-full'>
 <h1>Welcome!</h1>
@@ -946,40 +949,59 @@
 
 <h1>Social Media</h1>
 <p>Follow me on 
-  <a href="http://twitter.com/@pearlchen" target="_blank">Twitter</a>!
+  <a href="http://twitter.com/christinatruong" target="_blank">Twitter</a>!
 </p>
 </textarea>
 <script type='coder-solution'>
-<h1>Welcome!</h1>
-<p>This is my website.</p>
-
-<h1>Social Media</h1>
-<p>Follow me on 
-  <a href="http://twitter.com/@pearlchen" target="_blank">Twitter</a>!
-</p>
-
 <style>
   h1 { background-color: black; color: white; }
   p { font-size: 18apx; }
   a { color: red; }
 </style>
-</script>
 
+<h1>Welcome!</h1>
+<p>This is my website.</p>
+
+<h1>Social Media</h1>
+<p>Follow me on 
+  <a href="http://twitter.com/christinatruong" target="_blank">Twitter</a>!
+</p>
+</script>
+    <br />
+    <p>NOTE: Internal CSS should be place between the  <code>&lt;head&gt;</code> tags.</p>
     </article>
 
-    <!-- SLIDE: CSS -->
+
+    <!-- SLIDE 58: CSS -->
+    <article class='slide slide-list'>
+      <h2>Common CSS terms</h2>
+      <p><strong>Selectors</strong>: used to determine which element(s) to apply the styles to. Can target an HTML tag (i.e. <code>&lt;h1&gt;</code> for a heading), class or ID.</p>
+
+      <p><strong>Declaration blocks</strong> consists of a list of declarations (rules to follow) wrapped in curly braces <code>{ }</code>.</p>
+
+      <p>Declarations are written using CSS <code>property: value</code> pairs.</p>
+<pre class="prettyprint">
+selector { property: value; }
+</pre>
+<pre class="prettyprint">
+h1 { color: blue; }
+</pre>
+    </article>
+
+    <!-- SLIDE 59: CSS -->
     <article class='slide slide-list'>
       <h2>CSS selectors and properties</h2>
       <p>Here's a CSS declaration dissected:</p>
       <p class="centered"><img src="assets/css.png" /></p>
       <ul>
-        <li>A <strong>basic</strong> <span class="keyword">selector</span> will match its HTML tag name. In this case, all content that is a <code>&lt;h1&gt;</code> will be applied this style.<br /><span class="sidenote">(We'll get into more complex ones later.)</span></li>
-        <li>A <span class="keyword">property</span> is a special label for some visual aspect of the selector such as color or size. You can see a list of them in this <a href="http://www.cheatography.com/davechild/cheat-sheets/css2/">cheatsheet</a>.</li>
+        <li>A <strong>basic</strong> <span class="keyword">selector</span> will match its HTML tag name. In this case, all content that is in an <code>&lt;h1&gt;</code> will have this style applied to it.<br /><span class="sidenote">(We'll get into more complex ones later.)</span></li>
+        <li>A <span class="keyword">property</span> is a label used to determine the type of style to be applied to 
+the element (like color). You can see a list of them in this <a href="http://www.cheatography.com/davechild/cheat-sheets/css2/">cheatsheet</a>.</li>
         <li>The property <strong>value</strong> is specific to the property type. For example, <code>color</code> properties accept colour values like <code>blue</code> or <code>#FFFF00</code>. <code>font-size</code> properties accept units of measurements like <code>12px</code> (where "px" stands for pixels).</li>
       </ul>
     </article>  
 
- <!-- SLIDE: CSS -->
+ <!-- SLIDE 60: CSS -->
     <article class='slide slide-list'>
       <h2>CSS selectors and properties</h2>
       <p>Here's a CSS declaration dissected:</p>
@@ -990,7 +1012,7 @@
       </ul>
     </article>  
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 61: CSS -->
     <article class='slide slide-list'>
       <h2>Changing the page's background colour</h2>
       <p>View <code><a href="exercises/3_CSS/index.html" target="_blank">exercises/3_CSS/index.html</a></code> in your browser. Notice how we're using a transparent PNG so it's hard to read all the white letters on a white background.</p>
@@ -998,14 +1020,14 @@
 <pre class="prettyprint">body { background-color: gray; }</pre>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 62: CSS -->
     <article class='slide slide-list'>
       <h2>Changing the font colour</h2>
       <p>Now the text is a bit hard to read on the gray background. Because the <code>&lt;body&gt;</code> tag is the highest possible visible HTML tag, the <code>body</code> selector will also allow us to target the font color on the <em>entire</em> page.</p>
 <pre class="prettyprint">body { background-color: gray; <strong>color: white;</strong> }</pre>
     </article>    
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 63: CSS -->
     <article class='slide slide-list'>
       <h2>Changing the font family</h2>
       <p>The web has a number of fonts that are considered "web safe". Some of the most used fonts are:</p>
@@ -1021,7 +1043,7 @@
 h2 { font-family: Courier; }</pre>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 64: CSS -->
     <article class='slide slide-list'>
       <h2>Changing the font family</h2>
       <p>Not all fonts are installed on all computers so it's recommended that you use a list of fonts. If the first font in the list isn't available, it will try to use the next.</p>
@@ -1029,7 +1051,7 @@ h2 { font-family: Courier; }</pre>
       <p class="sidenote">(Notice how the font-family for the headers are still Courier? That's the "cascading" part of Cascading Style Sheets in action. Inline styles take precedence, then innermost tags, then outer tags.)</p>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 65: CSS -->
     <article class='slide slide-list'>
       <h2>Changing the font size</h2>
       <p>Font sizes are typically defined in pixels (px) or "ems" (em).</p>
@@ -1045,7 +1067,7 @@ h2 { font-family: Courier; <strong>font-size: 22px;</strong> }</pre>
 <p class="sidenote">(When you've got more time, read <a href="http://kyleschaeffer.com/best-practices/css-font-size-em-vs-px-vs-pt-vs/" target="_blank">this article</a> for more info on font unit sizes.</p>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 66: CSS -->
     <article class='slide slide-list'>
       <h2>Changing the font weight</h2>
       <p>In its simplest form, there are 2 weights:</p>
@@ -1058,6 +1080,7 @@ h2 { font-family: Courier; <strong>font-size: 22px;</strong> }</pre>
 h2 { font-family: Courier; font-size: 22px; <strong>font-weight: normal;</strong> }</pre>
     </article>
 
+    <!-- SLIDE 67: CSS -->
     <article class='slide slide-list'>
       <h2>Formatting CSS</h2>
       <p>As with HTML, extra whitespace and line breaks add to readability.</p>
@@ -1087,20 +1110,23 @@ h2 { font-family: Courier; font-size: 22px; <strong>font-weight: normal;</strong
 </pre>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 68: CSS -->
     <article class='slide slide-list'>
       <h2>The "Box Model"</h2>
-      <p>Most HTML elements on a webpage look like this to the browser:</p>
+      <p>Most HTML elements on a webpage look like rectangles, or boxes, to the browser:</p>
       <p class="centered"><img src="assets/box-model.gif" width="536" height="289" alt="box model" /></p>
+      <p>The content is the visible text or image. The border is... the border. Padding and margin adds spacing inside and outside, respectively.</p> 
+      <p>Each of these rectangles may have margins, padding and borders, which in turn changes the elements size (width & height).  The way these elements are formulated together is referred to as the box model.</p>
       <p>This is the same but visualized differently:</p>
       <p class="centered"><img src="assets/box-model.png" width="517" height="476" alt="box model" /></p>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 69: CSS -->
     <article class='slide slide-list'>
       <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p>To add a border you need to set 3 properties:<br />
-        <code>border-weight</code>, <code>border-style</code>, and <code>border-color</code>.</p>
+      <p><strong>Step 1: add a border</strong><br />
+        To add a border you need to set 3 properties:<br />
+        <code>border-width</code>, <code>border-style</code>, and <code>border-color</code>.</p>
       <p class="sidenote">You can define them seperately, or using shorthand.</p>
       <p class="sidenote">Note: CSS comments use the format <code>/* comment */</code></p>
 
@@ -1124,6 +1150,8 @@ a {
   border-style: solid;
   border-color: black;
   */
+
+  /* shorthand */
   border: 1px solid black;
 }
 &lt;/style&gt;
@@ -1135,10 +1163,11 @@ a {
 
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 70: CSS -->
     <article class='slide slide-list'>
       <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p>To add padding you set 4 properties:<br />
+      <p><strong>Step 2: add padding</strong><br />
+        To add padding you set 4 properties:<br />
         <code>padding-top</code>, <code>padding-left</code>, <code>padding-bottom</code>, and <code>padding-left</code>.</p>
       <p class="sidenote">You can define them seperately, or using shorthand (in a clockwise direction).</p>
 
@@ -1147,10 +1176,10 @@ a {
 a { 
   border: 1px solid black;
 
-  padding-top: 5px;
+  /*padding-top: 5px;
   padding-right: 30px;
   padding-bottom: 5px;
-  padding-left: 30px; 
+  padding-left: 30px;*/
 }
 &lt;/style&gt;
 
@@ -1167,6 +1196,8 @@ a {
   padding-bottom: 5px;
   padding-left: 30px; 
   */
+
+  /* shorthand */
   padding: 5px 30px 5px 30px;
 }
 &lt;/style&gt;
@@ -1178,10 +1209,11 @@ a {
 
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 71: CSS -->
     <article class='slide slide-list'>
       <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p>Add a background colour and change the font colour.</p>
+      <p><strong>Step 3: Change background & text properties</strong><br />
+      Add a background colour (<code>background-color</code>), and change the font colour, (<code>color</code>).</p>
       <p>To get rid of the underline, use the <code>text-decoration</code> property.</p>
 
 <textarea class='coder-editor'>
@@ -1214,10 +1246,11 @@ a {
 
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 72: CSS -->
     <article class='slide slide-list'>
       <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p>To add margins you set 4 properties:<br />
+      <p><strong>Step 4: add margin</strong><br />
+      To add margins you set 4 properties:<br />
         <code>margin-top</code>, <code>margin-left</code>, <code>margin-bottom</code>, and <code>margin-left</code>.</p>
       <p class="sidenote">You can define them seperately, or using shorthand (in a clockwise direction).</p>
 
@@ -1231,10 +1264,10 @@ a {
   color: white;
   text-decoration: none;
 
-  margin-top: 15px;
+  /*margin-top: 15px;
   margin-right: 10px;
   margin-bottom: 0;
-  margin-left: 0;
+  margin-left: 0;*/
 }
 &lt;/style&gt;
 
@@ -1256,6 +1289,8 @@ a {
   margin-bottom: 0;
   margin-left: 0;
   */
+
+  /* shorthand */
   margin: 15px 10px 0 0;
 }
 &lt;/style&gt;
@@ -1267,7 +1302,7 @@ a {
 
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 73: CSS -->
     <article class='slide slide-list'>
       <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
       <p>Here's the final button code!</p>
@@ -1309,11 +1344,11 @@ a {
 </script>
 
       <br clear="all" />
-      <p class="sidenote"><strong>Advanced topic:</strong> To get it looking even more like a button, use the <code>border-radius</code> property.<br />
+      <p class="sidenote"><strong>Advanced topic:</strong> To get it looking even more like a button, use the <code><a href="https://developer.mozilla.org/en-US/docs/CSS/border-radius" target="_blank">border-radius</a></code> property.<br />
       <span class="sidenote">(We won't get into browser pre-fixes today but do know that newer CSS features require you to re-state the property for each browser vendor.)</span></p>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 74: CSS -->
     <article class='slide slide-list'>
       <h2>CSS interactions &amp; pseudo selectors</h2>
       <p>CSS is also able to handle some basic UI interactions in our sites, such as allowing a mouse over or "hover" state on various elements. This is frequently done with items such as links.</p>
@@ -1369,7 +1404,7 @@ a:hover {
 
     </article>
     
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 75: CSS -->
     <article class='slide slide-list'>
       <h2>CSS classes</h2>
       <p>Wait! What happens when we add another link to the page and it's not part of our navigation?
@@ -1395,7 +1430,7 @@ a:hover {
 &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
 
 &lt;p&gt;Follow me on
-  &lt;a href="http://twitter.com/pearlchen" target="_blank"&gt;Twitter&lt;/a&gt;!
+  &lt;a href="http://twitter.com/christinatruong" target="_blank"&gt;Twitter&lt;/a&gt;!
 &lt;/p&gt;
 </textarea>
 <script type='coder-solution'>&lt;a 
@@ -1424,29 +1459,30 @@ a:hover {
   margin: 15px 10px 0 0;"&gt;Contact&lt;/a&gt;
 
 &lt;p&gt;Follow me on
-  &lt;a href="http://twitter.com/pearlchen" target="_blank"&gt;Twitter&lt;/a&gt;!
+  &lt;a href="http://twitter.com/christinatruong" target="_blank"&gt;Twitter&lt;/a&gt;!
 &lt;/p&gt;
 </script>
       <br clear="all" />
-      <p class="sidenote">Now that's a lot of CSS! What if you change you mind and decide that the background color should be blue now? Plus you can't apply pseudo selectors like <code>:hover</code> inline.</p>
+      <p class="sidenote">Now that's a lot of CSS! What if you change your mind and decide that the background color should be blue now? Plus you can't apply pseudo selectors like <code>:hover</code> inline.</p>
     </article>    
 
-   <!-- SLIDE: CSS -->
+   <!-- SLIDE 76: CSS -->
     <article class='slide slide-list'>
       <h2>CSS classes</h2>
-      <p>If you know that several elements are going to have similiar styles, use CSS classes! Once you define one CSS class, you can apply it over and over again!</p>
+      <p>If you know that several elements are going to have similiar styles, use CSS classes! A class <span class="keyword">attribute</span> can be added to any element and given any value, defined by you. Once you define a CSS class, you can apply it over and over again, to any element.</p>
       <ul>
-        <li>Use a <strong>period</strong> (<code>.</code>) to define CSS selectors that are classes.<br />
-          e.g. <code>.nav_button</code></li>
-        <li>Then apply that class to any element using the <code>class</code> attribute.<br />
-          e.g. <code>class="nav_button"</code></li>
+        <li>Add a class attribute to the HTML element and give it a meaningful class name.
+          e.g. <code>class="nav-button"</code></li>
+        <li>In CSS, a class is defined by a leading <strong>period</strong> (<code>.</code>).  Use the leading period, plus class name to define your CSS selector <br>
+          e.g. <code>.nav-button</code>
+        </li>
       </ul>
 
 <pre class="prettyprint">
-&lt;a <strong>class="nav_button"</strong>&gt;Home&lt;/a&gt;
+&lt;a <strong>class="nav-button"</strong>&gt;Home&lt;/a&gt;
 
 &lt;style&gt;
-<strong>.nav_button</strong> {
+<strong>.nav-button</strong> {
   font-family: Georgia;
 }
 &lt;/style&gt;  
@@ -1454,10 +1490,10 @@ a:hover {
 
     </article>
 
-   <!-- SLIDE: CSS -->
+   <!-- SLIDE 77: CSS -->
     <article class='slide slide-list'>
       <h2>CSS classes</h2>
-      <p>Let's apply a "nav_button" CSS class to our current navigation links:</p>
+      <p>Let's apply a "nav-button" CSS class to our current navigation links:</p>
       <textarea class="coder-editor">
 &lt;style&gt;
 a { 
@@ -1479,11 +1515,11 @@ a:hover {
 &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
 
 &lt;p&gt;Follow me on
-  &lt;a href="http://twitter.com/pearlchen" target="_blank"&gt;Twitter&lt;/a&gt;!
+  &lt;a href="http://twitter.com/christinatruong" target="_blank"&gt;Twitter&lt;/a&gt;!
 &lt;/p&gt;
 </textarea>
 <script type='coder-solution'>&lt;style&gt;
-.nav_button { 
+.nav-button { 
   border: 1px solid black;
   padding: 5px 30px 5px 30px;
   background-color: black;
@@ -1492,22 +1528,22 @@ a:hover {
   margin: 15px 10px 0 0;
 }
 
-.nav_button:hover {
+.nav-button:hover {
   background-color: purple;
 }
 &lt;/style&gt;
 
-&lt;a href="index.html" class="nav_button"&gt;Home&lt;/a&gt;
-&lt;a href="about.html" class="nav_button"&gt;About&lt;/a&gt;
-&lt;a href="contact.html" class="nav_button"&gt;Contact&lt;/a&gt;
+&lt;a href="index.html" class="nav-button"&gt;Home&lt;/a&gt;
+&lt;a href="about.html" class="nav-button"&gt;About&lt;/a&gt;
+&lt;a href="contact.html" class="nav-button"&gt;Contact&lt;/a&gt;
 
 &lt;p&gt;Follow me on
-  &lt;a href="http://twitter.com/pearlchen" target="_blank"&gt;Twitter&lt;/a&gt;!
+  &lt;a href="http://twitter.com/christinatruong" target="_blank"&gt;Twitter&lt;/a&gt;!
 &lt;/p&gt;
 </script>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 78: CSS -->
     <article class='slide slide-list'>
       <h2>External CSS</h2>
       <p>Instead of duplicating your <code>&lt;style&gt;</code> content for every webpage, make one single CSS document ending with a <code>.css</code> extension and link to it in the <code>&lt;head&gt;</code> tag instead of (or in addition to) a <code>&lt;style&gt;</code> tag.</p>
@@ -1536,22 +1572,18 @@ h1 {
 
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 79: CSS -->
     <article class='slide slide-list'>
       <h2>Exercise #4 (20 minutes)</h2>
       <p>Use this time to apply CSS to your 3-page website.</p>
       <ul>
         <li>Update your navigation in <code>index.html</code> to look more button-like.</li>
         <li>Create a single <code>styles.css</code> file and link to this external stylesheet from all 3 webpages using the <code>&lt;link&gt;</code> tag. Consolidate all of your CSS into this external stylesheet.</li>
-        <li>If you've got extra time, try out some new CSS properties from the cheatsheet and other resources listed on the <a href="#slide-94">CSS resources slide</a>.</li>
+        <li>If you've got extra time, try out some new CSS properties from the <a href="#slide-96">cheatsheet</a> and other resources listed on the <a href="#slide-94">bonus CSS resources slides</a>.</li>
       </ul>
-      <h3>Got questions?</h3>
-      <p>
-        Post them to Google Moderator: <a href="http://goo.gl/mod/c4cm" target="_blank" >http://goo.gl/mod/c4cm</a>
-      </p>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 80: CSS -->
     <article class='slide slide-list'>
       <h2>Laying out webpages with CSS</h2>
       <p>Layout is one of the most challenging things to do in CSS because it requires you to think about the whole picture and plan ahead.</p>
@@ -1559,6 +1591,7 @@ h1 {
       <p class="centered"><img src="assets/2-column-webpage.png" width="703" height="411" alt="" /></p>
     </article>
 
+    <!-- SLIDE 81: CSS -->
     <article class='slide slide-list'>
       <h2>Generic Container Tags</h2>
       <p>Sometimes content you might want to group together (and treat differently with CSS) shouldn't be defined as a <code>h1</code> or <code>h2</code> or even a <code>p</code> paragraph. There are two kinds of generic containers available:</p>
@@ -1568,6 +1601,12 @@ h1 {
         <li><code>div</code> - An <span class="keyword">block</span> container.<br />
           Much like a paragraph, it creates a line break above and below to create a box.</li>
       </ul>
+<pre class="prettyprint">&lt;span&gt;I'm a span!&lt;/div&gt;
+&lt;div&gt;I'm another span!&lt;/div&gt;
+</pre>
+      <span>I'm a span!</span>
+      <span>I'm another span!</span>
+      <p></p>
 <pre class="prettyprint">&lt;div&gt;I'm a div!&lt;/div&gt;
 &lt;div&gt;I'm another div!&lt;/div&gt;
 </pre>
@@ -1575,6 +1614,7 @@ h1 {
       <div>I'm another div!</div>
     </article>
 
+    <!-- SLIDE 82: CSS -->
     <article class='slide slide-list'>
       <h2>Semantic HTML Tags</h2>
       <p>Historically, when making non-trivial websites, it required nesting lots of <code>div</code> tags within <code>div</code> tags (within <code>div</code> tags!) like this:</p>
@@ -1599,6 +1639,7 @@ h1 {
 </pre>
     </article>
 
+    <!-- SLIDE 83: CSS -->
     <article class='slide slide-list'>
       <h2>Semantic HTML Tags</h2>
       <p>With HTML5, there are an increasing number of semantic tags that better describe larger blocks of content such as: <code>header</code>, <code>footer</code>, <code>nav</code>, <code>section</code>, <code>article</code>, and <code>aside</code>.</p>
@@ -1623,12 +1664,14 @@ h1 {
 </pre>
     </article>
 
+    <!-- SLIDE 84: CSS -->
     <article class='slide slide-list'>
       <h2>Semantic HTML Tags</h2>
       <p>This helps <span class="keyword">web crawlers</span> from search engines like Google or Bing better understand your content.</p>
       <p>Even better, it helps <strong>you</strong> from missing a closing <code>&lt;/div&gt;</code> tag and makes your HTML easier to read for everyone.</p>
     </article>
 
+    <!-- SLIDE 85: CSS -->
     <article class='slide slide-list'>
       <h2>Preparing for our group exercise</h2>
       <p>Using <code>index.html</code> from the <code>website</code> folder, let's update it with the code below.</p>
@@ -1656,7 +1699,8 @@ h1 {
 </pre>
     </article>
 
-    <!-- SLIDE: CSS -->
+
+    <!-- SLIDE 86: CSS -->
     <article class='slide slide-list'>
       <h2>Assigning widths</h2>
       <p>It is important to know the overall width of your site so you can select column widths for the main <code>&lt;section&gt;</code> and the <code>&lt;aside&gt;</code> sidebar that will make sense.</p>
@@ -1674,7 +1718,7 @@ footer {
 </pre>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 87: CSS -->
     <article class='slide slide-list'>
       <h2>Assigning widths</h2>
       <p>If our site is 960px wide, we need to ensure that our columns don't exceed 960 - <strong>including margins!</strong> (e.g. 640 + 20 + 300 = 960)</p>
@@ -1702,7 +1746,7 @@ aside {
 </pre>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 88: CSS -->
     <article class='slide slide-list'>
       <h2>Getting columns to be side-by-side</h2>
       <p>Block-style HTML containers like <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;aside&gt;</code> automatically start on a new line.</p>
@@ -1724,7 +1768,7 @@ aside {
 </pre>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 89: CSS -->
     <article class='slide slide-list'>
       <h2>Clearing floats</h2>
         <p>You may notice that floats have the ability to affect the rest of the webpage in unexpected ways. It's important to always clear your floats.</p>
@@ -1736,8 +1780,6 @@ footer {
   <strong>clear: both;</strong>
 }
 </pre>
-      <br /><br /><br />
-      <hr />
       <p class="sidenote">If the elements that are floating are enclosed in another container, you can you apply <code>overflow:auto</code> to the parent container:</p>
 <pre class="prettyprint">nav {
   <strong>overflow: auto;</strong>
@@ -1748,21 +1790,21 @@ footer {
     </article>
 
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 90: CSS -->
     <article class='slide slide-list'>
       <h2>CSS id's</h2>
       <p>CSS classes are great when you want to re-apply the same style to multiple HTML elements but sometimes you need to only target an HTML container <strong>once</strong>. This is where an <span class="keyword">ID</span> is useful.</p>
       <ul>
         <li>Use a <strong>hash</strong> (<code>#</code>) to define CSS selectors that are IDs.<br />
-          e.g. <code>#centered_on_page</code></li>
+          e.g. <code>#centered</code></li>
         <li>Use the <code>id</code> attribute to apply the styles to that element.<br />
-          e.g. <code>id="centered_on_page"</code><br />
+          e.g. <code>id="centered"</code><br />
         </li>
       </ul>
       <p class="sidenote"><strong>Important!</strong> You should only have <strong>one</strong> instance of an ID per page. Any more can cause unexpected things to happen with your CSS -- and later, JavaScript.</p>
 <textarea class="coder-editor">
 &lt;style&gt;
-  #centered_on_page {
+  #centered {
     margin: 0 auto 0 auto;
   }
   div {
@@ -1776,7 +1818,7 @@ footer {
 &lt;/div&gt;
 </textarea>
 <script type="coder-solution">&lt;style&gt;
-  #centered_on_page {
+  #centered {
     margin: 0 auto 0 auto;
   }
   div {
@@ -1785,32 +1827,32 @@ footer {
   } 
 &lt;/style&gt;
 
-&lt;div id="centered_on_page"&gt;
+&lt;div id="centered"&gt;
   Cupcake ipsum dolor sit amet halvah muffin apple pie. Pastry sweet jelly soufflé icing cake carrot cake tart chupa chups. Topping cookie bear claw.
 &lt;/div&gt;
 </script>
     </article>
 
-        <!-- SLIDE: CSS -->
+        <!-- SLIDE 91: CSS -->
     <article class='slide slide-list'>
       <h2>CSS id's</h2>
-      <p>Let's add <code>#centered_on_page</code> to <code>styles.css</code> and apply the id to the <code>div</code> container immediately after the opening <code>&lt;body&gt;</code> tag in <code>index.html</code>.</p>
+      <p>Let's add <code>#centered</code> to <code>styles.css</code> and apply the id to the <code>div</code> container immediately after the opening <code>&lt;body&gt;</code> tag in <code>index.html</code>.</p>
 <pre class="prettyprint">
-#centered_on_page {
+#centered {
   margin: 0 auto 0 auto;
   width: 960px;
 }
 </pre>
 <pre class="prettyprint">
 &lt;body&gt;
-  &lt;div id="centered_on_page"&gt;
+  &lt;div id="centered"&gt;
 
   &lt;/div&gt;
 &lt;/body&gt;
 </pre>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 92: CSS -->
     <article class='slide slide-list'>
       <h2>Custom colours</h2>
       <p>Often, the CSS colours "gray", "blue", or "purple" are boring and limiting. You can define your own custom colour using hex colours.</p>
@@ -1819,7 +1861,7 @@ footer {
 }</pre>
       <p class="centered"><img src="assets/lg_hex_codes.png" widht="500" height="283" alt="" /></p>
       <p class="sidenote">Image source: <a href="http://websiteincite.com/create-your-website/hexadecimal-color-codes" target="_blank">http://websiteincite.com/create-your-website/hexadecimal-color-codes</a></p>
-      <p class="sidenote">Chart of many hex colours: <a href="http://www.visibone.com/color/chart_847.gif" target="_blank">http://www.visibone.com/color/chart_847.gif</a></p>
+      <p class="sidenote">Color Inspiration: <a href="http://www.colourlovers.com/" target="_blank">COLOURlovers</a></p>
     </article>    
 
     <!-- SLIDE: CSS -->
@@ -1832,10 +1874,6 @@ footer {
         <li>Apply some custom colours to your text in any of your web pages.</li>
         <li>Research the <code>background-image</code> property and add a background image to webpages.</li>
       </ul>
-      <h3>Got questions?</h3>
-      <p>
-        Post them to Google Moderator: <a href="http://goo.gl/mod/c4cm" target="_blank">http://goo.gl/mod/c4cm</a>
-      </p>
     </article>
 
     <!-- SLIDE: CSS -->
@@ -1881,7 +1919,7 @@ background-size: 13px, 29px, 37px, 53px;
       <ul class="spacey_list">
         <li>Download a <a href="http://www.cheatography.com/davechild/cheat-sheets/css2/" target="_blank">cheatsheet of CSS selectors and properties</a>.</li>
         <li>Try looking up individual selectors and propertie using the CSS section of <a href="https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference" target="_blank">Mozilla's Developer Network</a> for further breakdown.</li>
-        <li>Read articles from <a href="http://www.alistapart.com/" target="_blank">A List Apart</a>.</li>
+        <li>Read articles from <a href="http://www.alistapart.com/" target="_blank">A List Apart</a> and <a href="http://css-tricks.com/">CSS Tricks</a>.</li>
         <li>And don't forget the "inspect element" option!</li>
       </ul>
     </article> 
