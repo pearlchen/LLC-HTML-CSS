@@ -17,8 +17,9 @@
   <link rel="stylesheet" href="src/codemirror/theme/default.css">
 
   <!-- Custom for LLC -->
-  <link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' type='text/css'> -->
   <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
   <style type="text/css"></style>
 
@@ -230,7 +231,7 @@
           <span class="sidenote"><code>about.html</code> instead of <code>About.html</code> or <code>ABOUT.html</code></span>
         </li>
         <li>
-          Avoid <code>s p a c e s</code> in your file name. Use underscores <code>(_)</code> or dashes <code>(-)</code> instead. Dashes are preferred for SEO.<br />
+          Avoid <code>s p a c e s</code> in your file name. Use underscores <code>(_)</code> or dashes <code>(-)</code> instead. Dashes are generally preferred for SEO.<br />
           <span class="sidenote"><code>business_hours.html</code> or <code>business-hours.html</code> instead of <code>business hours.html</code><br />
             (The browser will interpret it as <code>business%20hours.html</code>)</span>
         </li>
@@ -426,7 +427,7 @@
     <!-- SLIDE 22: HTML -->
     <article class='slide slide-list'>
       <h2>HTML in a web browser</h2>
-      <p>If you ever forget the basic tags needed to build a basic webpage, <code>exercises/barebones.html</code> is available to copy and use.</p>
+      <p>If you ever forget the basic tags needed to build a basic webpage, <a href="exercises/barebones.html"><code>exercises/barebones.html</code></a> is available to copy and use.</p>
       <p>Let's open it up in our code editor!</p>
       <div class="reminders"><p>Most computers are set to open <code>.html</code> files in the default web browser so <strong>right-click</strong> (Command+click or 2-finger click on Mac) and select the "<strong>open with...</strong>" option.</p></div>
     </article>
@@ -444,7 +445,7 @@
     <article class='slide slide-list'>
       <h2>HTML in a web browser</h2>
       <p>But I can right-click and select <strong>View Page Source</strong> to see what the HTML is to confirm that it's not a blank file.</p>
-      <p class="sidenote">(I suggest that you do this yourself any time you see something you like so you can reverse-engineer it.)</p>
+      <p class="sidenote">(I suggest that you do this any time you see something you like so you can reverse-engineer it.)</p>
       <p class="centered"><img src="assets/llcodedotcom_viewsource.gif" width="468" height="362" alt="view source" style="margin-right: 30px;" /></p>
     </article>
 
@@ -465,7 +466,7 @@
     <!-- SLIDE 26: HTML -->
     <article class='slide slide-list'>
       <h2>HTML content</h2>
-      <p class="sidenote">(If HTML tags are the beams of a house, you still need to put up walls and put in furniture for it to be liveable.)</p>
+      <p class="sidenote">(If HTML tags are the beams of a house, you still need to put up walls for it to be liveable.)</p>
       <p>The human-viewable content of a HTML tag goes in between the opening and closing tags like this:</p>
       <p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;<span style="color: #333;">Content</span>&lt;/tag&gt;</code></p>
 <pre class="prettyprint">&lt;!DOCTYPE html&gt;
@@ -532,7 +533,7 @@
       <div class="cheatsheet">
         <div>
           <h3>Text Formatting</h3>
-          <code>&lt;hl&gt;</code>, <code>&lt;h2&gt;</code>, ... <code>&lt;h6&gt;</code><br /> 
+          <code>&lt;hl&gt;</code>, <code>&lt;h2&gt;</code>, ... <code>&lt;h6&gt;</code>
           - hierarchical heading levels from 1 to 6 with 1 being the most important<br />
           <code>&lt;p&gt;</code> - paragraph<br />
           <code>&lt;b&gt;</code> or <code>&lt;strong&gt;</code> - bold<br />
@@ -561,11 +562,6 @@
         <li>What are acceptable tags that lend well to being nested and what should never be nested?</li>
         <li>How is whitespace treated? What happens when you use multiple spaces or line breaks?</li> 
       </ul>
-      <h3>Got more questions?</h3>
-      <p>
-        Post them to this Google Moderator: <a href="http://goo.gl/mod/c4cm" target="_blank" >http://goo.gl/mod/c4cm</a><br />
-        <span class="sidenote">(You'll need to be signed into your Gmail or other Google account.)</span>
-      </p>
     </article>
 
    <!-- SLIDE 32 -->
@@ -667,7 +663,7 @@
         <p>Another optional image attribute:</p>
         <ul style="margin-top: -1em;">
           <li><code>alt</code> is <em>alternative text</em> to display to visually impaired web visitors using screen readers. It also shows up when there's a "broken image" due to typos or moved files.<br /> 
-            <span class="sidenote">(Technically, it's required to be "<a href="http://validator.w3.org/"target="_blank">valid</a>" HTML markup which is why you might see <code>alt=""</code> often used.)</span></li>
+            <span class="sidenote">(The img tag will work without the alt attribute but it's required to be "<a href="http://validator.w3.org/"target="_blank">valid</a>" HTML markup,<br /> which is why you might see <code>alt=""</code> often used.)</span></li>
         </ul>
 <textarea class="coder-editor">&lt;img 
   src="http://goo.gl/7eSU5" 
@@ -725,13 +721,13 @@
     <article class='slide slide-list'>
       <h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 2)</span></h2>
       <p>Code along with me:</p>
-      <ol class="spacey_list">
+      <ol>
         <li>Return to our <code>img</code> tag in <code>index.html</code> and let's instead embed <code>llc.gif</code> which we have locally.</li>
       </ol>
       <p class="centered" style="font-size: 2.5em;">This is an example of a <span class="keyword">relative path</span>.</p>
       <p>It's based on using the html file that you're working on as the starting point to find your image source.</p>
       <p>Right now, <code>llc.gif</code> in the <strong>same folder</strong> as <code>index.html</code>.</p>
-      <ol class="spacey_list" start="2">
+      <ol start="2">
         <li>Open the <a href="exercises/2_WORKING_WITH_IMAGES/images/images.html" target="_blank"><code>images.html</code></a> file in the <code>img</code> folder in Sublime Text.</li>
         <li>Click on the above link to also view <code>images.html</code> in Chrome. </li>
         <li>Note that there's already an <code>img</code> tag in <code>images.html</code> trying to embed <code>llc.gif</code>.</li>
@@ -747,9 +743,8 @@
       <ol class="spacey_list">
         <li>Return to our <code>img</code> tag in <code>images.html</code> and add <code>../</code> infront of <code>llc.gif</code>.</li>
       </ol>
-      <br /><br /><br />
       <hr />
-      <p class="sidenote">An aside: <code>../</code> can be used multiple times if you have many nested folders.</p>
+      <p class="sidenote"><strong>Note:</strong> "<code>../</code>" can be used multiple times if you have many nested folders.</p>
       <pre class="prettyprint">&lt;img src="<strong>../../../../</strong>llc.gif" /&gt;</pre>
       <div>How many folders does this relative path go up?</div>
       <div class="show-hint" onclick="javascript:showHint('nested-img-path'); this.style.display = 'none';">click here to show answer...</div>
@@ -760,7 +755,7 @@
     <article class='slide slide-list'>
       <h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 4)</span></h2>
       <p>However, it's best practice to organize your images into its own folder to keep your website's file structure tidy.</p>
-      <p class="sidenote">We tend to also organize JavaScript files into their own "js" folder and CSS files into their own "css" folder.</p>
+      <p class="sidenote">We tend to also organize JavaScript and CSS files into their own "js" or "css" folder.</p>
       <p>So let's <strong>move all of our images into the <code>images</code> folder</strong> of <code>2_WORKING_WITH_IMAGES</code>.</p>
       <p>Uh oh! Now our image will be broken in <code>index.html</code> since the image is no longer in the same folder. Let's fix that...</p>
     </article>
@@ -807,7 +802,7 @@
       <ul>
         <li><code>href</code> is the <em>attribute</em></li>
         <li><code>http://ladieslearningcode.com</code> is the <em>value</em> of that attribute</li>
-        <li>Remember, the clickable text goes <strong>in between</strong> the opening and closing <code>a</code> tags.</li>
+        <li>Remember, the clickable text that the user sees goes <strong>in between</strong> the opening and closing <code>a</code> tags.</li>
       </ul>
     </article>
 
@@ -1620,9 +1615,9 @@ h1 {
       <p>Historically, when making non-trivial websites, it required nesting lots of <code>div</code> tags within <code>div</code> tags (within <code>div</code> tags!) like this:</p>
 <pre class="prettyprint">&lt;div&gt;
   &lt;div&gt;
-    &lt;div&gt;Home&lt;/div&gt;
-    &lt;div&gt;About&lt;/div&gt;
-    &lt;div&gt;Contact&lt;/div&gt;
+    &lt;a&gt;Home&lt;/a&gt;
+    &lt;a&gt;About&lt;/a&gt;
+    &lt;a&gt;Contact&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;  
 &lt;div&gt;
@@ -1645,9 +1640,9 @@ h1 {
       <p>With HTML5, there are an increasing number of semantic tags that better describe larger blocks of content such as: <code>header</code>, <code>footer</code>, <code>nav</code>, <code>section</code>, <code>article</code>, and <code>aside</code>.</p>
 <pre class="prettyprint">&lt;header&gt;
   &lt;nav&gt;
-    &lt;div&gt;Home&lt;/div&gt;
-    &lt;div"&gt;About&lt;/div&gt;
-    &lt;div"&gt;Contact&lt;/div&gt;
+    &lt;a&gt;Home&lt;/a&gt;
+    &lt;a"&gt;About&lt;/a&gt;
+    &lt;a"&gt;Contact&lt;/a&gt;
   &lt;/nav&gt;
 &lt;/header&gt;  
 &lt;section&gt;
@@ -1669,6 +1664,8 @@ h1 {
       <h2>Semantic HTML Tags</h2>
       <p>This helps <span class="keyword">web crawlers</span> from search engines like Google or Bing better understand your content.</p>
       <p>Even better, it helps <strong>you</strong> from missing a closing <code>&lt;/div&gt;</code> tag and makes your HTML easier to read for everyone.</p>
+      <p><strong>Important:</strong> HTML5 is not supported in older browsers such as Internet Explorer 8 and previous versions.<br><br>
+      Further reading: <a href="http://diveintohtml5.info/semantics.html#new-elements">Dive Into HTML5</a></p>
     </article>
 
     <!-- SLIDE 85: CSS -->
@@ -1735,7 +1732,7 @@ aside {
   border: 1px solid gray;
 }
 </pre>
-      <p class="sidenote"><strong>PRO TIP:</strong> Historically, padding wrecked havoc on our math. To avoid headaches, use the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank">box-sizing property</a> for every website you make to make sure your math adds up.</p>
+      <p class="sidenote"><strong>PRO TIP:</strong> Historically, padding wrecked havoc on our math. To avoid headaches, use the<br /> <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank">box-sizing property</a> for every website you make to make sure your math adds up.</p>
 <pre class="prettyprint">
 /* apply a natural box layout model to all elements */
 <strong>* { 
@@ -1864,7 +1861,7 @@ footer {
       <p class="sidenote">Color Inspiration: <a href="http://www.colourlovers.com/" target="_blank">COLOURlovers</a></p>
     </article>    
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 93: CSS -->
     <article class='slide slide-list'>
       <h2>Hands-on time (now until end)</h2>
       <p>Use this time to apply CSS to your 3-page website. Review the afternoon's slides and experiment with some of the properties on the cheatsheet. If you're stuck, here are some suggestions:</p>
@@ -1876,7 +1873,7 @@ footer {
       </ul>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 94: CSS -->
     <article class='slide slide-list'>
       <h2>Bonus: Try out web fonts</h2>
       <p>When you get bored of Arial and Georgia, go to the <a href="http://www.google.com/webfonts/" target="_blank">Google Web Fonts</a> website and find a font that you like.</p>
@@ -1888,7 +1885,7 @@ footer {
       </ol>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 95: CSS -->
     <article class='slide slide-list'>
       <h2>Bonus: CSS patterns for fun</h2>
       <p>CSS is great because it can reduce the number of image files you need to create. You can even create <a href="http://lea.verou.me/css3patterns/#" target="_blank">patterns purely out of CSS</a>!</p>
@@ -1913,7 +1910,7 @@ background-size: 13px, 29px, 37px, 53px;
 </pre>
     </article>
 
-    <!-- SLIDE: CSS -->
+    <!-- SLIDE 96: CSS -->
     <article class='slide slide-list'>
       <h2>CSS reference</h2>
       <ul class="spacey_list">
@@ -1924,13 +1921,13 @@ background-size: 13px, 29px, 37px, 53px;
       </ul>
     </article> 
 
-    <!-- FTP -->
+     <!-- SLIDE 97: FTP -->
     <article class='slide slide-subhead'>
       <h1>Getting your website online</h1>
       <p>Using FTP</p>
     </article>
 
-    <!-- SLIDE: FTP -->
+    <!-- SLIDE 98: FTP -->
     <article class='slide slide-list'>
       <h2>Déjà vu: What is a website?</h2>
       <p>Remember how a website is essentially a folder located on a dedicated computer (a <span class="keyword">server</span>)?</p>
@@ -1940,7 +1937,7 @@ background-size: 13px, 29px, 37px, 53px;
     </article>
 
 
-    <!-- SLIDE: FTP -->
+    <!-- SLIDE 99: FTP -->
     <article class='slide slide-list'>
       <h2>Using FTP to put your site online</h2>
       <div>
@@ -1955,7 +1952,7 @@ background-size: 13px, 29px, 37px, 53px;
       </div>
     </article>
 
-    <!-- SLIDE: FTP -->
+    <!-- SLIDE 100: FTP -->
     <article class='slide slide-list'>
       <h2>Where to get this information</h2>
       <div>
@@ -1970,7 +1967,7 @@ background-size: 13px, 29px, 37px, 53px;
       </div>
     </article>
 
-    <!-- SLIDE: FTP -->
+    <!-- SLIDE 101: FTP -->
     <article class='slide slide-list'>
       <h2>Transferring your files</h2>
       <div>
@@ -1979,27 +1976,26 @@ background-size: 13px, 29px, 37px, 53px;
       </div>
     </article>  
 
-    <!-- FTP -->
+    <!-- SLIDE 102: FTP -->
     <article class='slide slide-subhead'>
       <h1>Additional Resources</h1>
       <p>Some tips and tricks for the future</p>
     </article>
 
+    <!-- SLIDE 103: FTP -->
     <article class='slide slide-list'>
       <h2>Books</h2>
-      <ul><a href="http://htmlandcssbook.com/">HTML and CSS: Design and Build Websites</a> by Jon Duckett</ul>
-    </article>
-
-    <!-- SLIDE: FTP -->
-    <article class='slide slide-list'>
+      <p><a href="http://htmlandcssbook.com/">HTML and CSS: Design and Build Websites</a> by Jon Duckett</p>
+      <br />
       <h2>Validating your HTML</h2>
       <div>
-        <p>One of the best ways to make sure that your HTML is being done correctly is to run it through an HTML validator on occasion.</p>
-        <p>You can find the HTML validator at <a href="http://validator.w3.org/">http://validator.w3.org/</a></p>
+        <p>One of the best ways to make sure that your HTML &amp; CSS is being done correctly is to run it through a validator.</p>
+        <p><a href="http://validator.w3.org/">HTML validator</a><br />
+          <a href="http://jigsaw.w3.org/css-validator/">CSS validator</a></p>
       </div>
-    </article> 
+    </article>
 
-    <!-- SLIDE: TIPS -->
+    <!-- SLIDE 104: TIPS -->
     <article class='slide slide-list'>
       <h2>One last peice of advice:<br />Clear your cache</h2>
       <p>Hitting refresh and still seeing old stuff? The browser cache is the rip-your-hair-out <em>gotcha!</em> of every web developer.</p>
