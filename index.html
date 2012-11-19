@@ -2043,5 +2043,58 @@ background-size: 13px, 29px, 37px, 53px;
     $.deck('.slide');
   });
 </script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-246174-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  function trackQuality(feedback){
+
+    //the higher the value over time,
+    //the more the page should be tweaked since it's not understandable
+    var feedbackValue;
+    switch(feedback) {
+      case 'no':
+        feedbackValue = 2;
+        break;
+      case 'sortof':
+        feedbackValue = 1;
+        break;
+      default:
+        feedbackValue = 0;
+    }
+
+    if (_gaq) {
+      _gaq.push(['_trackEvent', "LLC HTML/CSS (Ottawa)", feedback, returnDocumentName(), feedbackValue, true]);
+      var feedbackDiv = document.getElementById('page_feedback');
+      feedbackDiv.innerHTML = "Thanks!";
+    }else{
+      console.log('_gaq is not defined');
+    }
+  }
+
+  function returnDocumentName() {
+    var fileName = document.location.href;
+    var end = (fileName.indexOf("?") == -1) ? fileName.length : fileName.indexOf("?");
+    return fileName.substring(fileName.lastIndexOf("/")+1, end);
+  }
+
+</script>
+
+<div id="page_feedback">
+  <strong>Help improve the quality of this workshop!</strong>
+  Did this page explain everything well?
+    <a href="#" onClick="trackQuality('yes');return false;" class="button">Yes</a>
+    <a href="#" onClick="trackQuality('sortof');return false;" class="button">Sort of</a>
+    <a href="#" onClick="trackQuality('no');return false;" class="button">No</a>
+</div>
 </body>
 </html>

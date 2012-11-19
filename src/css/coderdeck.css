@@ -390,3 +390,32 @@ pre.prettyprint {
   font-size: 16px !important;
   font-style: italic !important;
 }
+
+/* **** */
+
+#page_feedback {
+  border-top: 1px dashed rgb(223, 223, 223);
+  padding: 10px 0; 
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 60px;
+}
+
+#page_feedback div {
+  position: relative;
+  padding: 3px 10px 3px 0px;
+}
+
+#page_feedback a {
+  margin-left: 5px;
+  border: 1px solid #ccc;
+  color: #666;
+  padding: 0 10px;
+  text-decoration: none;
+}
+#page_feedback a:hover {
+  color: #B1009A;
+}
+
+/* **** */
