@@ -140,26 +140,17 @@
       <br clear="all" />
     </article>
 
-    <!-- SLIDE 5: Hackasaurus -->
+    <!-- SLIDE 5: Chrome Dev Tools -->
     <article class='slide slide-list'>
-      <h2>3. Hackasaurus X-Ray Goggles</h2>
-      <p>
-        Use this bookmarklet to "inspect" any webpage and see how it's built. Click and <strong><em>drag</em></strong> the orange box into your bookmarks bar to install.
-      </p>
-      <p class="sidenote centered">
-        (If you can't see your bookmarks bar, use Ctrl/Cmd+Shift+B in Chrome to toggle visibility.)
-      </p>
-      <br /><br /><br />
-      <div class="centered contains_sidebyside_icons">
-        <a id="hackasaurus" href="javascript:(function(){var script=document.createElement('script');script.src='http://webxray.hackasaurus.org/webxray.js';script.className='webxray';document.head.appendChild(script);})();">X-Ray Goggles</a>
-        <br /><br />
-        (from <a href="http://hackasaurus.org/en-US/goggles/install/" target="_blank">Hackasaurus</a> by Mozilla)
-      </div>
-      <br clear="all" />
-      <br />
-      <br />
-      <br />
-
+      <h2>3. Chrome Developer Tools</h2>
+      <p>These developer tools allow us to <em>inspect</em> any webpage and see how it's built and is used to easily test and debug code.</p>
+      <p>The dev tools can be accessed in three ways:</p>
+      <ul>
+        <li>right-click on a web page and select “Inspect Element”</li>
+        <li>select the wrench in the top right hand corner of Chrome and select “Tools > Developer Tools”</li>
+        <li>keyboard shortcuts: Control – Shift – I (Windows), Command – Option – I (Mac)</li>
+      </ul>
+      <p>Go <a href="http://webdesign.tutsplus.com/tutorials/workflow-tutorials/faster-htmlcss-workflow-with-chrome-developer-tools/" target="_blank">here</a> for further exploration.</p>
     </article>
 
     <!-- SLIDE 6: FTP -->
@@ -216,7 +207,7 @@
     <!-- SLIDE 10: What is a website? -->
     <article class='slide slide-list'>
       <h2>What is a website?</h2>
-      <p>Essentially this folder is located on a dedicated computer (also known as a <span class="keyword">server</span>) that <span class="keyword">hosts</span> websites.</p>
+      <p>This folder containing the web pages and related files are located on a dedicated computer (also known as a <span class="keyword">server</span>) that <span class="keyword">hosts</span> websites.</p>
       <div class="centered">
         <img src="assets/webserver_download.png" width="738" height="531" alt="web request process" />
       </div>
@@ -286,12 +277,14 @@
       <p>HTML was created for <span class="keyword">web browsers</span> to easily read (not humans).</p>
       <p>So this makes perfect sense to a web browser:</p>
 <pre class="prettyprint">&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+      <p>Just like the different languages that we speak and write, HTML has to follow proper "grammar" rules as well to make sense.</p>
+      <p>This is known as <em>syntax</em>.</p>
     </article>
 
     <!-- SLIDE 15: HTML -->
     <article class='slide slide-list'>
       <h2>What is HTML?</h2>
-      <p>Whitespace through indentation (tabs) make your more HTML human-readable.</p>
+      <p>Whitespace through indentation (tabs) make your HTML more human-readable.</p>
 <pre class='prettyprint'>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -349,7 +342,7 @@
 
     <!-- SLIDE 19: HTML -->
     <article class='slide slide-list'>
-      <h2>HTML tags</h2>
+      <h2>HTML tags: nesting</h2>
       <p>Tags can be "nested" within other tags, like this:</p>
       <p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
       <p class="centered sidenote">(This relationship is often referred to using the terms "parent" node and "child" nodes.)</p>
@@ -384,8 +377,7 @@
 
     <!-- SLIDE 20: HTML -->
     <article class='slide slide-list'>
-      <h2>HTML tags</h2>
-      <p>Tags can be "nested" within other tags, like this:</p>
+      <h2>HTML tags: nesting</h2>
       <p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
       <p>Let's practice writing an <code>html</code> tag with a <code>head</code> and <code>body</code> tag nested inside:</p>
 <textarea class="coder-editor coder-editor-full"></textarea>
@@ -402,8 +394,7 @@
 
     <!-- SLIDE 21: HTML -->
     <article class='slide slide-list'>
-      <h2>HTML tags</h2>
-      <p>Tags can be "nested" within other tags, like this:</p>
+      <h2>HTML tags: nesting</h2>
       <p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
       <p>Now where does the <code>title</code> tag get nested? Practice here:</p>
 <textarea class="coder-editor coder-editor-full">&lt;html&gt;
@@ -455,7 +446,7 @@
       <p>What about the 1st line?</p>
 <pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
       <p>This is a <span class="keyword">Document Type Declaration</span> a.k.a <code>DOCTYPE</code>.  This indicates to the web browser what <strong>version</strong> of HTML the file is written in. This helps the browser render the content correctly based on the rules denoted by the <code>DOCTYPE</code>.</p>
-      <p class="sidenote">Consider how old versions of Microsoft Office or Photoshop have problems opening files that were created in later versions of the software.  For example, it could be an <a href="http://www.alistapart.com/articles/doctype/">older document type</a> like the ones below, or the newer "HTML5" one that we're using above.</p>
+      <p class="sidenote">Consider how old versions of Microsoft Office or Photoshop have problems opening files that were created in later versions of the software.  For example, it could be an <a href="http://www.alistapart.com/articles/doctype/">older document type</a> like the ones below, or the newer <em>HTML5</em> <code>DOCTYPE</code> one that we're using above.</p>
 <pre class="prettyprint">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 "http://www.w3.org/TR/html4/strict.dtd"&gt;</pre>
 <pre class="prettyprint">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
@@ -541,12 +532,13 @@
         </div>
         <div>
           <h3>Section Formatting</h3>
-          <code>&lt;blockquote&gt;</code> - indented block of code<br />
+          <code>&lt;blockquote&gt;</code> - indented block of code usually reserved for quotes.<br />
         </div>
         <div>
           <h3>Input &amp; Forms</h3>
           <code>&lt;button&gt;</code> - clickable button<br />
           <code>&lt;textarea&gt;</code> - multiline text area for user input<br />
+          (Note: these tags are usually used inside of an HTML form element. More info <a href="http://learn.shayhowe.com/html-css/building-forms" target="_blank">here</a>)
         </div>
       </div>
       <br clear="all" />
@@ -559,7 +551,7 @@
     <article class='slide slide-list'>
       <h2>Exercise #1 - Exploration Questions</h2>
       <ul class="spacey">
-        <li>What are acceptable tags that lend well to being nested and what should never be nested?</li>
+        <li>How does the content/text look when you use different HTML tags? Why do you think the browser, by default adds those styles?</li>
         <li>How is whitespace treated? What happens when you use multiple spaces or line breaks?</li> 
       </ul>
     </article>
@@ -607,7 +599,7 @@
       <ul>
         <li><strong>HTML tags</strong> define <em>structure</em>.</li>
         <li><strong>Text between opening &amp; closing tags</strong> define <em>content</em>.</li>
-        <li><strong>Void HTML tags</strong> render special objects that are sometimes <em>sort of like content</em> or <em>seem structural</em> depending on the void tag.</li>
+        <li><strong>Void HTML tags</strong> render special objects that may sometimes <em>look like content</em> or <em>seem structural</em> depending on the void tag.</li>
       </ul>
       <p>Consider the <code>img</code> tag. Not very exciting right?</p>
 <textarea class="coder-editor">&lt;p&gt;Kicking up HTML a notch.&lt;/p&gt;
@@ -625,7 +617,7 @@
 &lt;img src="http://goo.gl/7eSU5" /&gt;
 &lt;p&gt;Do you agree?&lt;/p&gt;</textarea>
       <br clear="all" />
-      <div class="reminders single-line"><p>Remember, <code>img</code> is a void HTML tag so it's <strong>not</strong> <code>&lt;img&gt;http://goo.gl/7eSU5&lt;/img&gt;</code></p></div>
+      <div class="reminders single-line"><p>Remember, <code>img</code> is a void HTML tag so it does <strong>not</strong> need a closing tag. This is wrong: <code>&lt;img&gt;http://goo.gl/7eSU5&lt;/img&gt;</code></p></div>
     </article>
 
     <!-- SLIDE 37: HTML -->
@@ -728,7 +720,7 @@
       <p>It's based on using the html file that you're working on as the starting point to find your image source.</p>
       <p>Right now, <code>llc.gif</code> in the <strong>same folder</strong> as <code>index.html</code>.</p>
       <ol start="2">
-        <li>Open the <a href="exercises/2_WORKING_WITH_IMAGES/images/images.html" target="_blank"><code>images.html</code></a> file in the <code>img</code> folder in Sublime Text.</li>
+        <li>Open the <a href="exercises/2_WORKING_WITH_IMAGES/secondary/images.html" target="_blank"><code>images.html</code></a> file in the <em>secondary</em> folder in Sublime Text.</li>
         <li>Click on the above link to also view <code>images.html</code> in Chrome. </li>
         <li>Note that there's already an <code>img</code> tag in <code>images.html</code> trying to embed <code>llc.gif</code>.</li>
       </ol>
@@ -835,16 +827,15 @@
         <li>What's the <strong>very first line</strong> we need to type?</li>
         <li>What <strong>three</strong> HTML tags should every website have?</li>
         <li>What HTML tag do I need to update the browser tab with a descriptive tab name? And where does it go?</li>
+        <li>In between which tag do I write code for content that should be <strong>visible to the user</strong>?</li>
       </ol>
-      <p>Here is the start of your top navigation menu.<br /><span class="sidenote">NOTE: <code>nav</code> is an HTML5 tag that represents a section with navigation links. <!-- (Don't worry, <code>&lt;nav&gt;</code> is nothing too special but we'll use it later in CSS.) --></span></p>
+      <p>Here is the start of your top navigation menu.</p>
 <pre class="prettyprint">
   &lt;nav&gt;
     Home About Contact
   &lt;/nav&gt;
 </pre>
-      <ol start="4">
-        <li>In between which tag do I paste this code since it's content that should be <strong>visible to the user</strong>?</li>
-      </ol>
+      <p class="sidenote">NOTE: <code>nav</code> is an HTML5 tag that represents a section with navigation links. Navigations are also generally used with an HTML list but to keep it straightforward for today, we will leave it out.</p>
     </article>
 
     <!-- SLIDE 51 -->
@@ -881,7 +872,7 @@
       <ul class="spacey_list">
         <li>Download a <a href="http://woorkup.com/2009/12/16/html5-visual-cheat-sheet-reloaded/" target="_blank">cheatsheet of HTML tags</a>. (Copy in the <code>cheatsheets</code> folder.)</li>
         <li>Try looking up individual tags using the HTML sections of <a href="https://developer.mozilla.org/en-US/docs/HTML/Element" target="_blank">Mozilla's Developer Network</a> or the <a href="http://www.w3.org/community/webed/wiki/HTML/Elements" target="_blank">W3C</a> for further breakdown.</li>
-        <li>For further exploration, use the <a href="http://hackasaurus.org/en-US/goggles/install/" target="_blank">Hackasaurus X-Ray Goggles</a> to look at any webpage.</li>
+        <li>For further exploration, review the <a href="http://webdesign.tutsplus.com/tutorials/workflow-tutorials/faster-htmlcss-workflow-with-chrome-developer-tools/" target="_blank">tutorial</a> for using Chrome's dev tools.</li>
         <li>And don't forget the "view source" option of your web browser!</li>
       </ul>
     </article>  
@@ -909,13 +900,11 @@
     <!-- SLIDE 56: CSS -->
     <article class='slide slide-list'>
       <h2>Inline CSS</h2>
-      <p>The <code>style</code> <em><strong>attribute</strong></em> can be added to any visible HTML tag. This allows us to add CSS properties directly to the element.  Let's practice using using the <code>background-color</code>, <code>color</code> and <code>font-size</code> <em><strong>property</strong></em>.</p>
+      <p>The <code>style</code> <em><strong>attribute</strong></em> can be added to any visible HTML tag. This allows us to add CSS properties directly to the element.</p> <p>Let's practice using using the <code>background-color</code>, <code>color</code> and<br> <code>font-size</code> <em><strong>property</strong></em>.</p>
 
 <textarea class='coder-editor coder-editor-full'>
 <h1>Welcome!</h1>
 <p>This is my website.</p>
-
-<h1>Social Media</h1>
 <p>Follow me on 
   <a href="http://twitter.com/christinatruong" target="_blank">Twitter</a>!
 </p>
@@ -923,7 +912,6 @@
 <script type='coder-solution'><h1 style="background-color: yellow;">Welcome!</h1>
 <p style="font-size: 18px;">This is my website.</p>
 
-<h1 style="background-color: pink;">Social Media</h1>
 <p style="font-size: 18px;">Follow me on 
   <a href="http://twitter.com/christinatruong" target="_blank"
   style="color: red;">Twitter</a>!
@@ -1002,23 +990,25 @@ the element (like color). You can see a list of them in this <a href="http://www
       <p>Here's a CSS declaration dissected:</p>
       <p class="centered"><img src="assets/css.png" /></p>
       <ul>
-        <li>Use <strong>curly braces</strong> (<code>{}</code>) to hold a list of the property:value sets.</li> 
-        <li>You can define multiple property:value sets but you must end each one with a <strong>semi-colon</strong> (<code>;</code>).</li>
+        <li>Use <strong>curly braces</strong> (<code>{}</code>) to hold a list of the <em>property:value</em> sets.</li> 
+        <li>You can define multiple <em>property:value</em> sets but you must end each one with a <strong>semi-colon</strong> (<code>;</code>).</li>
       </ul>
     </article>  
 
     <!-- SLIDE 61: CSS -->
     <article class='slide slide-list'>
-      <h2>Changing the page's background colour</h2>
+      <h2>Changing the background colour of a page</h2>
       <p>View <code><a href="exercises/3_CSS/index.html" target="_blank">exercises/3_CSS/index.html</a></code> in your browser. Notice how we're using a transparent PNG so it's hard to read all the white letters on a white background.</p>
       <p>Let's add a <code>&lt;style&gt;</code> tag between the <code>&lt;head&gt;</code>. Then add this:</p>
 <pre class="prettyprint">body { background-color: gray; }</pre>
+      <p>Hello Canadians, note the spelling of "color"!</p>
     </article>
 
     <!-- SLIDE 62: CSS -->
     <article class='slide slide-list'>
       <h2>Changing the font colour</h2>
-      <p>Now the text is a bit hard to read on the gray background. Because the <code>&lt;body&gt;</code> tag is the highest possible visible HTML tag, the <code>body</code> selector will also allow us to target the font color on the <em>entire</em> page.</p>
+      <p>Now the text is a bit hard to read on the gray background.</p>
+      <p>The <code>&lt;body&gt;</code> tag is the highest possible visible HTML tag, so the <code>body</code> selector will also allow us to target the font color on the <em>entire</em> page.</p>
 <pre class="prettyprint">body { background-color: gray; <strong>color: white;</strong> }</pre>
     </article>    
 
@@ -1033,9 +1023,9 @@ the element (like color). You can see a list of them in this <a href="http://www
         <li style="font-family: Georgia;">Georgia</li>
         <li style="font-family: Courier;">Courier</li>
       </ul>
-      <p>Let's add a bit of contrast to our headers by using the Courier font on them.</p>
+      <p>Let's add a bit of contrast to our headers by using the Courier font.</p>
 <pre class="prettyprint">h1 { font-family: Courier; }
-h2 { font-family: Courier; }</pre>
+h2 { font-family: Courier; }</pre> 
     </article>
 
     <!-- SLIDE 64: CSS -->
@@ -1044,6 +1034,7 @@ h2 { font-family: Courier; }</pre>
       <p>Not all fonts are installed on all computers so it's recommended that you use a list of fonts. If the first font in the list isn't available, it will try to use the next.</p>
 <pre class="prettyprint">body { background-color: gray; color: white; <strong>font-family: Helvetica, Verdana, Arial, sans-serif;</strong> }</pre>
       <p class="sidenote">(Notice how the font-family for the headers are still Courier? That's the "cascading" part of Cascading Style Sheets in action. Inline styles take precedence, then innermost tags, then outer tags.)</p>
+      <p>Here's a handy resource, <a href="http://cssfontstack.com/">CSS Font Stack</a>.</p>
     </article>
 
     <!-- SLIDE 65: CSS -->
@@ -1328,7 +1319,6 @@ a {
   margin: 15px 10px 0 0;
 
   border-radius: 6px;
-  -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
 }
 &lt;/style&gt;
@@ -1612,14 +1602,12 @@ h1 {
     <!-- SLIDE 82: CSS -->
     <article class='slide slide-list'>
       <h2>Semantic HTML Tags</h2>
-      <p>Historically, when making non-trivial websites, it required nesting lots of <code>div</code> tags within <code>div</code> tags (within <code>div</code> tags!) like this:</p>
+      <p>When making websites, it requires nesting <code>div</code> tags, sometimes within other<code>div</code> tags like this:</p>
 <pre class="prettyprint">&lt;div&gt;
-  &lt;div&gt;
-    &lt;a&gt;Home&lt;/a&gt;
-    &lt;a&gt;About&lt;/a&gt;
-    &lt;a&gt;Contact&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;  
+  &lt;a&gt;Home&lt;/a&gt;
+  &lt;a&gt;About&lt;/a&gt;
+  &lt;a&gt;Contact&lt;/a&gt;
+&lt;/div&gt;
 &lt;div&gt;
   Welcome to my blog!
   &lt;div&gt;[...Blog Post...]&lt;/div&gt;
@@ -1701,16 +1689,16 @@ h1 {
     <article class='slide slide-list'>
       <h2>Assigning widths</h2>
       <p>It is important to know the overall width of your site so you can select column widths for the main <code>&lt;section&gt;</code> and the <code>&lt;aside&gt;</code> sidebar that will make sense.</p>
-      <p>Let's go ahead and set the <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> to be 960 pixels wide. We'll add a gray border too, so we can see what's going on.</p>
+      <p>Let's go ahead and set the <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> to be 960 pixels wide. We'll add a light gray background colour too, to make it easier to see the size of the elements.</p>
 <pre class="prettyprint">
 header {
   <strong>width: 960px;</strong>
-  border: 1px solid gray;
+  background-color: #eee;
 }
 
 footer {
   <strong>width: 960px;</strong>
-  border: 1px solid gray;
+  background-color: #eee;
 }
 </pre>
     </article>
@@ -1723,16 +1711,17 @@ footer {
 section {
   <strong>width: 640px;</strong>
   padding: 30px;
-  border: 1px solid gray;
+  background-color: pink;
 }
 
 aside {
   <strong>margin-left: 20px;</strong>
   <strong>width: 300px;</strong>
-  border: 1px solid gray;
+  background-color: red;
 }
 </pre>
-      <p class="sidenote"><strong>PRO TIP:</strong> Historically, padding wrecked havoc on our math. To avoid headaches, use the<br /> <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank">box-sizing property</a> for every website you make to make sure your math adds up.</p>
+      <p>What about the padding?</p>
+      <p class="sidenote"><strong>PRO TIP:</strong> For many, padding has wrecked havoc on our math, since it increases the width of the element. To avoid headaches, use the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank">box-sizing property</a> to make sure your math adds up.</p>
 <pre class="prettyprint">
 /* apply a natural box layout model to all elements */
 <strong>* { 
@@ -1752,14 +1741,14 @@ aside {
 section {
   width: 640px;
   padding: 30px;
-  border: 1px solid gray;
+  background-color: pink;
   <strong>float: left;</strong>
 }
 
 aside {
   margin-left: 20px;
   width: 300px;
-  border: 1px solid gray;
+  background-color: red;
   <strong>float: left;</strong>
 }
 </pre>
@@ -1773,17 +1762,14 @@ aside {
 <pre class="prettyprint">
 footer {
   width: 960px;
-  border: 1px solid gray;
+  background-color: #eee;
   <strong>clear: both;</strong>
 }
 </pre>
-      <p class="sidenote">If the elements that are floating are enclosed in another container, you can you apply <code>overflow:auto</code> to the parent container:</p>
+      <p class="sidenote">If the elements that are floating are enclosed in another container, you can you apply <code>overflow:auto</code> or <code>overflow:hidden;</code> to the parent container:</p>
 <pre class="prettyprint">nav {
   <strong>overflow: auto;</strong>
 }</pre>
-
-      <p class="sidenote">Another way (when all else fails) is via a line break tag with a clear attribute:  <code>&lt;br clear="all" /&gt;</code></p>
-     
     </article>
 
 
@@ -1802,7 +1788,7 @@ footer {
 <textarea class="coder-editor">
 &lt;style&gt;
   #centered {
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
   }
   div {
     width: 200px;
@@ -1816,7 +1802,7 @@ footer {
 </textarea>
 <script type="coder-solution">&lt;style&gt;
   #centered {
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
   }
   div {
     width: 200px;
@@ -1836,7 +1822,7 @@ footer {
       <p>Let's add <code>#centered</code> to <code>styles.css</code> and apply the id to the <code>div</code> container immediately after the opening <code>&lt;body&gt;</code> tag in <code>index.html</code>.</p>
 <pre class="prettyprint">
 #centered {
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   width: 960px;
 }
 </pre>
@@ -1869,7 +1855,7 @@ footer {
         <li>Apply <code>width</code>s and <code>float</code>s to <code>&lt;section&gt;</code> and <code>&lt;aside&gt;</code> to make a standard 2-column layout.</li>
         <li>Update your <code>about.html</code> and <code>contact.html</code> with some of your own CSS.</li>
         <li>Apply some custom colours to your text in any of your web pages.</li>
-        <li>Research the <code>background-image</code> property and add a background image to webpages.</li>
+        <li>Read about the <code><a href="http://coding.smashingmagazine.com/2009/09/02/backgrounds-in-css-everything-you-need-to-know/" target="_blank">background-image</a></code> property and add a background image to webpages.</li>
       </ul>
     </article>
 
@@ -2000,7 +1986,7 @@ background-size: 13px, 29px, 37px, 53px;
 
     <!-- SLIDE 104: TIPS -->
     <article class='slide slide-list'>
-      <h2>One last peice of advice:<br />Clear your cache</h2>
+      <h2>One last piece of advice:<br />Clear your cache</h2>
       <p>Hitting refresh and still seeing old stuff? The browser cache is the rip-your-hair-out <em>gotcha!</em> of every web developer.</p>
       <p>Instructions for every browser (including the archaic one your client is running): <a href="http://www.wikihow.com/Clear-Your-Browser's-Cache" target="_blank">http://www.wikihow.com/Clear-Your-Browser's-Cache</a></p>
       <p>Also try out "Incognito Mode" in Chrome: Ctrl/Cmd+Shift+N</p>
