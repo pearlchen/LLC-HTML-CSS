@@ -3,7 +3,7 @@
 
 A full-day introductory workshop to HTML and CSS.
 
-Currently refreshing content and other changes so things will be broken for a couple weeks.  
+Currently refreshing content and other changes so things will be updated in a couple weeks.  
 
 The pre-refresh zip file can be downloaded here: http://db.tt/4AInBRmn 
 
