@@ -1,0 +1,124 @@
+//Fonts
+//font-family: 'Lato', sans-serif;
+//font-family: 'Source Sans Pro', sans-serif;
+//font-family: 'Noto Sans', sans-serif;
+//font-family: 'Gentium Basic', serif;
+//font-family: 'Volkhov', serif;
+//font-family: 'Poly', serif;
+
+//mixins
+.list-reset {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style-type: none;
+	}
+}
+
+.border-radius(@size) {
+	-webkit-border-radius: 12px;          
+	border-radius: 12px;
+
+	/* useful if you don't want a bg color from leaking outside the border: */
+	background-clip: padding-box;
+}
+
+
+
+/* LLC CUSTOM CHANGES AND CODERDECK OVERRIDES 
+---------------------------------------------------------*/
+/* apply a natural box layout model to all elements */
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+body {
+	//-webkit-font-smoothing: antialiased;
+	color: #222;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.deck-container {
+	//font-family: 'Open Sans', Arial, sans-serif;
+	//font-family: 'Lato', sans-serif;
+	//font-family: 'Source Sans Pro', sans-serif;
+	//font-family: 'Noto Sans', sans-serif;
+	//font-family: 'Gentium Basic', serif;
+	//font-family: 'Volkhov', serif;
+	//font-family: 'Poly', serif;
+	//font-weight: 400;
+	font-size: 1em;
+	padding: 0; /* overriding deck.coder.css */
+	font-family: 'Source Sans Pro', sans-serif;
+
+	h1, h2, h3 {
+		color: #B1009A;
+		padding-top: 0;
+		font-weight: normal;
+		font-family: 'Volkhov', serif;
+	}
+	h2 {
+		font-size: 40px;
+	}
+	strong {
+		color: #2E2E2E;
+	}
+
+	#presentation {
+		margin-top: 10px;
+	}
+	.icon {
+		height: 40px;
+		display: block;
+		padding-left: 45px;
+	}
+	.tip {
+		background: url(../../assets/icon-lightbulb.png) no-repeat;
+	}
+	.note {
+		background: url(../../assets/icon-notebook.png) no-repeat;
+	}
+	.warning {
+		background: url(../../assets/icon-flash.png) no-repeat;
+	}
+
+	.slide {
+		.border-radius(5px);
+		width: 960px;
+		min-height: 525px;
+		border: 3px solid #b1009a;
+		margin: 0 auto;
+		padding: 30px;
+	}
+
+	h2 {
+		border: none;
+	}
+
+	.intro {
+		text-align: center;
+
+		h1 {
+			position: static;
+		}
+		img {
+			border-radius: 50%;
+		}
+		ul {
+			.list-reset;
+		}
+	}
+
+	.instructions {
+		text-align: center;
+		margin: 10px 0;
+	}
+}
+
+

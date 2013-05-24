@@ -22,8 +22,9 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 
 	<!-- Custom for LLC -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
-	<link rel="stylesheet" id='style-theme-link' href="src/css/custom.css" type="text/css" >
+	<link href='http://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro|Gentium+Basic|Noto+Sans|Volkhov|Poly' rel='stylesheet' type='text/css'>
+	<!-- <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" > -->
+	<link rel="stylesheet" href="src/css/custom.css" type="text/css" >
 	<style type="text/css"></style>
 
 	<script type="text/javascript">
@@ -61,6 +62,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 
 		<!-- SLIDE 0: Workshop intro -->
 		<article class='slide slide-title intro'>
+			<img src="assets/ladieslearningcode-125x125.gif">
 			<h1>Introduction to HTML &amp; CSS</h1>
 			<h2>Your instructor today</h2>
 			<img src="assets/christina_avatar.jpg" width="72" height="72" alt="christina truong" />
@@ -75,18 +77,26 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 
 		<!-- SLIDE 1: Course Outline -->
 		<article class='slide slide-list'>
-			<h1>Course Outline</h1>
-			<h3>Morning</h3>
-			<ul>
-				<li>Make sure your computer is setup</li>
-				<li>Web development breakdown</li>
-				<li>Dive into HTML</li>
-			</ul>
-			<h3>Afternoon</h3>
-			<ul>
-				<li>CSS basics</li>
-				<li>Create your own website</li>
-			</ul>
+			<h2>Course Outline and Conventions</h2>
+			<div class="column">
+				<h3>Morning</h3>
+				<ul>
+					<li>Make sure your computer is setup</li>
+					<li>Web development breakdown</li>
+					<li>Dive into HTML</li>
+				</ul>
+				<h3>Afternoon</h3>
+				<ul>
+					<li>CSS basics</li>
+					<li>Create and build your website</li>
+				</ul>
+			</div>
+			<div class="column">
+				<h3>Notes and tips along the way</h3>
+				<span class="icon tip">Tips and helpful hints</span>
+				<span class="icon note">Extra resources, additional information</span>
+				<span class="icon warning">Gotchas and warnings</span>
+			</div>
 		</article>
 
 		<!-- SLIDE 2: Development Environment -->
@@ -97,8 +107,8 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 
 		<!-- SLIDE 3: Web Browser -->
 		<article class='slide slide-list'>
-			<h2>1. Web Browser</h2>
-			<p>Choose a modern web browser that supports current web standards and has good development tools. I personally use Google Chromes as my default browser.</p>
+			<h2>Web Browser</h2>
+			<p>Choose a modern web browser that supports current web standards and has good development tools. I personally use Google Chrome as my default browser.</p>
 			<div class="centered">
 				<a href="https://www.google.com/chrome" target="_blank"><img src="assets/ChromeIcon.png" width="125" height="125" alt="Chrome" /></a>
 				<a href="https://www.google.com/chrome" target="_blank">Google Chrome</a>
@@ -108,7 +118,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 
 		<!-- SLIDE 4: Code Editor -->
 		<article class='slide slide-list'>
-			<h2>2. Code Editor</h2>
+			<h2>Code Editor</h2>
 			<p>Although you can write code using your computer's default text editor, Notepad(Windows) or TextEdit(Apple), choosing a text editor with colour highlighting and other helpful features will improve your work flow.</p>
 			<p>There are <a href="http://en.wikipedia.org/wiki/List_of_HTML_editors" target="_blank">many</a>, <a href="http://line25.com/articles/top-html-css-editing-apps-for-mac-designers" target="_blank">many</a> free and paid options. I recommend this one that's free to evaluate:</p>
 			<div>
@@ -122,7 +132,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 
 		<!-- SLIDE 5: Chrome Dev Tools -->
 		<article class='slide slide-list'>
-			<h2>3. Chrome Developer Tools</h2>
+			<h2>Chrome Developer Tools</h2>
 			<p>These developer tools allow us to <em>inspect</em> any web page and see how it's built. These tools make it easier to test and debug code.</p>
 			<p>The dev tools can be accessed in three ways:</p>
 			<ul>
@@ -136,7 +146,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 
 		<!-- SLIDE 6: FTP -->
 		<article class='slide slide-list'>
-			<h2>4. File Transfer Program (FTP)</h2>
+			<h2>File Transfer Program (FTP)</h2>
 			<p>FTP software will let you copy your files to a <em>server</em> so the rest of the world can see them! Again, there are many free and paid options. I recommend: </p>
 			<div>
 				<a href="http://cyberduck.ch/" target="_blank"><img src="assets/CyberduckIcon.png" width="125" height="125" alt="CyberDuck" /></a>
@@ -172,19 +182,19 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			</div>
 		</article> -->
 
-		<!-- SLIDE 10: What is a website? -->
+		<!-- SLIDE 9: What is a website? -->
 		<article class='slide slide-list'>
 			<h2>What is a website?</h2>
-			<p>The folder containing the web pages and related files (images, css & javascript files, etc) are located on a dedicated computer (also known as a <em>server</em>) that <em>hosts</em> websites.</p>
+			<p>The folders containing the web pages and related files (images, css & javascript files, etc) are located on a dedicated computer (also known as a <em>server</em>) that <em>hosts</em> websites.</p>
 			<div class="centered">
 				<img src="assets/webserver_download.png" width="738" height="531" alt="web request process" />
 			</div>
 		</article>
 
-		<!-- SLIDE 11 -->
+		<!-- SLIDE 10 -->
 		<article class='slide slide-list'>
 			<h2>A basic web page</h2>
-			<p>A web page is mainly built using 3 web languages:</p>
+			<p>Mainly built using 3 web languages:</p>
 			<table width="100%">
 				<tr>
 					<td width="33%" class="centered"><strong>HTML</strong> (Hypertext Markup Language) <br>
@@ -207,17 +217,17 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			</table>
 		</article>
 
-		<!-- SLIDE 12 -->
+		<!-- SLIDE 11 -->
 		<article class='slide slide-subhead'>
 			<h1>Dive into HTML</h1>
 			<p>The content layer</p>
 			<p><img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer" /></p>
 		</article>
 
-		<!-- SLIDE 13 -->
+		<!-- SLIDE 12 -->
 		<article class='slide slide-list'>
 			<h2>Good file naming habits</h2>
-			<p>To create an HTML web page, you can simply name your file with a .html extension. (Much like .pdf for PDF files or .doc for Word files.</p>
+			<p>To create an HTML web page, you can simply name your file using the .html extension. (Much like .pdf for PDF files or .doc for Word files.</p>
 			<ul>
 				<li>Use <strong>lowercase</strong>.<br />
 					<span class="sidenote"><code>about.html</code> instead of <code>About.html</code> or <code>ABOUT.html</code></span>
@@ -231,10 +241,11 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 					<span class="sidenote"><code>about.html, contact.html</code> instead of <code>page1.html, page2.html</code></span>
 				</li>
 			</ul>
-			<p class="sidenote">These tips can be applied to any files such as images, folders, CSS files, etc.</p>
+			<p>Let's try creating a web page. Open your text editor!</p>
+			<p class="sidenote">These tips can be applied to any files such as images, folders, CSS, etc.</p>
 		</article>
 
-		<!-- SLIDE 14: HTML -->
+		<!-- SLIDE 13: HTML -->
 		<article class='slide slide-list'>
 			<h2>What is HTML?</h2>
 			<p>HTML was created for <span class="keyword">web browsers</span> to easily read (not humans).</p>
@@ -1964,7 +1975,7 @@ background-size: 13px, 29px, 37px, 53px;
   
 	</div><!-- END div id=presentation 104 slides total -->
 
-	<div class="centered" style="font-size: 12px; padding-top: 10px;">(Use the left and right arrow keys on your keyboard to navigate.)</div>
+	<div class="instructions">(Use the left and right arrow keys on your keyboard to navigate.)</div><!-- TODO: add arrow icons -->
 
 	<script src='src/jquery.min.js'></script>
 	<script src="src/modernizr.js"></script>
