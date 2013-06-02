@@ -108,7 +108,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 				Visit <a href="http://browsehappy.com/">browsehappy.com</a> for more info about modern browsers.</p>
 
 				<p class="icon-warning">This presentation requires a modern browser.</p>
-			</div>	
+			</div>  
 		</article>
 
 		<!-- SLIDE 4: Code Editor -->
@@ -249,7 +249,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		<article class='slide slide-list'>
 			<h2>What is HTML?</h2>
 			<p>HTML stands for <em>HyperText Markup Language</em>. It was created for <em>web browsers</em> to easily read.</p>
-			<p>Below are the basic HTML tags that are required for all web pages. This makes perfect sense to a web browser:</p>
+			<p>Below are the basic HTML tags required for all web pages. This makes perfect sense to a web browser:</p>
 <pre class="prettyprint">&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</pre>
 			<p>Just like the different languages that we speak and write, HTML has to follow proper "grammar" rules as well to make sense.</p>
 			<p>This is referred to as <em>syntax</em>.</p>
@@ -381,11 +381,11 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		<article class='slide slide-list'>
 			<h2>HTML tags: nesting</h2>
 			<p>Let's practice writing an <code>html</code> tag with a <code>head</code> and <code>body</code> tag nested inside.</p>
-			<p class="centered"><code>&lt;tag&gt;<span class="nested">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>			
+			<p class="centered"><code>&lt;tag&gt;<span class="nested">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>         
 <textarea class="coder-editor coder-editor-full"></textarea>
 <script type="coder-solution">&lt;html&gt;
-    &lt;head&gt;&lt;/head&gt;
-    &lt;body&gt;&lt;/body&gt;
+	&lt;head&gt;&lt;/head&gt;
+	&lt;body&gt;&lt;/body&gt;
 &lt;/html&gt;</script>
 			<p class="icon-tip">Tags must be closed from inside out.</p>
 		</article>
@@ -413,13 +413,14 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		<!-- SLIDE 22: HTML -->
 		<article class='slide slide-list'>
 			<h2>HTML in a web browser</h2>
-			<p>In your <strong>exercises</strong> folder, there is a file called <strong><code>barebones.html</code></strong>. If you ever forget the basic tags needed to build a basic web page, use this as your template.</p>
+			<p>In your <strong>exercises</strong> folder, there is a file called <strong><code>barebones.html</code></strong>. If you ever forget which tags are needed to build a basic web page, use this as your template.</p>
 			<p>Let's view <a href="exercises/barebones.html" target="_blank"><code>barebones.html</code></a> in the web browser (click the link).  Why don't we see anything?</p>
 
 			<p>Now right-click anywhere on the page and select <strong>View Page Source</strong>.</p>
 			<img src="assets/llcodedotcom_viewsource.gif" width="468" height="362" alt="view source">
 			
 			<p>You can view the page source on <strong>ANY</strong> web site!</p>
+			<p class="icon-tip">You can also use your <a href="index.html#slide-5" target="_blank">developer tools</a>.</p>
 		</article>
 
 
@@ -439,53 +440,64 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			<p class="centered"><img src="assets/llcodedotcom_viewsource.gif" width="468" height="362" alt="view source" style="margin-right: 30px;" /></p>
 		</article> -->
 
-		<!-- SLIDE 22: HTML -->
+		<!-- SLIDE 23: HTML -->
 		<article class='slide slide-list'>
-			<h2>HTML Document Types</h2>
+			<h2>HTML Document Type</h2>
 			<p>What about the 1st line?</p>
 <pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
-			<p>This is a <em>Document Type Declaration</em> a.k.a <code>DOCTYPE</code>.  This indicates to the web browser what <strong>version</strong> of HTML the document is written in. This helps the browser render the content correctly based on the rules denoted by the <code>DOCTYPE</code>.</p>
-			<p class="sidenote">Consider how old versions of Microsoft Office or Photoshop have problems opening files that were created in later versions of the software.  For example, it could be an <a href="http://www.alistapart.com/articles/doctype/">older document type</a> like the ones below, or the newer <em>HTML5</em> <code>DOCTYPE</code> one that we're using above.</p>
-<pre class="prettyprint">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd"&gt;</pre>
+			<p>This is a <em>Document Type Declaration</em> a.k.a <code>DOCTYPE</code> and <strong>must always be included as the first line of the document</strong>.</p>
+			<p>This tells the web browser what <strong>version</strong> of HTML the document is written in and helps the browser render the content based on the rules specific to that version of HTML.</p>
+		</article>
+
+		<!-- SLIDE 24: HTML -->
+		<article class='slide slide-list'>
+			<h2>HTML, XHTML, HTML5</h2>
+			<p>These terms refer to different versions of the same language though the rules, syntax and features may differ. However, the HTML5 DOCTYPE is <em>backwards compatible</em> and can be used in place of the older versions.</p>
+			<p class="sidenote">Consider how old versions of MS Word or Photoshop have problems opening files created in later versions of the software.</p>
+			
+			<h4>HTML5 DOCTYPE</h4>
+<pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
+			<h4>XHTML DOCTYPE</h4>
 <pre class="prettyprint">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</pre>
-			</p>
+			<h4>HTML4 DOCTYPE</h4>
+<pre class="prettyprint">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd"&gt;</pre>
+		</article>
+
+		<!-- SLIDE 25: HTML -->
+		<article class='slide slide-list'>
+			<h2>HTML content</h2>
+			<p class="sidenote">(If HTML tags are the beams of a house, you still need to put up walls for it to be liveable.)</p>
+			<p>The human-viewable content of a HTML tag goes in between the opening and closing tags like this:</p>
+			<p class="centered"><code class="large">&lt;tag&gt;<span style="color: #333;">Content</span>&lt;/tag&gt;</code></p>
+<pre class="prettyprint">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;<strong>Home</strong>&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;<strong>
+        Put all the content you want people to see here!
+    </strong>&lt;/body&gt;
+&lt;/html&gt;</pre> 
 		</article>
 
 		<!-- SLIDE 26: HTML -->
 		<article class='slide slide-list'>
 			<h2>HTML content</h2>
-			<p class="sidenote">(If HTML tags are the beams of a house, you still need to put up walls for it to be liveable.)</p>
 			<p>The human-viewable content of a HTML tag goes in between the opening and closing tags like this:</p>
 			<p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;<span style="color: #333;">Content</span>&lt;/tag&gt;</code></p>
-<pre class="prettyprint">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;<strong>Home</strong>&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;<strong>
-		You are currently looking at index.html.
-	</strong>&lt;/body&gt;
-&lt;/html&gt;</pre> 
-		</article>
-
-		<!-- SLIDE 27: HTML -->
-		<article class='slide slide-list'>
-			<h2>HTML content</h2>
-			<p>The human-viewable content of a HTML tag goes in between the opening and closing tags like this:</p>
-			<p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;<span style="color: #333;">Content</span>&lt;/tag&gt;</code></p>
-			<p>Practice writing a <code>body</code> tag with some human-viewable content here:</p>
+			<p>Practice writing a <code>body</code> tag with some content here:</p>
 <textarea class="coder-editor"></textarea>
 <script type="coder-solution">&lt;body&gt;Hello!&lt;/body&gt;</script>
 			<br clear="all" />
 		</article>
 
-		<!-- SLIDE 28: HTML -->
+		<!-- SLIDE 27: HTML -->
 		<article class='slide slide-list'>
-			<h2><code>&lt;head&gt;</code> vs <code>&lt;body&gt;</code></h2>
-			<p>Using a copy of <code>barebones.html</code>, I'm going to edit it to answer the below questions and prepare you for the following exercise you'll do on your own time.</p>
-			<ul class="spacey_list">
+			<h2><code>head</code> vs <code>body</code></h2>
+			<p>In your <strong>exercises</strong> folder, open <code>index.html</code> in your editor and type along with me.  <span class="sidenote">(It's just a copy of <code>barebones.html</code>)</span></p>
+			<ul>
 				<li>
 					What happens when I change the content in the <code>&lt;title&gt;</code> tag?
 					<div class="show-hint" onclick="javascript:showHint('title-tag'); this.style.display = 'none';">click here to show answer...</div>
@@ -494,13 +506,13 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 				<li>
 					What's the difference between putting a tag in-between the <code>&lt;head&gt;</code> tag versus the <code>&lt;body&gt;</code> tag?
 					<div class="show-hint" onclick="javascript:showHint('head-vs-body'); this.style.display = 'none';">click here to show answer...</div>
-					<div id="head-vs-body" class="hint-solution"><code>&lt;head&gt;</code> is for "meta" instructions that the browser will use to render content differently such as the tab title, or the character set to use when displaying a Japanese website, or links to external CSS or JS files.<br />
-						<code>&lt;body&gt;</code> should be used for all the content that actually gets displayed in the main part of the web browser.</div>
+					<div id="head-vs-body" class="hint-solution"><code>&lt;head&gt;</code> is for "meta" instructions that the browser will use to render content differently such as the page title, or the character set to use when displaying a Japanese website, or links to external CSS or JS files.<br />
+					<code>&lt;body&gt;</code> should be used for all the content that actually gets displayed in the main part of the web browser.</div>
 				</li>
 			</ul>
 		</article>
 
-		<!-- SLIDE 29: HTML -->
+		<!-- SLIDE 28: HTML -->
 		<article class='slide slide-list'>
 			<h2>Exercise #1 (15 minutes)</h2>
 			<ol class="spacey_list">
@@ -1967,6 +1979,14 @@ background-size: 13px, 29px, 37px, 53px;
 		<article class='slide slide-subhead'>
 			<h1>Additional Resources</h1>
 			<p>Some tips and tricks for the future</p>
+			<!-- The W3C has extensive guidelines and 
+recommendations about these languages (and more).
+RESOURCES:
+HTML: http://www.w3.org/TR/1999/REC-html401-19991224/
+XHTML: http://www.w3.org/TR/xhtml1/
+HTML5: http://www.w3.org/TR/html5/
+Full list of recommendations: http://www.w3.org/TR/
+Browser compatibilty table: http://caniuse.com/ -->
 		</article>
 
 		<!-- SLIDE 103: FTP -->
