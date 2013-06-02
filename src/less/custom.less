@@ -116,7 +116,17 @@ body {
 	strong {
 		color: #2E2E2E;
 	}
+	pre.prettyprint {
+		padding: 10px;
+	}
+	code {
+		color: @llcPink;
 
+		&.large {
+			font-size: 60px;
+		}
+	}
+	
 	#presentation {
 		margin-top: 5px;
 	}
@@ -139,8 +149,17 @@ body {
 			margin-top: 28%;
 		}
 	}
-	.column {
+	
+	[class^="column-"] {
 		float: left;
+	}
+	.column-3 {
+		width: 30%;
+		margin: 0 0.5%;
+	}
+	.column-2 {
+		width: 48%;
+		margin: 0 1%;
 	}
 
 	[class^="icon-"]{
@@ -213,12 +232,33 @@ body {
 	}
 
 	.triad {
-		.column {
-			width: 33%;
+		.column-3 {
 			text-align: center;
 			margin-top: 20px;
 		}
 	}
+
+	.html-intro {
+		&.slide-subhead {
+			h1 {
+				top: 20%;
+			}
+			p {
+				margin-top: 18%;
+			}
+		}
+	}
+	.tags-nesting {
+		ul {
+			clear: both;
+
+			li {
+				font-size: 22px;
+				line-height: 26px;
+			}
+		}
+	}
+
 }
 
 

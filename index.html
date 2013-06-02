@@ -182,18 +182,18 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		<article class='slide slide-list triad'>
 			<h2>A basic web page</h2>
 			<p>Web pages are generally built using 3 web languages:</p>
-			<div class="column">
+			<div class="column-3">
 				<strong>HTML</strong> (Hypertext Markup Language) is the markup language.
 				<img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer" />
 				Defines the <strong>content</strong>.
 			</div>
-			<div class="column">
+			<div class="column-3">
 				<strong>CSS</strong> (Cascading Style Sheets) <br>
 						is the style sheet language.
 				<img src="assets/TRIAD-css.gif" width="261" height="241" alt="Presentation Layer" />
 				Defines the <strong>presentation</strong>.
 			</div>
-			<div class="column">
+			<div class="column-3">
 				<strong>JavaScript</strong><br>
 						is the programming language.
 				<img src="assets/TRIAD-js.gif" width="274" height="241" alt="Behaviour Layer" />
@@ -202,50 +202,52 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		</article>
 
 		<!-- SLIDE 11 -->
-		<article class='slide slide-subhead'>
+		<article class='slide slide-subhead html-intro'>
 			<h1>Dive into HTML</h1>
 			<p>The content layer</p>
-			<p><img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer" /></p>
+			<img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer" />
 		</article>
 
 		<!-- SLIDE 12 -->
 		<article class='slide slide-list'>
 			<h2>Good file naming habits</h2>
-			<p>To create an HTML web page, you can simply name your file using the .html extension. (Much like .pdf for PDF files or .doc for Word files.</p>
+			<p>To create an HTML web page, you can simply name your file using the .html extension (much like .pdf for PDF files or .doc for Word files).</p>
 			<ul>
-				<li>Use <strong>lowercase</strong>.<br />
-					<span class="sidenote"><code>about.html</code> instead of <code>About.html</code> or <code>ABOUT.html</code></span>
+				<li>
+					Use <strong>lowercase</strong>. <span class="sidenote"><code>about.html</code> instead of <code>About.html</code> or <code>ABOUT.html</code></span>
 				</li>
-				<li>Avoid <code>s p a c e s</code> in your file name. Use underscores <code>(_)</code> or dashes <code>(-)</code>. Dashes are generally preferred for SEO (search engine optimization).<br />
+				<li>
+					Avoid <code>s p a c e s</code>. Use underscores <code>(_)</code> or dashes <code>(-)</code>. Dashes are generally preferred for SEO (search engine optimization).<br />
 					<span class="sidenote"><code>business_hours.html</code> or <code>business-hours.html</code> instead of <code>business hours.html</code><br />
-						(The browser will interpret it as <code>business%20hours.html</code>)</span>
+					(The browser will interpret it as <code>business%20hours.html</code>)</span>
 				</li>
 				<li>Avoid symbols like <code># &amp; *</code> in your file name.</li>
-				<li>Keep your file names concise, yet meaningful.<br />
+				<li>
+					Keep your file names concise, yet meaningful.<br />
 					<span class="sidenote"><code>about.html, contact.html</code> instead of <code>page1.html, page2.html</code></span>
 				</li>
 			</ul>
-			<p>Let's try creating a web page. Open your text editor!</p>
-			<p class="sidenote">These tips can be applied to any files such as images, folders, CSS, etc.</p>
+			<p class="icon-tip">These file naming tips can be applied to any files such as images, folders, CSS, etc.</p>
 		</article>
 
 		<!-- SLIDE 13: HTML -->
 		<article class='slide slide-list'>
 			<h2>Your First Web Page (sorta)</h2>
 			<ul>
-				<li>Open Sublime (text editor) and select "File > new file"</li>
-				<li>Type in whatever text you'd like</li>
-				<li>Select "File > Save"</li>
-				<li>Name the file hello.html (or anything you want but it must end in .html)</li>
-				<li>Open the .html page in your browser</li>
+				<li>Open Sublime (text editor) and select <strong>"File > new file"</strong></li>
+				<li>Type some text. (ex. Hello world!)</li>
+				<li>Select <strong>"File > Save"</strong></li>
+				<li>Name the file <code>index.html</code></li>
+				<li>Open <code>index.html</code> page in your browser</li>
 			</ul>
 			<p>Ta da!</p>
+			<p class="icon-tip">Most computers are set to open <code>.html</code> files in the default web browser. To open with Chrome, right-click (PC) or command+click or 2-finger click (Mac) and select the "open with..." option.</p>
 		</article>
 
 		<!-- SLIDE 14: HTML -->
 		<article class='slide slide-list'>
 			<h2>What is HTML?</h2>
-			<p>HTML was created for <span class="keyword">web browsers</span> to easily read (not humans).</p>
+			<p>HTML stands for <em>HyperText Markup Language</em> and was created for <em>web browsers</em> to easily read.</p>
 			<p>This makes perfect sense to a web browser:</p>
 <pre class="prettyprint">&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</pre>
 			<p>Just like the different languages that we speak and write, HTML has to follow proper "grammar" rules as well to make sense.</p>
@@ -258,165 +260,176 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			<p>Whitespace through indentation (tabs) make your HTML more human-readable.</p>
 <pre class='prettyprint'>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-	&lt;head&gt;	aA
-		&lt;title&gt; &lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;/body&gt;
+    &lt;head&gt;
+        &lt;title&gt; &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
 &lt;/html&gt;</pre> 
 			<p class="sidenote">(Later on, you might also notice how automatic colour coding in your code editor helps too.)</p>
 		</article>
 
 		<!-- SLIDE 16: HTML -->
-		<article class='slide slide-list'>
+		<article class='slide slide-list tags'>
 			<h2>HTML tags</h2>
-			<p>The structure of a web page is defined by HTML <span class="keyword">tags</span>. Angled brackets denote tags, like this:</p>
-			<p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;</code></p>
-			<p class="centered sidenote">Think about HTML tags like the beams of a house.<br />
-				It's what holds up a web page.</p>
-			<p class="centered"><img src="assets/house_beam.jpg" width="300" height="232" alt="house beam" /></p>
+			<p>The structure of a web page is defined by HTML <span class="keyword">tags</span>. Left & right angled brackets (<code>shift</code> + <code>< </code> and <code>shift</code> + <code> > </code>) surround the tag name like this:</p>
+			<div class="centered">
+				<p><code class="large">&lt;tag&gt;</code></p>
+				<p><img src="assets/house_beam.jpg" width="300" height="232" alt="house beam" /></p>
+				<p class="sidenote">Think about HTML tags like the beams of a house. It's what holds up a web page can creates structure.</p>
+			</div>
 		</article>
 
 		<!-- SLIDE 17: HTML -->
 		<article class='slide slide-list'>
 			<h2>HTML tags</h2>
-			<p>Tags typically come in <strong>pairs</strong> -- an opening tag and a closing tag with a forward slash:</p>
-			<p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;&lt;<span style="color:red;">/</span>tag&gt;</code></p>
-			<p class="sidenote">Some examples:</p>
-<pre class="prettyprint" style="width: 45%; float: left;">&lt;!DOCTYPE html&gt;
-<strong>&lt;html&gt;</strong>
-	&lt;head&gt;
-		&lt;title&gt; &lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;/body&gt;
-<strong>&lt;/html&gt;</strong></pre> 
-<pre class="prettyprint" style="width: 45%; float: right;">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt; &lt;/title&gt;
-	&lt;/head&gt;
-	<strong>&lt;body&gt;</strong>
-	<strong>&lt;/body&gt;</strong>
-&lt;/html&gt;</pre> 
-<br clear="all" />
+			<p>Tags typically come in <strong>pairs</strong> -- an <em>opening</em> tag and a <em>closing</em> tag with a forward slash:</p>
+			<p class="centered"><code class="large">&lt;tag&gt;&lt;<span style="color:red;">/</span>tag&gt;</code></p>
+<!-- <div class="column-2">
+	<pre class="prettyprint">&lt;!DOCTYPE html&gt;
+	<strong>&lt;html&gt;</strong>
+		&lt;head&gt;
+			&lt;title&gt; &lt;/title&gt;
+		&lt;/head&gt;
+		&lt;body&gt;
+		&lt;/body&gt;
+	<strong>&lt;/html&gt;</strong></pre> 
+	</div>
+	<div class="column-2">
+	<pre class="prettyprint">&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			&lt;title&gt; &lt;/title&gt;
+		&lt;/head&gt;
+		<strong>&lt;body&gt;</strong>
+		<strong>&lt;/body&gt;</strong>
+	&lt;/html&gt;</pre>
+</div> -->
+			<p>The are many different HTML tags. Each are used to create structure and add <em><a href="http://www.adobe.com/devnet/html5/articles/semantic-markup.edu.html" target="_blank">semantics</a></em> (meaning) to the content.</p>
+			<p>For example, any content between the <code>&lt;html&gt;&lt;/html&gt;</code> tag tells the browser that is HTML code.</p>
+			<p>Content between the <code>&lt;title&gt;&lt;/title&gt;</code> tag describes the web page title.</p>
 		</article>
 
 		<!-- SLIDE 18: HTML -->
-		<article class='slide slide-list'>
+		<!-- <article class='slide slide-list'>
 			<h2>HTML tags</h2>
 			<p>The are many different HTML tags. Each are used to add <span class="keyword"><a href="http://www.adobe.com/devnet/html5/articles/semantic-markup.edu.html" target="_blank" style="color:#B1009A;">semantics</a></span> (meaning) to the content on the as well as for structure.</p>
 			<p>Practice writing a <code>body</code> tag with me here:</p>
-<textarea class="coder-editor coder-editor-full"></textarea>
-<script type="coder-solution">&lt;body&gt;&lt;/body&gt;</script>
+			<textarea class="coder-editor coder-editor-full"></textarea>
+			<script type="coder-solution">&lt;body&gt;&lt;/body&gt;</script>
+		</article> -->
+
+		<!-- SLIDE 18: HTML -->
+		<article class='slide slide-list tags-nesting'>
+			<h2>HTML tags: nesting</h2>
+			<p>Tags can also be <em>nested</em> within other tags. This relationship is often referred to as <em>parent</em>, <em>child</em>, <em>descendant</em>, <em>ancestor</em>, etc nodes.</p>
+			<p class="centered"><code class="large">&lt;tag&gt;<span style="color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
+			
+			<p>Let's look at the required tags for a basic web page.</p>
+			<div class="column-2">
+<pre class="prettyprint">&lt;!DOCTYPE html&gt;
+<strong>&lt;html&gt;</strong>
+    &lt;head&gt;
+        &lt;title&gt; &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+<strong>&lt;/html&gt;</strong></pre>
+			</div> 
+			<div class="column-2">
+<pre class="prettyprint">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    <strong>&lt;head&gt;</strong>
+        &lt;title&gt;&lt;/title&gt;
+    <strong>&lt;/head&gt;</strong>
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+			</div>
+			<ul>
+				<li>
+					<code>&lt;html&gt;</code> is always first and known as the <em>root</em> node. It has <strong>no</strong> parent nodes.<br> All other HTML tags are nested within <code>&lt;html&gt;</code>.
+				</li>
+				<li>
+					<code>&lt;head&gt;</code> is the child of <code>&lt;html&gt;</code> and the parent node of the <code>&lt;title&gt;</code> tag.
+				</li>
+				<li>
+					What is the relationship of <code>&lt;title&gt;</code> to the <code>&lt;head&gt;</code> tag?
+				</li>
+				<li>
+					What is the relationship between the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags</code>?
+				</li>
+			</ul>
 		</article>
 
 		<!-- SLIDE 19: HTML -->
 		<article class='slide slide-list'>
 			<h2>HTML tags: nesting</h2>
-			<p>Tags can be "nested" within other tags, like this:</p>
-			<p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
-			<p class="centered sidenote">(This relationship is often referred to using the terms "parent" node and "child" nodes.)</p>
-			<br />
-			<p class="sidenote" style="margin-bottom: 0px;">Example of basic tags needed to build a website:</p>
-			<ul class="sidenote">
-				<li><code>&lt;title&gt;&lt;/title&gt;</code> is nested between opening <code>&lt;head&gt;</code> and closing <code>&lt;/head&gt;</code> tags</li>
-				<li><code>&lt;head&gt;</code> is the parent node and <code>&lt;title&gt;</code> is the child node.</li>
-				<li>Going further, <code>&lt;head&gt;</code> is also (at the same time) a child node of <code>&lt;html&gt;</code>.</li>
-				<li>While <code>&lt;html&gt;</code> is the always the "root" node and has <strong>no</strong> parent nodes.</li>
-				<li>Notice too that <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> are on the same level. They are both child nodes of <code>&lt;html&gt;</code>.</li>
-			</ul>
-<pre class="prettyprint" style="width: 45%; float: left;">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		<strong>&lt;title&gt;</strong> <strong>&lt;/title&gt;</strong>
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;/body&gt;
-&lt;/html&gt;</pre> 
-<pre class="prettyprint" style="width: 45%; float: right;">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	<strong>&lt;head&gt;</strong>
-		&lt;title&gt; &lt;/title&gt;
-	<strong>&lt;/head&gt;</strong>
-	&lt;body&gt;
-	&lt;/body&gt;
-&lt;/html&gt;</pre> 
-<br clear="all" />
-
+			<p>Let's practice writing an <code>html</code> tag with a <code>head</code> and <code>body</code> tag nested inside.</p>
+			<p class="centered"><code class="large">&lt;tag&gt;<span style="color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>			
+<textarea class="coder-editor coder-editor-full"></textarea>
+<script type="coder-solution">&lt;html&gt;
+    &lt;head&gt;&lt;/head&gt;
+    &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</script>
+			<p class="icon-tip">Tags must be closed from inside out.</p>
 		</article>
 
 		<!-- SLIDE 20: HTML -->
 		<article class='slide slide-list'>
 			<h2>HTML tags: nesting</h2>
-			<p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
-			<p>Let's practice writing an <code>html</code> tag with a <code>head</code> and <code>body</code> tag nested inside:</p>
-<textarea class="coder-editor coder-editor-full"></textarea>
+			<p>Where does the <code>title</code> tag get nested?</p>
+<textarea class="coder-editor coder-editor-full">&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</textarea>
 <script type="coder-solution">&lt;html&gt;
-	&lt;head&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;/body&gt;
+    &lt;head&gt;
+        &lt;title&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
 &lt;/html&gt;</script>
-<br clear="all" />
-			 <p class="centered sidenote"><strong>Remember:</strong> The innermost tag must be closed <strong>before</strong>  trying to open up a new tag.<br />
-				This would be incorrect: &lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;/html&gt;&lt;/head&gt;&lt;/body&gt; </p>
+			<p class="icon-tip">Tags must be closed from inside out.</p>
 		</article>
 
 		<!-- SLIDE 21: HTML -->
 		<article class='slide slide-list'>
-			<h2>HTML tags: nesting</h2>
-			<p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
-			<p>Now where does the <code>title</code> tag get nested? Practice here:</p>
-<textarea class="coder-editor coder-editor-full">&lt;html&gt;
-	&lt;head&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;/body&gt;
-&lt;/html&gt;</textarea>
-<script type="coder-solution">&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;/body&gt;
-&lt;/html&gt;</script>
-			<br clear="all" />
-			<p class="centered sidenote"><strong>Remember:</strong> The innermost tag must be closed <strong>before</strong>  trying to open up a new tag.<br />
-				This would be incorrect: &lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/html&gt;&lt;/head&gt;&lt;/title&gt; </p>
-		</article>
-
-		<!-- SLIDE 22: HTML -->
-		<article class='slide slide-list'>
 			<h2>HTML in a web browser</h2>
-			<p>If you ever forget the basic tags needed to build a basic web page, <a href="exercises/barebones.html"><code>exercises/barebones.html</code></a> is available to copy and use.</p>
-			<p>Let's open it up in our code editor!</p>
-			<div class="reminders"><p>Most computers are set to open <code>.html</code> files in the default web browser so <strong>right-click</strong> (Command+click or 2-finger click on Mac) and select the "<strong>open with...</strong>" option.</p></div>
+			<p>If you ever forget the basic tags needed to build a basic web page, <strong><code>exercises/barebones.html</code></strong> is available to refer to and use.</p>
+			<p>However, if I view <a href="exercises/barebones.html" target="_blank"><code>barebones.html</code></a> in a web browser, I don't see anything interesting yet...</p>
+
+			<p>But I can right-click and select <strong>View Page Source</strong> to see the HTML.</p>
+			<img src="assets/llcodedotcom_viewsource.gif" width="468" height="362" alt="view source">
+			
+			<p>You can view the page source on <strong>ANY</strong> web site!</p>
 		</article>
 
 
 		<!-- SLIDE 23: HTML -->
-		<article class='slide slide-list'>
+		<!-- <article class='slide slide-list'>
 			<h2>HTML in a web browser</h2>
 			<p>But remember: HTML tags are like the beams of a house -- they denote structure, not content.)  </p>
 			<p>So if I view <a href="exercises/barebones.html" target="_blank"><code>barebones.html</code></a> in a web browser, I don't see anything interesting yet...</p>
 			<div class="reminders single-line"><p>If Chrome is not your default web browser, <strong>right-click</strong> and select the "<strong>open with...</strong>" option.</p></div>
-		</article>
+		</article> -->
 
 		<!-- SLIDE 24: HTML -->
-		<article class='slide slide-list'>
+		<!-- <article class='slide slide-list'>
 			<h2>HTML in a web browser</h2>
 			<p>But I can right-click and select <strong>View Page Source</strong> to see what the HTML is to confirm that it's not a blank file.</p>
 			<p class="sidenote">(I suggest that you do this any time you see something you like so you can reverse-engineer it.)</p>
 			<p class="centered"><img src="assets/llcodedotcom_viewsource.gif" width="468" height="362" alt="view source" style="margin-right: 30px;" /></p>
-		</article>
+		</article> -->
 
-		<!-- SLIDE 25: HTML -->
+		<!-- SLIDE 22: HTML -->
 		<article class='slide slide-list'>
 			<h2>HTML Document Types</h2>
 			<p>What about the 1st line?</p>
 <pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
-			<p>This is a <span class="keyword">Document Type Declaration</span> a.k.a <code>DOCTYPE</code>.  This indicates to the web browser what <strong>version</strong> of HTML the file is written in. This helps the browser render the content correctly based on the rules denoted by the <code>DOCTYPE</code>.</p>
+			<p>This is a <em>Document Type Declaration</em> a.k.a <code>DOCTYPE</code>.  This indicates to the web browser what <strong>version</strong> of HTML the document is written in. This helps the browser render the content correctly based on the rules denoted by the <code>DOCTYPE</code>.</p>
 			<p class="sidenote">Consider how old versions of Microsoft Office or Photoshop have problems opening files that were created in later versions of the software.  For example, it could be an <a href="http://www.alistapart.com/articles/doctype/">older document type</a> like the ones below, or the newer <em>HTML5</em> <code>DOCTYPE</code> one that we're using above.</p>
 <pre class="prettyprint">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 "http://www.w3.org/TR/html4/strict.dtd"&gt;</pre>
