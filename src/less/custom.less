@@ -63,22 +63,6 @@
     font-style: normal;
 }
 
-
-a:before, a:after {
-     font-family:'Heydings';
-}
-
-// a[href*="rss"]:before {
-//      color:#c03f29;
-//      content:'R';
-// }
-
-// a[href*="rss"]:after {
-//      vertical-align:super;
-//      font-size:16px;
-//      content:'e';
-// }
-
 /* apply a natural box layout model to all elements */
 * { 
 	-moz-box-sizing: border-box; 
@@ -144,6 +128,20 @@ body {
 		margin: 0 auto;
 		padding: 30px 40px;
 	}
+	.slide-subhead {
+		h1 {
+			.reset-transform;
+			top: 36%;
+		}
+		p {
+			text-align: center;
+			font-size: 35px;
+			margin-top: 28%;
+		}
+	}
+	.column {
+		float: left;
+	}
 
 	[class^="icon-"]{
 		font-size: 20px;
@@ -203,19 +201,22 @@ body {
 			line-height: 20px;
 		}
 	}
+
 	.outline p {
 		font-size: 28px;
 	}
 
-	.slide-subhead {
-		h1 {
-			.reset-transform;
-			top: 36%;
+	.folder-structure {
+		img {
+			float: left;
 		}
-		p {
+	}
+
+	.triad {
+		.column {
+			width: 33%;
 			text-align: center;
-			font-size: 35px;
-			margin-top: 28%;
+			margin-top: 20px;
 		}
 	}
 }
