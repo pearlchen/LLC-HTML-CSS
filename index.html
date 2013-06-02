@@ -893,27 +893,226 @@
     </article>  
 
 
-    <!-- CSS -->
+    <!-- SLIDE: CSS Basics -->
     <article class='slide slide-subhead'>
-      <h1>CSS basics</h1>
-      <p>The presentation layer</p>
-      <p><img src="assets/TRIAD-css.gif" width="261" height="241" alt="Presentation Layer" /></p>
+      <h1>CSS basics</h1>      
     </article>  
 
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Why use CSS?</h2>
+    <!-- SLIDE: CSS and HTML -->
+    <article class="slide slide-list">
+      <h2>CSS is closely paired with HTML</h2>
       <ul>
-        <li>Seperates content (text) from presentation (text colour).</li>
-        <li>The "cascading" part of CSS means that it (should) help avoid redundancy in styling your web documents.</li>
+        <li>CSS doesn't do anything on its own, it's the presentation layer on top of a content base</li>
+        <li>If HTML is the beams of the house, CSS is the layout, paint, and decorations</li>
       </ul>
-    </article>    
-
-    <!-- SLIDE: CSS -->
+    </article>
   
+    <!-- SLIDE: CSS Syntax 1 -->
+    <article class="slide slide-list">
+      <h2>CSS Syntax</h2>
+      <ul>
+        <li>CSS is made up of <strong>rules</strong> that refer to HTML elements (like <code>&lt;p></code> and <code>&lt;ul></code>), and define what those elements should look like.</li>
+        <li>A CSS rule is made up of a <strong>selector</strong> and one or more <strong>declarations</strong></li>
+        <li>A <strong>selector</strong> tells the browser what element(s) we are styling.</li>
+        <li>It looks like this:</li>
+        <pre><code>h2 {}</code></pre>   
+        <li>The above selector will select all <code>&lt;h2></code> elements and apply our styles (which will go between the curly brackets) to them</li>     
+      </ul>
+    </article>
+      
+    <!-- SLIDE: CSS Syntax 2 -->
+    <article class="slide slide-list">
+      <h2>CSS Syntax</h2>
+      <ul>
+        <li>A <strong>declaration</strong> tells the browser what style we want to apply to our element</li>
+        <li>A declaration is always made up of two parts: a <strong>property</strong> and a <strong>value</strong></li>
+        <li>A <strong>property</strong> tells the browser what we are modifying (ex. font, colour, size)</li>
+        <li>A <strong>value</strong> tells the browser how to modify the property (ex. Arial, green, small)</li>
+        <li>A declaration looks like this:</li>
+        <pre><code>background-color: green;</code></pre>        
+      </ul>
+    </article>
 
-    <!-- SLIDE: CSS -->
-  
+    <!-- SLIDE CSS Syntax 2.1 -->
+    <article class="slide slide-list">  
+      <ul>
+        <pre><code>background-color: green;</code></pre>
+        <li>The <strong>value</strong> (the part <em>after</em> the colon) is specific to the property type</li>
+        <li>Ex. size-related properties like <code>height, width</code>, or <code>font-size</code> are usually specified in <code>px</code> (pixels), while colour-related properties are specified with a colour name or code</li>
+        <li>It's very important that you write the syntax correctly, with a colon after the property name and a semi-colon after the value</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE: CSS Syntax 3 -->
+    <article class="slide slide-list">
+      <h2>CSS Syntax</h2>
+      <ul>
+        <li>When we put selectors and declarations together, they make a CSS rule, which looks like this: </li>
+<pre><code>
+h2 {
+  background-color: green;
+}
+</code></pre>
+        <li>This rule will select all <code>&lt;h2></code> elements and change their background colour to green</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE: CSS Syntax 4 -->
+    <article class="slide slide-list">
+      <h2>CSS Syntax</h2>
+      <ul>
+        <li>We can add multiple declarations (property: value; sets) to one selector to modify multiple properties:</li>
+<pre><code>
+  h2 {
+    background-color: green;
+    font-weight: bold;
+    font-size: 28px;
+  }
+</code></pre>
+        <li>Make sure you always end each declaration with a semi-colon</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE Adding Style Tags -->
+    <article class="slide slide-list">
+      <h2>Adding CSS to HTML</h2>
+      <ul>
+        <li>You write CSS rules in a set of <code>&lt;style>&lt;/style></code> tags</li>
+        <li>You add the style tags to the <code>&lt;head></code> of your HTML document like this:</li>
+<pre><code>
+&lt;html>
+  &lt;head>
+    &lt;style>
+      h2 {
+        background-color: green;
+      }
+    &lt;/style>
+  &lt;/head>
+  &lt;body>
+    
+  &lt;/body>
+&lt;/html>
+</code></pre>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS First -->
+    <article class="slide slide-list">
+      <h2>Assignment: First CSS Rule</h2>
+      <ul>
+        <li>Find the set of <code>&lt;style></code> tags in the <code>&lt;head></code> of <strong>index.html</strong></li>
+        <li>In between the two tags, write a selector for the <code>&lt;body></code> tag of the document</li>
+        <li>Next, add a <code>color: </code> property with a value of <code>blue;</code></li>
+<pre><code>
+body {
+  color: blue;
+}
+</code></pre>
+      <li>All the text on the page is now blue: this is because the <code>&lt;body></code> tag is the highest-level tag we can see on the page, so the <code>color</code> property applies to the body AND all its children, including every heading, paragraph, and list item</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Color Change -->
+    <article class="slide slide-list">
+      <ul>
+        <li>Let's change the text to something easier to read</li>
+        <li>We're going to use a <strong>hex code</strong>, which is a 6-character code that specifies a colour</li>
+        <li>You don't have to understand how they work, just remember that they start with a <code>#</code> sign</li>
+        <li>The code for a nice dark grey is <code>#444444</code></li>
+        <li>
+<pre><code>
+body {
+  color: #444444;
+}
+</code></pre>          
+        </li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Fonts -->
+    <article class="slide slide-list">
+      <h2>Styling Type with CSS</h2>
+      <ul>
+        <li>There are lots of CSS properties which let us style the text in our HTML:</li>
+        <ul>
+          <li><code>font-size</code></li>
+          <li><code>font-weight</code></li>
+          <li><code>font-style</code></li>
+          <li><code>font-family</code></li>
+          <li><code>color</code></li>
+          <li><code>line-height</code></li>
+        </ul>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Fonts 2 -->
+    <article class="slide slide-list">
+      <ul>
+        <li>If we want to make our <code>&lt;h2></code> tags <strong>bold</strong>:</li>
+<pre><code>
+  h2 {
+    font-weight: bold;
+  }
+</code></pre>
+        <li>And if we want to make them REALLY BIG, we specify the <code>font-size</code> in px (pixels)</li>
+<pre><code>
+  h2 {
+    font-size: 60px;
+  }
+</code></pre>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Fonts 3 -->
+    <article class="slide slide-list">    
+      <ul>
+        <li>If we want to change the font to Arial: </li>
+<pre><code>
+  h1 {
+    font-family: Arial, Verdana, sans-serif;    
+  }
+</code></pre>
+        <li>The font-family property accepts a list of font names: the first font is your first-choice font, the next ones are fallbacks in case that font is not available</li>
+        <li>Not all fonts are commonly available, so try to stick to 'web-safe' fonts like:</li>
+        <ul>
+          <li>Arial</li>
+          <li>Georgia</li>
+          <li>Times New Roman</li>
+          <li>Courier</li>
+          <li>Lucida Grande</li>
+          <li>Trebuchet MS</li>
+        </ul>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Fonts 4 -->
+    <article class="slide slide-list">
+      <ul>
+        <li>We can change the line height (or leading) with the <code>line-height</code> property</li>
+        <li><code>line-height</code> is specified as a multiple of the size of the font: so a value of <code>1.4</code> means the lines will be 1.4x as tall as the text.</li>
+<pre><code>
+  h1 {
+    line-height: 1.4;
+  }
+</code></pre>
+        <li>And we can make text italicized with the <code>font-style</code> property</li>
+<pre><code>
+  h1 {
+    font-style: italic;
+  }
+</code></pre>
+      </ul>
+    </article>
+
+
+    <!-- SLIDE CSS Properties -->
+    <article class="slide slide-list">
+      <h2>CSS Properties</h2>
+      <ul>
+        <li>There are lots and lots and lots of CSS properties...</li>
+        <li>... but you don't have to memorize them. Use a <a href="cheatsheets/davechild_css2.pdf">Cheat Sheet</a> or just Google it!</li>
+      </ul>
+    </article>
 
     <!-- SLIDE: CSS -->
     <article class='slide slide-list'>
