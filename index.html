@@ -447,6 +447,9 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
             <pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
 			<p>This is a <em>Document Type Declaration</em> a.k.a <code>DOCTYPE</code> and <strong>must always be included as the first line of the document</strong>.</p>
 			<p>This tells the web browser what <strong>version</strong> of HTML the document is written in and helps the browser render the content based on the rules specific to that version of HTML.</p>
+            <p class="icon-note">The W3C (World Wide Web Consortium) governs web standards with 
+specifications, guidelines, tools and recommendations. They also provides a free service to check if your 
+markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a></p>
 		</article>
 
 		<!-- SLIDE 24: HTML -->
@@ -573,7 +576,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
             </ul>    
         </article>
 
-		<!-- SLIDE 30: Exercise 1 -->
+		<!-- SLIDE 31: Exercise 1 -->
 		<article class='slide slide-list'>
 			<h2>Exercise 1 (20 minutes)</h2>
             <p>Let's go back to <code>index.html</code> and turn it into a real HTML page!</p>
@@ -587,7 +590,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		</article>
 
 
-		<!-- SLIDE 31: HTML -->
+		<!-- SLIDE 32: HTML -->
 		<article class='slide slide-list'>
 			<h2>Exercise 1 - Exploration Questions</h2>
             <p>Here are some things to look out for when working on your exercise.</p>
@@ -600,56 +603,58 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
             (Some more info about it <a href="http://info.cern.ch/" target="_blank">here</a>.)</p>
 		</article>
 
-	 <!-- SLIDE 32 -->
+        <!-- SLIDE 33 -->
 		<article class='slide slide-subhead'>
 			<h1>Going deeper</h1>
 			<p>Get to know HTML even better</p>
 		</article>
 
-		<!-- SLIDE 33: HTML -->
-		<article class='slide slide-list'>
-			<h2>Void (or empty) HTML Tags</h2>
-			<p><span class="keyword">Void tags</span> don't format content -- instead they are used to render or embed objects in our page. These tags <strong>do not</strong> come in pairs like <code>h1</code> or <code>p</code> tags. You only type the tag once.</p>
-			<p>However, In some versions of HTML <span class="sidenote">(specifically XHTML... remember <code>DOCTYPE</code>?)</span> they "self-close" with a back slash (<code>/</code>) immediately before the left angled bracket (<code>&gt;</code>). In HTML5, it is not required to self close.</p>
-			<p>The most often used example of this is the <code>&lt;br /&gt;</code> or <code>&lt;br&gt;</code> tag used to create a <strong>line break</strong>.</p>
-<pre class="prettyprint">&lt;p&gt;This text&lt;br /&gt;goes over&lt;br /&gt;several&lt;br /&gt;lines.&lt;/p&gt;
-</pre>
-			<p>This text<br />goes over<br />several<br />lines.</p>
-		</article>
-
 		<!-- SLIDE 34: HTML -->
 		<article class='slide slide-list'>
 			<h2>Void (or empty) HTML Tags</h2>
-			<div class="cheatsheet">
-				<div>
-					<br />
-					(Remember, XTHML requires void elements to be self closed, HTML5 <code>DOCTYPE</code> accepts either syntax)<br />
-					<code>&lt;hr&gt;</code> or <code>&lt;hr /&gt;</code> - horizontal rule<br />
-					<code>&lt;br&gt;</code> or <code>&lt;br /&gt;</code> - line break<br />
-					<code>&lt;input&gt;</code> or <code>&lt;input /&gt;</code> - text input boxes<br />
-					<hr />
-					<code>&lt;img&gt;</code> or <code>&lt;img /&gt;</code> - an image <em>*We'll get to this one very soon.</em><br />
-					<code>&lt;link&gt;</code> or <code>&lt;link /&gt;</code> - define a relationship to an external resource like an external style sheets. <em>*We'll get to this one later today.</em><br />
-				</div>
-			</div>
-			<br clear="all" />
-			<p class="sidenote">Practice some of these tags below:</p>
-<textarea class="coder-editor"></textarea>
+			<p><em>Void tags</em> don't format content &mdash; instead, they render or embed objects in our page. These tags <strong>do not</strong> come in pairs like <code>h1</code> or <code>p</code> tags.</p>
+			<p>However, In the XHTML versions <span class="sidenote">(remember the different <code>DOCTYPE</code> rules?)</span> they <em>self-close</em> with a forward slash (<code>/</code>) immediately before the right angled bracket (<code>&gt;</code>).</p>
+            <p>In HTML5, void tags are not required to self close but also accepts self-closed void tags as well.</p>
+			<p>A common void tag is the <code>&lt;br /&gt;</code> or <code>&lt;br&gt;</code> tag used to create a <strong>line break</strong>.</p>
+            <pre class="prettyprint">&lt;p&gt;This text&lt;br /&gt;goes over&lt;br /&gt;several&lt;br /&gt;lines.&lt;/p&gt;</pre>
+			<p>This text<br />goes over<br />several<br />lines.</p>
 		</article>
 
 		<!-- SLIDE 35: HTML -->
+		<article class='slide slide-list'>
+			<h2>Void (or empty) HTML Tags</h2>
+			<p>
+				<code>&lt;hr&gt;</code> or <code>&lt;hr /&gt;</code> - horizontal rule<br />
+				<code>&lt;br&gt;</code> or <code>&lt;br /&gt;</code> - line break<br />
+				<code>&lt;input&gt;</code> or <code>&lt;input /&gt;</code> - text input boxes<br />
+				<hr />
+                <em>*Don't worry about these just yet, we'll get to these tags soon.</em><br>
+				<code>&lt;img&gt;</code> or <code>&lt;img /&gt;</code> - an image <br />
+				<code>&lt;link&gt;</code> or <code>&lt;link /&gt;</code> - define a relationship to an external resource like an external style sheets.
+            </p>
+        <textarea class="coder-editor"></textarea>
+		</article>
+
+		<!-- SLIDE 36: HTML -->
 		<article class='slide slide-list'>
 			<h2>Quick review:</h2>
 			<ul>
 				<li><strong>HTML tags</strong> define <em>structure</em>.</li>
 				<li><strong>Text between opening &amp; closing tags</strong> define <em>content</em>.</li>
 				<li><strong>Void HTML tags</strong> render special objects that may sometimes <em>look like content</em> or <em>seem structural</em> depending on the void tag.</li>
-			</ul>
-			<p>Consider the <code>img</code> tag. Not very exciting right?</p>
-<textarea class="coder-editor">&lt;p&gt;Kicking up HTML a notch.&lt;/p&gt;
-&lt;img /&gt;
-&lt;p&gt;Do you agree?&lt;/p&gt;</textarea>      
+			</ul>     
 		</article>
+
+        <!-- SLIDE 37: HTML -->
+        <article class='slide slide-list'>
+            <h2><code>img</code> tag</h2>
+            <p>Let's take a look at how the <code>img</code> tag renders below. Not very exciting right?</p>
+<textarea class="coder-editor">&lt;p&gt;Kicking up HTML a notch.&lt;/p&gt;
+&lt;img &gt;
+&lt;p&gt;Do you agree?&lt;/p&gt;</textarea>      
+        </article>
+
+
 
 		<!-- SLIDE 36: HTML -->
 		<article class='slide slide-list'>
@@ -815,6 +820,14 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			<p class="sidenote">Transvering <em>over</em> to a parallel folder level would be:</p>
 			<pre class="prettyprint">src="../folder/images/llc.gif"</pre>
 		-->
+
+<!-- add slide about comments
+        LEAVE A COMMENT
+Comments can be used to:
+● hide code for later use
+● leave directions
+● organize the document
+<!-- This is my comment --> -->
 
 		<!-- SLIDE 46: HTML -->
 		<article class='slide slide-list'>
