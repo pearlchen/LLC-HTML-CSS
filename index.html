@@ -178,7 +178,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			</div>
 		</article>
 
-		<!-- SLIDE 10 -->
+		<!-- SLIDE 10: web triad -->
 		<article class='slide slide-list triad'>
 			<h2>A basic web page</h2>
 			<p>Web pages are generally built using 3 web languages:</p>
@@ -444,7 +444,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		<article class='slide slide-list'>
 			<h2>HTML Document Type</h2>
 			<p>What about the 1st line?</p>
-<pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
+            <pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
 			<p>This is a <em>Document Type Declaration</em> a.k.a <code>DOCTYPE</code> and <strong>must always be included as the first line of the document</strong>.</p>
 			<p>This tells the web browser what <strong>version</strong> of HTML the document is written in and helps the browser render the content based on the rules specific to that version of HTML.</p>
 		</article>
@@ -456,12 +456,12 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			<p class="sidenote">Consider how old versions of MS Word or Photoshop have problems opening files created in later versions of the software.</p>
 			
 			<h4>HTML5 DOCTYPE</h4>
-<pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
+            <pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
 			<h4>XHTML DOCTYPE</h4>
-<pre class="prettyprint">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+            <pre class="prettyprint">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</pre>
 			<h4>HTML4 DOCTYPE</h4>
-<pre class="prettyprint">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            <pre class="prettyprint">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 "http://www.w3.org/TR/html4/strict.dtd"&gt;</pre>
 		</article>
 
@@ -486,7 +486,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		<article class='slide slide-list'>
 			<h2>HTML content</h2>
 			<p>The human-viewable content of a HTML tag goes in between the opening and closing tags like this:</p>
-			<p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;<span style="color: #333;">Content</span>&lt;/tag&gt;</code></p>
+			<p class="centered"><code class="large">&lt;tag&gt;<span style="color: #333;">Content</span>&lt;/tag&gt;</code></p>
 			<p>Practice writing a <code>body</code> tag with some content here:</p>
 <textarea class="coder-editor"></textarea>
 <script type="coder-solution">&lt;body&gt;Hello!&lt;/body&gt;</script>
@@ -511,62 +511,93 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 				</li>
 			</ul>
 		</article>
+        
+        <!-- SLIDE 28: Adding text -->
+        <article class='slide slide-list'>
+            <h2>HTML content: ADDING TEXT</h2>
+            <p><em>Heading</em> tags are used for headings/page titles.</p>
 
-		<!-- SLIDE 28: HTML -->
+            <p>There are six levels of ranging from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. They follow a hierarchy with <code>&lt;h1&gt;</code> being the most significant heading on the page.</p>
+<pre class="prettyprint"><code>&lt;h1&gt;Name of blog&lt;/h1&gt;
+&lt;h2&gt;Title of blog post&lt;/h2&gt;
+&lt;h3&gt;Sub headings within blog post&lt;/h3&gt;
+</code></pre>
+
+            <p><em>Paragraphs</em> are represented by the <code>&lt;p&gt;</code> tag.</p>
+<pre class="prettyprint"><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+</code></pre>
+            
+            <p><code>&lt;b&gt;</code> or <code>&lt;strong&gt;</code>, <code>&lt;i&gt;</code> or <code>&lt;em&gt;</code></p>
+
+            <p class="icon-note">In XHTML, &lt;b&gt; and &lt;i&gt; were no longer used. In HTML5, they were re-introduced with a slightly different meaning/usage. See <a href="http://html5doctor.com/i-b-em-strong-element/">here</a> for more info.</p>
+
+            <p class="icon-tip">To keep from forgetting to close your tags, it's good practice to write the open &amp; close tags <em>first</em>, then go back and add the content <em>between</em> the tags.</p>
+        </article>
+
+        <!-- SLIDE 29: HTML -->
+        <article class='slide slide-list'>
+            <h2>HTML LISTS</h2>
+            <p><strong>Ordered</strong> lists are for items that need to follow a specific order. <strong>Two</strong> HTML tags are required, an ordered list tag <code>&lt;ol&gt;</code> and a list item <code>&lt;li&gt;</code> tag.</p>
+<pre class="prettyprint"><code>&lt;ol&gt;
+    &lt;li&gt;Buy ticket to LLC event.&lt;/li&gt;
+    &lt;li&gt;Arrive at venue.&lt;/li&gt;
+    &lt;li&gt;Turn on your computer.&lt;/li&gt;
+    &lt;li&gt;Learn some HTML &amp; CSS!&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+            <p><strong>Unordered</strong> lists are for items that don't follow any order and use the unordered list tag <code>&lt;ul&gt;</code> instead.</p>
+<pre class="prettyprint"><code>&lt;ul&gt;
+    &lt;li&gt;Breaking Bad&lt;/li&gt;
+    &lt;li&gt;Game of Thrones&lt;/li&gt;
+    &lt;li&gt;Arrested Development&lt;/li&gt;
+    &lt;li&gt;The Wire&lt;/li&gt;
+    &lt;li&gt;True Blood&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+            <p class="icon-warning">HTML tags and other content can <strong>only</strong> be added between the <code>&lt;li&gt;</code> tags, not the <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> tags.</p>
+        </article>
+
+        <!-- SLIDE 30: HTML -->
+        <article class='slide slide-list'>
+            <h2>Extra resource: Placeholder text</h2>            
+            <p>There are also many fun placeholder text generators for when you just need some dummy text to test how content looks your page.</p>
+            <ul>
+                <li><a href="http://lipsum.com/" target="_blank">http://lipsum.com/</a></li>
+                <li><a href="http://cupcakeipsum.com/" target="_blank">http://cupcakeipsum.com/</a></li>
+                <li><a href="http://slipsum.com/" target="_blank">http://slipsum.com/</a></li>
+                <li><a href="http://baconipsum.com/" target="_blank">http://baconipsum.com/</a></li>
+                <li><a href="http://hipsteripsum.me/" target="_blank">http://hipsteripsum.me/</a></li>
+            </ul>    
+        </article>
+
+		<!-- SLIDE 30: Exercise 1 -->
 		<article class='slide slide-list'>
-			<h2>Exercise #1 (15 minutes)</h2>
-			<ol class="spacey_list">
-				<li>View/open <a href="exercises/1_BASIC_HTML_WEBSITE/index.html" target="_blank"><code>exercises/1_BASIC_HTML_WEBSITE/index.html</code></a> in Chrome.</li>
-				<li>Make a local copy of <code>index.html</code> in the same <code>1_BASIC_HTML_WEBSITE</code> folder and rename it <code>copy.html</code>.<div class="sidenote">(This is so you can always refer back to index.html when needed.)</div></li>
-				<li>Open <code>copy.html</code> in Sublime Text and edit some the content within some of the opening and closing tags.</li>
-				<li>Make sure to save <code>copy.html</code> after changes have been made (Ctrl/Cmd+S).</li>
-				<li>View how <code>copy.html</code> has changed in Chrome by refreshing the web page.</li>
-				<li>Explore some of the HTML tags listed on the <strong>next slide</strong> by adding them to your <code>copy.html</code>. Re-save and re-view in Chrome.</li>
+			<h2>Exercise 1 (20 minutes)</h2>
+            <p>Let's go back to <code>index.html</code> and turn it into a real HTML page!</p>
+			<ol>
+				<li>Open <code>index.html</code> in the <strong>exercises</strong> folder in Sublime (text editor).</li>
+				<li>Add all the basic tags required for a web page.  Use <code>barebones.html</code> (or your mentors!) as a guide.</li>
+				<li>Try adding some content using the different content formatting tags discussed.</li>
+				<li>Save frequently and check out your work in Chrome!</li>
 			</ol>
+            <p class="icon-tip">Find a work flow that works best for you when making frequent changes. I like to use keyboard shortcuts to save my files in the editor (CTRL/CMND + S).  Then I open my file in the browser once and simply refresh it (CTRL/CMND + R) after saving my edits to view the changes in the browser.</p>
 		</article>
 
-		<!-- SLIDE 30: HTML -->
-		<article class='slide slide-list'>
-			<h2>Exercise #1 - Basic HTML tags</h2>
-			<div class="sidenote">
-				(Don't forget that viewable content goes in-between opening and closing tag pairs.<br />
-				Notice how Sublime Text will hint at you when/where you might not have closed a tag.)
-			</div>
-			<div class="cheatsheet">
-				<div>
-					<h3>Text Formatting</h3>
-					<code>&lt;hl&gt;</code>, <code>&lt;h2&gt;</code>, ... <code>&lt;h6&gt;</code>
-					- hierarchical heading levels from 1 to 6 with 1 being the most important<br />
-					<code>&lt;p&gt;</code> - paragraph<br />
-					<code>&lt;b&gt;</code> or <code>&lt;strong&gt;</code> - bold<br />
-					<code>&lt;i&gt;</code> or <code>&lt;em&gt;</code> - italics or emphasis<br />
-				</div>
-				<div>
-					<h3>Section Formatting</h3>
-					<code>&lt;blockquote&gt;</code> - indented block of code usually reserved for quotes.<br />
-				</div>
-				<div>
-					<h3>Input &amp; Forms</h3>
-					<code>&lt;button&gt;</code> - clickable button<br />
-					<code>&lt;textarea&gt;</code> - multiline text area for user input<br />
-					(Note: these tags are usually used inside of an HTML form element. More info <a href="http://learn.shayhowe.com/html-css/building-forms" target="_blank">here</a>)
-				</div>
-			</div>
-			<br clear="all" />
-			<p class="sidenote">You can practice writing some of these tags in the area below:</p>
-<textarea class="coder-editor"></textarea>
- <br clear="all" />
-		</article>
 
 		<!-- SLIDE 31: HTML -->
 		<article class='slide slide-list'>
-			<h2>Exercise #1 - Exploration Questions</h2>
-			<ul class="spacey">
+			<h2>Exercise 1 - Exploration Questions</h2>
+            <p>Here are some things to look out for when working on your exercise.</p>
+			<ul>
 				<li>How does the content/text look when you use different HTML tags? Why do you think the browser, by default adds those styles?</li>
-				<li>How is whitespace treated? What happens when you use multiple spaces or line breaks?</li> 
+				<li>How is whitespace treated? What happens when you use multiple spaces or line breaks?</li>
+                <li>What tags can/can't be nested in other tags?</li>
 			</ul>
-
-			<a href="http://info.cern.ch/">First website ever</a>
+            <p>And just for fun, here's a link to the <a href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">FIRST website ever</a>!<br>
+            (Some more info about it <a href="http://info.cern.ch/" target="_blank">here</a>.)</p>
 		</article>
 
 	 <!-- SLIDE 32 -->
