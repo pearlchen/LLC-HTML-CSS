@@ -233,11 +233,13 @@
       <h3>Please don't use any of these tags ever again!</h3>
     </article>
 
+    <!-- new slide -->
     <article class='slide slide-subhead'>
       <h1>Speaking of CSS...</h1>
       <p>It's what makes the web look nice.</p>
     </article>
 
+    <!-- new slide -->
     <article class='slide slide-list'>
       <h2>What is CSS?</h2>
       <p>CSS (Cascading Style Sheets) is what makes websites look nice.</p>
@@ -251,6 +253,7 @@
       </code></pre>
     </article>
 
+    <!-- new slide -->
     <article class='slide slide-list'>
       <h2>Let's add this to our HTML document</h2>
       <p>To indicate that we're adding CSS, we need to add an opening and closing <code>&#60;style&#62;</code> tag between our opening and closing <code>&#60;head&#62;</code> tags.</p>
@@ -272,114 +275,43 @@
       </code></pre>
     </article>
 
+    <!-- new slide -->
     <article class='slide slide-subhead'>
       <h1>Ta-da!</h1>
       <p>You just created your first website.</p>
       <p>HTML + CSS = website</p>
     </article>
 
+    <!-- new slide -->
     <article class='slide slide-list'>
       <h2>A note about HTML and CSS...</h2>
       <p>HTML and CSS are sort of like languages (HTML is technically a "markup language" and CSS is technically a "syntax"), but they're DIFFERENT languages. Just like French or Italian, they each have rules. It takes time to learn these languages. Don't worry if you don't get it all right away.</p>
     </article>
 
-    <!-- SLIDE: What is a website? -->
+    <!-- SLIDE: Websites without CSS -->
     <article class='slide slide-list'>
-      <h2>What is a website?</h2>
-      <p>These webpages closely match a file folder structure.</p>
-      <div class="centered">
-        <img src="assets/website_structure.gif" width="440" alt="website structure" />&nbsp;<img src="assets/folder_structure-simple.png" width="362" height="152" alt="folder structure" />
-      </div>
+      <h2>Websites without CSS...</h2>
+      <p>This:</p>
+      <img src="assets/llc_site_with_css.jpg">
+    </article>
+
+    <!-- SLIDE: Websites without CSS -->
+    <article class='slide slide-list'>
+      <h2>Websites without CSS...</h2>
+      <p>Becomes this:</p>
+      <img src="assets/llc_site_without_css.jpg">
     </article>
 
     <!-- SLIDE: What is a website? -->
-    <article class='slide slide-list'>
-      <h2>What is a website?</h2>
-      <p>Essentially this folder is located on a dedicated computer (also known as a <span class="keyword">server</span>) that <span class="keyword">hosts</span> websites.</p>
-      <div class="centered">
-        <img src="assets/webserver_download.png" width="738" height="531" alt="web request process" />
-      </div>
-    </article>
-
-    <!-- SLIDE: What is a website? -->
-    <article class='slide slide-list'>
-      <h2>Good file naming habits</h2>
-      <ul class="spacey_list">
-        <li>
-          Keep your file names in <strong>all lowercase</strong>.<br />
-          <span class="sidenote"><code>about.html</code> instead of <code>About.html</code> or <code>ABOUT.html</code></span>
-        </li>
-        <li>
-          Avoid <code>s p a c e s</code> in your file name. Use underscores instead.<br />
-          <span class="sidenote"><code>business_hours.html</code> instead of <code>business hours.html</code><br />
-            (The browswer will interpret it as <code>business%20hours.html</code>)</span>
-        </li>
-        <li>
-          For the same reason, avoid symbols like <code># &amp; *</code> in your file name.
-        </li>
-        <li>
-          Keep your file names concise, yet meaningful.<br />
-          <span class="sidenote"><code>about.html, contact.html</code> instead of <code>page1.html, page2.html</code></span>
-        </li>
-      </ul>
-    </article>
-
-    <!-- SLIDE: The Web Triad -->
-    <article class='slide slide-list'>
-      <h2>A basic webpage</h2>
-      <p>
-        A webpage is mainly built using 3 web languages:
-      </p>
-      <table width="100%">
-      <tr>
-      <td width="33%" class="centered"><strong>HTML</strong> (Hypertext Markup Language) <br>
-          is the markup language.</td>
-      <td width="33%" class="centered"><strong>CSS</strong> (Cascading Style Sheets) <br>
-          is the style sheet language.</td>
-      <td width="33%" class="centered"><strong>JavaScript</strong><br>
-          is the programming language.</td>
-      </tr>
-            <tr>
-      <td class="centered"><img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer" /></td>
-      <td class="centered"><img src="assets/TRIAD-css.gif" width="261" height="241" alt="Presentation Layer" /></td>
-      <td class="centered"><img src="assets/TRIAD-js.gif" width="274" height="241" alt="Behaviour Layer" /></td>
-      </tr>
-            <tr>
-      <td class="centered">It should define the <strong>content</strong>.</td>
-      <td class="centered">It should define the <strong>presentation</strong></td>
-      <td class="centered">It should define <strong>behaviour</strong>.</td>
-      </tr>
-      </table>
-    </article>
-
-    <!-- new slide -->
     <article class='slide slide-subhead'>
-      <h1>Dive into HTML</h1>
-      <p>The content layer</p>
-      <p><img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer" /></p>
+      <h1>Why is that again?</h1>
+      <h2>Because HTML defines content, and CSS defines the look and layout (it makes the web look nice).</h2>
     </article>
 
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>What is HTML?</h2>
-      <p>HTML was created for <span class="keyword">web browsers</span> to easily read (not humans).</p>
-      <p>So this makes perfect sense to a web browser:</p>
-<pre>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</pre>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>What is HTML?</h2>
-      <p>Whitespace through indentation (tabs) make your more HTML human-readable.</p>
-<pre class='prettyprint'>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt; &lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre> 
-      <p class="sidenote">(Later on, you might also notice how automatic colour coding in your code editor helps a lot too.)</p>
+    <!-- SLIDE: What is a website? -->
+    <article class='slide slide-subhead'>
+      <h1>Let's focus on HTML for now</h1>
+      <p>Time to start writing some HTML (which is also called "markup")</p>
     </article>
 
     <!-- SLIDE: HTML -->
@@ -397,37 +329,17 @@
       <h2>HTML tags</h2>
       <p>Tags typically come in <strong>pairs</strong> -- an opening tag and a closing tag with a forward slash:</p>
       <p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;&lt;/tag&gt;</code></p>
-      <p class="sidenote">Some examples:</p>
-<pre style="width: 45%; float: left;">&lt;!DOCTYPE html&gt;
-<strong>&lt;html&gt;</strong>
+      <p class="sidenote">Some examples that you've already seen:</p>
+      <pre>&lt;!DOCTYPE html&gt;
   &lt;head&gt;
     &lt;title&gt; &lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
   &lt;/body&gt;
-<strong>&lt;/html&gt;</strong></pre> 
-<pre style="width: 45%; float: right;">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt; &lt;/title&gt;
-  &lt;/head&gt;
-  <strong>&lt;body&gt;</strong>
-  <strong>&lt;/body&gt;</strong>
-&lt;/html&gt;</pre> 
-<br clear="all" />
+&lt;/html&gt;</pre>   
     </article>
 
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML tags</h2>
-      <p>Tags typically come in <strong>pairs</strong> -- an opening tag and a closing tag with a forward slash:</p>
-      <p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;&lt;/tag&gt;</code></p>
-      <p>Practice writing a <code>body</code> tag with me here:</p>
-<textarea class="coder-editor"></textarea>
-<script type="coder-solution">&lt;body&gt;&lt;/body&gt;</script>
-    </article>
-
-    <!-- SLIDE: HTML -->
+   <!-- SLIDE: HTML -->
     <article class='slide slide-list'>
       <h2>HTML tags</h2>
       <p>Tags can be "nested" within other tags, like this:</p>
@@ -458,7 +370,45 @@
   &lt;/body&gt;
 &lt;/html&gt;</pre> 
 <br clear="all" />
+    </article>
 
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>What goes in the <code>&lt;head&gt;</code> and what goes in the <code>&lt;body&gt;</code>?</h2>
+      <p>Things that you put in the <code>&lt;body&gt;</code> of your HTML document will show up on your webpage. Things that you put in the <code>&lt;head&gt;</code> of your HTML document won't show up. You can think of the <code>&lt;head&gt;</code> as a place to write secret notes to your browser. For example, our styles go in the head. We don't want our styles to show up on our page, but we do want our browser to apply the styles.</p>
+    </article>
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>Exercise: Open the file "blank.html" in Sublime Text</h2>
+      <ol>
+        <li>Change the content within the opening and closing <code>&lt;title&gt;</code> tags, and observe the change in your browser.</li>
+        <li>Add an additional paragraph.</li>
+        <li>Add a few headers to the page, above each paragraph. Hint: you'll need to use some or all of the following tags: <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code>, <code>&lt;h2&gt;</code> and <code>&lt;/h2&gt;</code>, and you can even try using h3, h4, h5 and h6, if you like.</li>
+        <li>Try adding three links. The code for a link looks like this:<br><code>&lt;a href="http://link.com"&gt;Click here&lt;/a&gt;</code>
+      </ol>
+      <p>Don't forget to save and refresh your browser to see your code in action!</p>
+    </article>
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>Exercise: Let's write the markup for our final project</h2>
+      <p>The output (what you'll see in your browser) of this exercise is on the next slide. Write the HTML.</p>
+      <p><strong>Hint: you'll need to know how to create an unordered (bulleted) list for this exercise. The code for an unordered list is as follows:</strong></p>
+      <pre><code>
+        &lt;ul&gt;
+          &lt;li&gt;This is a list item&lt;/li&gt;
+          &lt;li&gt;This is another list item&lt;/li&gt;
+        &lt;/ul&gt;
+      </code></pre>
+      <p>You can also create ordered (numbered) lists by using <code>&lt;ol&gt;</code> and <code>&lt;/ol&gt;</code> instead of <code>&lt;ul&gt;</code> and <code>&lt;/ul&gt;</code>.</p>
+    </article>
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>Write the HTML that will output this:</h2>
+      <img src="assets/step_1_output.jpg">
+      <p>Hint: You'll want to use <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code> once, <code>&lt;h2&gt;</code> and <code>&lt;/h2&gt;</code> three times and <code>&lt;h3&gt;</code> and <code>&lt;/h3&gt;</code> once.</p>
     </article>
 
     <!-- SLIDE: HTML -->
