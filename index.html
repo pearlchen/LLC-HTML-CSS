@@ -630,49 +630,46 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 				<hr />
                 <em>*Don't worry about these just yet, we'll get to these tags soon.</em><br>
 				<code>&lt;img&gt;</code> or <code>&lt;img /&gt;</code> - an image <br />
-				<code>&lt;link&gt;</code> or <code>&lt;link /&gt;</code> - define a relationship to an external resource like an external style sheets.
+				<code>&lt;link&gt;</code> or <code>&lt;link /&gt;</code> - define a relationship and links to an external resource, like an external style sheets.
             </p>
         <textarea class="coder-editor"></textarea>
 		</article>
 
 		<!-- SLIDE 36: HTML -->
-		<article class='slide slide-list'>
+		<!-- <article class='slide slide-list'>
 			<h2>Quick review:</h2>
 			<ul>
 				<li><strong>HTML tags</strong> define <em>structure</em>.</li>
 				<li><strong>Text between opening &amp; closing tags</strong> define <em>content</em>.</li>
 				<li><strong>Void HTML tags</strong> render special objects that may sometimes <em>look like content</em> or <em>seem structural</em> depending on the void tag.</li>
 			</ul>     
-		</article>
+		</article> -->
 
-        <!-- SLIDE 37: HTML -->
+        <!-- SLIDE 36: HTML -->
         <article class='slide slide-list'>
             <h2><code>img</code> tag</h2>
             <p>Let's take a look at how the <code>img</code> tag renders below. Not very exciting right?</p>
 <textarea class="coder-editor">&lt;p&gt;Kicking up HTML a notch.&lt;/p&gt;
-&lt;img &gt;
-&lt;p&gt;Do you agree?&lt;/p&gt;</textarea>      
-        </article>
-
-
-
-		<!-- SLIDE 36: HTML -->
-		<article class='slide slide-list'>
-			<h2>Attributes</h2>
-			<p>Sometimes we need to define data that we don't see right away but is used by the browser to help render special content like hyperlinks, images, or video.</p>
-			<p><span class="keyword">Attributes</span> are used to provide additional information or instruction.</p>
-			<p class="sidenote">Here's that same <code>img</code> tag but now it's using an <strong>attribute</strong>, <code>src</code>, to tell my web page where to find a source image:</p>
-<textarea class="coder-editor coder-editor-full">&lt;p&gt;Kicking up HTML a notch.&lt;/p&gt;
-&lt;img src="http://goo.gl/7eSU5" /&gt;
+&lt;img&gt;
 &lt;p&gt;Do you agree?&lt;/p&gt;</textarea>
-			<br clear="all" />
-			<div class="reminders single-line"><p>Remember, <code>img</code> is a void HTML tag so it does <strong>not</strong> need a closing tag. This is wrong: <code>&lt;img&gt;http://goo.gl/7eSU5&lt;/img&gt;</code></p></div>
-		</article>
+            <p>Right now, the image tag is missing additional information in the form of <em>attributes</em>.</p>      
+        </article>
 
 		<!-- SLIDE 37: HTML -->
 		<article class='slide slide-list'>
+			<h2>Attributes</h2>
+			<p>Attributes are used to render special content like hyperlinks, images, or video because they provide additional information or instruction.</p>
+			<p>Here's that same <code>img</code> tag but now it's using an <strong>attribute</strong> (<code>src</code>), to tell the web page where to find the source of the image.</p>
+<textarea class="coder-editor coder-editor-full">&lt;p&gt;Kicking up HTML a notch.&lt;/p&gt;
+&lt;img src="http://goo.gl/7eSU5" /&gt;
+&lt;p&gt;Do you agree?&lt;/p&gt;</textarea>
+			<p class="icon-warning">Remember, <code>img</code> is a void HTML tag so it does <strong>not</strong> need a closing tag. This is <strong>wrong</strong>: <code>&lt;img&gt;http://goo.gl/7eSU5&lt;/img&gt;</code></p>
+		</article>
+
+		<!-- SLIDE 38: HTML -->
+		<article class='slide slide-list'>
 			<h2>Working with images</h2>
-			<p>Let's look at that again: images are an example of a <span class="keyword">void tag</span> <strong>with</strong> an <span class="keyword">attribute</span>.</p>
+			<p>Images are an example of a <em>void tag</em> with an <em>attribute</em> to define the filepath of the image file.</p>
 			<pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5" /&gt;</pre>
 			<ul>
 				<li><code>src</code> is the <em>attribute</em></li>
@@ -682,13 +679,11 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 			<p>With an <code>img</code> tag, the value of the <code>src</code> attribute tells the browser what the <em>url source</em> of our image is.</p>
 		</article>
 
-		<!-- SLIDE 38: HTML -->
+		<!-- SLIDE 39: HTML -->
 		<article class='slide slide-list'>
 			<h2>Working with images</h2>
-			<p>Tags can have more than one attribute, some are <strong>required</strong> (like <code>src</code>) and others are <strong>optional</strong>:</p>
-			<p><code>width</code> and <code>height</code> attributes tell the browser what dimension to <em>display</em> the image at.</p>
-			<p class="sidenote" style="margin-top: -15px;">(This is useful so the page doesn't jump around when loading very large images, or while on a very slow internet connection such as dial-up or 2G/3G. Also, width/height values don't necessarily have to match the image's <em>actual</em> width/height.)</p>
-			<hr />
+			<p>Tags can have more than one attribute. Some are <strong>required</strong> (<code>src</code>) and others are <strong>optional</strong> (<code>width</code> and <code>height</code>). These attributes tell the browser what dimension to <em>display</em> the image at.</p>
+			<p class="icon-tip">(This is useful so the page doesn't jump around when loading very large images, or while on a slow internet connection such as dial-up or 2G/3G. Also, width/height values don't necessarily have to match the image's <em>actual</em> width/height.)</p>
 			<p>For example, without <code>width</code> and <code>height</code> attributes, the browser displays image at original size.</p>
 			<pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5" /&gt;</pre>
 			<img src="http://goo.gl/7eSU5" />
@@ -698,19 +693,19 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 			<img src="http://goo.gl/7eSU5" width="320" height="262" />
 		</article>
 
-				<!-- SLIDE 39: HTML -->
+	   <!-- SLIDE 40: HTML -->
 		<article class='slide slide-list'>
 			<h2>Working with images</h2>
-				<p>Another optional image attribute:</p>
-				<ul style="margin-top: -1em;">
-					<li><code>alt</code> is <em>alternative text</em> to display to visually impaired web visitors using screen readers. It also shows up when there's a "broken image" due to typos or moved files.<br /> 
-						<span class="sidenote">(The img tag will work without the alt attribute but it's required to be "<a href="http://validator.w3.org/"target="_blank">valid</a>" HTML markup,<br /> which is why you might see <code>alt=""</code> often used.)</span></li>
-				</ul>
-<textarea class="coder-editor">&lt;img 
-	src="http://goo.gl/7eSU5" 
-	width="160" 
-	height="131" 
-	alt="HTML LOLcat" /&gt;</textarea>
+			<p><code>alt</code> is another optional image attribute and refers to <em>alternative text</em>. It is used to display to visually impaired web visitors using screen readers.</p>
+            <p>It also shows up when there's a broken or missing image due to typos or moved files.</p> 
+<textarea class="coder-editor">&lt;img src="http://goo.gl/7eSU5" 
+width="160" height="131" 
+alt="HTML LOLcat" /&gt;
+&lt;!-- this is usually written in one
+ line but is broken down this way 
+ for demonstration purposes. --&gt;
+</textarea>
+            <p class="icon-tip">The img tag will work without the alt attribute but it's required to be "<a href="http://validator.w3.org/"target="_blank">valid</a>" HTML markup.</span>
 		</article>
 
 		<!-- SLIDE 40: HTML -->
@@ -827,7 +822,7 @@ Comments can be used to:
 ● hide code for later use
 ● leave directions
 ● organize the document
-<!-- This is my comment --> -->
+<!-- This is my comment -->
 
 		<!-- SLIDE 46: HTML -->
 		<article class='slide slide-list'>
