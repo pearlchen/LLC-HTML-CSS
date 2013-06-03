@@ -92,7 +92,7 @@
     <!-- SLIDE: Today's project -->
     <article class='slide slide-list'>
       <h2>Today's Project</h2>
-      <!--<img src="">-->
+      <a href="http://#"><img src="assets/project_screenshot.jpg"></a>
     </article>
 
     <!-- SLIDE: Course Outline -->
@@ -143,7 +143,7 @@
         <li>Open Sublime Text and go to "File -> Open".</li>
         <li>Navigate to the folder called "Exercises" in the folder you downloaded with today's slides.</li>
         <li>With the entire folder selected (not just one file within it), click "Open".</li>
-        <li>Now that the folder is open in Sublime, click on "Exercise 1" so that it fills the screen. Now, right click and select "Open in Browser". (If your defaulr browser isn't set to Chrome, <a href="https://support.google.com/chrome/answer/95417?hl=en">here are the instructions</a>.)</li>
+        <li>Now that the folder is open in Sublime, click on "Exercise 1" so that it fills the screen. Now, right click and select "Open in Browser". (If your default browser isn't set to Chrome, <a href="https://support.google.com/chrome/answer/95417?hl=en">here are the instructions</a>.)</li>
       </ol>
     </article>
 
@@ -230,7 +230,7 @@
         <li>&#60;marquee&#62;HUGE FONTS!&#60;/font&#62;</li>
         <li>&#60;center&#62;I'm centered text!&#60;/center&#62;</li>
       </ul>
-      <h2>Please don't use any of these tags ever again!</h2>
+      <h3>Please don't use any of these tags ever again!</h3>
     </article>
 
     <article class='slide slide-subhead'>
@@ -251,17 +251,36 @@
       </code></pre>
     </article>
 
-    <!-- SLIDE: What is a website? -->
     <article class='slide slide-list'>
-      <h2>What is a website?</h2>
-      <p>A
-        <span class="keyword">website</span>
-        is made up of many 
-        <span class="keyword">webpages</span>.
-      </p>
-      <div class="centered">
-        <img src="assets/website_structure.gif" width="580" heigth="320" alt="website structure" />
-      </div>
+      <h2>Let's add this to our HTML document</h2>
+      <p>To indicate that we're adding CSS, we need to add an opening and closing <code>&#60;style&#62;</code> tag between our opening and closing <code>&#60;head&#62;</code> tags.</p>
+      <pre><code>
+        &#60;!doctype html&#62;
+          &#60;head&#62;
+            &#60;title&#62;Ladies Learning Code HTML and CSS&#60;/title&#62;
+            &#60;style&#62;
+              p {
+              color: red;
+              text-decoration: underline;
+              }
+            &#60;/style&#62;
+          &#60;/head&#62;
+          &#60;body&#62;
+            &#60;p&#62;This is a paragraph&#60;/p&#62;
+          &#60;/body&#62;
+        &#60;/html&#62;
+      </code></pre>
+    </article>
+
+    <article class='slide slide-subhead'>
+      <h1>Ta-da!</h1>
+      <p>You just created your first website.</p>
+      <p>HTML + CSS = website</p>
+    </article>
+
+    <article class='slide slide-list'>
+      <h2>A note about HTML and CSS...</h2>
+      <p>HTML and CSS are sort of like languages (HTML is technically a "markup language" and CSS is technically a "syntax"), but they're DIFFERENT languages. Just like French or Italian, they each have rules. It takes time to learn these languages. Don't worry if you don't get it all right away.</p>
     </article>
 
     <!-- SLIDE: What is a website? -->
