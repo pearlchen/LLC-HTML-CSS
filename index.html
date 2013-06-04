@@ -1178,6 +1178,347 @@ section.about {
       </ul>
     </article>
 
+    <!-- SLIDE CSS Layout About 3 -->
+    <article class="slide slide-list">
+      <h2>Centre-aligning the header</h2>
+      <ul>
+        <li>We want the heading for this section to be centre-aligned</li>
+        <li>So let's select it with a child selector:</li>
+<pre><code>
+section.about h2 {}
+</code></pre>
+        <li>And centre-align it with <code>text-align: center;</code></li>
+<pre><code>
+section.about h2 {
+  text-align: center;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout About 4 -->
+    <article class="slide slide-list">
+      <h2>CSS Floats</h2>
+      <ul>
+        <li>We want to align that image to the left, and allow the text to wrap around it.</li>
+        <li>We do this using <strong>CSS Floats</strong></li>
+        <li>Remember how all HTML elements are all rectangular boxes stacked on top of each other?</li>
+        <li>We have to break that stacking flow by <strong>floating</strong> the image to the side</li>
+        <li>This will cause the text after the image to move up beside it, because we've disrupted the flow of the rectangular boxes</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout About 5 -->
+    <article class="slide slide-list">
+      <h2>CSS Floats</h2>
+      <ul>
+        <li>We already wrote the selector for our profile <code>&lt;img></code>, so let's add the declaration <code>float: left;</code> to it:</li>
+<pre><code>
+img.profile {
+  float: left;
+}
+</code></pre> 
+        <li>This has 'floated' our image to the left, but there's a problem...</li>       
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout About 5 -->
+    <article class="slide slide-list">
+      <h2>CSS Floats</h2>
+      <ul>
+        <li>We broke the flow of rectangular boxes by adding <code>float: left;</code> to our image</li>
+        <li>We need to restore the regular stacking of boxes after this section</li>
+        <li>We do this by adding <code>overflow: hidden;</code> to the parent element (<code>&lt;section class="about"></code>)</li>
+        <li><code>overflow: hidden;</code> forces the element to 'contain' any floated children, so that they don't disrupt the elements after them</li>
+<pre><code>
+section.about {
+  overflow: hidden;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Favourites -->
+    <article class="slide slide-list">
+      <h2>Next Section: Favourites</h2>
+      <ul>
+        <li>There's not much to do here, but let's centre-align the entire section</li>
+        <li>First, we have to add a wrapping <code>&lt;section></code> around the favourites content</li>
+        <li>Add an opening <code>&lt;section></code> tag before the favourites heading, and a closing <code>&lt;/section></code> tag after the last image.</li>
+<pre><code>
+&lt;section class="favourites">
+  &lt;h2>...&lt;/h2>
+  &lt;h3>...&lt;/h3>
+  &lt;img class="favourite" src="images/kitten.jpg">
+  &lt;img class="favourite" src="images/kitten.jpg">
+  &lt;img class="favourite" src="images/kitten.jpg">
+  &lt;img class="favourite" src="images/kitten.jpg">
+&lt;/section>
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Favourites 2 -->
+    <article class="slide slide-list">
+      <h2>Centre-aligning</h2>
+      <ul>
+        <li>Let's write a selector for the section we just created:</li>
+<pre><code>
+section.favourites {}  
+</code></pre>
+        <li>And centre-align it:</li>        
+<pre><code>
+section.favourites {
+  text-align: center;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Contact -->
+    <article class="slide slide-list">
+      <h2>Assignment: Contact Section</h2>
+      <ul>
+        <li>Repeat the process of adding a wrapper <code>&lt;section></code> and centre-aligning i in CSS with the Contact section</li>
+        <li>Add a background image to the contact section</li>
+        <li>Add <code>margin</code>s around the images in the contact section</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Contact 2 -->
+    <article class="slide slide-list">
+      <h2>Contact Section</h2>
+      <ul>
+        <li>Your HTML code should look something like this:</li>
+<pre><code>
+&lt;section class="contact">
+  &lt;h2>Contact Me&lt;/h2>
+  &lt;a href="https://">...&lt;/a>
+  &lt;a href="https://">...&lt;/a>
+  &lt;a href="https://">...&lt;/a>
+&lt;/section>
+</code></pre>
+        <li>And your CSS:</li>        
+<pre><code>
+section.contact {
+  text-align: center;
+  background: url('images/escheresque.png');
+}
+section.contact img {
+  margin: 20px;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Classes -->
+    <article class="slide slide-list">
+      <h2>Styling Multiple Sections at Once</h2>
+      <ul>
+        <li>All our sections could use some spacing, they're a bit too squished together</li>
+        <li>We'll add some <code>padding</code> to our sections</li>
+        <li>Since we're adding the same amount of padding to each section, we can avoid repeating ourselves by adding a class to each section we'd like to style, and then targeting this class in our CSS</li>
+        <li>Add a class of <strong>box</strong> to each of the content <code>&lt;section></code>s. (not including the banner section)</li>
+<pre><code>
+&lt;section class="about box">&lt;/section>
+&lt;section class="favourites box">&lt;/section>
+&lt;section class="contact box">&lt;/section>
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Classes -->
+    <article class="slide slide-list">
+      <h2>Styling Multiple Sections</h2>
+      <ul>
+        <li>Let's write a selector for our new classes:</li>
+<pre><code>
+section.box {}
+</code></pre>
+        <li>And add a bunch of padding to all our sections:</li>        
+<pre><code>
+section.box {
+  padding: 50px 100px;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Classes 3 -->
+    <article class="slide slide-list">      
+      <ul>
+        <li>We can also use our <code>box</code> class to target the headings in each of these sections</li>
+        <li>Since we're targeting both our <code>&lt;h2></code> and <code>&lt;h3></code> tags, we'll write a selector for both, separating them with a comma:</li>
+<pre><code>
+section.box h2, section.box h3 {}
+</code></pre>        
+        <li>And change the colour of our headings:</li>
+<pre><code>
+section.box h2, section.box h3 {
+  color: #A8258D;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras -->
+    <article class="slide slide-subhead">
+      <h1>Now we have a nice-looking website with all the elements nicely styled!</h1>
+      <h2>But there's still more we can do to make our site extra special</h2>
+    </article>
+
+    <!-- SLIDE CSS Extras: Background -->
+    <article class="slide slide-list">
+      <h2>Making our Background image fixed</h2>
+      <ul>
+        <li>To get that trendy effect where your background image stays put while you scroll, you can adjust the <code>background-attachment</code> property:</li>
+<pre><code>
+section.banner {
+  background-attachment: fixed;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Custom Fonts -->
+    <article class="slide slide-list">
+      <h2>Adding Custom Fonts</h2>
+      <ul>
+        <li>Services like <a href="http://www.google.com/fonts/">Google Fonts</a> can make it easy for us to use fun fonts that aren't normally supported by all computers</li>
+        <li>Go to <a href="http://www.google.com/fonts/">Google Fonts</a> and search around for a font you like</li>
+        <li>Click "add to collection" when you find a font you like, then click the "use" button</li>
+        <li>Find the code in Step 3 of the instructions, and paste it into the <code>&lt;head></code> of your HTML document</li>
+<pre><code>
+&lt;link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Custom Fonts -->
+    <article class="slide slide-list">
+      <h2>Adding Custom Fonts</h2>
+      <ul>
+        <li>Copy the code from Step 4 of the instructions into your CSS</li>
+        <li>Add the line of code anywhere you'd like to use your custom font</li>
+        <li>I'm going to add it to all the header tags</li>
+<pre><code>
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Menu -->
+    <article class="slide slide-list">
+      <h2>Adding a Menu</h2>
+      <ul>
+        <li>Let's add a menu to the top of our document so our users can navigate</li>
+        <li>Menus are commonly marked up as unordered lists with links inside each list item</li>
+        <li>Add a <code>&lt;ul></code> with a class of "menu" to the top of your HTML document, just inside the <code>&lt;body></code></li>
+<pre><code>
+&lt;ul class="menu">
+  &lt;li>&lt;a href="#about">About&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#favourites">Favourites&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
+&lt;/ul>
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Menu 2 -->
+    <article class="slide slide-list">
+      <h2>Adding a Menu</h2>
+      <ul>
+        <li>Let's add some basic styles to the unordered list item, like a border and background, and lets remove the bullets from the list items:</li>
+<pre><code>
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  border-bottom: 1px solid #434A5C;
+  background: #ffffff;
+}
+</code></pre>       
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Menu 3 -->
+    <article class="slide slide-list">
+      <h2>Styling the Menu</h2>
+      <ul>
+        <li>We need to get our list items in a row</li>
+        <li>Remember how we had <code>display: block;</code> and <code>display:inline;</code> properties?</li>
+        <li>Neither of those is quite what we want, because <code>block</code> will create a new line for each element, and <code>inline</code> won't let us add padding to the list items</li>
+        <li>There's a third option that gives us the best of both worlds: <code>display: inline-block;</code></li>
+        <li>Write a selector for the list items, and apply <code>display: inline-block;</code> as well as some padding to the top and sides</li>
+<pre><code>
+.menu li {
+  display: inline-block;
+  padding: 20px 35px;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Menu 4 -->
+    <article class="slide slide-list">
+      <h2>Styling the Menu Links</h2>
+      <ul>
+        <li>Add a bit of style to the links in your menu. Remove the default underline with <code>text-decoration: none</code></li>
+<pre><code>
+.menu a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Menu 5 -->
+    <article class="slide slide-list">
+      <h2>Making the menu "sticky"</h2>
+      <ul>
+        <li>We can get our menu to stay at the top of the screen while the user scrolls with the <code>position: fixed;</code> declaration</li>
+        <li><code>position: fixed;</code> requires us to set the <code>top</code> and <code>left</code> properties to tell the browser where to fix the menu to</li>
+        <li>This destroys the rectangular box around our menu, so we have to set the width back to 100%</li>
+<pre><code>
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Menu 6 -->
+    <article class="slide slide-list">
+      <h2>Getting the links to work</h2>
+      <ul>
+        <li>We need to match the links in our menu to the sections on our page</li>
+        <li>We can do this by adding an <code>id</code> attribute to each section that matches the link <code>href</code> (minus the <code>#</code> part)</li>
+<pre><code>
+&lt;section id="about" class="about box">&lt;/section>
+&lt;section id="favourites" class="favourites box">&lt;/section>
+&lt;section id="contact" class="contact box">&lt;/section>
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Finished -->
+    <article class="slide slide-subhead">
+      <h1>Assignment: Customize!</h1>
+      <h2>With whatever time is left, try changing and adding CSS properties to customize the page</h2>
+      <h2>Check the <a href="cheatsheets/davechild_css2.pdf">CSS Cheat Sheet</a> to find new properties to try out</h2>
+      <h2>Have fun!</h2>
+    </article>
+    
     <article class='slide slide-subhead'>
       <h1>Thank you!</h1>
       <p></p>
