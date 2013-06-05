@@ -872,18 +872,17 @@ alt="HTML LOLcat" /&gt;
             </ul>
 		</article>
 
-		<!-- SLIDE 49: HTML -->
+		<!-- SLIDE 51: HTML -->
 		<article class='slide slide-list'>
 			<h2>Getting ready for Exercise #3</h2>
 			<p>We're eventually aiming to have a <strong>3-page</strong> website that uses a standard 2-column web page layout.</p>
-			<p class="centered"><img src="assets/2-column-web page.png" width="703" height="411" alt="" /></p>
+			<p class="centered"><img src="assets/2-column-webpage.png" width="703" height="411" alt="" /></p>
 		</article>
 
-		<!-- SLIDE 50 -->
+		<!-- SLIDE 52 -->
 		<article class='slide slide-list'>
-			<h2>Getting ready for Exercise #3</h2>
-			<p>Code along and review with me!</p>
-			<p>Make a new <code>index.html</code> in the <code>exercises/website</code> folder.</p>
+			<h2>Getting ready for Exercise 3</h2>
+			<p>Make a new folder and name it <strong>website</strong>. This is where you'll be creating the files for the final project, a three page website. Now let's create a new <code>index.html</code> in the <code>exercises/website</code> folder.</p>
 			<ol>
 				<li>What's the <strong>very first line</strong> we need to type?</li>
 				<li>What <strong>three</strong> HTML tags should every website have?</li>
@@ -892,22 +891,25 @@ alt="HTML LOLcat" /&gt;
 			</ol>
 			<p>Here is the start of your top navigation menu.</p>
 <pre class="prettyprint">
-	&lt;nav&gt;
-		Home About Contact
-	&lt;/nav&gt;
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Home&lt;/li&gt;
+        &lt;li&gt;About&lt;/li&gt;
+        &lt;li&gt;Contact&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
 </pre>
-			<p class="sidenote">NOTE: <code>nav</code> is an HTML5 tag that represents a section with navigation links. Navigations are also generally used with an HTML list but to keep it straightforward for today, we will leave it out.</p>
+			<p class="icon-note"><code>nav</code> is a new HTML5 tag that represents a section with navigation links. Read more about it <a href="http://html5doctor.com/nav-element/" target="_blank">here</a>.</p>
 		</article>
 
-		<!-- SLIDE 51 -->
+		<!-- SLIDE 53 -->
 		<article class='slide slide-list'>
 			<h2>Exercise #3 (now until lunch)</h2>
-			<p>On your own:</p>
-			<ol class="spacey_list">
-				<li>Eventually there will be <code>about.html</code> and <code>contact.html</code>. Use the <code>&lt;a&gt;</code> tag with a <code>href</code> attribute to link all your pages together.</li>
-				<li>Based on <code>index.html</code>, create those 2 new files for About and Contact  in the same <code>website</code> folder as <code>index.html</code>.</li> 
+			<ol>
+				<li>Create 2 more HTML pages in the <strong>website</strong> folder and name them <code>about.html</code> and <code>contact.html</code>.</li>
+                <li>Update your navigation code using the <code>&lt;a&gt;</code> tag to link all your pages together.</li> 
 				<li>Make sure that all your web pages have descriptive and unique <code>&lt;title&gt;</code>'s.</li>
-				<li>Confirm that you can click between all the pages using the navigation links. Fix them if needed.</li>
+				<li>Confirm that you can click between all the pages using the navigation links.</li>
 				<li>Update <code>about.html</code> with a picture and bio.<br />
 					<span class="sidenote">(You can even try adding a YouTube video based on the notes on the next slide.)</span></li>
 				<li>Update <code>contact.html</code> with contact info.<br />
@@ -917,19 +919,19 @@ alt="HTML LOLcat" /&gt;
 			</ol>
 		</article> 
 
-		<!-- SLIDE 52: HTML -->
+		<!-- SLIDE 54: HTML -->
 		<article class='slide slide-list'>
 			<h2>Bonus: Add video to your web page</h2>
 			<p>As time goes on, it has become easier and easier to embed multimedia content into websites.</p>
 			<p>From YouTube, you can find an <strong>Embed Code</strong> to put into your website <span class="sidenote">(click on "Share" button below video, then "Embed")</span> and YouTube's servers do all the rest of the work via the <code>iframe</code> tag.</p>
-			<pre class="prettyprint">&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/tlnFyjpV5Wo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</pre>
-			<iframe width="560" height="315" src="http://www.youtube.com/embed/tlnFyjpV5Wo" frameborder="0" allowfullscreen></iframe>
+			<pre class="prettyprint">&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/WvCfkejRGbY" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</pre>
+			<iframe width="560" height="315" src="http://www.youtube.com/embed/WvCfkejRGbY" frameborder="0" allowfullscreen></iframe>
 			<p>Adding a Google Map is similiar. <a href="assets/google_map_embed.jpg" target="_blank">Click here for instructional screenshot.</a></p>
 		</article>
 
 		<!-- SLIDE 53: HTML -->
 		<article class='slide slide-list'>
-			<h2>HTML reference</h2>
+			<h2>HTML references and Tools</h2>
 			<ul class="spacey_list">
 				<li>Download a <a href="http://woorkup.com/2009/12/16/html5-visual-cheat-sheet-reloaded/" target="_blank">cheatsheet of HTML tags</a>. (Copy in the <code>cheatsheets</code> folder.)</li>
 				<li>Try looking up individual tags using the HTML sections of <a href="https://developer.mozilla.org/en-US/docs/HTML/Element" target="_blank">Mozilla's Developer Network</a> or the <a href="http://www.w3.org/community/webed/wiki/HTML/Elements" target="_blank">W3C</a> for further breakdown.</li>
