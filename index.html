@@ -197,8 +197,9 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 				<strong>JavaScript</strong><br>
 						is the programming language.
 				<img src="assets/TRIAD-js.gif" width="274" height="241" alt="Behaviour Layer" />
-				<td>Defines the <strong>behaviour</strong>.
+				Defines the <strong>behaviour</strong>.
 			</div>
+            <p class="clear">Let's look at an <a href="http://everylastdrop.co.uk/" target="_blank">example</a>.</p>
 		</article>
 
 		<!-- SLIDE 11 -->
@@ -797,8 +798,8 @@ alt="HTML LOLcat" /&gt;
 			<p>To write a <em>relative path</em> that goes <strong>up</strong> a folder, start the path with "<code>../</code>".</p>
 			<pre class="prettyprint">&lt;img src="<strong>../</strong>llc.gif"&gt;</pre>
 			<ol>
-				<li>Open <code>relative-path.html</code> <span class="sidenote">(located in the <strong>exercises > secondary</strong> folder)</span> in Sublime and try adding the the image again.</li>
-                <li>BUT if you moved all your images to an <strong>images</strong> folder, why won't<br>
+				<li>Open <code>relative-path.html</code> <span class="sidenote">(located in the <strong>exercises > secondary</strong> folder)</span> in Sublime and try adding another image.</li>
+                <li>If you moved all your images to an <strong>images</strong> folder, why won't<br>
                 <code class="prettyprint">&lt;img src="<strong>../</strong>llc.gif"&gt;</code> work?<br>
                 <p class="show-hint" onclick="javascript:showHint('nested-img-path'); this.style.display = 'none';">click here to show answer...</p>
                 <p id="nested-img-path" class="hint-solution">The file path first needs to go <em>up</em> a folder and then <em>into</em> the <strong>images</strong> folder. The file path should be <code class="prettyprint">&lt;img src="../images/llc.gif"&gt;</code></p>
@@ -808,52 +809,22 @@ alt="HTML LOLcat" /&gt;
 			<pre class="prettyprint">&lt;img src="<strong>../../../../</strong>llc.gif" /&gt;</pre>
 		</article>
 
-		<!-- SLIDE 44: HTML -->
-		<!-- <article class='slide slide-list'>
-			<h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 4)</span></h2>
-			<p>However, it's best practice to organize your images into its own folder to keep your website's file structure tidy.</p>
-			<p class="sidenote">We tend to also organize JavaScript and CSS files into their own "js" or "css" folder.</p>
-			<p>So let's <strong>move all of our images into the <code>images</code> folder</strong> of <code>2_WORKING_WITH_IMAGES</code>.</p>
-			<p>Uh oh! Now our image will be broken in <code>index.html</code> since the image is no longer in the same folder. Let's fix that...</p>
-		</article> -->
-
-		<!-- SLIDE 45: HTML -->
-		<!-- <article class='slide slide-list'>
-			<h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 5)</span></h2>
-			<p>To write a <span class="keyword">relative path</span> that goes <strong><em>into</em></strong> a folder, start path with the <strong>folder name</strong> followed by a backslash (<code>/</code>).</p>
-			<pre class="prettyprint">&lt;img src="<strong>images/</strong>llc.gif" /&gt;</pre>
-			<ol class="spacey_list">
-				<li>Return to <code>index.html</code> and add <code>images/</code> infront of <code>llc.gif</code>.</li>
-			</ol>
-			<br /><br /><br />
-			<hr />
-			<p class="sidenote">An aside: You can go into multiple nested folders:</p>
-			<pre class="prettyprint">&lt;img src="<strong>folder1/folder2/folder3/</strong>llc.gif" /&gt;</pre>
-		</article> -->
-
-		<!--
-			Bonus: Give this file structure? How would you include the image?
-			<p class="sidenote">Transvering <em>over</em> to a parallel folder level would be:</p>
-			<pre class="prettyprint">src="../folder/images/llc.gif"</pre>
-		-->
-
-		<!-- SLIDE 46: HTML -->
+		<!-- SLIDE 47: HTML -->
 		<article class='slide slide-list'>
 			<h2>Hyperlinks</h2>
-			<p>The <code>&lt;a&gt;</code> <em>anchor</em> tag is used to tell the browser that we want to link to somewhere else on our site or on the web.</p>
-			<p>The <code>a</code> tag comes in pairs and the content between the opening and closing tags is what is displayed as the link text (by default it is underlined).</p>
-			<br />
-			<pre class="typ">Visit <span class="str">&lt;a&gt;</span>Ladies Learning Code<span class="str">&lt;/a&gt;</span>.</pre>
-			<p>Visit <a>Ladies Learning Code</a>.</p>
+			<p>The <code>anchor</code> tag is used to create links and comes in pairs (<code>&lt;a&gt;&lt;/a&gt;</code>).</p>
+			<p>The content between the tags is displayed as the link text (by default it is underlined).</p>
+			<pre>Visit <span class="str">&lt;a&gt;</span>Ladies Learning Code<span class="str">&lt;/a&gt;</span>.</pre>
+			<p>Visit <a style="text-decoration: underline;">Ladies Learning Code</a>.</p>
 			<br />
 			<p class="sidenote">But wait! This link doesn't take me anywhere!</p>
 		</article>
 
-		<!-- SLIDE 47: HTML -->
+		<!-- SLIDE 48: HTML -->
 		<article class='slide slide-list'>
 			<h2>Hyperlinks</h2>
-			<p>We need a way of setting the URL <span class="sidenote">(e.g. <code>http://ladieslearningcode.com</code>)</span> that the browser will request when someone clicks on the link.</p>
-			<p>Once again, we need to use <span class="keyword">attributes</span>.</p>
+			<p>Just like images, <em>attributes</em> are needed to provide additonal information.</p>
+            <p>For links, the <strong>hypertext reference attribute (<code>href</code>)</strong> is needed to specify the link location.</p>
 			<pre class="prettyprint">Visit &lt;a <strong>href="http://ladieslearningcode.com"</strong>&gt;Ladies Learning Code&lt;/a&gt;.</pre>
 			<p>Visit <a href="http://ladieslearningcode.com" target="_blank">Ladies Learning Code</a>.</p>
 			<ul>
@@ -861,19 +832,44 @@ alt="HTML LOLcat" /&gt;
 				<li><code>http://ladieslearningcode.com</code> is the <em>value</em> of that attribute</li>
 				<li>Remember, the clickable text that the user sees goes <strong>in between</strong> the opening and closing <code>a</code> tags.</li>
 			</ul>
+            <p>This is an example of an <strong>absolute</strong> hyperlink.</p>
+
+            <p>Hyperlinks can also link to other pages within your own folder structure using a <strong>relative</strong> path.</p>
+            <pre class="prettyprint">Visit &lt;a href="page-one.html"</strong>&gt;Page One&lt;/a&gt;.</pre>
+            <p class="icon-tip">Rememeber, a website is basically a collection of pages linking to other pages and files such as images, css and javascript files.</p>
 		</article>
 
-		<!-- SLIDE 48: HTML -->
+        <!-- SLIDE 49: HTML -->
+        <article class='slide slide-list'>
+            <h2>Hyperlinks: Intrapage linking</h2>
+            <p>Hyperlinks can also link to a specific <em>section</em> of your HTML page. You can create your own link location using the <code>id</code> attribute. This is useful for long pages or one-page websites. (Like <a href="http://www.fifteen.net/" target="_blank">this</a> one).</p>
+            <p>A <strong>unique</strong> <code>id</code> must be assigned to the section that is being linked to. You can give the id any value you want. But choose something that is descriptive.</p>
+            <p>The value of the <code>href</code> attribute will be the number symbol <code>#</code> followed by the name of the ID with no spaces.</p>
+            <pre class="prettyprint"><code>&lt;p id="top"&gt;Top of the page. By adding the id here, when the person clicks the "back to top" link, it will take them here. Make the sure the page is long enough to scroll or else you won't be able to see the page scroll up or down.&lt;/p&gt;
+
+&lt;a href="#top"&gt;Back to top&lt;/a&gt;
+</code></pre>
+        </article>
+
+
+		<!-- SLIDE 50: HTML -->
 		<article class='slide slide-list'>
-			<h2>Exercise #2 (10-15 minutes)</h2>
-			<ol class="spacey_list">
-				<li>Continue using <code>index.html</code> from the <code>2_WORKING_WITH_IMAGES</code> folder in Sublime Text.</li>
-				<li>Create a text link using the <code>&lt;a&gt;</code> tag that points to "http://ladieslearningcode.com".</li>
-				<li>Using your knowledge of the <code>&lt;a&gt;</code> tag, try to create a <em>clickable image</em> using both the <code>&lt;img&gt;</code> and <code>&lt;a&gt;</code> tags. Clicking on the image should open up "http://ladieslearningcode.com".<br />
-				<span class="sidenote">(Hint: This involves nested HTML tags.)</span>
+			<h2>Exercise 2 (10 minutes)</h2>
+			<ol>
+				<li>Continue editing <code>index.html</code> in Sublime Text.</li>
+				<li>Create a text link using the <code>&lt;a&gt;</code> tag.</li>
+				<li>Using your knowledge of the <code>&lt;a&gt;</code> tag, try to create a <em>clickable image</em> using both the <code>&lt;img&gt;</code> and <code>&lt;a&gt;</code> tags.<br />
+				<span class="sidenote">Hint: This involves nested HTML tags.</span>
 				</li>
+                <li>Try adding an intrapage link. Make sure you have enough content for the page to scroll!</li>
 			</ol>
-			<p class="sidenote">Make sure to save <code>index.html</code> after changes have been made (Ctrl/Cmd+S) and before confirming your edits in Chrome.</p>
+            <p class="icon-note">In addition to <a href="index.html#slide-30" target="_blank">placeholder text</a>, there are also many placeholder image sites:</p>
+            <ul>
+                <li class="sidenote"><a href="http://placekitten.com/">http://placekitten.com/</a></li>
+                <li class="sidenote"><a href="http://placehold.it/">http://placehold.it/</a></li>
+                <li class="sidenote"><a href="http://placedog.com/">http://placedog.com/</a></li>
+                <li class="sidenote"><a href="http://lorempixel.com/">http://lorempixel.com/</a></li>
+            </ul>
 		</article>
 
 		<!-- SLIDE 49: HTML -->
