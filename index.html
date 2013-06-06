@@ -1063,108 +1063,87 @@ the element (like color). You can see a list of them in this <a href="http://www
 				<li>Use <i>curly braces</i> (<code>{}</code>) to hold a list of the <i>property:value</i> sets.</li> 
 				<li>You can define multiple <i>property:value</i> sets but you <em>must</em> end each one with a semi-colon (<code>;</code>).</li>
 			</ul>
-		</article>  
-
-		<!-- SLIDE 61: CSS -->
-		<article class='slide slide-list'>
-			<h2>Changing the background colour of a page</h2>
-			<p>View <code><a href="exercises/3_CSS/index.html" target="_blank">exercises/3_CSS/index.html</a></code> in your browser. Notice how we're using a transparent PNG so it's hard to read all the white letters on a white background.</p>
-			<p>Let's add a <code>&lt;style&gt;</code> tag between the <code>&lt;head&gt;</code>. Then add this:</p>
-<pre class="prettyprint">body { background-color: gray; }</pre>
-			<p>Hello Canadians, note the spelling of "color"!</p>
 		</article>
-
-		<!-- SLIDE 62: CSS -->
-		<article class='slide slide-list'>
-			<h2>Changing the font colour</h2>
-			<p>Now the text is a bit hard to read on the gray background.</p>
-			<p>The <code>&lt;body&gt;</code> tag is the highest possible visible HTML tag, so the <code>body</code> selector will also allow us to target the font color on the <em>entire</em> page.</p>
-<pre class="prettyprint">body { background-color: gray; <strong>color: white;</strong> }</pre>
-		</article>    
 
 		<!-- SLIDE 63: CSS -->
 		<article class='slide slide-list'>
-			<h2>Changing the font family</h2>
-			<p>The web has a number of fonts that are considered "web safe". Some of the most used fonts are:</p>
-			<ul>
-				<li style="font-family: Arial;">Arial</li>
-				<li style="font-family: Verdana;">Verdana</li>
-				<li style="font-family: 'Times New Roman';">Times New Roman</li>
-				<li style="font-family: Georgia;">Georgia</li>
-				<li style="font-family: Courier;">Courier</li>
-			</ul>
-			<p>Let's add a bit of contrast to our headers by using the Courier font.</p>
-<pre class="prettyprint">h1 { font-family: Courier; }
-h2 { font-family: Courier; }</pre> 
+			<h2>Formatting CSS</h2>
+			<p>As with HTML, extra whitespace and line breaks add to readability.</p>
+<pre class="prettyprint lang-css">
+&lt;style&gt;
+    body { 
+        background-color: gray; 
+        color: white; 
+        font-family: Helvetica, Verdana, Arial, sans-serif; 
+    }
+    
+    h1 { 
+        font-family: Courier; 
+        font-size: 25px;
+        font-weight: normal; 
+    }
+    
+    h2 { 
+        font-family: Courier;
+        font-size: 22px; 
+        font-weight: normal; 
+    }
+&lt;/style&gt;
+</pre>
 		</article>
 
 		<!-- SLIDE 64: CSS -->
 		<article class='slide slide-list'>
-			<h2>Changing the font family</h2>
-			<p>Not all fonts are installed on all computers so it's recommended that you use a list of fonts. If the first font in the list isn't available, it will try to use the next.</p>
-<pre class="prettyprint">body { background-color: gray; color: white; <strong>font-family: Helvetica, Verdana, Arial, sans-serif;</strong> }</pre>
-			<p class="sidenote">(Notice how the font-family for the headers are still Courier? That's the "cascading" part of Cascading Style Sheets in action. Inline styles take precedence, then innermost tags, then outer tags.)</p>
-			<p>Here's a handy resource, <a href="http://cssfontstack.com/">CSS Font Stack</a>.</p>
+			<h2>Changing colours</h2>
+			<p>Let's return to our new <strong>index.html</strong> in the <strong>website</strong> folder.
+			<p>To add <i>internal CSS</i> we need to add the opening and closing <code>&lt;style&gt;</code> tags <em>between</em> the <code>&lt;head&gt;</code> tags.</p>
+			<p>Now let's add this code below.</p>
+<pre class="prettyprint">body { 
+    background-color: blue; 
+}</pre>
+			<p class="icon-warning">Fellow Canadians, note the spelling of <code>color</code>!</p>
+			<p>The <code>&lt;body&gt;</code> tag is the highest possible visible HTML tag, so the <code>body</code> selector will also allow us to target the font color on the <em>entire</em> page.</p>
+			<p class="icon-tip">Remember the family tree? CSS styles are inherited from parent to child.</p>
+<pre class="prettyprint">body { 
+    background-color: blue; 
+    color: white; 
+}</pre>
 		</article>
+   
 
 		<!-- SLIDE 65: CSS -->
 		<article class='slide slide-list'>
-			<h2>Changing the font size</h2>
-			<p>Font sizes are typically defined in pixels (px) or "ems" (em).</p>
-			<ul>
-				<li style="font-size: 10px;">20px</li>
-				<li style="font-size: 20px;">45px</li>
-				<li style="font-size: 1em;">0.5em</li>
-				<li style="font-size: 1.5em;">1em</li>
-			</ul>
-			<p>Headers have default font-sizes defined by the browser. Let's override them. </p>
-<pre class="prettyprint">h1 { font-family: Courier; <strong>font-size: 25px;</strong> }
-h2 { font-family: Courier; <strong>font-size: 22px;</strong> }</pre>
-<p class="sidenote">(When you've got more time, read <a href="http://kyleschaeffer.com/best-practices/css-font-size-em-vs-px-vs-pt-vs/" target="_blank">this article</a> for more info on font unit sizes.</p>
+			<h2>Changing the font family</h2>
+			<p>Not all fonts are installed on all computers so it's recommended that you use fonts that are considered <i>web safe</i>.</p>
+			<p>Here's a handy resource, <a href="http://cssfontstack.com/">CSS Font Stack</a>.</p>
+			
+			<p>Because we want to ensure that the most amount of users will see the fonts as we intended, it's best practice to list <em>at least two</em> font options to provide a <em>fall-back</em> if the user doesn't have the fonts installed.</p>
+
+<pre class="prettyprint">body { 
+    background-color: blue; 
+    color: white; 
+    <strong>font-family: Helvetica, Arial, sans-serif;</strong> 
+}</pre>
 		</article>
 
-		<!-- SLIDE 66: CSS -->
+		<!-- SLIDE 66 -->
 		<article class='slide slide-list'>
-			<h2>Changing the font weight</h2>
-			<p>In its simplest form, there are 2 weights:</p>
-			<ul>
-				<li style="font-weight: normal;">normal</li>
-				<li style="font-weight: bold;">bold</li>
-			</ul>
-			<p>By default, headers are already bolded. Let's remove the bold by applying the <em>normal</em> font weight on them.</p>
-<pre class="prettyprint">h1 { font-family: Courier; font-size: 25px; <strong>font-weight: normal;</strong> }
-h2 { font-family: Courier; font-size: 22px; <strong>font-weight: normal;</strong> }</pre>
-		</article>
+			<h2>Cascading, Inheritance and Specificity</h2>
+			<p>In the previous example, we added all our CSS properties to the <code>body</code> <i>selector</i>. Therefore, all of the children and descendants <em>inherited</em> the styles. However, if a more specific <i>selector</i> was used, it would override the inherited values.</p>
+<pre class="prettyprint">body { 
+    background-color: blue; 
+    color: white; 
+    font-family: Helvetica, Arial, sans-serif;
+}
+h1 {
+    color: black; /* only the h1 text will be black */
+}
 
-		<!-- SLIDE 67: CSS -->
-		<article class='slide slide-list'>
-			<h2>Formatting CSS</h2>
-			<p>As with HTML, extra whitespace and line breaks add to readability.</p>
-			<p>Our current CSS can be written like this:</p>
-<pre class="prettyprint lang-css">
-&lt;style&gt;
-
-	body { 
-		background-color: gray; 
-		color: white; 
-		font-family: Helvetica, Verdana, Arial, sans-serif; 
-	}
-
-	h1 { 
-		font-family: Courier; 
-		font-size: 25px;
-		font-weight: normal; 
-	}
-
-	h2 { 
-		font-family: Courier;
-		font-size: 22px; 
-		font-weight: normal; 
-	}
-
-&lt;/style&gt;
+/* This is a CSS comment by the way. The syntax is different from an HTML comment. */
 </pre>
+			<p class="icon-note">More resources <a href="http://www.w3.org/TR/CSS2/cascade.html" target="_blank">here</a>, <a href="http://css-tricks.com/specifics-on-css-specificity/" target="_blank">here</a> and <a href="http://coding.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/" target="_blank">here</a>.</p>
 		</article>
+
 
 		<!-- SLIDE 68: CSS -->
 		<article class='slide slide-list'>
