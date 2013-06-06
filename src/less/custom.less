@@ -1,0 +1,306 @@
+//Fonts
+//font-family: 'Lato', sans-serif;
+//font-family: 'Source Sans Pro', sans-serif;
+//font-family: 'Noto Sans', sans-serif;
+//font-family: 'Gentium Basic', serif;
+//font-family: 'Volkhov', serif;
+//font-family: 'Poly', serif;
+
+/* LLC CUSTOM CHANGES AND CODERDECK OVERRIDES 
+---------------------------------------------------------*/
+@import url('mixins-variables.less');
+
+/* FONTS 
+---------------------------------------------------------*/
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('../fonts/opensans-light-webfont.eot');
+    src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-light-webfont.woff') format('woff'),
+         url('../fonts/opensans-light-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url('../fonts/opensans-regular-webfont.eot');
+    src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff'),
+         url('../fonts/opensans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans Semibold';
+    src: url('../fonts/opensans-semibold-webfont.eot');
+    src: url('../fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-semibold-webfont.woff') format('woff'),
+         url('../fonts/opensans-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url('../fonts/opensans-bold-webfont.eot');
+    src: url('../fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-bold-webfont.woff') format('woff'),
+         url('../fonts/opensans-bold-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Heydings';
+    src: url('../fonts/heydings_icons-webfont.eot');
+    src: url('../fonts/heydings_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/heydings_icons-webfont.woff') format('woff'),
+         url('../fonts/heydings_icons-webfont.ttf') format('truetype'),
+         url('../fonts/heydings_icons-webfont.svg#heydings_iconsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* apply a natural box layout model to all elements */
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+body {
+	-webkit-font-smoothing: antialiased;
+	color: #222;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Added so code editor areas won't resize in height */
+.CodeMirror-scroll {
+  	height: auto !important;
+  	overflow-y: hidden;
+  	overflow-x: auto;
+  	width: 100%;
+  	min-height: 200px;
+}
+.coder-destination {
+ 	bottom: auto !important;
+  	top: 0 !important;
+}
+
+.deck-container {
+
+	/* Global slide styles */
+	font-family: @OpenSansRegular;
+	padding: 0;
+	
+	h1, h2, h3 {
+		color: @llcPink;
+		padding-top: 0;
+		text-transform: uppercase;
+	}
+	h1 {
+		font-size: 58px;
+	}
+	h2 {
+		font-size: 36px;
+		border: none;
+		background: url(../../assets/hash.gif) no-repeat left 8px;
+		padding-left: 35px;
+	}
+	p {
+		font-size: 28px;
+		line-height: 36px;
+		padding: 10px 0;
+		margin-bottom: 0;
+	}
+	ul, ol {
+
+		li {
+			font-size: 28px;
+			line-height: 32px;
+		}
+	}
+	a {
+		color: @gray;
+
+		&:hover {
+			color: @llcPink;
+		}
+	}
+	strong, em {
+		color: #2E2E2E;
+	}
+	i {
+		color: darken(@llcPink, 15%);
+		font-size: 25px;
+		font-style: italic;
+		padding-right: 4px;
+	}
+	pre.prettyprint {
+		padding: 10px;
+		margin-top: 10px;
+	}
+	code {
+		color: @llcPink;
+
+		&.large {
+			font-size: 50px;
+		}
+		.nested {
+			color: purple;
+			font-size: 40px;
+			vertical-align: top;
+		}
+	}
+	
+	.slide {
+		.border-radius(5px);
+		width: 1050px;
+		min-height: 600px;
+		border: 3px solid #b1009a;
+		margin: 0 auto;
+		padding: 30px 40px;
+	}
+	.slide-subhead {
+		h1 {
+			.reset-transform;
+			top: 36%;
+		}
+		p {
+			text-align: center;
+			font-size: 35px;
+			margin-top: 28%;
+		}
+	}
+	.coder-wrapper {
+		margin: 10px 0;
+	}
+	[class^="column-"] {
+		float: left;
+	}
+	.column-3 {
+		width: 30%;
+		margin: 0 0.5%;
+	}
+	.column-2 {
+		width: 48%;
+		margin: 0 1%;
+	}
+	.clear {
+		clear: both;
+	}
+
+	[class^="icon-"]{
+		font-size: 20px;
+		line-height: 24px;
+
+		&:before {
+			font-family:'Heydings';
+			padding-right: 5px;
+			color: @llcPink;
+		}
+	}
+
+	.icon-tip:before {
+		content: 'l'; /* lightbulb */
+	}
+	.icon-note:before {
+		content: 'B';
+	}
+	.icon-warning:before {
+		content: '!'; /* warning */
+	}
+	.instructions {
+		text-align: center;
+		margin: 5px 0;
+	}
+	.centered {
+		text-align: center;
+		margin: 10px 0;
+	}
+	img.inline {
+		display: inline;
+		vertical-align: top;
+		margin-bottom: 0;
+	}
+	.sidenote, .show-hint {
+		font-size: 17px;
+		line-height: 24px;
+		color: @grayLight;
+	}
+	.hint-solution {
+		display: none;
+		margin-top: 10px;
+		font-style: italic;
+		font-size: 22px;
+	}
+	
+
+	/* Slide specific styles 
+	-----------------------------------*/
+	.intro {
+		text-align: center;
+
+		h1 {
+			position: static;
+			.reset-transform;
+			margin-bottom: 40px;
+		}
+		img {
+			border-radius: 50%;
+			margin-bottom: 0;
+		}
+		p {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+	.outline p {
+		font-size: 28px;
+	}
+
+	.folder-structure {
+		img {
+			float: left;
+		}
+	}
+
+	.triad {
+		.column-3 {
+			text-align: center;
+			margin-top: 20px;
+		}
+	}
+
+	.section-intro {
+		&.slide-subhead {
+			h1 {
+				top: 20%;
+			}
+			p {
+				margin-top: 18%;
+			}
+		}
+	}
+	.tags-nesting {
+		ul {
+			clear: both;
+
+			li {
+				font-size: 22px;
+				line-height: 26px;
+			}
+		}
+	}
+
+	.image-types {
+		.list-reset;
+	}
+
+}
+
+

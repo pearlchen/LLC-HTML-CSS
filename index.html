@@ -1,930 +1,1012 @@
 <!DOCTYPE html>
+<!-- prev version:
+http://db.tt/4AInBRmn
+https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip 
+-->
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Ladies Learning Code - HTML &plus; CSS</title>
-  <meta name="viewport" content="width=1280">
+	<meta charset="utf-8">
+	<title>Ladies Learning Code - HTML &plus; CSS</title>
+	<meta name="viewport" content="width=device-width">
 
-  <!-- CoderDeck core and extension CSS files -->
-  <link rel="stylesheet" href="src/deck.js/core/deck.core.css" type="text/css">
-  <link rel="stylesheet" href="src/deck.js/extensions/navigation/deck.navigation.css">
-  <link rel="stylesheet" href="src/deck.js/extensions/status/deck.status.css">
-  <link rel="stylesheet" href="src/deck.js/extensions/hash/deck.hash.css">
-  <link rel="stylesheet" href="src/deck.js/extensions/menu/deck.menu.css">
-  <link rel="stylesheet" href="src/css/prettify.css">
-  <link rel="stylesheet" href="src/css/deck.coder.css">
-  <link rel="stylesheet" href="src/codemirror/lib/codemirror.css">
-  <link rel="stylesheet" href="src/codemirror/theme/default.css">
+	<!-- CoderDeck core and extension CSS files -->
+	<link rel="stylesheet" href="src/deck.js/core/deck.core.css" type="text/css">
+	<link rel="stylesheet" href="src/deck.js/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="src/deck.js/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="src/deck.js/extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="src/deck.js/extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="src/css/prettify.css">
+	<link rel="stylesheet" href="src/css/deck.coder.css">
+	<link rel="stylesheet" href="src/codemirror/lib/codemirror.css">
+	<link rel="stylesheet" href="src/codemirror/theme/default.css">
 
-  <!-- Custom for LLC -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <!-- <link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' type='text/css'> -->
-  <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
-  <style type="text/css"></style>
+	<!-- Custom for LLC -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<!-- <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" > -->
+	<link rel="stylesheet" href="src/css/custom.css" type="text/css" >
+	<style type="text/css"></style>
 
-  <script type="text/javascript">
-    function showHint(answerContainerId) {
-      var preTags = document.getElementById(answerContainerId).style.display = "block";
-    }
-  </script>
+	<script type="text/javascript">
+		function showHint(answerContainerId) {
+			var preTags = document.getElementById(answerContainerId).style.display = "block";
+		}
+	</script>
 </head>
 
 <body class="deck-container">
-  <script type='text/coderdeck' id='coderdeck-default'>
-    <html>
-      <head>
-        <script src='src/jquery.min.js'>SCRIPTEND</head>
-      <body>CODE</body>
-    </html>
-    </script>
-  
-    <script type='text/coderdeck' id='coderdeck-style-example'>
-    <html>
-      <title>test</title>
-      <style>CODE</style>
-      <body>
-        <h1>I'm a H1 heading</h1>
-        <h2>I'm a H2 heading</h2>
-        <p>Pargraph of text &lt;p&gt; here</p>
-        <div class='stuff'>I'm a div &lt;div&gt; with class "stuff"</div>
-        <div id='my-div'>I'm a &lt;div&gt; with id "my-div"</div>
-      </body>
-    </html>
-  </script>
-  
-  <div id="presentation">
-  <!-- **************************************** --> 
+	<script type='text/coderdeck' id='coderdeck-default'>
+		<html>
+			<head>
+				<script src='src/jquery.min.js'>SCRIPTEND</head>
+			<body>CODE</body>
+		</html>
+		</script>
+	
+		<script type='text/coderdeck' id='coderdeck-style-example'>
+		<html>
+			<title>test</title>
+			<style>CODE</style>
+			<body>
+				<h1>I'm a H1 heading</h1>
+				<h2>I'm a H2 heading</h2>
+				<p>Pargraph of text &lt;p&gt; here</p>
+				<div class='stuff'>I'm a div &lt;div&gt; with class "stuff"</div>
+				<div id='my-div'>I'm a &lt;div&gt; with id "my-div"</div>
+			</body>
+		</html>
+	</script>
+	
 
-    <!-- SLIDE 0: Workshop intro -->
-    <article class='slide slide-title'>
-      <div class="workshop_title">
-        <h1>Introduction to HTML &amp; CSS</h1>
-      </div>
-      <div class="instructor_holder">
-        <h2>Your instructor today</h2>
-        <div>
-          <img src="assets/christina_avatar.jpg" width="72" height="72" alt="christina truong" />
-          <h4>Christina Truong</h4>
-          hello@christinatruong.com
-          <br />
-          <a href="http://christinatruong.com" target="_blank">christinatruong.com</a>
-          <a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a>
-        </div>
-        <br  clear="left" />
-      </div>
-      <p style="padding-top: 75px; margin-bottom: 0; font-size: 0.9em; color: #999;">
-        ( Interactive code slides thanks to
-        <a href="http://cykod.github.com/CoderDeck/" target="_blank" style="color: #999;">CoderDeck</a> )
-      </p>
-    </article>
+	<div id="presentation">
 
-    <!-- SLIDE 1: Course Outline -->
-    <article class='slide slide-list'>
-      <h2>Course Outline</h2>
-      <h3 style="margin-top: 1em;">Morning</h3>
-      <ul>
-        <li>Make sure your computer is setup</li>
-        <li>Web development breakdown</li>
-        <li>Dive into HTML</li>
-      </ul>
-      <h3 style="margin-top: 1em;">Afternoon</h3>
-      <ul>
-        <li>CSS basics</li>
-        <li>Getting your website online</li>
-        <li style="color: #ccc;">Upload your website</li>
-      </ul>
-    </article>
+		<!-- SLIDE 0: Workshop intro -->
+		<article class='slide slide-title intro'>
+			<img src="assets/ladieslearningcode-125x125.gif">
+			<h1>Introduction to <br>
+				HTML &amp; CSS</h1>
+			<!-- <h2>Your instructor today</h2> -->
+			<img src="assets/christina_avatar.jpg" width="72" height="72" alt="christina truong" />
+			<h3>Christina Truong</h3>
+			<p>
+				<a href="mailto:hello@christinatruong.com">hello@christinatruong.com<br>
+				<a href="http://christinatruong.com" target="_blank">christinatruong.com<br>
+				<a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a>
+			</p>
+			<p class="sidenote">Thanks to <a href="http://cykod.github.com/CoderDeck/" target="_blank">CoderDeck</a> for the interactive code slides.</p>
+		</article>
 
-    <!-- SLIDE 2: Development Environment -->
-    <article class='slide slide-subhead'>
-      <h1>Development Environment</h1>
-      <p>4 tools you need to get started</p>
-    </article>
+		<!-- SLIDE 1: Course Outline -->
+		<article class='slide slide-list outline'>
+			<h2>Course Outline</h2>
+			<ul>
+				<li>Make sure your computer is setup</li>
+				<li>Web development breakdown</li>
+				<li>Dive into HTML</li>
+				<li>CSS fundamentals</li>
+			</ul>
+			<br>
+			<h3>Help along the way</h3>
+			<p class="icon-tip">Tips and hints</p>
+			<p class="icon-note">Extra resources, additional information</p>
+			<p class="icon-warning">Gotchas and warnings</p>
+		</article>
 
-    <!-- SLIDE 3: Web Browser -->
-    <article class='slide slide-list'>
-      <h2>1. Web Browser</h2>
-      <p>
-        Choose a modern web browser that has good development tools to help make building web pages easier.
-      </p>
-      <div class="centered contains_sidebyside_icons">
-        <a href="https://www.google.com/chrome" target="_blank"><img src="assets/ChromeIcon.png" width="125" height="125" alt="Chrome" /></a>
-        <br/>
-        <a href="https://www.google.com/chrome" target="_blank">Google Chrome</a>
-      </div>
-      <br clear="all" />
-      <br />
-      <br />
-      <br />
-      <p class="sidenote centered">
-        (If you are unable to install Chrome:
-        <br />
-        install
-        <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> <b>and</b>
-        <a href="http://getfirebug.com/" target="_blank">Firebug</a>
-        .)
-      </p>
-    </article>
+		<!-- SLIDE 2: Development Environment -->
+		<article class='slide slide-subhead'>
+			<h1>Development Environment</h1>
+			<p>Tools you need to get started</p>
+		</article>
 
-    <!-- SLIDE 4: Code Editor -->
-    <article class='slide slide-list'>
-      <h2>2. Code Editor</h2>
-      <p>Although you could write code in Notepad or TextEdit, choose a text editor with code colour highlighting and other helpful features.</p>
-      <p>There are many, <em>many</em> free and paid options. I recommend this one that's free to evaluate:</p>
-      <div class="centered contains_sidebyside_icons">
-        <a href="http://www.sublimetext.com" target="_blank"><img src="assets/SublimeTextIcon.jpg" width="125" height="125" alt="Sublime Text 2" /></a>
-        <br />
-        <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a>
-      </div>
-      <br clear="all" />
-    </article>
+		<!-- SLIDE 3: Web Browser -->
+		<article class='slide slide-list'>
+			<h2>Web Browser</h2>
+			<p>Choose a modern web browser that supports current web standards and has good development tools. I recommend <a href="https://www.google.com/chrome" target="_blank">Google Chrome</a>.</p>
 
-    <!-- SLIDE 5: Chrome Dev Tools -->
-    <article class='slide slide-list'>
-      <h2>3. Chrome Developer Tools</h2>
-      <p>These developer tools allow us to <em>inspect</em> any webpage and see how it's built and is used to easily test and debug code.</p>
-      <p>The dev tools can be accessed in three ways:</p>
-      <ul>
-        <li>right-click on a web page and select “Inspect Element”</li>
-        <li>select the wrench in the top right hand corner of Chrome and select “Tools > Developer Tools”</li>
-        <li>keyboard shortcuts: Control – Shift – I (Windows), Command – Option – I (Mac)</li>
-      </ul>
-      <p>Go <a href="http://webdesign.tutsplus.com/tutorials/workflow-tutorials/faster-htmlcss-workflow-with-chrome-developer-tools/" target="_blank">here</a> for further exploration.</p>
-    </article>
+			<div class="centered">
+				<a href="https://www.google.com/chrome" target="_blank"><img src="assets/ChromeIcon.png" width="150" height="150" alt="Chrome" /></a>
+				<p class="sidenote">If you are unable to install Chrome, another good option is <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> <strong>and</strong> <a href="http://getfirebug.com/" target="_blank">Firebug</a>.<br>
+				Visit <a href="http://browsehappy.com/">browsehappy.com</a> for more info about modern browsers.</p>
 
-    <!-- SLIDE 6: FTP -->
-    <article class='slide slide-list'>
-      <h2>4. File Transfer Program (FTP)</h2>
-      <p>
-        Do you already have your own hosted website? FTP software will let you copy the files you work on today to somewhere where the rest of the world can see them!
-      </p>
-      <div class="centered contains_sidebyside_icons">
-        <a href="http://cyberduck.ch/" target="_blank"><img src="assets/CyberduckIcon.png" width="125" height="125" alt="CyberDuck" /></a>
-        <br />
-        <a href="http://cyberduck.ch/" target="_blank">CyberDuck</a>
-      </div>
-      <br clear="all" />
-      <br />
-      <br />
-      <br />
-      <p class="sidenote centered">
-        Again, there are many, many free and paid options.
-        <br />
-        <a href="http://filezilla-project.org/" target="_blank">FileZilla</a>
-        is good when you're more advanced.
-      </p>
-    </article>
+				<p class="icon-warning">This presentation requires a modern browser.</p>
+			</div>  
+		</article>
 
-    <!-- SLIDE 7 -->
-    <article class='slide slide-subhead'>
-      <h1>Organizing your files</h1>
-      <p>Websites, webpages, and file structures</p>
-    </article>
+		<!-- SLIDE 4: Code Editor -->
+		<article class='slide slide-list'>
+			<h2>Code Editor</h2>
+			<p>You can write code using your computer's default text editor, Notepad (Windows) or TextEdit (Apple), choosing a text editor with colour highlighting and other helpful features will improve your work flow.</p>
+			<p>There are <a href="http://en.wikipedia.org/wiki/List_of_HTML_editors" target="_blank">many</a> free and paid options. I recommend <a href="http://www.sublimetext.com/2" target="_blank">Sublime Text 2</a><br>(free to evaluate):</p>
+			<a href="http://www.sublimetext.com/2" target="_blank"><img src="assets/SublimeTextIcon.jpg" width="150" height="150" alt="Sublime Text 2" /></a>
+			
+			<br>
+			<p class="sidenote">If you are unable to install Sublime Text 2, try installing: <a href="http://notepad-plus-plus.org/download/" target="_blank">Notepad++ (Windows)</a> <b>and</b> <a href="http://www.barebones.com/products/textwrangler/" target="_blank">TextWrangler (Mac)</a>.
+			</p>
+		</article>
 
-    <!-- SLIDE 8: What is a website? -->
-    <article class='slide slide-list'>
-      <h2>What is a website?</h2>
-      <p>A
-        <span class="keyword">website</span>
-        is made up of many 
-        <span class="keyword">webpages</span>.
-      </p>
-      <div class="centered">
-        <img src="assets/website_structure.gif" width="580" heigth="320" alt="website structure" />
-      </div>
-    </article>
+		<!-- SLIDE 5: Chrome Dev Tools -->
+		<article class='slide slide-list'>
+			<h2>Chrome Developer Tools</h2>
+			<p>Developer tools allow us to <em>inspect</em> any web page to see how it's built. These tools also make it easier to test and debug code. The tools can be accessed in 3 ways:</p>
+			<ul>
+				<li>right-click on a web page and select <strong>Inspect Element</strong></li>
+				<li>select the menu icon <img class="inline" src="assets/menu-icon.png"> in the top right hand corner of the Chrome browser and select <strong>Tools > Developer Tools</strong></li>
+				<li>keyboard shortcut: <strong>Ctrl + Shift + I</strong> (PC) / <strong>Cmnd + Option + I</strong> (Mac)</li>
+			</ul>
+			<p class="icon-note"><a href="http://webdesign.tutsplus.com/tutorials/workflow-tutorials/faster-htmlcss-workflow-with-chrome-developer-tools/" target="_blank">Faster HTML/CSS Workflow with Chrome Developer Tools (Tutorial)</a></p>
+			<p class="icon-note"><a href="http://getfirebug.com/screencasts" target="_blank">Firefox's Firebug developer tool screencasts</a></p>
+		</article>
 
-    <!-- SLIDE 9: What is a website? -->
-    <article class='slide slide-list'>
-      <h2>What is a website?</h2>
-      <p>These webpages closely match a file folder structure.</p>
-      <div class="centered">
-        <img src="assets/website_structure.gif" width="440" alt="website structure" />&nbsp;<img src="assets/folder_structure-simple.png" width="362" height="152" alt="folder structure" />
-      </div>
-    </article>
+		<!-- SLIDE 6: FTP -->
+		<article class='slide slide-list'>
+			<h2>File Transfer Program (FTP)</h2>
+			<p>FTP software will let you copy your files to a <em>server</em> so the rest of the world can see them! Again, there are many free and paid options.</p>
+			<p>I recommend <a href="http://cyberduck.ch/" target="_blank">Cyberduck</a> or <a href="http://filezilla-project.org/" target="_blank">Filezilla</a>.</p>
+			<br>
+			<div class="centered"><a href="http://cyberduck.ch/" target="_blank"><img class="inline" src="assets/CyberduckIcon.png" width="125" height="125" alt="CyberDuck" /></a><a href="http://filezilla-project.org/" target="_blank"><img  class="inline" src="assets/filezilla.jpg" width="150" height="150" alt="Filezilla" /></a></div>
+		</article>
 
-    <!-- SLIDE 10: What is a website? -->
-    <article class='slide slide-list'>
-      <h2>What is a website?</h2>
-      <p>This folder containing the web pages and related files are located on a dedicated computer (also known as a <span class="keyword">server</span>) that <span class="keyword">hosts</span> websites.</p>
-      <div class="centered">
-        <img src="assets/webserver_download.png" width="738" height="531" alt="web request process" />
-      </div>
-    </article>
+		<!-- SLIDE 7: Organizing your files -->
+		<article class='slide slide-subhead'>
+			<h1>Organizing your files</h1>
+			<p>Websites, web pages, and file structures</p>
+		</article>
 
-    <!-- SLIDE 11: What is a website? -->
-    <article class='slide slide-list'>
-      <h2>Good file naming habits</h2>
-      <ul class="spacey_list">
-        <li>
-          Keep your file names in <strong>all lowercase</strong>.<br />
-          <span class="sidenote"><code>about.html</code> instead of <code>About.html</code> or <code>ABOUT.html</code></span>
-        </li>
-        <li>
-          Avoid <code>s p a c e s</code> in your file name. Use underscores <code>(_)</code> or dashes <code>(-)</code> instead. Dashes are generally preferred for SEO.<br />
-          <span class="sidenote"><code>business_hours.html</code> or <code>business-hours.html</code> instead of <code>business hours.html</code><br />
-            (The browser will interpret it as <code>business%20hours.html</code>)</span>
-        </li>
-        <li>
-          For the same reason, avoid symbols like <code># &amp; *</code> in your file name.
-        </li>
-        <li>
-          Keep your file names concise, yet meaningful.<br />
-          <span class="sidenote"><code>about.html, contact.html</code> instead of <code>page1.html, page2.html</code></span>
-        </li>
-      </ul>
-    </article>
+		<!-- SLIDE 8: What is a website? -->
+		<article class='slide slide-list folder-structure'>
+			<h2>What is a website?</h2>
+			<p>A <em>website</em> is merely a collection of various <em>web pages</em> that closely match a file folder structure.</p>
 
-    <!-- SLIDE 12 -->
-    <article class='slide slide-list'>
-      <h2>A basic webpage</h2>
-      <p>
-        A webpage is mainly built using 3 web languages:
-      </p>
-      <table width="100%">
-      <tr>
-      <td width="33%" class="centered"><strong>HTML</strong> (Hypertext Markup Language) <br>
-          is the markup language.</td>
-      <td width="33%" class="centered"><strong>CSS</strong> (Cascading Style Sheets) <br>
-          is the style sheet language.</td>
-      <td width="33%" class="centered"><strong>JavaScript</strong><br>
-          is the programming language.</td>
-      </tr>
-            <tr>
-      <td class="centered"><img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer" /></td>
-      <td class="centered"><img src="assets/TRIAD-css.gif" width="261" height="241" alt="Presentation Layer" /></td>
-      <td class="centered"><img src="assets/TRIAD-js.gif" width="274" height="241" alt="Behaviour Layer" /></td>
-      </tr>
-            <tr>
-      <td class="centered">It should define the <strong>content</strong>.</td>
-      <td class="centered">It should define the <strong>presentation</strong></td>
-      <td class="centered">It should define <strong>behaviour</strong>.</td>
-      </tr>
-      </table>
-    </article>
+			<img src="assets/website_structure.gif" width="580" heigth="320" alt="website structure" />
+			<img src="assets/folder-structure.gif" alt="folder structure" />
+		</article>
 
-    <!-- SLIDE 13 -->
-    <article class='slide slide-subhead'>
-      <h1>Dive into HTML</h1>
-      <p>The content layer</p>
-      <p><img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer" /></p>
-    </article>
+		<!-- SLIDE 9: What is a website? -->
+		<!-- <article class='slide slide-list'>
+			<h2>What is a website?</h2>
+			<p>These web pages closely match a file folder structure.</p>
+			<div class="centered">
+				<img src="assets/website_structure.gif" width="440" alt="website structure" />&nbsp;<img src="assets/folder_structure-simple.png" width="362" height="152" alt="folder structure" />
+			</div>
+		</article> -->
 
-    <!-- SLIDE 14: HTML -->
-    <article class='slide slide-list'>
-      <h2>What is HTML?</h2>
-      <p>HTML was created for <span class="keyword">web browsers</span> to easily read (not humans).</p>
-      <p>So this makes perfect sense to a web browser:</p>
+		<!-- SLIDE 9: What is a website? -->
+		<article class='slide slide-list'>
+			<h2>What is a website?</h2>
+			<p>The folder containing the web pages and related files (ex. images, css, javascript files) are located on a <em>server</em> that <em>hosts</em> websites.</p>
+			<div class="centered">
+				<img src="assets/webserver_download.png" width="738" height="531" alt="web request process" />
+			</div>
+		</article>
+
+		<!-- SLIDE 10: web triad -->
+		<article class='slide slide-list triad'>
+			<h2>A basic web page</h2>
+			<p>Web pages are generally built using 3 web languages:</p>
+			<div class="column-3">
+				<strong>HTML</strong> (Hypertext Markup Language) is the markup language.
+				<img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer" />
+				Defines the <strong>content</strong>.
+			</div>
+			<div class="column-3">
+				<strong>CSS</strong> (Cascading Style Sheets) <br>
+						is the style sheet language.
+				<img src="assets/TRIAD-css.gif" width="261" height="241" alt="Presentation Layer" />
+				Defines the <strong>presentation</strong>.
+			</div>
+			<div class="column-3">
+				<strong>JavaScript</strong><br>
+						is the programming language.
+				<img src="assets/TRIAD-js.gif" width="274" height="241" alt="Behaviour Layer" />
+				Defines the <strong>behaviour</strong>.
+			</div>
+            <p class="clear">Let's look at an <a href="http://everylastdrop.co.uk/" target="_blank">example</a>.</p>
+		</article>
+
+		<!-- SLIDE 11 -->
+		<article class='slide slide-subhead section-intro'>
+			<h1>Dive into HTML</h1>
+			<p>The content layer</p>
+			<img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer" />
+		</article>
+
+		<!-- SLIDE 12 -->
+		<article class='slide slide-list'>
+			<h2>Good file naming habits</h2>
+			<p>To create an HTML web page, just name your file using the <strong>.html</strong> extension (much like .pdf for PDF files or .doc for Word files).</p>
+			<ul>
+				<li>
+					Use lowercase letters.<br>
+					<span class="sidenote"><code>about.html</code> instead of <code>About.html</code> or <code>ABOUT.html</code></span>
+				</li>
+				<li>
+					Avoid <code>s p a c e s</code>. Use underscores <code>(_)</code> or dashes <code>(-)</code>. Dashes are generally preferred for SEO (search engine optimization).<br />
+					<span class="sidenote"><code>business_hours.html</code> or <code>business-hours.html</code> instead of <code>business hours.html</code><br />
+					(The browser will interpret it as <code>business%20hours.html</code>)</span>
+				</li>
+				<li>Avoid symbols like <code># &amp; *</code> in your file name.</li>
+				<li>
+					Keep your file names concise, yet meaningful.<br />
+					<span class="sidenote"><code>about.html, contact.html</code> instead of <code>page1.html, page2.html</code></span>
+				</li>
+			</ul>
+			<p class="icon-tip">These file naming tips can be applied to any files such as images, folders, CSS, etc.</p>
+		</article>
+
+		<!-- SLIDE 13: HTML -->
+		<article class='slide slide-list'>
+			<h2>Your First Web Page (sorta)</h2>
+			<ul>
+				<li>Open Sublime (text editor) and select <strong>File > new file</strong></li>
+				<li>Type some text. (ex. Hello world!)</li>
+				<li>Select <strong>File > Save</strong> or <strong>CTRL/CMND + S </strong></li>
+				<li>Name the file <code>index.html</code></li>
+				<li>Open <code>index.html</code> page in your browser</li>
+			</ul>
+			<p>Ta da!</p>
+			<p class="icon-tip">Most computers are set to open <code>.html</code> files in the default web browser when you double-click the file. To open the file specifically with Chrome, right-click (PC) or command+click or 2-finger click (Mac) and select the "open with..." option.</p>
+		</article>
+
+		<!-- SLIDE 14: HTML -->
+		<article class='slide slide-list'>
+			<h2>What is HTML?</h2>
+			<p>HTML stands for <em>HyperText Markup Language</em>. It was created for <em>web browsers</em> to easily read.</p>
+			<p>Below are the basic HTML tags required for all web pages. This makes perfect sense to a web browser:</p>
 <pre class="prettyprint">&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</pre>
-      <p>Just like the different languages that we speak and write, HTML has to follow proper "grammar" rules as well to make sense.</p>
-      <p>This is known as <em>syntax</em>.</p>
-    </article>
+			<p>Just like the different languages that we speak and write, HTML has to follow proper "grammar" rules as well to make sense.</p>
+			<p>This is referred to as <em>syntax</em>.</p>
+		</article>
 
-    <!-- SLIDE 15: HTML -->
-    <article class='slide slide-list'>
-      <h2>What is HTML?</h2>
-      <p>Whitespace through indentation (tabs) make your HTML more human-readable.</p>
+		<!-- SLIDE 15: HTML -->
+		<article class='slide slide-list'>
+			<h2>What is HTML?</h2>
+			<p>Whitespace through indentation (tabs) make your HTML more human-readable.</p>
 <pre class='prettyprint'>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt; &lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
+    &lt;head&gt;
+        &lt;title&gt; &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
 &lt;/html&gt;</pre> 
-      <p class="sidenote">(Later on, you might also notice how automatic colour coding in your code editor helps a lot too.)</p>
-    </article>
+			<p class="sidenote">(Later on, you might also notice how automatic colour coding in your code editor helps too.)</p>
+		</article>
 
-    <!-- SLIDE 16: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML tags</h2>
-      <p>The structure of a webpage is defined by HTML <span class="keyword">tags</span>. Angled brackets denote tags, like this:</p>
-      <p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;</code></p>
-      <p class="centered sidenote">Think about HTML tags like the beams of a house.<br />
-        It's what holds up a webpage.</p>
-      <p class="centered"><img src="assets/house_beam.jpg" width="300" height="232" alt="house beam" /></p>
-    </article>
+		<!-- SLIDE 16: HTML -->
+		<article class='slide slide-list tags'>
+			<h2>HTML tags</h2>
+			<p>The <em>structure</em> of a web page is defined by HTML <span class="keyword">tags</span>. Left & right angled brackets (<code>shift</code> + <code>< </code> and <code>shift</code> + <code> > </code>) surround the tag name like this:</p>
+			<div class="centered">
+				<p><code class="large">&lt;tag&gt;</code></p>
+				<p><img src="assets/house_beam.jpg" width="300" height="232" alt="house beam" /></p>
+				<p class="sidenote">Think about HTML tags like the beams of a house. It's what holds up a web page can creates structure.</p>
+			</div>
+		</article>
 
-    <!-- SLIDE 17: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML tags</h2>
-      <p>Tags typically come in <strong>pairs</strong> -- an opening tag and a closing tag with a forward slash:</p>
-      <p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;&lt;<span style="color:red;">/</span>tag&gt;</code></p>
-      <p class="sidenote">Some examples:</p>
-<pre class="prettyprint" style="width: 45%; float: left;">&lt;!DOCTYPE html&gt;
+		<!-- SLIDE 17: HTML -->
+		<article class='slide slide-list'>
+			<h2>HTML tags</h2>
+			<p>Tags typically come in <strong>pairs</strong> &mdash; an <em>opening</em> tag and a <em>closing</em> tag with a forward slash:</p>
+			<p class="centered"><code class="large">&lt;tag&gt;&lt;<span style="color:red;">/</span>tag&gt;</code></p>
+<!-- <div class="column-2">
+	<pre class="prettyprint">&lt;!DOCTYPE html&gt;
+	<strong>&lt;html&gt;</strong>
+		&lt;head&gt;
+			&lt;title&gt; &lt;/title&gt;
+		&lt;/head&gt;
+		&lt;body&gt;
+		&lt;/body&gt;
+	<strong>&lt;/html&gt;</strong></pre> 
+	</div>
+	<div class="column-2">
+	<pre class="prettyprint">&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			&lt;title&gt; &lt;/title&gt;
+		&lt;/head&gt;
+		<strong>&lt;body&gt;</strong>
+		<strong>&lt;/body&gt;</strong>
+	&lt;/html&gt;</pre>
+</div> -->
+			<p>The are many different HTML tags. Each are used to create structure and add <em><a href="http://www.adobe.com/devnet/html5/articles/semantic-markup.edu.html" target="_blank">semantics</a></em> (meaning) to the content.</p>
+			<p>For example, any content between the <code>&lt;html&gt;&lt;/html&gt;</code> tag tells the browser that it is HTML code.</p>
+			<p>Content between the <code>&lt;title&gt;&lt;/title&gt;</code> tag describes the web page title.</p>
+		</article>
+
+		<!-- SLIDE 18: HTML -->
+		<!-- <article class='slide slide-list'>
+			<h2>HTML tags</h2>
+			<p>The are many different HTML tags. Each are used to add <span class="keyword"><a href="http://www.adobe.com/devnet/html5/articles/semantic-markup.edu.html" target="_blank" style="color:#B1009A;">semantics</a></span> (meaning) to the content on the as well as for structure.</p>
+			<p>Practice writing a <code>body</code> tag with me here:</p>
+			<textarea class="coder-editor coder-editor-full"></textarea>
+			<script type="coder-solution">&lt;body&gt;&lt;/body&gt;</script>
+		</article> -->
+
+		<!-- SLIDE 18: HTML -->
+		<article class='slide slide-list tags-nesting'>
+			<h2>HTML tags: nesting</h2>
+			<p>Tags can also be <em>nested</em> within other tags.<!--  This relationship is often referred to as <em>parent</em>, <em>child</em>, <em>descendant</em>, <em>ancestor</em>, etc nodes.--></p>
+			<p class="centered"><code>&lt;tag&gt;<span class="nested">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code> </p>
+			
+			<p>Let's look at the HTML tags that are required for a basic web page and take a closer look at how they are nested.</p>
+			<div class="column-2">
+<pre class="prettyprint">&lt;!DOCTYPE html&gt;
 <strong>&lt;html&gt;</strong>
-  &lt;head&gt;
-    &lt;title&gt; &lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-<strong>&lt;/html&gt;</strong></pre> 
-<pre class="prettyprint" style="width: 45%; float: right;">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt; &lt;/title&gt;
-  &lt;/head&gt;
-  <strong>&lt;body&gt;</strong>
-  <strong>&lt;/body&gt;</strong>
-&lt;/html&gt;</pre> 
-<br clear="all" />
-    </article>
-
-    <!-- SLIDE 18: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML tags</h2>
-      <p>The are many different HTML tags. Each are used to add <span class="keyword"><a href="http://www.adobe.com/devnet/html5/articles/semantic-markup.edu.html" target="_blank" style="color:#B1009A;">semantics</a></span> (meaning) to the content on the as well as for structure.</p>
-      <p>Practice writing a <code>body</code> tag with me here:</p>
-<textarea class="coder-editor coder-editor-full"></textarea>
-<script type="coder-solution">&lt;body&gt;&lt;/body&gt;</script>
-    </article>
-
-    <!-- SLIDE 19: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML tags: nesting</h2>
-      <p>Tags can be "nested" within other tags, like this:</p>
-      <p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
-      <p class="centered sidenote">(This relationship is often referred to using the terms "parent" node and "child" nodes.)</p>
-      <br />
-      <p class="sidenote" style="margin-bottom: 0px;">Example of basic tags needed to build a website:</p>
-      <ul class="sidenote">
-        <li><code>&lt;title&gt;&lt;/title&gt;</code> is nested between opening <code>&lt;head&gt;</code> and closing <code>&lt;/head&gt;</code> tags</li>
-        <li><code>&lt;head&gt;</code> is the parent node and <code>&lt;title&gt;</code> is the child node.</li>
-        <li>Going further, <code>&lt;head&gt;</code> is also (at the same time) a child node of <code>&lt;html&gt;</code>.</li>
-        <li>While <code>&lt;html&gt;</code> is the always the "root" node and has <strong>no</strong> parent nodes.</li>
-        <li>Notice too that <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> are on the same level. They are both child nodes of <code>&lt;html&gt;</code>.</li>
-      </ul>
-<pre class="prettyprint" style="width: 45%; float: left;">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    <strong>&lt;title&gt;</strong> <strong>&lt;/title&gt;</strong>
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre> 
-<pre class="prettyprint" style="width: 45%; float: right;">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  <strong>&lt;head&gt;</strong>
-    &lt;title&gt; &lt;/title&gt;
-  <strong>&lt;/head&gt;</strong>
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre> 
-<br clear="all" />
-
-    </article>
-
-    <!-- SLIDE 20: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML tags: nesting</h2>
-      <p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
-      <p>Let's practice writing an <code>html</code> tag with a <code>head</code> and <code>body</code> tag nested inside:</p>
-<textarea class="coder-editor coder-editor-full"></textarea>
-<script type="coder-solution">&lt;html&gt;
-  &lt;head&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</script>
-<br clear="all" />
-       <p class="centered sidenote"><strong>Remember:</strong> The innermost tag must be closed <strong>before</strong>  trying to open up a new tag.<br />
-        This would be incorrect: &lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;/html&gt;&lt;/head&gt;&lt;/body&gt; </p>
-    </article>
-
-    <!-- SLIDE 21: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML tags: nesting</h2>
-      <p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
-      <p>Now where does the <code>title</code> tag get nested? Practice here:</p>
-<textarea class="coder-editor coder-editor-full">&lt;html&gt;
-  &lt;head&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</textarea>
-<script type="coder-solution">&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</script>
-      <br clear="all" />
-      <p class="centered sidenote"><strong>Remember:</strong> The innermost tag must be closed <strong>before</strong>  trying to open up a new tag.<br />
-        This would be incorrect: &lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/html&gt;&lt;/head&gt;&lt;/title&gt; </p>
-    </article>
-
-    <!-- SLIDE 22: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML in a web browser</h2>
-      <p>If you ever forget the basic tags needed to build a basic webpage, <a href="exercises/barebones.html"><code>exercises/barebones.html</code></a> is available to copy and use.</p>
-      <p>Let's open it up in our code editor!</p>
-      <div class="reminders"><p>Most computers are set to open <code>.html</code> files in the default web browser so <strong>right-click</strong> (Command+click or 2-finger click on Mac) and select the "<strong>open with...</strong>" option.</p></div>
-    </article>
-
-
-    <!-- SLIDE 23: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML in a web browser</h2>
-      <p>But remember: HTML tags are like the beams of a house -- they denote structure, not content.)  </p>
-      <p>So if I view <a href="exercises/barebones.html" target="_blank"><code>barebones.html</code></a> in a web browser, I don't see anything interesting yet...</p>
-      <div class="reminders single-line"><p>If Chrome is not your default web browser, <strong>right-click</strong> and select the "<strong>open with...</strong>" option.</p></div>
-    </article>
-
-    <!-- SLIDE 24: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML in a web browser</h2>
-      <p>But I can right-click and select <strong>View Page Source</strong> to see what the HTML is to confirm that it's not a blank file.</p>
-      <p class="sidenote">(I suggest that you do this any time you see something you like so you can reverse-engineer it.)</p>
-      <p class="centered"><img src="assets/llcodedotcom_viewsource.gif" width="468" height="362" alt="view source" style="margin-right: 30px;" /></p>
-    </article>
-
-    <!-- SLIDE 25: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML Document Types</h2>
-      <p>What about the 1st line?</p>
-<pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
-      <p>This is a <span class="keyword">Document Type Declaration</span> a.k.a <code>DOCTYPE</code>.  This indicates to the web browser what <strong>version</strong> of HTML the file is written in. This helps the browser render the content correctly based on the rules denoted by the <code>DOCTYPE</code>.</p>
-      <p class="sidenote">Consider how old versions of Microsoft Office or Photoshop have problems opening files that were created in later versions of the software.  For example, it could be an <a href="http://www.alistapart.com/articles/doctype/">older document type</a> like the ones below, or the newer <em>HTML5</em> <code>DOCTYPE</code> one that we're using above.</p>
-<pre class="prettyprint">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd"&gt;</pre>
-<pre class="prettyprint">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</pre>
-      </p>
-    </article>
-
-    <!-- SLIDE 26: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML content</h2>
-      <p class="sidenote">(If HTML tags are the beams of a house, you still need to put up walls for it to be liveable.)</p>
-      <p>The human-viewable content of a HTML tag goes in between the opening and closing tags like this:</p>
-      <p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;<span style="color: #333;">Content</span>&lt;/tag&gt;</code></p>
+    &lt;head&gt;
+        &lt;title&gt; &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+<strong>&lt;/html&gt;</strong></pre>
+			</div> 
+			<div class="column-2">
 <pre class="prettyprint">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<strong>Home</strong>&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;<strong>
-    You are currently looking at index.html.
-  </strong>&lt;/body&gt;
-&lt;/html&gt;</pre> 
-    </article>
+    <strong>&lt;head&gt;</strong>
+        &lt;title&gt;&lt;/title&gt;
+    <strong>&lt;/head&gt;</strong>
+    <strong>&lt;body&gt;</strong>
+    <strong>&lt;/body&gt;</strong>
+&lt;/html&gt;</pre>
+			</div>
+		</article>
 
-    <!-- SLIDE 27: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML content</h2>
-      <p>The human-viewable content of a HTML tag goes in between the opening and closing tags like this:</p>
-      <p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;<span style="color: #333;">Content</span>&lt;/tag&gt;</code></p>
-      <p>Practice writing a <code>body</code> tag with some human-viewable content here:</p>
+		<!-- SLIDE 19: HTML -->
+		<article class='slide slide-list tags-nesting'>
+			<h2>HTML tags: nesting</h2>
+			<p>Nested elements make up the <em>document tree</em> & the relationships are just like a family tree; branches of ancestors, parents, children, siblings, etc.</p>
+<pre class="prettyprint">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;&lt;!-- child of <strong>html</strong> tag, parent of <strong>title</strong> tag --&gt;
+        &lt;title&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;&lt;!-- child of <strong>html</strong> tag --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+			<ul>
+				<li>
+					<code>&lt;html&gt;</code> is always first and known as the <em>root</em> node. It has <strong>no</strong> parent nodes.<br> All other HTML tags are nested within <code>&lt;html&gt;</code>.
+				</li>
+				<li>
+					<code>&lt;head&gt;</code> is the child of <code>&lt;html&gt;</code> and the parent node of the <code>&lt;title&gt;</code> tag.
+				</li>
+				<li>
+					What is the relationship of <code>&lt;title&gt;</code> to the <code>&lt;head&gt;</code> tag?
+				</li>
+				<li>
+					What is the relationship between the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags</code>?
+				</li>
+			</ul>
+		</article>
+
+		<!-- SLIDE 20: HTML -->
+		<article class='slide slide-list'>
+			<h2>HTML tags: nesting</h2>
+			<p>Let's practice writing an <code>html</code> tag with a <code>head</code> and <code>body</code> tag nested inside.</p>
+			<p class="centered"><code>&lt;tag&gt;<span class="nested">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>         
+<textarea class="coder-editor coder-editor-full"></textarea>
+<script type="coder-solution">&lt;html&gt;
+	&lt;head&gt;&lt;/head&gt;
+	&lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</script>
+			<p class="icon-tip">Tags must be closed from inside out.</p>
+		</article>
+
+		<!-- SLIDE 21: HTML -->
+		<article class='slide slide-list'>
+			<h2>HTML tags: nesting</h2>
+			<p>Where does the <code>title</code> tag get nested?</p>
+<textarea class="coder-editor coder-editor-full">&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</textarea>
+<script type="coder-solution">&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</script>
+			<p class="icon-tip">Tags must be closed from inside out.</p>
+		</article>
+
+		<!-- SLIDE 22: HTML -->
+		<article class='slide slide-list'>
+			<h2>HTML in a web browser</h2>
+			<p>In your <strong>exercises</strong> folder, there is a file called <strong><code>barebones.html</code></strong>. If you ever forget which tags are needed to build a basic web page, use this as your template.</p>
+			<p>Let's view <a href="exercises/barebones.html" target="_blank"><code>barebones.html</code></a> in the web browser (click the link).  Why don't we see anything?</p>
+
+			<p>Now right-click anywhere on the page and select <strong>View Page Source</strong>.</p>
+			<img src="assets/llcodedotcom_viewsource.gif" width="468" height="362" alt="view source">
+			
+			<p>You can view the page source on <strong>ANY</strong> web site!</p>
+			<p class="icon-tip">You can also use your <a href="index.html#slide-5" target="_blank">developer tools</a>.</p>
+		</article>
+
+
+		<!-- SLIDE 23: HTML -->
+		<!-- <article class='slide slide-list'>
+			<h2>HTML in a web browser</h2>
+			<p>But remember: HTML tags are like the beams of a house -- they denote structure, not content.)  </p>
+			<p>So if I view <a href="exercises/barebones.html" target="_blank"><code>barebones.html</code></a> in a web browser, I don't see anything interesting yet...</p>
+			<div class="reminders single-line"><p>If Chrome is not your default web browser, <strong>right-click</strong> and select the "<strong>open with...</strong>" option.</p></div>
+		</article> -->
+
+		<!-- SLIDE 24: HTML -->
+		<!-- <article class='slide slide-list'>
+			<h2>HTML in a web browser</h2>
+			<p>But I can right-click and select <strong>View Page Source</strong> to see what the HTML is to confirm that it's not a blank file.</p>
+			<p class="sidenote">(I suggest that you do this any time you see something you like so you can reverse-engineer it.)</p>
+			<p class="centered"><img src="assets/llcodedotcom_viewsource.gif" width="468" height="362" alt="view source" style="margin-right: 30px;" /></p>
+		</article> -->
+
+		<!-- SLIDE 23: HTML -->
+		<article class='slide slide-list'>
+			<h2>HTML Document Type</h2>
+			<p>What about the 1st line?</p>
+            <pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
+			<p>This is a <em>Document Type Declaration</em> a.k.a <code>DOCTYPE</code> and <strong>must always be included as the first line of the document</strong>.</p>
+			<p>This tells the web browser what <strong>version</strong> of HTML the document is written in and helps the browser render the content based on the rules specific to that version of HTML.</p>
+            <p class="icon-note">The W3C (World Wide Web Consortium) governs web standards with 
+specifications, guidelines, tools and recommendations. They also provides a free service to check if your 
+markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a></p>
+		</article>
+
+		<!-- SLIDE 24: HTML -->
+		<article class='slide slide-list'>
+			<h2>HTML, XHTML, HTML5</h2>
+			<p>These terms refer to different versions of the same language though the rules, syntax and features may differ. However, the HTML5 DOCTYPE is <em>backwards compatible</em> and can be used in place of the older versions.</p>
+			<p class="sidenote">Consider how old versions of MS Word or Photoshop have problems opening files created in later versions of the software.</p>
+			
+			<h4>HTML5 DOCTYPE</h4>
+            <pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
+			<h4>XHTML DOCTYPE</h4>
+            <pre class="prettyprint">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</pre>
+			<h4>HTML4 DOCTYPE</h4>
+            <pre class="prettyprint">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd"&gt;</pre>
+		</article>
+
+		<!-- SLIDE 25: HTML -->
+		<article class='slide slide-list'>
+			<h2>HTML content</h2>
+			<p class="sidenote">(If HTML tags are the beams of a house, you still need to put up walls for it to be liveable.)</p>
+			<p>The human-viewable content of a HTML tag goes in between the opening and closing tags like this:</p>
+			<p class="centered"><code class="large">&lt;tag&gt;<span style="color: #333;">Content</span>&lt;/tag&gt;</code></p>
+<pre class="prettyprint">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;<strong>Home</strong>&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;<strong>
+        Put all the content you want people to see here!
+    </strong>&lt;/body&gt;
+&lt;/html&gt;</pre> 
+		</article>
+
+		<!-- SLIDE 26: HTML -->
+		<article class='slide slide-list'>
+			<h2>HTML content</h2>
+			<p>The human-viewable content of a HTML tag goes in between the opening and closing tags like this:</p>
+			<p class="centered"><code class="large">&lt;tag&gt;<span style="color: #333;">Content</span>&lt;/tag&gt;</code></p>
+			<p>Practice writing a <code>body</code> tag with some content here:</p>
 <textarea class="coder-editor"></textarea>
 <script type="coder-solution">&lt;body&gt;Hello!&lt;/body&gt;</script>
-      <br clear="all" />
-    </article>
+			<br clear="all" />
+		</article>
 
-    <!-- SLIDE 28: HTML -->
-    <article class='slide slide-list'>
-      <h2><code>&lt;head&gt;</code> vs <code>&lt;body&gt;</code></h2>
-      <p>Using a copy of <code>barebones.html</code>, I'm going to edit it to answer the below questions and prepare you for the following exercise you'll do on your own time.</p>
-      <ul class="spacey_list">
-        <li>
-          What happens when I change the content in the <code>&lt;title&gt;</code> tag?
-          <div class="show-hint" onclick="javascript:showHint('title-tag'); this.style.display = 'none';">click here to show answer...</div>
-          <div id="title-tag" class="hint-solution">It will update the browser tab/window name.</div>
-        </li>
-        <li>
-          What's the difference between putting a tag in-between the <code>&lt;head&gt;</code> tag versus the <code>&lt;body&gt;</code> tag?
-          <div class="show-hint" onclick="javascript:showHint('head-vs-body'); this.style.display = 'none';">click here to show answer...</div>
-          <div id="head-vs-body" class="hint-solution"><code>&lt;head&gt;</code> is for "meta" instructions that the browser will use to render content differently such as the tab title, or the character set to use when displaying a Japanese website, or links to external CSS or JS files.<br />
-            <code>&lt;body&gt;</code> should be used for all the content that actually gets displayed in the main part of the web browser.</div>
-        </li>
-      </ul>
-    </article>
+		<!-- SLIDE 27: HTML -->
+		<article class='slide slide-list'>
+			<h2><code>head</code> vs <code>body</code></h2>
+			<p>In your <strong>exercises</strong> folder, open <code>index.html</code> in your editor and type along with me.  <span class="sidenote">(It's just a copy of <code>barebones.html</code>)</span></p>
+			<ul>
+				<li>
+					What happens when I change the content in the <code>&lt;title&gt;</code> tag?
+					<div class="show-hint" onclick="javascript:showHint('title-tag'); this.style.display = 'none';">click here to show answer...</div>
+					<div id="title-tag" class="hint-solution">It will update the browser tab/window name.</div>
+				</li>
+				<li>
+					What's the difference between putting a tag in-between the <code>&lt;head&gt;</code> tag versus the <code>&lt;body&gt;</code> tag?
+					<div class="show-hint" onclick="javascript:showHint('head-vs-body'); this.style.display = 'none';">click here to show answer...</div>
+					<div id="head-vs-body" class="hint-solution"><code>&lt;head&gt;</code> is for "meta" instructions that the browser will use to render content differently such as the page title, or the character set to use when displaying a Japanese website, or links to external CSS or JS files.<br />
+					<code>&lt;body&gt;</code> should be used for all the content that actually gets displayed in the main part of the web browser.</div>
+				</li>
+			</ul>
+		</article>
+        
+        <!-- SLIDE 28: Adding text -->
+        <article class='slide slide-list'>
+            <h2>HTML content: ADDING TEXT</h2>
+            <p><em>Heading</em> tags are used for headings/page titles.</p>
 
-    <!-- SLIDE 29: HTML -->
-    <article class='slide slide-list'>
-      <h2>Exercise #1 (15 minutes)</h2>
-      <ol class="spacey_list">
-        <li>View/open <a href="exercises/1_BASIC_HTML_WEBSITE/index.html" target="_blank"><code>exercises/1_BASIC_HTML_WEBSITE/index.html</code></a> in Chrome.</li>
-        <li>Make a local copy of <code>index.html</code> in the same <code>1_BASIC_HTML_WEBSITE</code> folder and rename it <code>copy.html</code>.<div class="sidenote">(This is so you can always refer back to index.html when needed.)</div></li>
-        <li>Open <code>copy.html</code> in Sublime Text and edit some the content within some of the opening and closing tags.</li>
-        <li>Make sure to save <code>copy.html</code> after changes have been made (Ctrl/Cmd+S).</li>
-        <li>View how <code>copy.html</code> has changed in Chrome by refreshing the webpage.</li>
-        <li>Explore some of the HTML tags listed on the <strong>next slide</strong> by adding them to your <code>copy.html</code>. Re-save and re-view in Chrome.</li>
-      </ol>
-    </article>
+            <p>There are six levels of ranging from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. They follow a hierarchy with <code>&lt;h1&gt;</code> being the most significant heading on the page.</p>
+<pre class="prettyprint"><code>&lt;h1&gt;Name of blog&lt;/h1&gt;
+&lt;h2&gt;Title of blog post&lt;/h2&gt;
+&lt;h3&gt;Sub headings within blog post&lt;/h3&gt;
+</code></pre>
 
-    <!-- SLIDE 30: HTML -->
-    <article class='slide slide-list'>
-      <h2>Exercise #1 - Basic HTML tags</h2>
-      <div class="sidenote">
-        (Don't forget that viewable content goes in-between opening and closing tag pairs.<br />
-        Notice how Sublime Text will hint at you when/where you might not have closed a tag.)
-      </div>
-      <div class="cheatsheet">
-        <div>
-          <h3>Text Formatting</h3>
-          <code>&lt;hl&gt;</code>, <code>&lt;h2&gt;</code>, ... <code>&lt;h6&gt;</code>
-          - hierarchical heading levels from 1 to 6 with 1 being the most important<br />
-          <code>&lt;p&gt;</code> - paragraph<br />
-          <code>&lt;b&gt;</code> or <code>&lt;strong&gt;</code> - bold<br />
-          <code>&lt;i&gt;</code> or <code>&lt;em&gt;</code> - italics or emphasis<br />
-        </div>
-        <div>
-          <h3>Section Formatting</h3>
-          <code>&lt;blockquote&gt;</code> - indented block of code usually reserved for quotes.<br />
-        </div>
-        <div>
-          <h3>Input &amp; Forms</h3>
-          <code>&lt;button&gt;</code> - clickable button<br />
-          <code>&lt;textarea&gt;</code> - multiline text area for user input<br />
-          (Note: these tags are usually used inside of an HTML form element. More info <a href="http://learn.shayhowe.com/html-css/building-forms" target="_blank">here</a>)
-        </div>
-      </div>
-      <br clear="all" />
-      <p class="sidenote">You can practice writing some of these tags in the area below:</p>
-<textarea class="coder-editor"></textarea>
- <br clear="all" />
-    </article>
+            <p><em>Paragraphs</em> are represented by the <code>&lt;p&gt;</code> tag.</p>
+<pre class="prettyprint"><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+</code></pre>
+            
+            <p><code>&lt;b&gt;</code> or <code>&lt;strong&gt;</code>, <code>&lt;i&gt;</code> or <code>&lt;em&gt;</code></p>
 
-    <!-- SLIDE 31: HTML -->
-    <article class='slide slide-list'>
-      <h2>Exercise #1 - Exploration Questions</h2>
-      <ul class="spacey">
-        <li>How does the content/text look when you use different HTML tags? Why do you think the browser, by default adds those styles?</li>
-        <li>How is whitespace treated? What happens when you use multiple spaces or line breaks?</li> 
-      </ul>
-    </article>
+            <p class="icon-note">In XHTML, &lt;b&gt; and &lt;i&gt; were no longer used. In HTML5, they were re-introduced with a slightly different meaning/usage. See <a href="http://html5doctor.com/i-b-em-strong-element/">here</a> for more info.</p>
 
-   <!-- SLIDE 32 -->
-    <article class='slide slide-subhead'>
-      <h1>Going deeper</h1>
-      <p>Get to know HTML even better</p>
-    </article>
+            <p class="icon-tip">To keep from forgetting to close your tags, it's good practice to write the open &amp; close tags <em>first</em>, then go back and add the content <em>between</em> the tags.</p>
+        </article>
 
-    <!-- SLIDE 33: HTML -->
-    <article class='slide slide-list'>
-      <h2>Void (or empty) HTML Tags</h2>
-      <p><span class="keyword">Void tags</span> don't format content -- instead they are used to render or embed objects in our page. These tags <strong>do not</strong> come in pairs like <code>h1</code> or <code>p</code> tags. You only type the tag once.</p>
-      <p>However, In some versions of HTML <span class="sidenote">(specifically XHTML... remember <code>DOCTYPE</code>?)</span> they "self-close" with a back slash (<code>/</code>) immediately before the left angled bracket (<code>&gt;</code>). In HTML5, it is not required to self close.</p>
-      <p>The most often used example of this is the <code>&lt;br /&gt;</code> or <code>&lt;br&gt;</code> tag used to create a <strong>line break</strong>.</p>
-<pre class="prettyprint">&lt;p&gt;This text&lt;br /&gt;goes over&lt;br /&gt;several&lt;br /&gt;lines.&lt;/p&gt;
-</pre>
-      <p>This text<br />goes over<br />several<br />lines.</p>
-    </article>
+        <!-- SLIDE 29: HTML -->
+        <article class='slide slide-list'>
+            <h2>HTML LISTS</h2>
+            <p><strong>Ordered</strong> lists are for items that need to follow a specific order. <strong>Two</strong> HTML tags are required, an ordered list tag <code>&lt;ol&gt;</code> and a list item <code>&lt;li&gt;</code> tag.</p>
+<pre class="prettyprint"><code>&lt;ol&gt;
+    &lt;li&gt;Buy ticket to LLC event.&lt;/li&gt;
+    &lt;li&gt;Arrive at venue.&lt;/li&gt;
+    &lt;li&gt;Turn on your computer.&lt;/li&gt;
+    &lt;li&gt;Learn some HTML &amp; CSS!&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
 
-    <!-- SLIDE 34: HTML -->
-    <article class='slide slide-list'>
-      <h2>Void (or empty) HTML Tags</h2>
-      <div class="cheatsheet">
-        <div>
-          <br />
-          (Remember, XTHML requires void elements to be self closed, HTML5 <code>DOCTYPE</code> accepts either syntax)<br />
-          <code>&lt;hr&gt;</code> or <code>&lt;hr /&gt;</code> - horizontal rule<br />
-          <code>&lt;br&gt;</code> or <code>&lt;br /&gt;</code> - line break<br />
-          <code>&lt;input&gt;</code> or <code>&lt;input /&gt;</code> - text input boxes<br />
-          <hr />
-          <code>&lt;img&gt;</code> or <code>&lt;img /&gt;</code> - an image <em>*We'll get to this one very soon.</em><br />
-          <code>&lt;link&gt;</code> or <code>&lt;link /&gt;</code> - define a relationship to an external resource like an external style sheets. <em>*We'll get to this one later today.</em><br />
-        </div>
-      </div>
-      <br clear="all" />
-      <p class="sidenote">Practice some of these tags below:</p>
-<textarea class="coder-editor"></textarea>
-    </article>
+            <p><strong>Unordered</strong> lists are for items that don't follow any order and use the unordered list tag <code>&lt;ul&gt;</code> instead.</p>
+<pre class="prettyprint"><code>&lt;ul&gt;
+    &lt;li&gt;Breaking Bad&lt;/li&gt;
+    &lt;li&gt;Game of Thrones&lt;/li&gt;
+    &lt;li&gt;Arrested Development&lt;/li&gt;
+    &lt;li&gt;The Wire&lt;/li&gt;
+    &lt;li&gt;True Blood&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
 
-    <!-- SLIDE 35: HTML -->
-    <article class='slide slide-list'>
-      <h2>Quick review:</h2>
-      <ul>
-        <li><strong>HTML tags</strong> define <em>structure</em>.</li>
-        <li><strong>Text between opening &amp; closing tags</strong> define <em>content</em>.</li>
-        <li><strong>Void HTML tags</strong> render special objects that may sometimes <em>look like content</em> or <em>seem structural</em> depending on the void tag.</li>
-      </ul>
-      <p>Consider the <code>img</code> tag. Not very exciting right?</p>
-<textarea class="coder-editor">&lt;p&gt;Kicking up HTML a notch.&lt;/p&gt;
-&lt;img /&gt;
-&lt;p&gt;Do you agree?&lt;/p&gt;</textarea>      
-    </article>
+            <p class="icon-warning">HTML tags and other content can <strong>only</strong> be added between the <code>&lt;li&gt;</code> tags, not the <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> tags.</p>
+        </article>
 
-    <!-- SLIDE 36: HTML -->
-    <article class='slide slide-list'>
-      <h2>Attributes</h2>
-      <p>Sometimes we need to define data that we don't see right away but is used by the browser to help render special content like hyperlinks, images, or video.</p>
-      <p><span class="keyword">Attributes</span> are used to provide additional information or instruction.</p>
-      <p class="sidenote">Here's that same <code>img</code> tag but now it's using an <strong>attribute</strong>, <code>src</code>, to tell my webpage where to find a source image:</p>
-<textarea class="coder-editor coder-editor-full">&lt;p&gt;Kicking up HTML a notch.&lt;/p&gt;
-&lt;img src="http://goo.gl/7eSU5" /&gt;
-&lt;p&gt;Do you agree?&lt;/p&gt;</textarea>
-      <br clear="all" />
-      <div class="reminders single-line"><p>Remember, <code>img</code> is a void HTML tag so it does <strong>not</strong> need a closing tag. This is wrong: <code>&lt;img&gt;http://goo.gl/7eSU5&lt;/img&gt;</code></p></div>
-    </article>
+        <!-- SLIDE 30: HTML -->
+        <article class='slide slide-list'>
+            <h2>Extra resource: Placeholder text</h2>            
+            <p>There are also many fun placeholder text generators for when you just need some dummy text to test how content looks your page.</p>
+            <ul>
+                <li><a href="http://lipsum.com/" target="_blank">http://lipsum.com/</a></li>
+                <li><a href="http://cupcakeipsum.com/" target="_blank">http://cupcakeipsum.com/</a></li>
+                <li><a href="http://slipsum.com/" target="_blank">http://slipsum.com/</a></li>
+                <li><a href="http://baconipsum.com/" target="_blank">http://baconipsum.com/</a></li>
+                <li><a href="http://hipsteripsum.me/" target="_blank">http://hipsteripsum.me/</a></li>
+            </ul>    
+        </article>
 
-    <!-- SLIDE 37: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images</h2>
-      <p>Let's look at that again: images are an example of a <span class="keyword">void tag</span> <strong>with</strong> an <span class="keyword">attribute</span>.</p>
-      <pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5" /&gt;</pre>
-      <ul>
-        <li><code>src</code> is the <em>attribute</em></li>
-        <li><code>http://goo.gl/7eSU5</code> is the <em>value</em> of that attribute<br />
-          <span class="sidenote">Values are typically surrounded by <em>single or double quotes</em> since occassionally values may contain spaces.</span></li>
-      </ul>
-      <p>With an <code>img</code> tag, the value of the <code>src</code> attribute tells the browser what the <em>url source</em> of our image is.</p>
-    </article>
+		<!-- SLIDE 31: Exercise 1 -->
+		<article class='slide slide-list'>
+			<h2>Exercise 1 (20 minutes)</h2>
+            <p>Let's go back to <code>index.html</code> and turn it into a real HTML page!</p>
+			<ol>
+				<li>Open <code>index.html</code> in the <strong>exercises</strong> folder in Sublime (text editor).</li>
+				<li>Add all the basic tags required for a web page.  Use <code>barebones.html</code> (or your mentors!) as a guide.</li>
+				<li>Try adding some content using the different content formatting tags discussed.</li>
+				<li>Save frequently and check out your work in Chrome!</li>
+			</ol>
+            <p class="icon-tip">Find a work flow that works best for you when making frequent changes. I like to use keyboard shortcuts to save my files in the editor (CTRL/CMND + S).  Then I open my file in the browser once and simply refresh it (CTRL/CMND + R) after saving my edits to view the changes in the browser.</p>
+		</article>
 
-    <!-- SLIDE 38: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images</h2>
-      <p>Tags can have more than one attribute, some are <strong>required</strong> (like <code>src</code>) and others are <strong>optional</strong>:</p>
-      <p><code>width</code> and <code>height</code> attributes tell the browser what dimension to <em>display</em> the image at.</p>
-      <p class="sidenote" style="margin-top: -15px;">(This is useful so the page doesn't jump around when loading very large images, or while on a very slow internet connection such as dial-up or 2G/3G. Also, width/height values don't necessarily have to match the image's <em>actual</em> width/height.)</p>
-      <hr />
-      <p>For example, without <code>width</code> and <code>height</code> attributes, the browser displays image at original size.</p>
-      <pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5" /&gt;</pre>
-      <img src="http://goo.gl/7eSU5" />
-      <hr />
-      <p>Now with a manipulated width and height (about 50% smaller):</p>
-      <pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5" width="320" height="262" /&gt;</pre>
-      <img src="http://goo.gl/7eSU5" width="320" height="262" />
-    </article>
 
-        <!-- SLIDE 39: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images</h2>
-        <p>Another optional image attribute:</p>
-        <ul style="margin-top: -1em;">
-          <li><code>alt</code> is <em>alternative text</em> to display to visually impaired web visitors using screen readers. It also shows up when there's a "broken image" due to typos or moved files.<br /> 
-            <span class="sidenote">(The img tag will work without the alt attribute but it's required to be "<a href="http://validator.w3.org/"target="_blank">valid</a>" HTML markup,<br /> which is why you might see <code>alt=""</code> often used.)</span></li>
+		<!-- SLIDE 32: HTML -->
+		<article class='slide slide-list'>
+			<h2>Exercise 1 - Exploration Questions</h2>
+            <p>Here are some things to look out for when working on your exercise.</p>
+			<ul>
+				<li>How does the content/text look when you use different HTML tags? Why do you think the browser, by default adds those styles?</li>
+				<li>How is whitespace treated? What happens when you use multiple spaces or line breaks?</li>
+                <li>What tags can/can't be nested in other tags?</li>
+			</ul>
+            <p>And just for fun, here's a link to the <a href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">FIRST website ever</a>!<br>
+            (Some more info about it <a href="http://info.cern.ch/" target="_blank">here</a>.)</p>
+		</article>
+
+        <!-- SLIDE 33 -->
+		<article class='slide slide-subhead'>
+			<h1>Going deeper</h1>
+			<p>Get to know HTML even better</p>
+		</article>
+
+        <!-- SLIDE 34: Comments -->
+        <article class='slide slide-list'>
+        <h2>LEAVE A COMMENT</h2>
+        <p>Sometimes you want to leave notes for yourself (or others) but don't want it to display in the browser. That's when <strong>comments</strong> can be really helpful.</p>
+        <p>Comments can be used for:</p>
+        <ul>
+            <li>hiding code for later use</li>
+            <li>leaving directions</li>
+            <li>organizing the document</li>
         </ul>
-<textarea class="coder-editor">&lt;img 
-  src="http://goo.gl/7eSU5" 
-  width="160" 
-  height="131" 
-  alt="HTML LOLcat" /&gt;</textarea>
-    </article>
+        <pre class="prettyprint"><code>
+&lt;!-- This is my comment. Comments should always be included between the dashes. --&gt;
+        </code></pre>
+        <textarea class="coder-editor">
+<p>hello!</p>
+<!-- Can't see me in the browser. -->
+        </textarea>
+        </article>
 
-    <!-- SLIDE 40: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images</h2>
-      <p>In the <code>exercises/2_WORKING_WITH_IMAGES</code> folder, there's an <code>index.html</code> file and 3 images of various types.</p>
-      <div class="reminders"><p>To make your web development life easier, turn on the option to see the file extension type in Explorer (<a href="http://windows.microsoft.com/en-US/windows-vista/Show-or-hide-file-name-extensions" target="_blank">Windows instructions</a>) or Finder (<a href="http://osxdaily.com/2012/01/13/show-filename-extensions-in-mac-os-x/" target="_blank">Mac instructions</a>).</p></div>
-      <p>Image file type comparison:</p>
-      <ul style="margin-top: -1em;">
-        <li>
-          <span class="keyword">gif</span> - smaller file size when used for line art, charts, and images with minimal colour variation
-        </li>
-        <li>
-          <span class="keyword">jpg</span> - smaller file size when used for photographs with lots of rich colours or gradients
-        </li>
-        <li>
-          <span class="keyword">png</span> - larger file size but has best quality and is great for images with transparent backgrounds
-        </li>
-      </ul>
+		<!-- SLIDE 35: HTML -->
+		<article class='slide slide-list'>
+			<h2>Void (or empty) HTML Tags</h2>
+			<p><em>Void tags</em> don't format content &mdash; instead, they render or embed objects in our page. These tags <strong>do not</strong> come in pairs like <code>h1</code> or <code>p</code> tags.</p>
+			<p>However, In the XHTML versions <span class="sidenote">(remember the different <code>DOCTYPE</code> rules?)</span> they <em>self-close</em> with a forward slash (<code>/</code>) immediately before the right angled bracket (<code>&gt;</code>).</p>
+            <p>In HTML5, void tags are not required to self close but also accepts self-closed void tags as well.</p>
+			<p>A common void tag is the <code>&lt;br /&gt;</code> or <code>&lt;br&gt;</code> tag used to create a <strong>line break</strong>.</p>
+            <pre class="prettyprint">&lt;p&gt;This text&lt;br /&gt;goes over&lt;br /&gt;several&lt;br /&gt;lines.&lt;/p&gt;</pre>
+			<p>This text<br />goes over<br />several<br />lines.</p>
+		</article>
 
-      <center>
-        <div class="sidenote">As a gif: 600 x 247, 8kb</div>
-        <img src="assets/img-example-gif.gif" />
-        <br />
-        <div class="sidenote">As a jpeg: 600 x 247, 9kb</div>
-        <img src="assets/img-example-jpg.jpg" />
-        <br />
-        <div class="sidenote">As a png: 600 x 247, 18kb</div>
-        <img src="assets/img-example-png.png" />
-      </center>
+		<!-- SLIDE 36: HTML -->
+		<article class='slide slide-list'>
+			<h2>Void (or empty) HTML Tags</h2>
+			<p>
+				<code>&lt;hr&gt;</code> or <code>&lt;hr /&gt;</code> - horizontal rule<br />
+				<code>&lt;br&gt;</code> or <code>&lt;br /&gt;</code> - line break<br />
+				<code>&lt;input&gt;</code> or <code>&lt;input /&gt;</code> - text input boxes<br />
+				<hr />
+                <em>*Don't worry about these just yet, we'll get to these tags soon.</em><br>
+				<code>&lt;img&gt;</code> or <code>&lt;img /&gt;</code> - an image <br />
+				<code>&lt;link&gt;</code> or <code>&lt;link /&gt;</code> - define a relationship and links to an external resource, like an external style sheets.
+            </p>
+            <p>Let's practice writing some of these tags.</p>
+        <textarea class="coder-editor">
+            
+        </textarea>
+		</article>
 
-    </article>
+		<!-- SLIDE 36: HTML -->
+		<!-- <article class='slide slide-list'>
+			<h2>Quick review:</h2>
+			<ul>
+				<li><strong>HTML tags</strong> define <em>structure</em>.</li>
+				<li><strong>Text between opening &amp; closing tags</strong> define <em>content</em>.</li>
+				<li><strong>Void HTML tags</strong> render special objects that may sometimes <em>look like content</em> or <em>seem structural</em> depending on the void tag.</li>
+			</ul>     
+		</article> -->
 
-    <!-- SLIDE 41: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 1)</span></h2>
-      <p>Code along with me:</p>
-      <ol class="spacey_list">
-        <li>Open <a href="exercises/2_WORKING_WITH_IMAGES/index.html" target="_blank"><code>exercises/2_WORKING_WITH_IMAGES/index.html</code></a> in Sublime Text. <span class="sidenote">(It's simply a copy of <code>barebones.html</code>.)</span></li>
-        <li>Click on the above link to also view <code>index.html</code> in Chrome. </li>
-        <li>Use the <code>img</code> tag to embed an image of our fave LOL cat using <code>http://goo.gl/mod/c4cm</code> for the value of the <code>src</code> attribute.</li>
-        <li>Save and refresh the webpage in the browser to make sure you got it right.</li>
-      </ol>
-      <p class="centered" style="font-size: 2.5em;">This is an example of an <span class="keyword">absolute path</span>.</p>
-      <p>It's "fully resolved" and starts with <code>http://</code> much like typing in a url into the browser's URL bar.</p>
-    </article>
+        <!-- SLIDE 37: HTML -->
+        <article class='slide slide-list'>
+            <h2><code>img</code> tag</h2>
+            <p>Let's take a look at how the <code>img</code> tag renders below. Not very exciting right?</p>
+<textarea class="coder-editor">&lt;p&gt;Kicking up HTML a notch.&lt;/p&gt;
+&lt;img&gt;
+&lt;p&gt;Do you agree?&lt;/p&gt;</textarea>   
+        </article>
 
-    <!-- SLIDE 42: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 2)</span></h2>
-      <p>Code along with me:</p>
-      <ol>
-        <li>Return to our <code>img</code> tag in <code>index.html</code> and let's instead embed <code>llc.gif</code> which we have locally.</li>
-      </ol>
-      <p class="centered" style="font-size: 2.5em;">This is an example of a <span class="keyword">relative path</span>.</p>
-      <p>It's based on using the html file that you're working on as the starting point to find your image source.</p>
-      <p>Right now, <code>llc.gif</code> in the <strong>same folder</strong> as <code>index.html</code>.</p>
-      <ol start="2">
-        <li>Open the <a href="exercises/2_WORKING_WITH_IMAGES/secondary/images.html" target="_blank"><code>images.html</code></a> file in the <em>secondary</em> folder in Sublime Text.</li>
-        <li>Click on the above link to also view <code>images.html</code> in Chrome. </li>
-        <li>Note that there's already an <code>img</code> tag in <code>images.html</code> trying to embed <code>llc.gif</code>.</li>
-      </ol>
-    </article>
+		<!-- SLIDE 38: Attributes -->
+		<article class='slide slide-list'>
+			<h2>Attributes</h2>
+			<p>Attributes are used to render special content like hyperlinks, images, or video because they provide additional information or instruction.</p>
+			<p>Here's that same <code>img</code> tag but now it's using an <strong>attribute</strong> (<code>src</code>), to tell the web page where to find the source of the image.</p>
+<textarea class="coder-editor coder-editor-full">&lt;p&gt;Kicking up HTML a notch.&lt;/p&gt;
+&lt;img src="http://goo.gl/7eSU5"&gt;
+&lt;p&gt;Do you agree?&lt;/p&gt;</textarea>
+			<p class="icon-warning">Remember, <code>img</code> is a void HTML tag so it does <strong>not</strong> need a closing tag. This is <strong>wrong</strong>: <code>&lt;img&gt;http://goo.gl/7eSU5&lt;/img&gt;</code></p>
+		</article>
 
-    <!-- SLIDE 43: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 3)</span></h2>
-      <p>To write a <span class="keyword">relative path</span> that goes <strong><em>up</em></strong> a folder, start path with "<code>../</code>".</p>
-      <pre class="prettyprint">&lt;img src="<strong>../</strong>llc.gif" /&gt;</pre>
-      <p>Code along with me:</p>
-      <ol class="spacey_list">
-        <li>Return to our <code>img</code> tag in <code>images.html</code> and add <code>../</code> infront of <code>llc.gif</code>.</li>
-      </ol>
-      <hr />
-      <p class="sidenote"><strong>Note:</strong> "<code>../</code>" can be used multiple times if you have many nested folders.</p>
-      <pre class="prettyprint">&lt;img src="<strong>../../../../</strong>llc.gif" /&gt;</pre>
-      <div>How many folders does this relative path go up?</div>
-      <div class="show-hint" onclick="javascript:showHint('nested-img-path'); this.style.display = 'none';">click here to show answer...</div>
-      <div id="nested-img-path" class="hint-solution">Four.</div>
-    </article>
+		<!-- SLIDE 39: IMAGES -->
+		<article class='slide slide-list'>
+			<h2>Working with images</h2>
+			<p>Images are an example of a <em>void tag</em> with an <em>attribute</em> to define the filepath of the image file.</p>
+			<pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5"&gt;</pre>
+			<ul>
+				<li><code>src</code> is the <em>attribute</em></li>
+				<li><code>http://goo.gl/7eSU5</code> is the <em>value</em> of that attribute<br />
+					<span class="sidenote">Values are typically surrounded by <em>single or double quotes</em> since occassionally values may contain spaces.</span></li>
+			</ul>
+			<p>With an <code>img</code> tag, the value of the <code>src</code> attribute tells the browser what the <em>url source</em> of our image is.</p>
+		</article>
 
-    <!-- SLIDE 44: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 4)</span></h2>
-      <p>However, it's best practice to organize your images into its own folder to keep your website's file structure tidy.</p>
-      <p class="sidenote">We tend to also organize JavaScript and CSS files into their own "js" or "css" folder.</p>
-      <p>So let's <strong>move all of our images into the <code>images</code> folder</strong> of <code>2_WORKING_WITH_IMAGES</code>.</p>
-      <p>Uh oh! Now our image will be broken in <code>index.html</code> since the image is no longer in the same folder. Let's fix that...</p>
-    </article>
+		<!-- SLIDE 40: IMAGES -->
+		<article class='slide slide-list'>
+			<h2>Working with images</h2>
+			<p>Tags can have more than one attribute. Some are <strong>required</strong> (<code>src</code>) and others are <strong>optional</strong>.</p>
+            <p><code>width</code> and <code>height</code> are optional attributes that tell the browser what dimension to <em>display</em> the image at.</p>
+			<p class="icon-tip">This is useful so the page doesn't jump around when loading very large images, or while on a slow internet connection such as dial-up or 2G/3G. Also, width/height values don't necessarily have to match the image's <em>actual</em> width/height.</p>
+			<p>Without <code>width</code> & <code>height</code> attributes, images appear at its original size.</p>
+			<pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5"&gt;</pre>
+			<img src="http://goo.gl/7eSU5">
+			<hr />
+			<p>Now here's the image with a manipulated width and height value.</p>
+			<pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5" width="320" height="262"&gt;</pre>
+			<img src="http://goo.gl/7eSU5" width="320" height="262">
+		</article>
 
-    <!-- SLIDE 45: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 5)</span></h2>
-      <p>To write a <span class="keyword">relative path</span> that goes <strong><em>into</em></strong> a folder, start path with the <strong>folder name</strong> followed by a backslash (<code>/</code>).</p>
-      <pre class="prettyprint">&lt;img src="<strong>images/</strong>llc.gif" /&gt;</pre>
-      <ol class="spacey_list">
-        <li>Return to <code>index.html</code> and add <code>images/</code> infront of <code>llc.gif</code>.</li>
-      </ol>
-      <br /><br /><br />
-      <hr />
-      <p class="sidenote">An aside: You can go into multiple nested folders:</p>
-      <pre class="prettyprint">&lt;img src="<strong>folder1/folder2/folder3/</strong>llc.gif" /&gt;</pre>
-    </article>
+	   <!-- SLIDE 41: IMAGES -->
+		<article class='slide slide-list'>
+			<h2>Working with images</h2>
+			<p><code>alt</code> is another optional image attribute and refers to <em>alternative text</em>. It is used to display to visually impaired web visitors using screen readers.</p>
+            <p>It also shows up when there's a broken or missing image due to typos or moved files.</p> 
+<textarea class="coder-editor">&lt;img src="http://goo.gl/7eSU5" 
+width="160" height="131" 
+alt="HTML LOLcat" /&gt;
+&lt;!-- this is usually written in one
+ line but is broken down this way 
+ for demonstration purposes. --&gt;
+</textarea>
+            <p class="icon-tip">The img tag will work without the alt attribute but it's required to be "<a href="http://validator.w3.org/"target="_blank">valid</a>" HTML markup.</span>
+		</article>
 
-    <!--
-      Bonus: Give this file structure? How would you include the image?
-      <p class="sidenote">Transvering <em>over</em> to a parallel folder level would be:</p>
-      <pre class="prettyprint">src="../folder/images/llc.gif"</pre>
-    -->
+		<!-- SLIDE 42: IMAGES -->
+		<article class='slide slide-list'>
+			<h2>Working with images</h2>
+			<p>There are 3 main file types used for web. Each type is best suited for specific kinds of images. Use the format that maintains the best quality while reducing the file size.</p>
+			<ul class="image-types">
+				<li>
+					<code>gif</code> - used for line art, charts, and images with minimal colour variation
+				</li>
+				<li>
+					<code>jpg</code> - used for photographs with lots of rich colours or gradients
+				</li>
+				<li>
+					<code>png</code> - used for images with transparent or opaque backgrounds
+				</li>
+			</ul>
+            <br>
+            <p class="icon-tip">To make your web development life easier, turn on the option to see the file extension type in Explorer (<a href="http://windows.microsoft.com/en-US/windows-vista/Show-or-hide-file-name-extensions" target="_blank">Windows instructions</a>) or Finder (<a href="http://osxdaily.com/2012/01/13/show-filename-extensions-in-mac-os-x/" target="_blank">Mac instructions</a>).</p>
+		</article>
 
-    <!-- SLIDE 46: HTML -->
-    <article class='slide slide-list'>
-      <h2>Hyperlinks</h2>
-      <p>The <code>&lt;a&gt;</code> <em>anchor</em> tag is used to tell the browser that we want to link to somewhere else on our site or on the web.</p>
-      <p>The <code>a</code> tag comes in pairs and the content between the opening and closing tags is what is displayed as the link text (by default it is underlined).</p>
-      <br />
-      <pre class="typ">Visit <span class="str">&lt;a&gt;</span>Ladies Learning Code<span class="str">&lt;/a&gt;</span>.</pre>
-      <p>Visit <a>Ladies Learning Code</a>.</p>
-      <br />
-      <p class="sidenote">But wait! This link doesn't take me anywhere!</p>
-    </article>
+		<!-- SLIDE 43: IMAGES -->
+		<article class='slide slide-list'>
+			<h2>Working with images <span class="sidenote">(Group exercise - Part 1)</span></h2>
+			<p>Code along with me:</p>
+			<ol>
+				<li>Let's keep editing your <code>index.html</code> file. Open it in Sublime Text.</li>
+				<li>Use the <code>img</code> tag to embed an image of our fave LOL cat using <code>http://goo.gl/7eSU5</code> for the value of the <code>src</code> attribute.</li>
+				<li>Save and refresh the web page in the browser.</li>
+			</ol>
+			<p>This is an example of an <strong>absolute path</strong>.</p>
+			<p>It's "fully resolved" and starts with <code>http://</code> much like typing in a url into the browser's URL bar.</p>
+		</article>
 
-    <!-- SLIDE 47: HTML -->
-    <article class='slide slide-list'>
-      <h2>Hyperlinks</h2>
-      <p>We need a way of setting the URL <span class="sidenote">(e.g. <code>http://ladieslearningcode.com</code>)</span> that the browser will request when someone clicks on the link.</p>
-      <p>Once again, we need to use <span class="keyword">attributes</span>.</p>
-      <pre class="prettyprint">Visit &lt;a <strong>href="http://ladieslearningcode.com"</strong>&gt;Ladies Learning Code&lt;/a&gt;.</pre>
-      <p>Visit <a href="http://ladieslearningcode.com" target="_blank">Ladies Learning Code</a>.</p>
-      <ul>
-        <li><code>href</code> is the <em>attribute</em></li>
-        <li><code>http://ladieslearningcode.com</code> is the <em>value</em> of that attribute</li>
-        <li>Remember, the clickable text that the user sees goes <strong>in between</strong> the opening and closing <code>a</code> tags.</li>
-      </ul>
-    </article>
+		<!-- SLIDE 44: HTML -->
+		<article class='slide slide-list'>
+			<h2>Working with images <span class="sidenote">(Group exercise - Part 2)</span></h2>
+			<ol>
+				<li>Return to your <code>index.html</code> and add another <code>img</code> tag. This time we're going to use one of the <code>llc</code> images included in your <strong>exercises</strong> folder.</li>
+			</ol>
+			<p>The <code>src</code> value is based on the html file that you're working on as the starting point to find the location of the image in your folder structure.</p>
+			<p>Right now, <code>llc.gif</code> is in the <strong>same folder</strong> as <code>index.html</code> so you can link directly to the image file.</p>
+            <pre class="prettyprint"><code>&lt;img src="llc.gif"&gt;</code></pre>
+            <p>This is an example of a <strong>relative path</strong>.</p>
+            <!-- 
+            <li>Open the <a href="exercises/2_WORKING_WITH_IMAGES/secondary/images.html" target="_blank"><code>images.html</code></a> file in the <em>secondary</em> folder in Sublime Text.</li>
+                <li>Click on the above link to also view <code>images.html</code> in Chrome. </li>
+                <li>Note that there's already an <code>img</code> tag in <code>images.html</code> trying to embed <code>llc.gif</code>.</li> -->
+		</article>
 
-    <!-- SLIDE 48: HTML -->
-    <article class='slide slide-list'>
-      <h2>Exercise #2 (10-15 minutes)</h2>
-      <ol class="spacey_list">
-        <li>Continue using <code>index.html</code> from the <code>2_WORKING_WITH_IMAGES</code> folder in Sublime Text.</li>
-        <li>Create a text link using the <code>&lt;a&gt;</code> tag that points to "http://ladieslearningcode.com".</li>
-        <li>Using your knowledge of the <code>&lt;a&gt;</code> tag, try to create a <em>clickable image</em> using both the <code>&lt;img&gt;</code> and <code>&lt;a&gt;</code> tags. Clicking on the image should open up "http://ladieslearningcode.com".<br />
-        <span class="sidenote">(Hint: This involves nested HTML tags.)</span>
-        </li>
-      </ol>
-      <p class="sidenote">Make sure to save <code>index.html</code> after changes have been made (Ctrl/Cmd+S) and before confirming your edits in Chrome.</p>
-    </article>
+        <!-- SLIDE 45: HTML -->
+        <article class='slide slide-list'>
+            <h2>Working with images <span class="sidenote">(Group exercise - Part 3)</span></h2>
+            <p>It's best practice to organize your images into its own folder. Keeping your website's file structure tidy will help reduce errors.</p>
+            <p class="icon-tip">It's best practice to also organize JavaScript and CSS files into their own "js" or "css" folder.</p>
+            <p>Let's create an <code>images</code> folder inside of our exercises folder and move all of our images into it.</p>
+            <p>Uh oh! Now our image will be broken in <code>index.html</code> since the image is no longer in the same folder as the html page. Let's fix that.</p>
+            <p>To write a <strong>relative path</strong> that goes <em>into</em> a folder, start the path with the <strong>folder name</strong> followed by a forward slash (<code>/</code>).</p>
+            <pre class="prettyprint">&lt;img src="<strong>images/</strong>llc.gif"&gt;</pre>
+            <p class="icon-tip">You can go into multiple nested folders:</p>
+            <pre class="prettyprint">&lt;img src="<strong>folder1/folder2/folder3/</strong>llc.gif"&gt;</pre>
+        </article>
 
-    <!-- SLIDE 49: HTML -->
-    <article class='slide slide-list'>
-      <h2>Getting ready for Exercise #3</h2>
-      <p>We're eventually aiming to have a <strong>3-page</strong> website that uses a standard 2-column webpage layout.</p>
-      <p class="centered"><img src="assets/2-column-webpage.png" width="703" height="411" alt="" /></p>
-    </article>
+		<!-- SLIDE 46: HTML -->
+		<article class='slide slide-list'>
+			<h2>Working with images <span class="sidenote">(Group exercise - Part 4)</span></h2>
+			<p>To write a <em>relative path</em> that goes <strong>up</strong> a folder, start the path with "<code>../</code>".</p>
+			<pre class="prettyprint">&lt;img src="<strong>../</strong>llc.gif"&gt;</pre>
+			<ol>
+				<li>Open <code>relative-path.html</code> <span class="sidenote">(located in the <strong>exercises > secondary</strong> folder)</span> in Sublime and try adding another image.</li>
+                <li>If you moved all your images to an <strong>images</strong> folder, why won't<br>
+                <code class="prettyprint">&lt;img src="<strong>../</strong>llc.gif"&gt;</code> work?<br>
+                <p class="show-hint" onclick="javascript:showHint('nested-img-path'); this.style.display = 'none';">click here to show answer...</p>
+                <p id="nested-img-path" class="hint-solution">The file path first needs to go <em>up</em> a folder and then <em>into</em> the <strong>images</strong> folder. The file path should be <code class="prettyprint">&lt;img src="../images/llc.gif"&gt;</code></p>
+            </li>
+			</ol>
+			<p class="icon-tip">If you have multiple nested folders, <code>../</code> can be used multiple times.</p>
+			<pre class="prettyprint">&lt;img src="<strong>../../../../</strong>llc.gif" /&gt;</pre>
+		</article>
 
-    <!-- SLIDE 50 -->
-    <article class='slide slide-list'>
-      <h2>Getting ready for Exercise #3</h2>
-      <p>Code along and review with me!</p>
-      <p>Make a new <code>index.html</code> in the <code>exercises/website</code> folder.</p>
-      <ol>
-        <li>What's the <strong>very first line</strong> we need to type?</li>
-        <li>What <strong>three</strong> HTML tags should every website have?</li>
-        <li>What HTML tag do I need to update the browser tab with a descriptive tab name? And where does it go?</li>
-        <li>In between which tag do I write code for content that should be <strong>visible to the user</strong>?</li>
-      </ol>
-      <p>Here is the start of your top navigation menu.</p>
+		<!-- SLIDE 47: HTML -->
+		<article class='slide slide-list'>
+			<h2>Hyperlinks</h2>
+			<p>The <code>anchor</code> tag is used to create links and comes in pairs (<code>&lt;a&gt;&lt;/a&gt;</code>).</p>
+			<p>The content between the tags is displayed as the link text (by default it is underlined).</p>
+			<pre>Visit <span class="str">&lt;a&gt;</span>Ladies Learning Code<span class="str">&lt;/a&gt;</span>.</pre>
+			<p>Visit <a style="text-decoration: underline;">Ladies Learning Code</a>.</p>
+			<br />
+			<p class="sidenote">But wait! This link doesn't take me anywhere!</p>
+		</article>
+
+		<!-- SLIDE 48: HTML -->
+		<article class='slide slide-list'>
+			<h2>Hyperlinks</h2>
+			<p>Just like images, <em>attributes</em> are needed to provide additonal information.</p>
+            <p>For links, the <strong>hypertext reference attribute (<code>href</code>)</strong> is needed to specify the link location.</p>
+			<pre class="prettyprint">Visit &lt;a <strong>href="http://ladieslearningcode.com"</strong>&gt;Ladies Learning Code&lt;/a&gt;.</pre>
+			<p>Visit <a href="http://ladieslearningcode.com" target="_blank">Ladies Learning Code</a>.</p>
+			<ul>
+				<li><code>href</code> is the <em>attribute</em></li>
+				<li><code>http://ladieslearningcode.com</code> is the <em>value</em> of that attribute</li>
+				<li>Remember, the clickable text that the user sees goes <strong>in between</strong> the opening and closing <code>a</code> tags.</li>
+			</ul>
+            <p>This is an example of an <strong>absolute</strong> hyperlink.</p>
+
+            <p>Hyperlinks can also link to other pages within your own folder structure using a <strong>relative</strong> path.</p>
+            <pre class="prettyprint">Visit &lt;a href="page-one.html"</strong>&gt;Page One&lt;/a&gt;.</pre>
+            <p class="icon-tip">Rememeber, a website is basically a collection of pages linking to other pages and files such as images, css and javascript files.</p>
+		</article>
+
+        <!-- SLIDE 49: HTML -->
+        <article class='slide slide-list'>
+            <h2>Hyperlinks: Intrapage linking</h2>
+            <p>Hyperlinks can also link to a specific <em>section</em> of your HTML page. You can create your own link location using the <code>id</code> attribute. This is useful for long pages or one-page websites. (Like <a href="http://www.fifteen.net/" target="_blank">this</a> one).</p>
+            <p>A <strong>unique</strong> <code>id</code> must be assigned to the section that is being linked to. You can give the id any value you want. But choose something that is descriptive.</p>
+            <p>The value of the <code>href</code> attribute will be the number symbol <code>#</code> followed by the name of the ID with no spaces.</p>
+            <pre class="prettyprint"><code>&lt;p id="top"&gt;Top of the page. By adding the id here, when the person clicks the "back to top" link, it will take them here. Make the sure the page is long enough to scroll or else you won't be able to see the page scroll up or down.&lt;/p&gt;
+
+&lt;a href="#top"&gt;Back to top&lt;/a&gt;
+</code></pre>
+        </article>
+
+
+		<!-- SLIDE 50: HTML -->
+		<article class='slide slide-list'>
+			<h2>Exercise 2 (10 minutes)</h2>
+			<ol>
+				<li>Continue editing <code>index.html</code> in Sublime Text.</li>
+				<li>Create a text link using the <code>&lt;a&gt;</code> tag.</li>
+				<li>Using your knowledge of the <code>&lt;a&gt;</code> tag, try to create a <em>clickable image</em> using both the <code>&lt;img&gt;</code> and <code>&lt;a&gt;</code> tags.<br />
+				<span class="sidenote">Hint: This involves nested HTML tags.</span>
+				</li>
+                <li>Try adding an intrapage link. Make sure you have enough content for the page to scroll!</li>
+			</ol>
+            <p class="icon-note">In addition to <a href="index.html#slide-30" target="_blank">placeholder text</a>, there are also many placeholder image sites:</p>
+            <ul>
+                <li class="sidenote"><a href="http://placekitten.com/">http://placekitten.com/</a></li>
+                <li class="sidenote"><a href="http://placehold.it/">http://placehold.it/</a></li>
+                <li class="sidenote"><a href="http://placedog.com/">http://placedog.com/</a></li>
+                <li class="sidenote"><a href="http://lorempixel.com/">http://lorempixel.com/</a></li>
+            </ul>
+		</article>
+
+		<!-- SLIDE 51: HTML -->
+		<article class='slide slide-list'>
+			<h2>Getting ready for Exercise #3</h2>
+			<p>We're eventually aiming to have a <strong>3-page</strong> website that uses a standard 2-column web page layout.</p>
+			<p class="centered"><img src="assets/2-column-webpage.png" width="703" height="411" alt="" /></p>
+		</article>
+
+		<!-- SLIDE 52 -->
+		<article class='slide slide-list'>
+			<h2>Getting ready for Exercise 3</h2>
+			<p>Make a new folder and name it <strong>website</strong>. This is where you'll be creating the files for the final project, a three page website.</p>
+			<p>Now let's create a new <code>index.html</code> in the <strong>exercises/website</strong> folder.</p>
+			<ol>
+				<li>What's the <strong>very first line</strong> we need to type?</li>
+				<li>What <strong>three</strong> HTML tags should every website have?</li>
+				<li>What HTML tag do I need to update the browser tab with a descriptive name? And where in the HTML does it go?</li>
+				<li>In between which tag do I write code for content that should be <strong>visible to the user</strong>?</li>
+			</ol>
+			<p>Here is the start of your top navigation menu.</p>
 <pre class="prettyprint">
-  &lt;nav&gt;
-    Home About Contact
-  &lt;/nav&gt;
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Home&lt;/li&gt;
+        &lt;li&gt;About&lt;/li&gt;
+        &lt;li&gt;Contact&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
 </pre>
-      <p class="sidenote">NOTE: <code>nav</code> is an HTML5 tag that represents a section with navigation links. Navigations are also generally used with an HTML list but to keep it straightforward for today, we will leave it out.</p>
-    </article>
+			<p class="icon-note"><code>nav</code> is a new HTML5 tag that represents a section with navigation links. Read more about it <a href="http://html5doctor.com/nav-element/" target="_blank">here</a>.</p>
+		</article>
 
-    <!-- SLIDE 51 -->
-    <article class='slide slide-list'>
-      <h2>Exercise #3 (now until lunch)</h2>
-      <p>On your own:</p>
-      <ol class="spacey_list">
-        <li>Eventually there will be <code>about.html</code> and <code>contact.html</code>. Use the <code>&lt;a&gt;</code> tag with a <code>href</code> attribute to link all your pages together.</li>
-        <li>Based on <code>index.html</code>, create those 2 new files for About and Contact  in the same <code>website</code> folder as <code>index.html</code>.</li> 
-        <li>Make sure that all your webpages have descriptive and unique <code>&lt;title&gt;</code>'s.</li>
-        <li>Confirm that you can click between all the pages using the navigation links. Fix them if needed.</li>
-        <li>Update <code>about.html</code> with a picture and bio.<br />
-          <span class="sidenote">(You can even try adding a YouTube video based on the notes on the next slide.)</span></li>
-        <li>Update <code>contact.html</code> with contact info.<br />
-         <span class="sidenote">(You can even try adding a Google Map.)</span></li>
-        <li><strong>Don't</strong> update <code>index.html</code> any more!<br/>
-          <span class="sidenote">We'll get to that <strong>after</strong> lunch.</span></li>
-      </ol>
-    </article> 
+		<!-- SLIDE 53 -->
+		<article class='slide slide-list'>
+			<h2>Exercise #3 (now until lunch)</h2>
+			<ol>
+				<li>Create <strong>two</strong> more HTML pages in the <strong>website</strong> folder and name them <code>about.html</code> and <code>contact.html</code>.</li>
+                <li>Update your navigation code using the <code>&lt;a&gt;</code> tag to link all your pages together.</li> 
+				<li>Make sure each web page has a descriptive and unique <code>&lt;title&gt;</code>.</li>
+				<li>Confirm that you can click between all the pages in the navigation links.</li>
+				<li>Update <code>about.html</code> with a picture and bio.<br />
+					<span class="sidenote">(You can even try adding a YouTube video based on the notes on the next slide.)</span></li>
+				<li>Update <code>contact.html</code> with contact info.<br />
+				 <span class="sidenote">(You can even try adding a Google Map.)</span></li>
+				<li><strong>Don't</strong> update <code>index.html</code> any more!<br/>
+				<span class="sidenote">We'll get to that <strong>after</strong> lunch.</span></li>
+			</ol>
+		</article> 
 
-    <!-- SLIDE 52: HTML -->
-    <article class='slide slide-list'>
-      <h2>Bonus: Add video to your webpage</h2>
-      <p>As time goes on, it has become easier and easier to embed multimedia content into websites.</p>
-      <p>From YouTube, you can find an <strong>Embed Code</strong> to put into your website <span class="sidenote">(click on "Share" button below video, then "Embed")</span> and YouTube's servers do all the rest of the work via the <code>iframe</code> tag.</p>
-      <pre class="prettyprint">&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/tlnFyjpV5Wo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</pre>
-      <iframe width="560" height="315" src="http://www.youtube.com/embed/tlnFyjpV5Wo" frameborder="0" allowfullscreen></iframe>
-      <p>Adding a Google Map is similiar. <a href="assets/google_map_embed.jpg" target="_blank">Click here for instructional screenshot.</a></p>
-    </article>
+		<!-- SLIDE 54: HTML -->
+		<article class='slide slide-list'>
+			<h2>Bonus: Add video to your web page</h2>
+			<p>As time goes on, it has become easier and easier to embed multimedia content into websites.</p>
+			<p>From YouTube, you can find an <strong>Embed Code</strong> to put into your website <span class="sidenote">(click on "Share" button below video, then "Embed")</span> and YouTube's servers do all the rest of the work via the <code>iframe</code> tag.</p>
+			<pre class="prettyprint">&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/WvCfkejRGbY" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</pre>
+			<iframe width="560" height="315" src="http://www.youtube.com/embed/WvCfkejRGbY" frameborder="0" allowfullscreen></iframe>
+			<p>Adding a Google Map is similiar. <a href="assets/google_map_embed.jpg" target="_blank">Click here for instructional screenshot.</a></p>
+		</article>
 
-    <!-- SLIDE 53: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML reference</h2>
-      <ul class="spacey_list">
-        <li>Download a <a href="http://woorkup.com/2009/12/16/html5-visual-cheat-sheet-reloaded/" target="_blank">cheatsheet of HTML tags</a>. (Copy in the <code>cheatsheets</code> folder.)</li>
-        <li>Try looking up individual tags using the HTML sections of <a href="https://developer.mozilla.org/en-US/docs/HTML/Element" target="_blank">Mozilla's Developer Network</a> or the <a href="http://www.w3.org/community/webed/wiki/HTML/Elements" target="_blank">W3C</a> for further breakdown.</li>
-        <li>For further exploration, review the <a href="http://webdesign.tutsplus.com/tutorials/workflow-tutorials/faster-htmlcss-workflow-with-chrome-developer-tools/" target="_blank">tutorial</a> for using Chrome's dev tools.</li>
-        <li>And don't forget the "view source" option of your web browser!</li>
-      </ul>
-    </article>  
+		<!-- SLIDE 55: HTML -->
+		<article class='slide slide-list'>
+			<h2>HTML references and Tools</h2>
+			<ul>
+				<li>Download a <a href="http://woorkup.com/2009/12/16/html5-visual-cheat-sheet-reloaded/" target="_blank">cheatsheet of HTML tags</a>. (Copy in the <code>cheatsheets</code> folder.)</li>
+				<li>Try looking up individual tags using the HTML sections of <a href="https://developer.mozilla.org/en-US/docs/HTML/Element" target="_blank">Mozilla's Developer Network</a> or the <a href="http://www.w3.org/community/webed/wiki/HTML/Elements" target="_blank">W3C</a> for further breakdown.</li>
+				<li>For further exploration, review the <a href="http://webdesign.tutsplus.com/tutorials/workflow-tutorials/faster-htmlcss-workflow-with-chrome-developer-tools/" target="_blank">tutorial</a> for using Chrome's dev tools.</li>
+				<li>And don't forget the "view source" option of your web browser!</li>
+			</ul>
+		</article>  
 
 
-    <!-- SLIDE 54: CSS -->
-    <article class='slide slide-subhead'>
-      <h1>CSS basics</h1>
-      <p>The presentation layer</p>
-      <p><img src="assets/TRIAD-css.gif" width="261" height="241" alt="Presentation Layer" /></p>
-    </article>  
+		<!-- SLIDE 56: CSS -->
+		<article class='slide slide-subhead section-intro'>
+			<h1>CSS basics</h1>
+			<p>The presentation layer</p>
+			<img src="assets/TRIAD-css.gif" width="261" height="241" alt="Presentation Layer">
+		</article>  
 
-    <!-- SLIDE 55: CSS -->
-    <article class='slide slide-list'>
-      <h2>What is CSS?</h2>
-      <ul>
-        <li>CSS = cascading style sheet</li>
-        <li>stylesheet language with its own syntax rules that are different from HTML</li>
-        <li>Separates content (i.e. text) from presentation (i.e. text colour).</li>
-        <li>a style sheet contains a list of rules that <em>cascade</em> and can help to reduce redundancy and save time</li>
-      </ul>
-      <p>There are three ways to include (otherwise known as <em>referencing</em>)<br /> CSS in an HTML page: inline, internal and external.</p>
-    </article>    
+		<!-- SLIDE 57: CSS -->
+		<article class='slide slide-list'>
+			<h2>What is CSS?</h2>
+			<ul>
+				<li>CSS = cascading style sheet</li>
+				<li>stylesheet language with its own syntax rules (different from HTML)</li>
+				<li>Separates content (i.e. text) from presentation (i.e. text colour).</li>
+				<li>a style sheet contains a list of rules that <em>cascade</em> and can help to reduce redundancy and save time</li>
+			</ul>
+			<p>There are three ways to include (otherwise known as <em>referencing</em>)<br /> CSS in an HTML page: <strong>inline</strong>, <strong>internal</strong> and <strong>external</strong>.</p>
+		</article>    
 
-    <!-- SLIDE 56: CSS -->
-    <article class='slide slide-list'>
-      <h2>Inline CSS</h2>
-      <p>The <code>style</code> <em><strong>attribute</strong></em> can be added to any visible HTML tag. This allows us to add CSS properties directly to the element.</p> <p>Let's practice using using the <code>background-color</code>, <code>color</code> and<br> <code>font-size</code> <em><strong>property</strong></em>.</p>
-
+		<!-- SLIDE 58: CSS -->
+		<article class='slide slide-list'>
+			<h2>Inline CSS</h2>
+			<p>The <code>style</code> <strong>attribute</strong> can be added to any HTML tag and will apply the CSS directly to the element as a <em>value</em> of the attribute. But the CSS properties <em>also</em> require their own values to be declared.</p> 
+			<pre class="prettyprint">style="css-property: value;"</pre>
+			<p>Let's practice using using the <code>background-color</code>, <code>color</code> and<br> <code>font-size</code> <i>properties</i>.</p>
 <textarea class='coder-editor coder-editor-full'>
 <h1>Welcome!</h1>
 <p>This is my website.</p>
 <p>Follow me on 
-  <a href="http://twitter.com/christinatruong" target="_blank">Twitter</a>!
+    <a href="http://twitter.com/christinatruong" target="_blank">Twitter</a>!
 </p>
 </textarea>
 <script type='coder-solution'><h1 style="background-color: yellow;">Welcome!</h1>
 <p style="font-size: 18px;">This is my website.</p>
 
 <p style="font-size: 18px;">Follow me on 
-  <a href="http://twitter.com/christinatruong" target="_blank"
-  style="color: red;">Twitter</a>!
+    <a href="http://twitter.com/christinatruong" target="_blank"
+    style="color: red;">Twitter</a>!
 </p>
 </script>
 
-    </article>
+		</article>
 
-    <!-- SLIDE 57: CSS -->
-    <article class='slide slide-list'>
-      <h2>Internal CSS using selectors</h2>
-      <p>Rather than using a style attribute directly in the element, a <code>&lt;style&gt;</code> tag is declared and the CSS declarations go in between these <code>&lt;style&gt;</code> tags.<p>
-      <p>Here's the same result but using CSS <span class="keyword">selectors</span>.</p>
+		<!-- SLIDE 59: CSS -->
+		<article class='slide slide-list'>
+			<h2>Common CSS terms</h2>
+			<p><strong>Selectors</strong>: used to <em>select</em> which element(s) to apply the styles to. Can target an HTML tag (i.e. <code>&lt;h1&gt;</code> for a heading), class or ID.</p>
+
+			<p><strong>Declaration blocks</strong> consists of a list of declarations (rules to follow) wrapped in curly braces <code>{ }</code> ( <strong>Shift</strong> + <strong>{</strong> and <strong>Shift</strong> + <strong>}</strong> ).</p>
+
+			<p>Declarations are written using CSS <code>property: value</code> pairs.</p>
+<pre class="prettyprint">
+selector { property: value; }
+</pre>
+<pre class="prettyprint">
+h1 { color: blue; }
+</pre>
+		</article>
+
+		<!-- SLIDE 60: CSS -->
+		<article class='slide slide-list'>
+			<h2>Internal CSS</h2>
+			<p>Rather than using a <code>style</code> <em>attribute</em> directly in the HTML tag, a pair of <code>&lt;style&gt;&lt;/style&gt;</code> tags are declared in the <code>head</code> of the document.</p>
+			<p>All the CSS is then included between these tags. Since the element isn't targeted directly in the HTML tag, <em>selectors</em> are required.<p>
+			<p>Let's try using CSS with <em>selectors</em>.</p>
 
 <textarea class='coder-editor coder-editor-full'>
 <h1>Welcome!</h1>
@@ -932,14 +1014,14 @@
 
 <h1>Social Media</h1>
 <p>Follow me on 
-  <a href="http://twitter.com/christinatruong" target="_blank">Twitter</a>!
+    <a href="http://twitter.com/christinatruong" target="_blank">Twitter</a>!
 </p>
 </textarea>
 <script type='coder-solution'>
 <style>
-  h1 { background-color: black; color: white; }
-  p { font-size: 18apx; }
-  a { color: red; }
+	h1 { background-color: black; color: white; }
+	p { font-size: 18apx; }
+	a { color: red; }
 </style>
 
 <h1>Welcome!</h1>
@@ -947,1143 +1029,1323 @@
 
 <h1>Social Media</h1>
 <p>Follow me on 
-  <a href="http://twitter.com/christinatruong" target="_blank">Twitter</a>!
+    <a href="http://twitter.com/christinatruong" target="_blank">Twitter</a>!
 </p>
 </script>
-    <br />
-    <p>NOTE: Internal CSS should be place between the  <code>&lt;head&gt;</code> tags.</p>
-    </article>
+		<br />
+		<p class="icon-warning">Remember! Internal CSS should be place between the  <code>&lt;head&gt;</code> tags.</p>
+		</article>
 
-
-    <!-- SLIDE 58: CSS -->
-    <article class='slide slide-list'>
-      <h2>Common CSS terms</h2>
-      <p><strong>Selectors</strong>: used to determine which element(s) to apply the styles to. Can target an HTML tag (i.e. <code>&lt;h1&gt;</code> for a heading), class or ID.</p>
-
-      <p><strong>Declaration blocks</strong> consists of a list of declarations (rules to follow) wrapped in curly braces <code>{ }</code>.</p>
-
-      <p>Declarations are written using CSS <code>property: value</code> pairs.</p>
-<pre class="prettyprint">
-selector { property: value; }
-</pre>
-<pre class="prettyprint">
-h1 { color: blue; }
-</pre>
-    </article>
-
-    <!-- SLIDE 59: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS selectors and properties</h2>
-      <p>Here's a CSS declaration dissected:</p>
-      <p class="centered"><img src="assets/css.png" /></p>
-      <ul>
-        <li>A <strong>basic</strong> <span class="keyword">selector</span> will match its HTML tag name. In this case, all content that is in an <code>&lt;h1&gt;</code> will have this style applied to it.<br /><span class="sidenote">(We'll get into more complex ones later.)</span></li>
-        <li>A <span class="keyword">property</span> is a label used to determine the type of style to be applied to 
+		
+		<!-- SLIDE 61: CSS -->
+		<article class='slide slide-list'>
+			<h2>CSS selectors and properties</h2>
+			<p>Here's a CSS declaration dissected:</p>
+			<img src="assets/css.png">
+			<ul>
+				<li>A <i>basic selector</i> will match its HTML tag name. In this case, all content that is in an <code>&lt;h1&gt;</code> will have this style applied to it.<br /><span class="sidenote">(We'll get into more complex ones later.)</span></li>
+				<li>A <i>property</i> is a label used to determine the type of style to be applied to 
 the element (like color). You can see a list of them in this <a href="http://www.cheatography.com/davechild/cheat-sheets/css2/">cheatsheet</a>.</li>
-        <li>The property <strong>value</strong> is specific to the property type. For example, <code>color</code> properties accept colour values like <code>blue</code> or <code>#FFFF00</code>. <code>font-size</code> properties accept units of measurements like <code>12px</code> (where "px" stands for pixels).</li>
-      </ul>
-    </article>  
+				<li>The property <i>value</i> is specific to the property <i>type</i>.
+				<p class="sidenote"> For example:<br>
+				 The <code>color</code> property accept colour values like <code>blue</code> or <code>#FFFF00</code>.<br>
+				 The <code>font-size</code> property accept units of measurements like <code>12px</code> (where "px" stands for pixels).</p>
+				</li>
+			</ul>
+		</article>  
 
- <!-- SLIDE 60: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS selectors and properties</h2>
-      <p>Here's a CSS declaration dissected:</p>
-      <p class="centered"><img src="assets/css.png" /></p>
-      <ul>
-        <li>Use <strong>curly braces</strong> (<code>{}</code>) to hold a list of the <em>property:value</em> sets.</li> 
-        <li>You can define multiple <em>property:value</em> sets but you must end each one with a <strong>semi-colon</strong> (<code>;</code>).</li>
-      </ul>
-    </article>  
+ 		<!-- SLIDE 62: CSS -->
+		<article class='slide slide-list'>
+			<h2>CSS selectors and properties</h2>
+			<p>Here's a CSS declaration dissected:</p>
+			<img src="assets/css.png">
+			<ul>
+				<li>Use <i>curly braces</i> (<code>{}</code>) to hold a list of the <i>property:value</i> sets.</li> 
+				<li>You can define multiple <i>property:value</i> sets but you <em>must</em> end each one with a semi-colon (<code>;</code>).</li>
+			</ul>
+		</article>
 
-    <!-- SLIDE 61: CSS -->
-    <article class='slide slide-list'>
-      <h2>Changing the background colour of a page</h2>
-      <p>View <code><a href="exercises/3_CSS/index.html" target="_blank">exercises/3_CSS/index.html</a></code> in your browser. Notice how we're using a transparent PNG so it's hard to read all the white letters on a white background.</p>
-      <p>Let's add a <code>&lt;style&gt;</code> tag between the <code>&lt;head&gt;</code>. Then add this:</p>
-<pre class="prettyprint">body { background-color: gray; }</pre>
-      <p>Hello Canadians, note the spelling of "color"!</p>
-    </article>
-
-    <!-- SLIDE 62: CSS -->
-    <article class='slide slide-list'>
-      <h2>Changing the font colour</h2>
-      <p>Now the text is a bit hard to read on the gray background.</p>
-      <p>The <code>&lt;body&gt;</code> tag is the highest possible visible HTML tag, so the <code>body</code> selector will also allow us to target the font color on the <em>entire</em> page.</p>
-<pre class="prettyprint">body { background-color: gray; <strong>color: white;</strong> }</pre>
-    </article>    
-
-    <!-- SLIDE 63: CSS -->
-    <article class='slide slide-list'>
-      <h2>Changing the font family</h2>
-      <p>The web has a number of fonts that are considered "web safe". Some of the most used fonts are:</p>
-      <ul>
-        <li style="font-family: Arial;">Arial</li>
-        <li style="font-family: Verdana;">Verdana</li>
-        <li style="font-family: 'Times New Roman';">Times New Roman</li>
-        <li style="font-family: Georgia;">Georgia</li>
-        <li style="font-family: Courier;">Courier</li>
-      </ul>
-      <p>Let's add a bit of contrast to our headers by using the Courier font.</p>
-<pre class="prettyprint">h1 { font-family: Courier; }
-h2 { font-family: Courier; }</pre> 
-    </article>
-
-    <!-- SLIDE 64: CSS -->
-    <article class='slide slide-list'>
-      <h2>Changing the font family</h2>
-      <p>Not all fonts are installed on all computers so it's recommended that you use a list of fonts. If the first font in the list isn't available, it will try to use the next.</p>
-<pre class="prettyprint">body { background-color: gray; color: white; <strong>font-family: Helvetica, Verdana, Arial, sans-serif;</strong> }</pre>
-      <p class="sidenote">(Notice how the font-family for the headers are still Courier? That's the "cascading" part of Cascading Style Sheets in action. Inline styles take precedence, then innermost tags, then outer tags.)</p>
-      <p>Here's a handy resource, <a href="http://cssfontstack.com/">CSS Font Stack</a>.</p>
-    </article>
-
-    <!-- SLIDE 65: CSS -->
-    <article class='slide slide-list'>
-      <h2>Changing the font size</h2>
-      <p>Font sizes are typically defined in pixels (px) or "ems" (em).</p>
-      <ul>
-        <li style="font-size: 10px;">20px</li>
-        <li style="font-size: 20px;">45px</li>
-        <li style="font-size: 1em;">0.5em</li>
-        <li style="font-size: 1.5em;">1em</li>
-      </ul>
-      <p>Headers have default font-sizes defined by the browser. Let's override them. </p>
-<pre class="prettyprint">h1 { font-family: Courier; <strong>font-size: 25px;</strong> }
-h2 { font-family: Courier; <strong>font-size: 22px;</strong> }</pre>
-<p class="sidenote">(When you've got more time, read <a href="http://kyleschaeffer.com/best-practices/css-font-size-em-vs-px-vs-pt-vs/" target="_blank">this article</a> for more info on font unit sizes.</p>
-    </article>
-
-    <!-- SLIDE 66: CSS -->
-    <article class='slide slide-list'>
-      <h2>Changing the font weight</h2>
-      <p>In its simplest form, there are 2 weights:</p>
-      <ul>
-        <li style="font-weight: normal;">normal</li>
-        <li style="font-weight: bold;">bold</li>
-      </ul>
-      <p>By default, headers are already bolded. Let's remove the bold by applying the <em>normal</em> font weight on them.</p>
-<pre class="prettyprint">h1 { font-family: Courier; font-size: 25px; <strong>font-weight: normal;</strong> }
-h2 { font-family: Courier; font-size: 22px; <strong>font-weight: normal;</strong> }</pre>
-    </article>
-
-    <!-- SLIDE 67: CSS -->
-    <article class='slide slide-list'>
-      <h2>Formatting CSS</h2>
-      <p>As with HTML, extra whitespace and line breaks add to readability.</p>
-      <p>Our current CSS can be written like this:</p>
+		<!-- SLIDE 63: CSS -->
+		<article class='slide slide-list'>
+			<h2>Formatting CSS</h2>
+			<p>As with HTML, extra whitespace and line breaks add to readability.</p>
 <pre class="prettyprint lang-css">
 &lt;style&gt;
-
-  body { 
-    background-color: gray; 
-    color: white; 
-    font-family: Helvetica, Verdana, Arial, sans-serif; 
-  }
-
-  h1 { 
-    font-family: Courier; 
-    font-size: 25px;
-    font-weight: normal; 
-  }
-
-  h2 { 
-    font-family: Courier;
-    font-size: 22px; 
-    font-weight: normal; 
-  }
-
-&lt;/style&gt;
-</pre>
-    </article>
-
-    <!-- SLIDE 68: CSS -->
-    <article class='slide slide-list'>
-      <h2>The "Box Model"</h2>
-      <p>Most HTML elements on a webpage look like rectangles, or boxes, to the browser:</p>
-      <p class="centered"><img src="assets/box-model.gif" width="536" height="289" alt="box model" /></p>
-      <p>The content is the visible text or image. The border is... the border. Padding and margin adds spacing inside and outside, respectively.</p> 
-      <p>Each of these rectangles may have margins, padding and borders, which in turn changes the elements size (width & height).  The way these elements are formulated together is referred to as the box model.</p>
-      <p>This is the same but visualized differently:</p>
-      <p class="centered"><img src="assets/box-model.png" width="517" height="476" alt="box model" /></p>
-    </article>
-
-    <!-- SLIDE 69: CSS -->
-    <article class='slide slide-list'>
-      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p><strong>Step 1: add a border</strong><br />
-        To add a border you need to set 3 properties:<br />
-        <code>border-width</code>, <code>border-style</code>, and <code>border-color</code>.</p>
-      <p class="sidenote">You can define them seperately, or using shorthand.</p>
-      <p class="sidenote">Note: CSS comments use the format <code>/* comment */</code></p>
-
-<textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-  border-width: 1px;
-  border-style: solid;
-  border-color: black;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-  /*
-  border-width: 1px;
-  border-style: solid;
-  border-color: black;
-  */
-
-  /* shorthand */
-  border: 1px solid black;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</script>
-
-    </article>
-
-    <!-- SLIDE 70: CSS -->
-    <article class='slide slide-list'>
-      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p><strong>Step 2: add padding</strong><br />
-        To add padding you set 4 properties:<br />
-        <code>padding-top</code>, <code>padding-left</code>, <code>padding-bottom</code>, and <code>padding-left</code>.</p>
-      <p class="sidenote">You can define them seperately, or using shorthand (in a clockwise direction).</p>
-
-<textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-
-  /*padding-top: 5px;
-  padding-right: 30px;
-  padding-bottom: 5px;
-  padding-left: 30px;*/
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-  border: 1px solid black;
-  /*
-  padding-top: 5px;
-  padding-right: 30px;
-  padding-bottom: 5px;
-  padding-left: 30px; 
-  */
-
-  /* shorthand */
-  padding: 5px 30px 5px 30px;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</script>
-
-    </article>
-
-    <!-- SLIDE 71: CSS -->
-    <article class='slide slide-list'>
-      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p><strong>Step 3: Change background & text properties</strong><br />
-      Add a background colour (<code>background-color</code>), and change the font colour, (<code>color</code>).</p>
-      <p>To get rid of the underline, use the <code>text-decoration</code> property.</p>
-
-<textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-
-  background-color: black;
-  color: white;
-  text-decoration: none;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</script>
-
-    </article>
-
-    <!-- SLIDE 72: CSS -->
-    <article class='slide slide-list'>
-      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p><strong>Step 4: add margin</strong><br />
-      To add margins you set 4 properties:<br />
-        <code>margin-top</code>, <code>margin-left</code>, <code>margin-bottom</code>, and <code>margin-left</code>.</p>
-      <p class="sidenote">You can define them seperately, or using shorthand (in a clockwise direction).</p>
-
-
-<textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-
-  /*margin-top: 15px;
-  margin-right: 10px;
-  margin-bottom: 0;
-  margin-left: 0;*/
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-
-  /*
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  */
-
-  /* shorthand */
-  margin: 15px 10px 0 0;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</script>
-
-    </article>
-
-    <!-- SLIDE 73: CSS -->
-    <article class='slide slide-list'>
-      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p>Here's the final button code!</p>
-
-<textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;
-
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</script>
-
-      <br clear="all" />
-      <p class="sidenote"><strong>Advanced topic:</strong> To get it looking even more like a button, use the <code><a href="https://developer.mozilla.org/en-US/docs/CSS/border-radius" target="_blank">border-radius</a></code> property.<br />
-      <span class="sidenote">(We won't get into browser pre-fixes today but do know that newer CSS features require you to re-state the property for each browser vendor.)</span></p>
-    </article>
-
-    <!-- SLIDE 74: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS interactions &amp; pseudo selectors</h2>
-      <p>CSS is also able to handle some basic UI interactions in our sites, such as allowing a mouse over or "hover" state on various elements. This is frequently done with items such as links.</p>
-      <p>As part of your selector, you need to use the <code>:hover</code> <span class="keyword">pseudo selector</span>.</p>
-
-<textarea class="coder-editor">
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;
-
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-}
-
-a:hover {
-
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;
-
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-}
-
-a:hover {
-  background-color: purple;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</script>
-
-    </article>
+    body { 
+        background-color: gray; 
+        color: white; 
+        font-family: Helvetica, Verdana, Arial, sans-serif; 
+    }
     
-    <!-- SLIDE 75: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS classes</h2>
-      <p>Wait! What happens when we add another link to the page and it's not part of our navigation?
-      <span class="sidenote">Putting all the styles inline wouldn't be wise...</span></p>
-<textarea class="coder-editor">
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;
-}
-
-a:hover {
-  background-color: purple;
-}
+    h1 { 
+        font-family: Courier; 
+        font-size: 25px;
+        font-weight: normal; 
+    }
+    
+    h2 { 
+        font-family: Courier;
+        font-size: 22px; 
+        font-weight: normal; 
+    }
 &lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-
-&lt;p&gt;Follow me on
-  &lt;a href="http://twitter.com/christinatruong" target="_blank"&gt;Twitter&lt;/a&gt;!
-&lt;/p&gt;
-</textarea>
-<script type='coder-solution'>&lt;a 
-  href="index.html"
-  style="border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;"&gt;Home&lt;/a&gt;
-&lt;a 
-  href="about.html"
-  style="border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;"&gt;About&lt;/a&gt;
-&lt;a 
-  href="contact.html"
-  style="border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;"&gt;Contact&lt;/a&gt;
-
-&lt;p&gt;Follow me on
-  &lt;a href="http://twitter.com/christinatruong" target="_blank"&gt;Twitter&lt;/a&gt;!
-&lt;/p&gt;
-</script>
-      <br clear="all" />
-      <p class="sidenote">Now that's a lot of CSS! What if you change your mind and decide that the background color should be blue now? Plus you can't apply pseudo selectors like <code>:hover</code> inline.</p>
-    </article>    
-
-   <!-- SLIDE 76: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS classes</h2>
-      <p>If you know that several elements are going to have similiar styles, use CSS classes! A class <span class="keyword">attribute</span> can be added to any element and given any value, defined by you. Once you define a CSS class, you can apply it over and over again, to any element.</p>
-      <ul>
-        <li>Add a class attribute to the HTML element and give it a meaningful class name.
-          e.g. <code>class="nav-button"</code></li>
-        <li>In CSS, a class is defined by a leading <strong>period</strong> (<code>.</code>).  Use the leading period, plus class name to define your CSS selector <br>
-          e.g. <code>.nav-button</code>
-        </li>
-      </ul>
-
-<pre class="prettyprint">
-&lt;a <strong>class="nav-button"</strong>&gt;Home&lt;/a&gt;
-
-&lt;style&gt;
-<strong>.nav-button</strong> {
-  font-family: Georgia;
-}
-&lt;/style&gt;  
 </pre>
+		</article>
 
-    </article>
+		<!-- SLIDE 64: CSS -->
+		<article class='slide slide-list'>
+			<h2>Changing colours</h2>
+			<p>Let's return to our new <strong>index.html</strong> in the <strong>website</strong> folder.
+			<p>To add <i>internal CSS</i> we need to add the opening and closing <code>&lt;style&gt;</code> tags <em>between</em> the <code>&lt;head&gt;</code> tags.</p>
+			<p>Now let's add this code below.</p>
+<pre class="prettyprint">body { 
+    background-color: blue; 
+}</pre>
+			<p class="icon-warning">Fellow Canadians, note the spelling of <code>color</code>!</p>
+			<p>The <code>&lt;body&gt;</code> tag is the highest possible visible HTML tag, so the <code>body</code> selector will also allow us to target the font color on the <em>entire</em> page.</p>
+			<p class="icon-tip">Remember the family tree? CSS styles are inherited from parent to child.</p>
+<pre class="prettyprint">body { 
+    background-color: blue; 
+    color: white; 
+}</pre>
+		</article>
+   
 
-   <!-- SLIDE 77: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS classes</h2>
-      <p>Let's apply a "nav-button" CSS class to our current navigation links:</p>
-      <textarea class="coder-editor">
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;
-}
+		<!-- SLIDE 65: CSS -->
+		<article class='slide slide-list'>
+			<h2>Changing the font family</h2>
+			<p>Not all fonts are installed on all computers so it's recommended that you use fonts that are considered <i>web safe</i>.</p>
+			<p>Here's a handy resource, <a href="http://cssfontstack.com/">CSS Font Stack</a>.</p>
+			
+			<p>Because we want to ensure that the most amount of users will see the fonts as we intended, it's best practice to list <em>at least two</em> font options to provide a <em>fall-back</em> if the user doesn't have the fonts installed.</p>
 
-a:hover {
-  background-color: purple;
-}
-&lt;/style&gt;
+<pre class="prettyprint">body { 
+    background-color: blue; 
+    color: white; 
+    <strong>font-family: Helvetica, Arial, sans-serif;</strong> 
+}</pre>
+		</article>
 
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-
-&lt;p&gt;Follow me on
-  &lt;a href="http://twitter.com/christinatruong" target="_blank"&gt;Twitter&lt;/a&gt;!
-&lt;/p&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-.nav-button { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;
-}
-
-.nav-button:hover {
-  background-color: purple;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html" class="nav-button"&gt;Home&lt;/a&gt;
-&lt;a href="about.html" class="nav-button"&gt;About&lt;/a&gt;
-&lt;a href="contact.html" class="nav-button"&gt;Contact&lt;/a&gt;
-
-&lt;p&gt;Follow me on
-  &lt;a href="http://twitter.com/christinatruong" target="_blank"&gt;Twitter&lt;/a&gt;!
-&lt;/p&gt;
-</script>
-    </article>
-
-    <!-- SLIDE 78: CSS -->
-    <article class='slide slide-list'>
-      <h2>External CSS</h2>
-      <p>Instead of duplicating your <code>&lt;style&gt;</code> content for every webpage, make one single CSS document ending with a <code>.css</code> extension and link to it in the <code>&lt;head&gt;</code> tag instead of (or in addition to) a <code>&lt;style&gt;</code> tag.</p>
-<pre class="prettyprint">
-&lt;head&gt;
-  <strong>&lt;link rel="stylesheet" href="styles.css" type="text/css" /&gt;</strong>
-  &lt;style&gt;
-  body {
-    font-size: 14px;
-  }
-  &lt;/style&gt;
-&lt;/head&gt;
-</pre>
-
-      <p>Inside styles.css, there is <strong>no</strong> <code>&lt;style&gt;</code> tag:</p>
-<pre class="prettyprint">
-body {
-  background-color: black;
-  color: white;
-  font-family: Helvetica, Arial, sans-serif;
+		<!-- SLIDE 66 -->
+		<article class='slide slide-list'>
+			<h2>Cascading, Inheritance and Specificity</h2>
+			<p>In the previous example, we added all our CSS properties to the <code>body</code> <i>selector</i>. Therefore, all of the children and descendants <em>inherited</em> the styles. However, if a more specific <i>selector</i> was used, it would override the inherited values.</p>
+<pre class="prettyprint">body { 
+    background-color: blue; 
+    color: white; 
+    font-family: Helvetica, Arial, sans-serif;
 }
 h1 {
-  font-family: Georgia, "Times New Roman", serif;
+    color: black; /* only the h1 text will be black */
+}
+
+/* This is a CSS comment by the way. The syntax is different from an HTML comment. */
+</pre>
+			<p class="icon-note">More resources <a href="http://www.w3.org/TR/CSS2/cascade.html" target="_blank">here</a>, <a href="http://css-tricks.com/specifics-on-css-specificity/" target="_blank">here</a> and <a href="http://coding.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/" target="_blank">here</a>.</p>
+		</article>
+
+
+		<!-- SLIDE 67: CSS -->
+		<article class='slide slide-list'>
+			<h2>The Box Model</h2>
+			<p>The browser sees all the HTML elements as square or rectangular boxes.</p>
+			<img src="assets/box-model.gif" width="536" height="289" alt="box model" />
+			<p>The <i>content</i> is the text or image visible to the user. The <code>border</code> is... the border. <code>padding</code> adds space <em>inside</em> of the box and <code>margin</code> adds space <em>outside</em> of the box.</p> 
+			<p>Each of these boxes can have different combinations of margins, padding and borders, which in turn changes the element's size (width & height).  This interaction is referred to as <i>the box model</i>.</p>
+			<p class="sidenote">We'll be exploring this concept in more detail when we do page layouts. For now, just keep this in the back of your mind.</p>
+		</article>
+
+		<!-- SLIDE 68: CSS Lists -->
+		<article class='slide slide-list css-lists'>
+			<h2>Lists as navigation</h2>
+			<p>It's common to use lists to create your navigation. Because lists have distinct default styles, we'll have to apply many different CSS properties to get it to look more button-like.</p>
+			<p><strong>Step 1:</strong> remove default list styles</p>
+<textarea class='coder-editor'>
+<style>
+    ul {
+        list-style-type: ;
+        margin: ;
+        padding: ;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
+</textarea>
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }	
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</script>
+		</article>
+
+		<!-- SLIDE 69: CSS Lists -->
+		<article class='slide slide-list css-lists'>
+			<h2>Lists as navigation</h2>
+			<p><strong>Step 2:</strong> Add some basic colour and font styles:<br>
+			Add a background color, center align the text, set a width, remove the underline, change the font family and font size.</p>
+<textarea class='coder-editor'>
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
+</textarea>
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul li {
+        background-color: black;
+        width: 80px;
+    }
+    ul li a {
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }	
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</script>
+		</article>
+
+		<!-- SLIDE 70: CSS lists -->
+		<article class='slide slide-list'>
+			<h2>Lists as navigation</h2>
+			<p><strong>Step 3:</strong> Line them up side by side</p>
+			<p>This is a bit tricky because there are 3 different ways we can do this and they each yield slightly different results.</p>
+			<p>We will be looking at the <code>display</code> and <code>float</code> properties. You only need to use <strong>one</strong> of these techniques but it depends on what you want the outcome to be. </p>
+			<p>List items (<code>li</code>) are block level elements so we need to override the default style behaviour to get the items to line up side by side.</p>
+
+<textarea class='coder-editor'>
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul li {
+        background-color: black;
+        width: 80px;
+    }
+    ul li a {
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</textarea>
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul li {
+        background-color: black;
+        width: 80px;
+
+        /* Option 1: lines up side by 
+        side but doesn't play nice 
+        with height & width changes*/
+        /* display: inline; */
+
+        /* Option 2: lines up side by
+        side, plays nice with height
+        and width but not with text-
+        align: center. */
+        /* float: left; */
+
+        /* Option 3: lines up side by
+        side, plays nice with height
+        and width AND with text-
+        align: center. */
+        /* display: inline-block; */
+    }
+    ul li a {
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</script>
+		<p class="icon-note"><a href="http://www.impressivewebs.com/difference-block-inline-css/" target="_blank">The Difference Between “Block” and “Inline”</a></p>
+		</article>
+
+		<!-- SLIDE 71: CSS -->
+		<article class='slide slide-list'>
+			<h2>Lists as navigation</h2>
+			<p><strong>Step 3:</strong> add padding</p>
+			<p>To add padding you set 4 properties: <code>padding-top</code>, <code>padding-left</code>, <code>padding-bottom</code>, and <code>padding-left</code>.</p>
+			<p class="icon-note">This property, as well as many others, can also be defined using shorthand. More info <a href="http://www.webcredible.co.uk/user-friendly-resources/css/css-shorthand-properties.shtml" target="_blank">here</a>.</p>
+
+<textarea class='coder-editor'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul li {
+        background-color: black;
+        width: 80px;
+        display: inline-block;
+    }
+    ul li a {
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</textarea>
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</script>
+		</article>
+
+
+		<!-- SLIDE 72: CSS -->
+		<article class='slide slide-list'>
+			<h2>Lists as navigation</h2>
+			<p><strong>Step 4:</strong> add margin<br />
+			To add margins you set 4 properties:
+				<code>margin-top</code>, <code>margin-left</code>, <code>margin-bottom</code>, and <code>margin-left</code>.</p>
+			<p class="icon-tip">Just like padding, you can also use shorthand (in a clockwise direction).</p>
+<textarea class='coder-editor'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</textarea>
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;/* Removes default
+    space from between list items
+    when using display: inline-block
+    Make sure to set the font-size.
+    again in the li or a tag.*/
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</script>
+		</article>
+
+		<!-- SLIDE 73: CSS -->
+		<article class='slide slide-list'>
+			<h2>Lists as navigation</h2>
+			<p>You can also add more styles such as a changing the font color or adding a border, but let's take a moment and talk about a new <em>CSS3</em> feature, <code>border-radius</code>.</p>
+			<p class="icon-note">We won't get into browser pre-fixes today but do know that newer CSS features require you to re-state the property for each browser vendor. More info <a href="https://developer.mozilla.org/en-US/docs/CSS/border-radius" target="_blank">here</a>.</p>
+
+<textarea class='coder-editor'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        /*border-radius: 6px;
+        -webkit-border-radius: 6px;*/
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</textarea>
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</script>
+		</article>
+
+		<!-- SLIDE 74: CSS -->
+		<article class='slide slide-list'>
+			<h2>CSS interactions &amp; pseudo selectors</h2>
+			<p>CSS is also able to handle some basic interactions such as a "hover" state on various elements. This is frequently used for links.</p>
+			<p>The <code>:hover</code> <i>psuedo selector</i> can be used to achieve this effect.</p>
+
+<textarea class="coder-editor">
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</textarea>
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul li:hover {
+    	background-color: purple;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+    ul li a:hover {
+    	color: white;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</script>
+
+		</article>
+		
+		<!-- SLIDE 75: CSS -->
+		<article class='slide slide-list'>
+			<h2>CSS classes</h2>
+			<p>Wait! What happens when we add another list to the page and it's not part of our navigation? Why can't we see the second list at all?</p>
+<textarea class="coder-editor"><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul li:hover {
+    	background-color: purple;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+    ul li a:hover {
+    	color: white;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
+</textarea>
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul li:hover {
+    	background-color: purple;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+    ul li a:hover {
+    	color: white;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</script>
+		</article>    
+
+	 <!-- SLIDE 76: CSS -->
+		<article class='slide slide-list'>
+			<h2>CSS classes</h2>
+			<p>A <code>class</code> <i>attribute</i> can be added to any HTML element and given any value, defined by you. Once you define a CSS class, you can apply it over and over again, to any element.</p>
+			<ul>
+				<li>Add a class attribute to the HTML element and give it a meaningful class name.
+					e.g. <code>class="main-nav"</code></li>
+				<li>In CSS, a class is defined by a leading period (<code>.</code>) followed by the class name with <strong>no spaces</strong> as your CSS selector.
+				</li>
+			</ul>
+
+<pre>
+.main-nav {
+    margin: 0;
+}
+
+&lt;ul class="main-nav"&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;"Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+		</article>
+
+	 <!-- SLIDE 77: CSS -->
+		<article class='slide slide-list'>
+			<h2>CSS classes</h2>
+			<p>Let's apply a "main-nav" CSS class to our current navigation list HTML and make the appropriate CSS changes to the selectors.</p>
+			<textarea class="coder-editor">
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul li:hover {
+    	background-color: purple;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+    ul li a:hover {
+    	color: white;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
+</textarea>
+<script type='coder-solution'><style>
+    ul.main-nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul.main-nav li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul.main-nav li:hover {
+    	background-color: purple;
+    }
+    ul.main-nav li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+    ul.main-nav li a:hover {
+    	color: white;
+    }
+</style>
+
+<ul class="main-nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
+</script>
+		</article>
+
+		<!-- SLIDE 78: CSS -->
+		<article class='slide slide-list'>
+			<h2>External CSS</h2>
+			<p>Instead of duplicating your <code>&lt;style&gt;</code> content for every web page, make one single CSS document ending with a <code>.css</code> extension and link to it in the <code>&lt;head&gt;</code> tag. That way, any pages that are linked to this one file will be updated all at once.</p>
+<pre class="prettyprint">
+&lt;head&gt;
+    <strong>&lt;link rel="stylesheet" href="styles.css" type="text/css" /&gt;</strong>
+&lt;/head&gt;
+</pre>
+	<p>Inside the css file, there is <strong>no</strong> <code>&lt;style&gt;</code> tag since it is already a css file! All you need to include are your CSS declaration blocks.</p>
+<pre class="prettyprint">
+body {
+    background-color: black;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+}
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
 }
 </pre>
 
-    </article>
+		</article>
 
-    <!-- SLIDE 79: CSS -->
-    <article class='slide slide-list'>
-      <h2>Exercise #4 (20 minutes)</h2>
-      <p>Use this time to apply CSS to your 3-page website.</p>
-      <ul>
-        <li>Update your navigation in <code>index.html</code> to look more button-like.</li>
-        <li>Create a single <code>styles.css</code> file and link to this external stylesheet from all 3 webpages using the <code>&lt;link&gt;</code> tag. Consolidate all of your CSS into this external stylesheet.</li>
-        <li>If you've got extra time, try out some new CSS properties from the <a href="#slide-96">cheatsheet</a> and other resources listed on the <a href="#slide-94">bonus CSS resources slides</a>.</li>
-      </ul>
-    </article>
+		<!-- SLIDE 79: CSS -->
+		<article class='slide slide-list'>
+			<h2>Exercise 4 (25 minutes)</h2>
+			<p>Use this time to apply CSS to your 3-page website.</p>
+			<ul>
+				<li>Update your navigation in <code>index.html</code> using the group exercise as an example.</li>
+				<li>Create a single <code>styles.css</code> file and link to this external stylesheet from all 3 web pages using the <code>&lt;link&gt;</code> tag. Consolidate all of your CSS into this external stylesheet.</li>
+				<li>If you've got extra time, try out some new CSS properties from the <a href="#slide-96">cheatsheet</a> and other resources listed on the <a href="#slide-94">bonus CSS resources slides</a>.</li>
+			</ul>
+		</article>
 
-    <!-- SLIDE 80: CSS -->
-    <article class='slide slide-list'>
-      <h2>Laying out webpages with CSS</h2>
-      <p>Layout is one of the most challenging things to do in CSS because it requires you to think about the whole picture and plan ahead.</p>
-      <p>To creating a standard 2-column layout requires us to give dimensions to some of our content, and position it accordingly.</p>
-      <p class="centered"><img src="assets/2-column-webpage.png" width="703" height="411" alt="" /></p>
-    </article>
+		<!-- SLIDE 80: CSS -->
+		<article class='slide slide-list'>
+			<h2>Laying out web pages with CSS</h2>
+			<p>Layout is one of the most challenging things to do in CSS because it requires you to think about the whole picture and plan ahead.</p>
+			<p>To creating a standard 2-column layout requires us to give dimensions to some of our content, and position it accordingly.</p>
+			<p class="centered"><img src="assets/2-column-web page.png" width="703" height="411" alt="" /></p>
+		</article>
 
-    <!-- SLIDE 81: CSS -->
-    <article class='slide slide-list'>
-      <h2>Generic Container Tags</h2>
-      <p>Sometimes content you might want to group together (and treat differently with CSS) shouldn't be defined as a <code>h1</code> or <code>h2</code> or even a <code>p</code> paragraph. There are two kinds of generic containers available:</p>
-      <ul>
-        <li><code>span</code> - An <span class="keyword">inline</span> container.<br />
-          Good for highlighting keywords like I did in this bullet.</li>
-        <li><code>div</code> - An <span class="keyword">block</span> container.<br />
-          Much like a paragraph, it creates a line break above and below to create a box.</li>
-      </ul>
+		<!-- SLIDE 81: CSS -->
+		<article class='slide slide-list'>
+			<h2>Generic Container Tags</h2>
+			<p>Sometimes content you might want to group together (and treat differently with CSS) shouldn't be defined as a <code>h1</code> or <code>h2</code> or even a <code>p</code> paragraph. There are two kinds of generic containers available:</p>
+			<ul>
+				<li><code>span</code> - An <span class="keyword">inline</span> container.<br />
+					Good for highlighting keywords like I did in this bullet.</li>
+				<li><code>div</code> - An <span class="keyword">block</span> container.<br />
+					Much like a paragraph, it creates a line break above and below to create a box.</li>
+			</ul>
 <pre class="prettyprint">&lt;span&gt;I'm a span!&lt;/span&gt;
 &lt;span&gt;I'm another span!&lt;/span&gt;
 </pre>
-      <span>I'm a span!</span>
-      <span>I'm another span!</span>
-      <p></p>
+			<span>I'm a span!</span>
+			<span>I'm another span!</span>
+			<p></p>
 <pre class="prettyprint">&lt;div&gt;I'm a div!&lt;/div&gt;
 &lt;div&gt;I'm another div!&lt;/div&gt;
 </pre>
-      <div>I'm a div!</div>
-      <div>I'm another div!</div>
-    </article>
+			<div>I'm a div!</div>
+			<div>I'm another div!</div>
+		</article>
 
-    <!-- SLIDE 82: CSS -->
-    <article class='slide slide-list'>
-      <h2>Semantic HTML Tags</h2>
-      <p>When making websites, it requires nesting <code>div</code> tags, sometimes within other<code>div</code> tags like this:</p>
+		<!-- SLIDE 82: CSS -->
+		<article class='slide slide-list'>
+			<h2>Semantic HTML Tags</h2>
+			<p>When making websites, it requires nesting <code>div</code> tags, sometimes within other<code>div</code> tags like this:</p>
 <pre class="prettyprint">&lt;div&gt;
-  &lt;a&gt;Home&lt;/a&gt;
-  &lt;a&gt;About&lt;/a&gt;
-  &lt;a&gt;Contact&lt;/a&gt;
+	&lt;a&gt;Home&lt;/a&gt;
+	&lt;a&gt;About&lt;/a&gt;
+	&lt;a&gt;Contact&lt;/a&gt;
 &lt;/div&gt;
 &lt;div&gt;
-  Welcome to my blog!
-  &lt;div&gt;[...Blog Post...]&lt;/div&gt;
-  &lt;div&gt;[...Blog Post...]&lt;/div&gt;
+	Welcome to my blog!
+	&lt;div&gt;[...Blog Post...]&lt;/div&gt;
+	&lt;div&gt;[...Blog Post...]&lt;/div&gt;
 &lt;/div&gt;
 &lt;div&gt;
-  [...Sidebar Ad...]
+	[...Sidebar Ad...]
 &lt;/div&gt;
 &lt;div&gt;
-  Copyright 2012
+	Copyright 2012
 &lt;/div&gt;
 </pre>
-    </article>
+		</article>
 
-    <!-- SLIDE 83: CSS -->
-    <article class='slide slide-list'>
-      <h2>Semantic HTML Tags</h2>
-      <p>With HTML5, there are an increasing number of semantic tags that better describe larger blocks of content such as: <code>header</code>, <code>footer</code>, <code>nav</code>, <code>section</code>, <code>article</code>, and <code>aside</code>.</p>
+		<!-- SLIDE 83: CSS -->
+		<article class='slide slide-list'>
+			<h2>Semantic HTML Tags</h2>
+			<p>With HTML5, there are an increasing number of semantic tags that better describe larger blocks of content such as: <code>header</code>, <code>footer</code>, <code>nav</code>, <code>section</code>, <code>article</code>, and <code>aside</code>.</p>
 <pre class="prettyprint">&lt;header&gt;
-  &lt;nav&gt;
-    &lt;a&gt;Home&lt;/a&gt;
-    &lt;a&gt;About&lt;/a&gt;
-    &lt;a&gt;Contact&lt;/a&gt;
-  &lt;/nav&gt;
+	&lt;nav&gt;
+		&lt;a&gt;Home&lt;/a&gt;
+		&lt;a&gt;About&lt;/a&gt;
+		&lt;a&gt;Contact&lt;/a&gt;
+	&lt;/nav&gt;
 &lt;/header&gt;  
 &lt;section&gt;
-  Welcome to my blog!
-  &lt;article&gt;[...Blog Post...]&lt;/article&gt;
-  &lt;article&gt;[...Blog Post...]&lt;/article&gt;
+	Welcome to my blog!
+	&lt;article&gt;[...Blog Post...]&lt;/article&gt;
+	&lt;article&gt;[...Blog Post...]&lt;/article&gt;
 &lt;/section&gt;
 &lt;aside&gt;
-  [...Sidebar Ad...]
+	[...Sidebar Ad...]
 &lt;/aside&gt;
 &lt;footer&gt;
-  Copyright 2012
+	Copyright 2012
 &lt;/footer&gt;
 </pre>
-    </article>
+		</article>
 
-    <!-- SLIDE 84: CSS -->
-    <article class='slide slide-list'>
-      <h2>Semantic HTML Tags</h2>
-      <p>This helps <span class="keyword">web crawlers</span> from search engines like Google or Bing better understand your content.</p>
-      <p>Even better, it helps <strong>you</strong> from missing a closing <code>&lt;/div&gt;</code> tag and makes your HTML easier to read for everyone.</p>
-      <p><strong>Important:</strong> HTML5 is not supported in older browsers such as Internet Explorer 8 and previous versions.<br><br>
-      Further reading: <a href="http://diveintohtml5.info/semantics.html#new-elements">Dive Into HTML5</a></p>
-    </article>
+		<!-- SLIDE 84: CSS -->
+		<article class='slide slide-list'>
+			<h2>Semantic HTML Tags</h2>
+			<p>This helps <span class="keyword">web crawlers</span> from search engines like Google or Bing better understand your content.</p>
+			<p>Even better, it helps <strong>you</strong> from missing a closing <code>&lt;/div&gt;</code> tag and makes your HTML easier to read for everyone.</p>
+			<p><strong>Important:</strong> HTML5 is not supported in older browsers such as Internet Explorer 8 and previous versions.<br><br>
+			Further reading: <a href="http://diveintohtml5.info/semantics.html#new-elements">Dive Into HTML5</a></p>
+		</article>
 
-    <!-- SLIDE 85: CSS -->
-    <article class='slide slide-list'>
-      <h2>Preparing for our group exercise</h2>
-      <p>Using <code>index.html</code> from the <code>website</code> folder, let's update it with the code below.</p>
-      <p>It should replace everything in between the opening and closing <code>&lt;body&gt;</code> tags.</p>
+		<!-- SLIDE 85: CSS -->
+		<article class='slide slide-list'>
+			<h2>Preparing for our group exercise</h2>
+			<p>Using <code>index.html</code> from the <code>website</code> folder, let's update it with the code below.</p>
+			<p>It should replace everything in between the opening and closing <code>&lt;body&gt;</code> tags.</p>
 <pre class="prettyprint">&lt;div&gt;
-  &lt;header&gt;
-    &lt;nav&gt;
-      &lt;a href="index.html"&gt;Home&lt;/a&gt;
-      &lt;a href="about.html"&gt;About&lt;/a&gt;
-      &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-    &lt;/nav&gt;
-  &lt;/header&gt;  
-  &lt;section&gt;
-    Welcome to my blog!
-    &lt;article&gt;[...Blog Post...]&lt;/article&gt;
-    &lt;article&gt;[...Blog Post...]&lt;/article&gt;
-  &lt;/section&gt;
-  &lt;aside&gt;
-    [...Sidebar Ad...]
-  &lt;/aside&gt;
-  &lt;footer&gt;
-    Copyright 2012
-  &lt;/footer&gt;
+	&lt;header&gt;
+		&lt;nav&gt;
+			&lt;a href="index.html"&gt;Home&lt;/a&gt;
+			&lt;a href="about.html"&gt;About&lt;/a&gt;
+			&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+		&lt;/nav&gt;
+	&lt;/header&gt;  
+	&lt;section&gt;
+		Welcome to my blog!
+		&lt;article&gt;[...Blog Post...]&lt;/article&gt;
+		&lt;article&gt;[...Blog Post...]&lt;/article&gt;
+	&lt;/section&gt;
+	&lt;aside&gt;
+		[...Sidebar Ad...]
+	&lt;/aside&gt;
+	&lt;footer&gt;
+		Copyright 2012
+	&lt;/footer&gt;
 &lt;/div&gt;
 </pre>
-    </article>
+		</article>
 
 
-    <!-- SLIDE 86: CSS -->
-    <article class='slide slide-list'>
-      <h2>Assigning widths</h2>
-      <p>It is important to know the overall width of your site so you can select column widths for the main <code>&lt;section&gt;</code> and the <code>&lt;aside&gt;</code> sidebar that will make sense.</p>
-      <p>Let's go ahead and set the <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> to be 960 pixels wide. We'll add a light gray background colour too, to make it easier to see the size of the elements.</p>
+		<!-- SLIDE 86: CSS -->
+		<article class='slide slide-list'>
+			<h2>Assigning widths</h2>
+			<p>It is important to know the overall width of your site so you can select column widths for the main <code>&lt;section&gt;</code> and the <code>&lt;aside&gt;</code> sidebar that will make sense.</p>
+			<p>Let's go ahead and set the <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> to be 960 pixels wide. We'll add a light gray background colour too, to make it easier to see the size of the elements.</p>
 <pre class="prettyprint">
 header {
-  <strong>width: 960px;</strong>
-  background-color: #eee;
+	<strong>width: 960px;</strong>
+	background-color: #eee;
 }
 
 footer {
-  <strong>width: 960px;</strong>
-  background-color: #eee;
+	<strong>width: 960px;</strong>
+	background-color: #eee;
 }
 </pre>
-    </article>
+		</article>
 
-    <!-- SLIDE 87: CSS -->
-    <article class='slide slide-list'>
-      <h2>Assigning widths</h2>
-      <p>If our site is 960px wide, we need to ensure that our columns don't exceed 960 - <strong>including margins!</strong> (e.g. 640 + 20 + 300 = 960)</p>
+		<!-- SLIDE 87: CSS -->
+		<article class='slide slide-list'>
+			<h2>Assigning widths</h2>
+			<p>If our site is 960px wide, we need to ensure that our columns don't exceed 960 - <strong>including margins!</strong> (e.g. 640 + 20 + 300 = 960)</p>
 <pre class="prettyprint">
 section {
-  <strong>width: 640px;</strong>
-  padding: 30px;
-  background-color: pink;
+	<strong>width: 640px;</strong>
+	padding: 30px;
+	background-color: pink;
 }
 
 aside {
-  <strong>margin-left: 20px;</strong>
-  <strong>width: 300px;</strong>
-  background-color: red;
+	<strong>margin-left: 20px;</strong>
+	<strong>width: 300px;</strong>
+	background-color: red;
 }
 </pre>
+<<<<<<< .merge_file_pRD9sp
       <p>What about the padding?</p>
       <p class="sidenote"><strong>PRO TIP:</strong> For many, padding has wreaked havoc on our math, since it increases the width of the element. To avoid headaches, use the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank">box-sizing property</a> to make sure your math adds up.</p>
+=======
+			<p>What about the padding?</p>
+			<p class="sidenote"><strong>PRO TIP:</strong> For many, padding has wrecked havoc on our math, since it increases the width of the element. To avoid headaches, use the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank">box-sizing property</a> to make sure your math adds up.</p>
+>>>>>>> .merge_file_7RPdS4
 <pre class="prettyprint">
 /* apply a natural box layout model to all elements */
 <strong>* { 
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
 }</strong>
 </pre>
-    </article>
+		</article>
 
-    <!-- SLIDE 88: CSS -->
-    <article class='slide slide-list'>
-      <h2>Getting columns to be side-by-side</h2>
-      <p>Block-style HTML containers like <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;aside&gt;</code> automatically start on a new line.</p>
-      <p>To get our two columns to be side-by-side, use the <code>float</code> property. Values can be <code>left</code>, <code>right</code>, or <code>none</code>.</p>
+		<!-- SLIDE 88: CSS -->
+		<article class='slide slide-list'>
+			<h2>Getting columns to be side-by-side</h2>
+			<p>Block-style HTML containers like <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;aside&gt;</code> automatically start on a new line.</p>
+			<p>To get our two columns to be side-by-side, use the <code>float</code> property. Values can be <code>left</code>, <code>right</code>, or <code>none</code>.</p>
 <pre class="prettyprint">
 section {
-  width: 640px;
-  padding: 30px;
-  background-color: pink;
-  <strong>float: left;</strong>
+	width: 640px;
+	padding: 30px;
+	background-color: pink;
+	<strong>float: left;</strong>
 }
 
 aside {
-  margin-left: 20px;
-  width: 300px;
-  background-color: red;
-  <strong>float: left;</strong>
+	margin-left: 20px;
+	width: 300px;
+	background-color: red;
+	<strong>float: left;</strong>
 }
 </pre>
-    </article>
+		</article>
 
-    <!-- SLIDE 89: CSS -->
-    <article class='slide slide-list'>
-      <h2>Clearing floats</h2>
-        <p>You may notice that floats have the ability to affect the rest of the webpage in unexpected ways. It's important to always clear your floats.</p>
-        <p>One way is to use the <code>clear</code> property on an element that comes <em>directly</em> after the containers that are floating. Values can be <code>left</code>, <code>right</code>, or <code>both</code>.</p>
+		<!-- SLIDE 89: CSS -->
+		<article class='slide slide-list'>
+			<h2>Clearing floats</h2>
+				<p>You may notice that floats have the ability to affect the rest of the web page in unexpected ways. It's important to always clear your floats.</p>
+				<p>One way is to use the <code>clear</code> property on an element that comes <em>directly</em> after the containers that are floating. Values can be <code>left</code>, <code>right</code>, or <code>both</code>.</p>
 <pre class="prettyprint">
 footer {
-  width: 960px;
-  background-color: #eee;
-  <strong>clear: both;</strong>
+	width: 960px;
+	background-color: #eee;
+	<strong>clear: both;</strong>
 }
 </pre>
-      <p class="sidenote">If the elements that are floating are enclosed in another container, you can you apply <code>overflow:auto</code> or <code>overflow:hidden;</code> to the parent container:</p>
+			<p class="sidenote">If the elements that are floating are enclosed in another container, you can you apply <code>overflow:auto</code> or <code>overflow:hidden;</code> to the parent container:</p>
 <pre class="prettyprint">nav {
-  <strong>overflow: auto;</strong>
+	<strong>overflow: auto;</strong>
 }</pre>
-    </article>
+		</article>
 
 
-    <!-- SLIDE 90: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS id's</h2>
-      <p>CSS classes are great when you want to re-apply the same style to multiple HTML elements but sometimes you need to only target an HTML container <strong>once</strong>. This is where an <span class="keyword">ID</span> is useful.</p>
-      <ul>
-        <li>Use a <strong>hash</strong> (<code>#</code>) to define CSS selectors that are IDs.<br />
-          e.g. <code>#centered</code></li>
-        <li>Use the <code>id</code> attribute to apply the styles to that element.<br />
-          e.g. <code>id="centered"</code><br />
-        </li>
-      </ul>
-      <p class="sidenote"><strong>Important!</strong> You should only have <strong>one</strong> instance of an ID per page. Any more can cause unexpected things to happen with your CSS -- and later, JavaScript.</p>
+		<!-- SLIDE 90: CSS -->
+		<article class='slide slide-list'>
+			<h2>CSS id's</h2>
+			<p>CSS classes are great when you want to re-apply the same style to multiple HTML elements but sometimes you need to only target an HTML container <strong>once</strong>. This is where an <span class="keyword">ID</span> is useful.</p>
+			<ul>
+				<li>Use a <strong>hash</strong> (<code>#</code>) to define CSS selectors that are IDs.<br />
+					e.g. <code>#centered</code></li>
+				<li>Use the <code>id</code> attribute to apply the styles to that element.<br />
+					e.g. <code>id="centered"</code><br />
+				</li>
+			</ul>
+			<p class="sidenote"><strong>Important!</strong> You should only have <strong>one</strong> instance of an ID per page. Any more can cause unexpected things to happen with your CSS -- and later, JavaScript.</p>
 <textarea class="coder-editor">
 &lt;style&gt;
-  #centered {
-    margin: 0 auto;
-  }
-  div {
-    width: 200px;
-    border: 1px solid black;
-  } 
+	#centered {
+		margin: 0 auto;
+	}
+	div {
+		width: 200px;
+		border: 1px solid black;
+	} 
 &lt;/style&gt;
 
 &lt;div&gt;
-  Cupcake ipsum dolor sit amet halvah muffin apple pie. Pastry sweet jelly soufflé icing cake carrot cake tart chupa chups. Topping cookie bear claw.
+	Cupcake ipsum dolor sit amet halvah muffin apple pie. Pastry sweet jelly soufflé icing cake carrot cake tart chupa chups. Topping cookie bear claw.
 &lt;/div&gt;
 </textarea>
 <script type="coder-solution">&lt;style&gt;
-  #centered {
-    margin: 0 auto;
-  }
-  div {
-    width: 200px;
-    border: 1px solid black;
-  } 
+	#centered {
+		margin: 0 auto;
+	}
+	div {
+		width: 200px;
+		border: 1px solid black;
+	} 
 &lt;/style&gt;
 
 &lt;div id="centered"&gt;
-  Cupcake ipsum dolor sit amet halvah muffin apple pie. Pastry sweet jelly soufflé icing cake carrot cake tart chupa chups. Topping cookie bear claw.
+	Cupcake ipsum dolor sit amet halvah muffin apple pie. Pastry sweet jelly soufflé icing cake carrot cake tart chupa chups. Topping cookie bear claw.
 &lt;/div&gt;
 </script>
-    </article>
+		</article>
 
-        <!-- SLIDE 91: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS id's</h2>
-      <p>Let's add <code>#centered</code> to <code>styles.css</code> and apply the id to the <code>div</code> container immediately after the opening <code>&lt;body&gt;</code> tag in <code>index.html</code>.</p>
+				<!-- SLIDE 91: CSS -->
+		<article class='slide slide-list'>
+			<h2>CSS id's</h2>
+			<p>Let's add <code>#centered</code> to <code>styles.css</code> and apply the id to the <code>div</code> container immediately after the opening <code>&lt;body&gt;</code> tag in <code>index.html</code>.</p>
 <pre class="prettyprint">
 #centered {
-  margin: 0 auto;
-  width: 960px;
+	margin: 0 auto;
+	width: 960px;
 }
 </pre>
 <pre class="prettyprint">
 &lt;body&gt;
-  &lt;div id="centered"&gt;
+	&lt;div id="centered"&gt;
 
-  &lt;/div&gt;
+	&lt;/div&gt;
 &lt;/body&gt;
 </pre>
-    </article>
+		</article>
 
-    <!-- SLIDE 92: CSS -->
-    <article class='slide slide-list'>
-      <h2>Custom colours</h2>
-      <p>Often, the CSS colours "gray", "blue", or "purple" are boring and limiting. You can define your own custom colour using hex colours.</p>
+		<!-- SLIDE 92: CSS -->
+		<article class='slide slide-list'>
+			<h2>Custom colours</h2>
+			<p>Often, the CSS colours "gray", "blue", or "purple" are boring and limiting. You can define your own custom colour using hex colours.</p>
 <pre class="prettyprint">h1 {
-  color: <strong>#026873;</strong> /* a unique shade of blue */
+	color: <strong>#026873;</strong> /* a unique shade of blue */
 }</pre>
-      <p class="centered"><img src="assets/lg_hex_codes.png" widht="500" height="283" alt="" /></p>
-      <p class="sidenote">Image source: <a href="http://websiteincite.com/create-your-website/hexadecimal-color-codes" target="_blank">http://websiteincite.com/create-your-website/hexadecimal-color-codes</a></p>
-      <p class="sidenote">Color Inspiration: <a href="http://www.colourlovers.com/" target="_blank">COLOURlovers</a></p>
-    </article>    
+			<p class="centered"><img src="assets/lg_hex_codes.png" widht="500" height="283" alt="" /></p>
+			<p class="sidenote">Image source: <a href="http://websiteincite.com/create-your-website/hexadecimal-color-codes" target="_blank">http://websiteincite.com/create-your-website/hexadecimal-color-codes</a></p>
+			<p class="sidenote">Color Inspiration: <a href="http://www.colourlovers.com/" target="_blank">COLOURlovers</a></p>
+		</article>    
 
-    <!-- SLIDE 93: CSS -->
-    <article class='slide slide-list'>
-      <h2>Hands-on time (now until end)</h2>
-      <p>Use this time to apply CSS to your 3-page website. Review the afternoon's slides and experiment with some of the properties on the cheatsheet. If you're stuck, here are some suggestions:</p>
-      <ul>
-        <li>Apply <code>width</code>s and <code>float</code>s to <code>&lt;section&gt;</code> and <code>&lt;aside&gt;</code> to make a standard 2-column layout.</li>
-        <li>Update your <code>about.html</code> and <code>contact.html</code> with some of your own CSS.</li>
-        <li>Apply some custom colours to your text in any of your web pages.</li>
-        <li>Read about the <code><a href="http://coding.smashingmagazine.com/2009/09/02/backgrounds-in-css-everything-you-need-to-know/" target="_blank">background-image</a></code> property and add a background image to webpages.</li>
-      </ul>
-    </article>
+		<!-- SLIDE 93: CSS -->
+		<article class='slide slide-list'>
+			<h2>Hands-on time (now until end)</h2>
+			<p>Use this time to apply CSS to your 3-page website. Review the afternoon's slides and experiment with some of the properties on the cheatsheet. If you're stuck, here are some suggestions:</p>
+			<ul>
+				<li>Apply <code>width</code>s and <code>float</code>s to <code>&lt;section&gt;</code> and <code>&lt;aside&gt;</code> to make a standard 2-column layout.</li>
+				<li>Update your <code>about.html</code> and <code>contact.html</code> with some of your own CSS.</li>
+				<li>Apply some custom colours to your text in any of your web pages.</li>
+				<li>Read about the <code><a href="http://coding.smashingmagazine.com/2009/09/02/backgrounds-in-css-everything-you-need-to-know/" target="_blank">background-image</a></code> property and add a background image to web pages.</li>
+			</ul>
+		</article>
 
-    <!-- SLIDE 94: CSS -->
-    <article class='slide slide-list'>
-      <h2>Bonus: Try out web fonts</h2>
-      <p>When you get bored of Arial and Georgia, go to the <a href="http://www.google.com/webfonts/" target="_blank">Google Web Fonts</a> website and find a font that you like.</p>
-      <ol>
-        <li>Click on the "Quick-use" button for that font.</li>
-        <li>Scroll down to find the supplied <code>&lt;link&gt;</code> tag. Copy and paste it into your own HTML file.</li>
-        <li>Integrate the fonts into your CSS by using their supplied <code>font-family</code>. For example, add their <code>font-family</code> to your <code>h1</code> CSS selector.</li>
-        <li>Make sure your files are saved and view your web page in the browser. New fonts are that easy!</li>
-      </ol>
-    </article>
+		<!-- SLIDE 94: CSS -->
+		<article class='slide slide-list'>
+			<h2>Bonus: Try out web fonts</h2>
+			<p>When you get bored of Arial and Georgia, go to the <a href="http://www.google.com/webfonts/" target="_blank">Google Web Fonts</a> website and find a font that you like.</p>
+			<ol>
+				<li>Click on the "Quick-use" button for that font.</li>
+				<li>Scroll down to find the supplied <code>&lt;link&gt;</code> tag. Copy and paste it into your own HTML file.</li>
+				<li>Integrate the fonts into your CSS by using their supplied <code>font-family</code>. For example, add their <code>font-family</code> to your <code>h1</code> CSS selector.</li>
+				<li>Make sure your files are saved and view your web page in the browser. New fonts are that easy!</li>
+			</ol>
+		</article>
 
-    <!-- SLIDE 95: CSS -->
-    <article class='slide slide-list'>
-      <h2>Bonus: CSS patterns for fun</h2>
-      <p>CSS is great because it can reduce the number of image files you need to create. You can even create <a href="http://lea.verou.me/css3patterns/#" target="_blank">patterns purely out of CSS</a>!</p>
-      <ol>
-        <li>Click on a pattern that you like.</li>
-        <li>Copy the supplied CSS.</li>
-        <li>Instead of an "ad" in your sidebar, paste the CSS into your <code>aside</code> selector. Or apply it to your <code>body</code> selector to change up the entire page.</li>
-        <li>Important: Due to the differences in CSS support in web browsers, you will need to duplicate the <code>background-image</code> property-value set and replace <code>linear-gradient</code> with <code>-webkit-linear-gradient</code>.</li>
-      </ol>
+		<!-- SLIDE 95: CSS -->
+		<article class='slide slide-list'>
+			<h2>Bonus: CSS patterns for fun</h2>
+			<p>CSS is great because it can reduce the number of image files you need to create. You can even create <a href="http://lea.verou.me/css3patterns/#" target="_blank">patterns purely out of CSS</a>!</p>
+			<ol>
+				<li>Click on a pattern that you like.</li>
+				<li>Copy the supplied CSS.</li>
+				<li>Instead of an "ad" in your sidebar, paste the CSS into your <code>aside</code> selector. Or apply it to your <code>body</code> selector to change up the entire page.</li>
+				<li>Important: Due to the differences in CSS support in web browsers, you will need to duplicate the <code>background-image</code> property-value set and replace <code>linear-gradient</code> with <code>-webkit-linear-gradient</code>.</li>
+			</ol>
 <pre style="font-size: 14px;">
 /* Based on Cicada stripes from http://lea.verou.me/css3patterns/#cicada-stripes */
 background-color: #026873;
 background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
-                  linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
-                  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
-                  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+									linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+									linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+									linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
 <strong>background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,.07) 50%, transparent 50%),
-                  -webkit-linear-gradient(0deg, rgba(255,255,255,.13) 50%, transparent 50%),
-                  -webkit-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.17) 50%),
-                  -webkit-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.19) 50%);</strong>
+									-webkit-linear-gradient(0deg, rgba(255,255,255,.13) 50%, transparent 50%),
+									-webkit-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.17) 50%),
+									-webkit-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.19) 50%);</strong>
 background-size: 13px, 29px, 37px, 53px;
 </pre>
-    </article>
+		</article>
 
-    <!-- SLIDE 96: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS reference</h2>
-      <ul class="spacey_list">
-        <li>Download a <a href="http://www.cheatography.com/davechild/cheat-sheets/css2/" target="_blank">cheatsheet of CSS selectors and properties</a>.</li>
-        <li>Try looking up individual selectors and propertie using the CSS section of <a href="https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference" target="_blank">Mozilla's Developer Network</a> for further breakdown.</li>
-        <li>Read articles from <a href="http://www.alistapart.com/" target="_blank">A List Apart</a> and <a href="http://css-tricks.com/">CSS Tricks</a>.</li>
-        <li>And don't forget the "inspect element" option!</li>
-      </ul>
-    </article> 
+		<!-- SLIDE 96: CSS -->
+		<article class='slide slide-list'>
+			<h2>CSS reference</h2>
+			<ul class="spacey_list">
+				<li>Download a <a href="http://www.cheatography.com/davechild/cheat-sheets/css2/" target="_blank">cheatsheet of CSS selectors and properties</a>.</li>
+				<li>Try looking up individual selectors and propertie using the CSS section of <a href="https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference" target="_blank">Mozilla's Developer Network</a> for further breakdown.</li>
+				<li>Read articles from <a href="http://www.alistapart.com/" target="_blank">A List Apart</a> and <a href="http://css-tricks.com/">CSS Tricks</a>.</li>
+				<li>And don't forget the "inspect element" option!</li>
+			</ul>
+		</article> 
 
-     <!-- SLIDE 97: FTP -->
-    <article class='slide slide-subhead'>
-      <h1>Getting your website online</h1>
-      <p>Using FTP</p>
-    </article>
+		 <!-- SLIDE 97: FTP -->
+		<article class='slide slide-subhead'>
+			<h1>Getting your website online</h1>
+			<p>Using FTP</p>
+		</article>
 
-    <!-- SLIDE 98: FTP -->
-    <article class='slide slide-list'>
-      <h2>Déjà vu: What is a website?</h2>
-      <p>Remember how a website is essentially a folder located on a dedicated computer (a <span class="keyword">server</span>)?</p>
-      <div class="centered">
-        <img src="assets/webserver_download.png" width="738" height="531" alt="web request process" />
-      </div>
-    </article>
+		<!-- SLIDE 98: FTP -->
+		<article class='slide slide-list'>
+			<h2>Déjà vu: What is a website?</h2>
+			<p>Remember how a website is essentially a folder located on a dedicated computer (a <span class="keyword">server</span>)?</p>
+			<div class="centered">
+				<img src="assets/webserver_download.png" width="738" height="531" alt="web request process" />
+			</div>
+		</article>
 
 
-    <!-- SLIDE 99: FTP -->
-    <article class='slide slide-list'>
-      <h2>Using FTP to put your site online</h2>
-      <div>
-        <p style="line-height: 32px;margin-top: 30px;">If you have access to web hosting and would like to put your site online, there are a few vital pieces of information you need:</p>
-        <ol>
-        <li>FTP Address</li>
-        <li>Username</li>
-        <li>Password</li>
-        <li>Any special security info</li>
-        <li>Which directory to transfer your files to</li>
-        </ol>
-      </div>
-    </article>
+		<!-- SLIDE 99: FTP -->
+		<article class='slide slide-list'>
+			<h2>Using FTP to put your site online</h2>
+			<div>
+				<p style="line-height: 32px;margin-top: 30px;">If you have access to web hosting and would like to put your site online, there are a few vital pieces of information you need:</p>
+				<ol>
+				<li>FTP Address</li>
+				<li>Username</li>
+				<li>Password</li>
+				<li>Any special security info</li>
+				<li>Which directory to transfer your files to</li>
+				</ol>
+			</div>
+		</article>
 
-    <!-- SLIDE 100: FTP -->
-    <article class='slide slide-list'>
-      <h2>Where to get this information</h2>
-      <div>
-        <p>This information will generaly be provided to you by your hosting service provider.</p>
-        <p>There ARE conventions regarding what directory your files go into once you have connected to your server via FTP:</p>
-        <ul>
-        <li>www</li>
-        <li>public</li>
-        <li>public_html</li>
-        <li>htdocs</li>
-        </ul>
-      </div>
-    </article>
+		<!-- SLIDE 100: FTP -->
+		<article class='slide slide-list'>
+			<h2>Where to get this information</h2>
+			<div>
+				<p>This information will generaly be provided to you by your hosting service provider.</p>
+				<p>There ARE conventions regarding what directory your files go into once you have connected to your server via FTP:</p>
+				<ul>
+				<li>www</li>
+				<li>public</li>
+				<li>public_html</li>
+				<li>htdocs</li>
+				</ul>
+			</div>
+		</article>
 
-    <!-- SLIDE 101: FTP -->
-    <article class='slide slide-list'>
-      <h2>Transferring your files</h2>
-      <div>
-        <p>Once you have identified where your files need to go, it is often just a matter of dragging and dropping into your FTP program.</p>
-        <p>Once this is done, you can check your web address to see how things are looking!</p>
-      </div>
-    </article>  
+		<!-- SLIDE 101: FTP -->
+		<article class='slide slide-list'>
+			<h2>Transferring your files</h2>
+			<div>
+				<p>Once you have identified where your files need to go, it is often just a matter of dragging and dropping into your FTP program.</p>
+				<p>Once this is done, you can check your web address to see how things are looking!</p>
+			</div>
+		</article>  
 
-    <!-- SLIDE 102: FTP -->
-    <article class='slide slide-subhead'>
-      <h1>Additional Resources</h1>
-      <p>Some tips and tricks for the future</p>
-    </article>
+		<!-- SLIDE 102: FTP -->
+		<article class='slide slide-subhead'>
+			<h1>Additional Resources</h1>
+			<p>Some tips and tricks for the future</p>
+			<!-- The W3C has extensive guidelines and 
+recommendations about these languages (and more).
+RESOURCES:
+HTML: http://www.w3.org/TR/1999/REC-html401-19991224/
+XHTML: http://www.w3.org/TR/xhtml1/
+HTML5: http://www.w3.org/TR/html5/
+Full list of recommendations: http://www.w3.org/TR/
+Browser compatibilty table: http://caniuse.com/ -->
+		</article>
 
-    <!-- SLIDE 103: FTP -->
-    <article class='slide slide-list'>
-      <h3>Books</h3>
-      <p><a href="http://htmlandcssbook.com/">HTML and CSS: Design and Build Websites</a> by Jon Duckett</p>
-      <br />
-      <h3>Validating your HTML</h3>
-      <div>
-        <p>One of the best ways to make sure that your HTML &amp; CSS is correct is to run it through a validator.</p>
-        <p><a href="http://validator.w3.org/">HTML validator</a><br />
-          <a href="http://jigsaw.w3.org/css-validator/">CSS validator</a></p>
-      </div>
-      <h3>Online resources</h3>
-      <p><a href="http://learn.shayhowe.com/html-css/">A Beginners Guide to HTML & CSS</a><br>
-      <a href="http://dochub.io/#css/">Documentation for HTML, CSS and more</a></p>
-    </article>
+		<!-- SLIDE 103: FTP -->
+		<article class='slide slide-list'>
+			<h3>Books</h3>
+			<p><a href="http://htmlandcssbook.com/">HTML and CSS: Design and Build Websites</a> by Jon Duckett</p>
+			<br />
+			<h3>Validating your HTML</h3>
+			<div>
+				<p>One of the best ways to make sure that your HTML &amp; CSS is correct is to run it through a validator.</p>
+				<p><a href="http://validator.w3.org/">HTML validator</a><br />
+					<a href="http://jigsaw.w3.org/css-validator/">CSS validator</a></p>
+			</div>
+			<h3>Online resources</h3>
+			<p><a href="http://learn.shayhowe.com/html-css/">A Beginners Guide to HTML & CSS</a><br>
+				<a href=http://learnlayout.com/>Learn CSS Layout</a>
+			<a href="http://dochub.io/#css/">Documentation for HTML, CSS and more</a></p>
+		</article>
 
-    <!-- SLIDE 104: TIPS -->
-    <article class='slide slide-list'>
-      <h2>One last piece of advice:<br />Clear your cache</h2>
-      <p>Hitting refresh and still seeing old stuff? The browser cache is the rip-your-hair-out <em>gotcha!</em> of every web developer.</p>
-      <p>Instructions for every browser (including the archaic one your client is running): <a href="http://www.wikihow.com/Clear-Your-Browser's-Cache" target="_blank">http://www.wikihow.com/Clear-Your-Browser's-Cache</a></p>
-      <p>Also try out "Incognito Mode" in Chrome: Ctrl/Cmd+Shift+N</p>
-    </article>
+		<!-- SLIDE 104: TIPS -->
+		<article class='slide slide-list'>
+			<h2>One last piece of advice:<br />Clear your cache</h2>
+			<p>Hitting refresh and still seeing old stuff? The browser cache is the rip-your-hair-out <em>gotcha!</em> of every web developer.</p>
+			<p>Instructions for every browser (including the archaic one your client is running): <a href="http://www.wikihow.com/Clear-Your-Browser's-Cache" target="_blank">http://www.wikihow.com/Clear-Your-Browser's-Cache</a></p>
+			<p>Also try out "Incognito Mode" in Chrome: Ctrl/Cmd+Shift+N</p>
+		</article>
 
-    <article class='slide slide-subhead'>
-      <h1>Thank you!</h1>
-      <p></p>
-    </article>
+		<article class='slide slide-subhead'>
+			<h1>Thank you!</h1>
+		</article>
+  
+	</div><!-- END div id=presentation 104 slides total -->
 
-  <!-- **************************************** -->    
-  </div>
-  <!-- END div id=presentation -->
+	<div class="instructions">(Use the left and right arrow keys on your keyboard to navigate.)</div><!-- TODO: add arrow icons -->
 
-  <div class="centered" style="font-size: 12px; padding-top: 10px;">(Use the left and right arrow keys on your keyboard to navigate.)</div>
+	<script src='src/jquery.min.js'></script>
+	<script src="src/modernizr.js"></script>
 
-  <script src='src/jquery.min.js'></script>
-  <script src="src/modernizr.js"></script>
+	<!-- Update these paths to point to the correct files. -->
+	<script src="src/jquery.tmpl.min.js"></script>
+	<script src="src/deck.js/core/deck.core.js"></script>
 
-  <!-- Update these paths to point to the correct files. -->
-  <script src="src/jquery.tmpl.min.js"></script>
-  <script src="src/deck.js/core/deck.core.js"></script>
+	<!-- Code Mirror -->
+	<script src="src/codemirror/lib/codemirror.js"></script>
+	<script src="src/codemirror/mode/xml/xml.js"></script>
+	<script src="src/codemirror/mode/css/css.js"></script>
+	<script src="src/codemirror/mode/javascript/javascript.js"></script>
+	<script src="src/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 
-  <!-- Code Mirror -->
-  <script src="src/codemirror/lib/codemirror.js"></script>
-  <script src="src/codemirror/mode/xml/xml.js"></script>
-  <script src="src/codemirror/mode/css/css.js"></script>
-  <script src="src/codemirror/mode/javascript/javascript.js"></script>
-  <script src="src/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+	<!-- Prettify -->
+	<script src="src/prettify.js"></script>
+	<script src="src/lang-css.js"></script>
 
-  <!-- Prettify -->
-  <script src="src/prettify.js"></script>
-  <script src="src/lang-css.js"></script>
-
-  <!-- Deck Core and extensions -->
-  <script src="src/deck.js/extensions/status/deck.status.js"></script>
-  <script src="src/deck.js/extensions/navigation/deck.navigation.js"></script>
-  <script src='src/deck.coder.js'></script>
-  <script src="src/deck.js/extensions/hash/deck.hash.js"></script>
-  <script src="src/deck.js/extensions/menu/deck.menu.js"></script>
-  <script>
-  $(function() {
-    $.deck('.slide');
-  });
+	<!-- Deck Core and extensions -->
+	<script src="src/deck.js/extensions/status/deck.status.js"></script>
+	<script src="src/deck.js/extensions/navigation/deck.navigation.js"></script>
+	<script src='src/deck.coder.js'></script>
+	<script src="src/deck.js/extensions/hash/deck.hash.js"></script>
+	<script src="src/deck.js/extensions/menu/deck.menu.js"></script>
+	<script>
+	$(function() {
+		$.deck('.slide');
+	});
 </script>
 
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-246174-1']);
-  _gaq.push(['_trackPageview']);
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-246174-1']);
+	_gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
 
-  function trackQuality(feedback){
+	function trackQuality(feedback){
 
-    //the higher the value over time,
-    //the more the page should be tweaked since it's not understandable
-    var feedbackValue;
-    switch(feedback) {
-      case 'no':
-        feedbackValue = 2;
-        break;
-      case 'sortof':
-        feedbackValue = 1;
-        break;
-      default:
-        feedbackValue = 0;
-    }
+		//the higher the value over time,
+		//the more the page should be tweaked since it's not understandable
+		var feedbackValue;
+		switch(feedback) {
+			case 'no':
+				feedbackValue = 2;
+				break;
+			case 'sortof':
+				feedbackValue = 1;
+				break;
+			default:
+				feedbackValue = 0;
+		}
 
-    if (_gaq) {
-      _gaq.push(['_trackEvent', "LLC HTML/CSS (Ottawa)", feedback, returnDocumentName(), feedbackValue, true]);
-      var feedbackDiv = document.getElementById('page_feedback');
-      feedbackDiv.innerHTML = "Thanks!";
-    }else{
-      console.log('_gaq is not defined');
-    }
-  }
+		if (_gaq) {
+			_gaq.push(['_trackEvent', "LLC HTML/CSS (Ottawa)", feedback, returnDocumentName(), feedbackValue, true]);
+			var feedbackDiv = document.getElementById('page_feedback');
+			feedbackDiv.innerHTML = "Thanks!";
+		}else{
+			console.log('_gaq is not defined');
+		}
+	}
 
-  function returnDocumentName() {
-    var fileName = document.location.href;
-    var end = (fileName.indexOf("?") == -1) ? fileName.length : fileName.indexOf("?");
-    return fileName.substring(fileName.lastIndexOf("/")+1, end);
-  }
+	function returnDocumentName() {
+		var fileName = document.location.href;
+		var end = (fileName.indexOf("?") == -1) ? fileName.length : fileName.indexOf("?");
+		return fileName.substring(fileName.lastIndexOf("/")+1, end);
+	}
 
 </script>
 
-<div id="page_feedback">
-  <strong>Help improve the quality of this workshop!</strong>
-  Did this page explain everything well?
-    <a href="#" onClick="trackQuality('yes');return false;" class="button">Yes</a>
-    <a href="#" onClick="trackQuality('sortof');return false;" class="button">Sort of</a>
-    <a href="#" onClick="trackQuality('no');return false;" class="button">No</a>
-</div>
+<!-- <div id="page_feedback">
+	<strong>Help improve the quality of this workshop!</strong>
+	Did this page explain everything well?
+		<a href="#" onClick="trackQuality('yes');return false;" class="button">Yes</a>
+		<a href="#" onClick="trackQuality('sortof');return false;" class="button">Sort of</a>
+		<a href="#" onClick="trackQuality('no');return false;" class="button">No</a>
+</div> -->
 </body>
 </html>
