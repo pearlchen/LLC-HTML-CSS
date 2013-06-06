@@ -76,6 +76,20 @@ body {
 	padding: 0;
 }
 
+
+/* Added so code editor areas won't resize in height */
+.CodeMirror-scroll {
+  	height: auto !important;
+  	overflow-y: hidden;
+  	overflow-x: auto;
+  	width: 100%;
+  	min-height: 200px;
+}
+.coder-destination {
+ 	bottom: auto !important;
+  	top: 0 !important;
+}
+
 .deck-container {
 
 	/* Global slide styles */

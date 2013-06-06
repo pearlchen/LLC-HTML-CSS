@@ -1145,241 +1145,371 @@ h1 {
 		</article>
 
 
-		<!-- SLIDE 68: CSS -->
+		<!-- SLIDE 67: CSS -->
 		<article class='slide slide-list'>
-			<h2>The "Box Model"</h2>
-			<p>Most HTML elements on a web page look like rectangles, or boxes, to the browser:</p>
-			<p class="centered"><img src="assets/box-model.gif" width="536" height="289" alt="box model" /></p>
-			<p>The content is the visible text or image. The border is... the border. Padding and margin adds spacing inside and outside, respectively.</p> 
-			<p>Each of these rectangles may have margins, padding and borders, which in turn changes the elements size (width & height).  The way these elements are formulated together is referred to as the box model.</p>
-			<p>This is the same but visualized differently:</p>
-			<p class="centered"><img src="assets/box-model.png" width="517" height="476" alt="box model" /></p>
+			<h2>The Box Model</h2>
+			<p>The browser sees all the HTML elements as square or rectangular boxes.</p>
+			<img src="assets/box-model.gif" width="536" height="289" alt="box model" />
+			<p>The <i>content</i> is the text or image visible to the user. The <code>border</code> is... the border. <code>padding</code> adds space <em>inside</em> of the box and <code>margin</code> adds space <em>outside</em> of the box.</p> 
+			<p>Each of these boxes can have different combinations of margins, padding and borders, which in turn changes the element's size (width & height).  This interaction is referred to as <i>the box model</i>.</p>
+			<p class="sidenote">We'll be exploring this concept in more detail when we do page layouts. For now, just keep this in the back of your mind.</p>
 		</article>
 
-		<!-- SLIDE 69: CSS -->
-		<article class='slide slide-list'>
-			<p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-			<p><strong>Step 1: add a border</strong><br />
-				To add a border you need to set 3 properties:<br />
-				<code>border-width</code>, <code>border-style</code>, and <code>border-color</code>.</p>
-			<p class="sidenote">You can define them seperately, or using shorthand.</p>
-			<p class="sidenote">Note: CSS comments use the format <code>/* comment */</code></p>
-
+		<!-- SLIDE 68: CSS Lists -->
+		<article class='slide slide-list css-lists'>
+			<h2>Lists as navigation</h2>
+			<p>It's common to use lists to create your navigation. Because lists have distinct default styles, we'll have to apply many different CSS properties to get it to look more button-like.</p>
+			<p><strong>Step 1:</strong> remove default list styles</p>
 <textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-	border-width: 1px;
-	border-style: solid;
-	border-color: black;
-}
-&lt;/style&gt;
+<style>
+    ul {
+        list-style-type: ;
+        margin: ;
+        padding: ;
+    }
+</style>
 
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
 </textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-	/*
-	border-width: 1px;
-	border-style: solid;
-	border-color: black;
-	*/
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }	
+</style>
 
-	/* shorthand */
-	border: 1px solid black;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
 </script>
-
 		</article>
 
-		<!-- SLIDE 70: CSS -->
+		<!-- SLIDE 69: CSS Lists -->
+		<article class='slide slide-list css-lists'>
+			<h2>Lists as navigation</h2>
+			<p><strong>Step 2:</strong> Add some basic colour and font styles:<br>
+			Add a background color, center align the text, set a width, remove the underline, change the font family and font size.</p>
+<textarea class='coder-editor'>
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
+</textarea>
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul li {
+        background-color: black;
+        width: 80px;
+    }
+    ul li a {
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }	
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+</script>
+		</article>
+
+		<!-- SLIDE 70: CSS lists -->
 		<article class='slide slide-list'>
-			<p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-			<p><strong>Step 2: add padding</strong><br />
-				To add padding you set 4 properties:<br />
-				<code>padding-top</code>, <code>padding-left</code>, <code>padding-bottom</code>, and <code>padding-left</code>.</p>
-			<p class="sidenote">You can define them seperately, or using shorthand (in a clockwise direction).</p>
+			<h2>Lists as navigation</h2>
+			<p><strong>Step 3:</strong> Line them up side by side</p>
+			<p>This is a bit tricky because there are 3 different ways we can do this and they each yield slightly different results.</p>
+			<p>We will be looking at the <code>display</code> and <code>float</code> properties. You only need to use <strong>one</strong> of these techniques but it depends on what you want the outcome to be. </p>
+			<p>List items (<code>li</code>) are block level elements so we need to override the default style behaviour to get the items to line up side by side.</p>
 
 <textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-	border: 1px solid black;
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul li {
+        background-color: black;
+        width: 80px;
+    }
+    ul li a {
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
 
-	/*padding-top: 5px;
-	padding-right: 30px;
-	padding-bottom: 5px;
-	padding-left: 30px;*/
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
 </textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-	border: 1px solid black;
-	/*
-	padding-top: 5px;
-	padding-right: 30px;
-	padding-bottom: 5px;
-	padding-left: 30px; 
-	*/
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul li {
+        background-color: black;
+        width: 80px;
 
-	/* shorthand */
-	padding: 5px 30px 5px 30px;
-}
-&lt;/style&gt;
+        /* Option 1: lines up side by 
+        side but doesn't play nice 
+        with height & width changes*/
+        /* display: inline; */
 
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+        /* Option 2: lines up side by
+        side, plays nice with height
+        and width but not with text-
+        align: center. */
+        /* float: left; */
+
+        /* Option 3: lines up side by
+        side, plays nice with height
+        and width AND with text-
+        align: center. */
+        /* display: inline-block; */
+    }
+    ul li a {
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
 </script>
-
+		<p class="icon-note"><a href="http://www.impressivewebs.com/difference-block-inline-css/" target="_blank">The Difference Between “Block” and “Inline”</a></p>
 		</article>
 
 		<!-- SLIDE 71: CSS -->
 		<article class='slide slide-list'>
-			<p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-			<p><strong>Step 3: Change background & text properties</strong><br />
-			Add a background colour (<code>background-color</code>), and change the font colour, (<code>color</code>).</p>
-			<p>To get rid of the underline, use the <code>text-decoration</code> property.</p>
+			<h2>Lists as navigation</h2>
+			<p><strong>Step 3:</strong> add padding</p>
+			<p>To add padding you set 4 properties: <code>padding-top</code>, <code>padding-left</code>, <code>padding-bottom</code>, and <code>padding-left</code>.</p>
+			<p class="icon-note">This property, as well as many others, can also be defined using shorthand. More info <a href="http://www.webcredible.co.uk/user-friendly-resources/css/css-shorthand-properties.shtml" target="_blank">here</a>.</p>
 
-<textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-	border: 1px solid black;
-	padding: 5px 30px 5px 30px;
-}
-&lt;/style&gt;
+<textarea class='coder-editor'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul li {
+        background-color: black;
+        width: 80px;
+        display: inline-block;
+    }
+    ul li a {
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
 
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
 </textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-	border: 1px solid black;
-	padding: 5px 30px 5px 30px;
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
 
-	background-color: black;
-	color: white;
-	text-decoration: none;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
 </script>
-
 		</article>
+
 
 		<!-- SLIDE 72: CSS -->
 		<article class='slide slide-list'>
-			<p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-			<p><strong>Step 4: add margin</strong><br />
-			To add margins you set 4 properties:<br />
+			<h2>Lists as navigation</h2>
+			<p><strong>Step 4:</strong> add margin<br />
+			To add margins you set 4 properties:
 				<code>margin-top</code>, <code>margin-left</code>, <code>margin-bottom</code>, and <code>margin-left</code>.</p>
-			<p class="sidenote">You can define them seperately, or using shorthand (in a clockwise direction).</p>
+			<p class="icon-tip">Just like padding, you can also use shorthand (in a clockwise direction).</p>
+<textarea class='coder-editor'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
 
-
-<textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-	border: 1px solid black;
-	padding: 5px 30px 5px 30px;
-	background-color: black;
-	color: white;
-	text-decoration: none;
-
-	/*margin-top: 15px;
-	margin-right: 10px;
-	margin-bottom: 0;
-	margin-left: 0;*/
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
 </textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-	border: 1px solid black;
-	padding: 5px 30px 5px 30px;
-	background-color: black;
-	color: white;
-	text-decoration: none;
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;/* Removes default
+    space from between list items
+    when using display: inline-block
+    Make sure to set the font-size.
+    again in the li or a tag.*/
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
 
-	/*
-	margin-top: 0;
-	margin-right: 0;
-	margin-bottom: 0;
-	margin-left: 0;
-	*/
-
-	/* shorthand */
-	margin: 15px 10px 0 0;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
 </script>
-
 		</article>
 
 		<!-- SLIDE 73: CSS -->
 		<article class='slide slide-list'>
-			<p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-			<p>Here's the final button code!</p>
+			<h2>Lists as navigation</h2>
+			<p>You can also add more styles such as a changing the font color or adding a border, but let's take a moment and talk about a new <em>CSS3</em> feature, <code>border-radius</code>.</p>
+			<p class="icon-note">We won't get into browser pre-fixes today but do know that newer CSS features require you to re-state the property for each browser vendor. More info <a href="https://developer.mozilla.org/en-US/docs/CSS/border-radius" target="_blank">here</a>.</p>
 
-<textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-	border: 1px solid black;
-	padding: 5px 30px 5px 30px;
-	background-color: black;
-	color: white;
-	text-decoration: none;
-	margin: 15px 10px 0 0;
-}
-&lt;/style&gt;
+<textarea class='coder-editor'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        /*border-radius: 6px;
+        -webkit-border-radius: 6px;*/
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
 
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
 </textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-	border: 1px solid black;
-	padding: 5px 30px 5px 30px;
-	background-color: black;
-	color: white;
-	text-decoration: none;
-	margin: 15px 10px 0 0;
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
 
-	border-radius: 6px;
-	-webkit-border-radius: 6px;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
 </script>
-
-			<br clear="all" />
-			<p class="sidenote"><strong>Advanced topic:</strong> To get it looking even more like a button, use the <code><a href="https://developer.mozilla.org/en-US/docs/CSS/border-radius" target="_blank">border-radius</a></code> property.<br />
-			<span class="sidenote">(We won't get into browser pre-fixes today but do know that newer CSS features require you to re-state the property for each browser vendor.)</span></p>
 		</article>
 
 		<!-- SLIDE 74: CSS -->
