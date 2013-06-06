@@ -141,6 +141,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			<h2>File Transfer Program (FTP)</h2>
 			<p>FTP software will let you copy your files to a <em>server</em> so the rest of the world can see them! Again, there are many free and paid options.</p>
 			<p>I recommend <a href="http://cyberduck.ch/" target="_blank">Cyberduck</a> or <a href="http://filezilla-project.org/" target="_blank">Filezilla</a>.</p>
+			<p>Instructions <a href="index.html#slide-97">here</a></p>
 			<br>
 			<div class="centered"><a href="http://cyberduck.ch/" target="_blank"><img class="inline" src="assets/CyberduckIcon.png" width="125" height="125" alt="CyberDuck" /></a><a href="http://filezilla-project.org/" target="_blank"><img  class="inline" src="assets/filezilla.jpg" width="150" height="150" alt="Filezilla" /></a></div>
 		</article>
@@ -1918,27 +1919,29 @@ h1 {
 			<h2>Preparing for our group exercise</h2>
 			<p>Using <code>index.html</code> from the <code>website</code> folder, update it with the code below. It should replace everything in between the opening and closing <code>&lt;body&gt;</code> tags.</p>
 			<p class="sidenote">If you added a <code>class</code> to your navigation list, be sure to add that back in.</p>
-<pre class="prettyprint">&lt;header&gt;
-    &lt;h1&gt;Main Heading&lt;/h1&gt;
-    &lt;nav&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/nav&gt;
-&lt;/header&gt;  
-&lt;section&gt;
-    &lt;h2&gt;Welcome to my blog!&lt;/h2&gt;
-    &lt;p&gt;[...content...]&lt;/p&gt;
-    &lt;p&gt;[...content...]&lt;/p&gt;
-&lt;/section&gt;
-&lt;aside&gt;
-	[...Sidebar content...]
-&lt;/aside&gt;
-&lt;footer&gt;
-	Copyright 2013
-&lt;/footer&gt;
+<pre class="prettyprint">&lt;div&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Main Heading&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;  
+    &lt;section&gt;
+        &lt;h2&gt;Welcome to my blog!&lt;/h2&gt;
+        &lt;p&gt;[...content...]&lt;/p&gt;
+        &lt;p&gt;[...content...]&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;aside&gt;
+    	[...Sidebar content...]
+    &lt;/aside&gt;
+    &lt;footer&gt;
+    	Copyright 2013
+    &lt;/footer&gt;
+&lt;/div&gt;
 </pre>
 		</article>
 
@@ -1946,17 +1949,17 @@ h1 {
 		<!-- SLIDE 86: CSS -->
 		<article class='slide slide-list'>
 			<h2>Assigning widths</h2>
-			<p>It is important to know the overall width of your site so you can select column widths for the main <code>&lt;section&gt;</code> and the <code>&lt;aside&gt;</code> sidebar that will make sense.</p>
-			<p>Let's go ahead and set the <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> to be 960 pixels wide. We'll add a light gray background colour too, to make it easier to see the size of the elements.</p>
+			<p>It is important to know the overall width of your site so you can select column widths for the <code>&lt;section&gt;</code> and <code>&lt;aside&gt;</code> elements to ensure that they will fit side by side.</p>
+			<p>Let's set the <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> to be 960 pixels wide. We'll add a gray background colour too, to make it easier to see the size of the elements.</p>
 <pre class="prettyprint">
 header {
-	<strong>width: 960px;</strong>
-	background-color: #eee;
+    <strong>width: 960px;</strong>
+    background-color: #bbb;
 }
 
 footer {
-	<strong>width: 960px;</strong>
-	background-color: #eee;
+    <strong>width: 960px;</strong>
+    background-color: #bbb;
 }
 </pre>
 		</article>
@@ -1967,30 +1970,27 @@ footer {
 			<p>If our site is 960px wide, we need to ensure that our columns don't exceed 960 - <strong>including margins!</strong> (e.g. 640 + 20 + 300 = 960)</p>
 <pre class="prettyprint">
 section {
-	<strong>width: 640px;</strong>
-	padding: 30px;
-	background-color: pink;
+    <strong>width: 640px;</strong>
+    padding: 30px;
+    background-color: pink;
 }
 
 aside {
-	<strong>margin-left: 20px;</strong>
-	<strong>width: 300px;</strong>
-	background-color: red;
+    <strong>margin-left: 20px;</strong>
+    <strong>width: 300px;</strong>
+    background-color: red;
 }
 </pre>
-<<<<<<< .merge_file_pRD9sp
       <p>What about the padding?</p>
-      <p class="sidenote"><strong>PRO TIP:</strong> For many, padding has wreaked havoc on our math, since it increases the width of the element. To avoid headaches, use the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank">box-sizing property</a> to make sure your math adds up.</p>
-=======
-			<p>What about the padding?</p>
-			<p class="sidenote"><strong>PRO TIP:</strong> For many, padding has wrecked havoc on our math, since it increases the width of the element. To avoid headaches, use the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank">box-sizing property</a> to make sure your math adds up.</p>
->>>>>>> .merge_file_7RPdS4
+      <p class="icon-note"><strong>PRO TIP:</strong> For many, padding has been a pain point because it increases the width of the element and makes the math not add up as one would expect. To avoid headaches, use the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank">box-sizing property</a> as a fix. Remember how the box model works?</p>
 <pre class="prettyprint">
-/* apply a natural box layout model to all elements */
+/* applies a natural box layout model to all elements 
+padding and border will not affect the width of the element with this fix*/
+
 <strong>* { 
-	-moz-box-sizing: border-box; 
-	-webkit-box-sizing: border-box; 
-	box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
 }</strong>
 </pre>
 		</article>
@@ -2002,17 +2002,17 @@ aside {
 			<p>To get our two columns to be side-by-side, use the <code>float</code> property. Values can be <code>left</code>, <code>right</code>, or <code>none</code>.</p>
 <pre class="prettyprint">
 section {
-	width: 640px;
-	padding: 30px;
-	background-color: pink;
-	<strong>float: left;</strong>
+    width: 640px;
+    padding: 30px;
+    background-color: pink;
+    <strong>float: left;</strong>
 }
 
 aside {
-	margin-left: 20px;
-	width: 300px;
-	background-color: red;
-	<strong>float: left;</strong>
+    margin-left: 20px;
+    width: 300px;
+    background-color: red;
+    <strong>float: left;</strong>
 }
 </pre>
 		</article>
@@ -2024,76 +2024,73 @@ aside {
 				<p>One way is to use the <code>clear</code> property on an element that comes <em>directly</em> after the containers that are floating. Values can be <code>left</code>, <code>right</code>, or <code>both</code>.</p>
 <pre class="prettyprint">
 footer {
-	width: 960px;
-	background-color: #eee;
-	<strong>clear: both;</strong>
+    width: 960px;
+    background-color: #bbb;
+    <strong>clear: both;</strong>
 }
 </pre>
-			<p class="sidenote">If the elements that are floating are enclosed in another container, you can you apply <code>overflow:auto</code> or <code>overflow:hidden;</code> to the parent container:</p>
-<pre class="prettyprint">nav {
-	<strong>overflow: auto;</strong>
-}</pre>
+			<p class="icon-note">If the elements that are floating can't be cleared because there is no element following the floated elements, you can you apply <code>overflow:auto</code> or <code>overflow:hidden;</code> to the parent container to <i>self-clear</i> the children.  See more info <a href="http://net.tutsplus.com/tutorials/html-css-techniques/css-fudamentals-containing-children/" target="_blank">here</a>.</p>
 		</article>
 
 
 		<!-- SLIDE 90: CSS -->
 		<article class='slide slide-list'>
-			<h2>CSS id's</h2>
-			<p>CSS classes are great when you want to re-apply the same style to multiple HTML elements but sometimes you need to only target an HTML container <strong>once</strong>. This is where an <span class="keyword">ID</span> is useful.</p>
+			<h2>CSS id</h2>
+			<p>CSS classes are great when you want to re-apply the same style to multiple HTML elements but sometimes you need to only target an HTML container <strong>once</strong>. This is where an <code>id</code> is useful.</p>
 			<ul>
-				<li>Use a <strong>hash</strong> (<code>#</code>) to define CSS selectors that are IDs.<br />
-					e.g. <code>#centered</code></li>
 				<li>Use the <code>id</code> attribute to apply the styles to that element.<br />
-					e.g. <code>id="centered"</code><br />
+					e.g. <code>id="wrapper"</code><br />
 				</li>
+				<li>Use a <strong>hash/number sign</strong> (<code>#</code>) to define CSS selectors that are IDs.<br />
+					e.g. <code>#wrapper</code></li>
 			</ul>
-			<p class="sidenote"><strong>Important!</strong> You should only have <strong>one</strong> instance of an ID per page. Any more can cause unexpected things to happen with your CSS -- and later, JavaScript.</p>
+			<p class="icon-warning">You should only have <strong>one</strong> instance of an ID per page. Any more can cause unexpected things to happen with your CSS -- and later, JavaScript.</p>
 <textarea class="coder-editor">
 &lt;style&gt;
-	#centered {
-		margin: 0 auto;
-	}
-	div {
-		width: 200px;
-		border: 1px solid black;
-	} 
+    #wrapper {
+        margin: 0 auto;
+    }
+    div {
+        width: 200px;
+        border: 1px solid black;
+    } 
 &lt;/style&gt;
 
 &lt;div&gt;
-	Cupcake ipsum dolor sit amet halvah muffin apple pie. Pastry sweet jelly soufflé icing cake carrot cake tart chupa chups. Topping cookie bear claw.
+    Cupcake ipsum dolor sit amet halvah muffin apple pie. Pastry sweet jelly soufflé icing cake carrot cake tart chupa chups. Topping cookie bear claw.
 &lt;/div&gt;
 </textarea>
 <script type="coder-solution">&lt;style&gt;
-	#centered {
-		margin: 0 auto;
-	}
-	div {
-		width: 200px;
-		border: 1px solid black;
-	} 
+    #wrapper {
+        margin: 0 auto;
+    }
+    div {
+        width: 200px;
+        border: 1px solid black;
+    }
 &lt;/style&gt;
 
-&lt;div id="centered"&gt;
+&lt;div id="wrapper"&gt;
 	Cupcake ipsum dolor sit amet halvah muffin apple pie. Pastry sweet jelly soufflé icing cake carrot cake tart chupa chups. Topping cookie bear claw.
 &lt;/div&gt;
 </script>
 		</article>
 
-				<!-- SLIDE 91: CSS -->
+		<!-- SLIDE 91: CSS -->
 		<article class='slide slide-list'>
-			<h2>CSS id's</h2>
-			<p>Let's add <code>#centered</code> to <code>styles.css</code> and apply the id to the <code>div</code> container immediately after the opening <code>&lt;body&gt;</code> tag in <code>index.html</code>.</p>
+			<h2>CSS id</h2>
+			<p>Let's add the <code>#wrapper</code> CSS to <code>styles.css</code> and apply the id to the <code>div</code> container immediately after the opening <code>&lt;body&gt;</code> tag in <code>index.html</code>.</p>
 <pre class="prettyprint">
-#centered {
-	margin: 0 auto;
-	width: 960px;
+#wrapper {
+    margin: 0 auto;
+    width: 960px;
 }
 </pre>
 <pre class="prettyprint">
 &lt;body&gt;
-	&lt;div id="centered"&gt;
+    &lt;div id="wrapper"&gt;
 
-	&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/body&gt;
 </pre>
 		</article>
@@ -2103,11 +2100,11 @@ footer {
 			<h2>Custom colours</h2>
 			<p>Often, the CSS colours "gray", "blue", or "purple" are boring and limiting. You can define your own custom colour using hex colours.</p>
 <pre class="prettyprint">h1 {
-	color: <strong>#026873;</strong> /* a unique shade of blue */
+    color: <strong>#026873;</strong> /* a unique shade of blue */
 }</pre>
-			<p class="centered"><img src="assets/lg_hex_codes.png" widht="500" height="283" alt="" /></p>
+			<img src="assets/lg_hex_codes.png" widht="500" height="283" alt="" />
 			<p class="sidenote">Image source: <a href="http://websiteincite.com/create-your-website/hexadecimal-color-codes" target="_blank">http://websiteincite.com/create-your-website/hexadecimal-color-codes</a></p>
-			<p class="sidenote">Color Inspiration: <a href="http://www.colourlovers.com/" target="_blank">COLOURlovers</a></p>
+			<p class="icon-ote">Color Inspiration: <a href="http://www.colourlovers.com/" target="_blank">COLOURlovers</a>, <a href="http://color.hailpixel.com/" target="_blank">color.hailpixel.com</a> </p>
 		</article>    
 
 		<!-- SLIDE 93: CSS -->
@@ -2118,7 +2115,8 @@ footer {
 				<li>Apply <code>width</code>s and <code>float</code>s to <code>&lt;section&gt;</code> and <code>&lt;aside&gt;</code> to make a standard 2-column layout.</li>
 				<li>Update your <code>about.html</code> and <code>contact.html</code> with some of your own CSS.</li>
 				<li>Apply some custom colours to your text in any of your web pages.</li>
-				<li>Read about the <code><a href="http://coding.smashingmagazine.com/2009/09/02/backgrounds-in-css-everything-you-need-to-know/" target="_blank">background-image</a></code> property and add a background image to web pages.</li>
+				<li>Read about the <code><a href="http://coding.smashingmagazine.com/2009/09/02/backgrounds-in-css-everything-you-need-to-know/" target="_blank">background-image</a></code> property and add a background image to web pages. Check out <a href="http://subtlepatterns.com/">subtlepatterns.com</a> for some nice background images.</li>
+
 			</ul>
 		</article>
 
@@ -2136,37 +2134,23 @@ footer {
 
 		<!-- SLIDE 95: CSS -->
 		<article class='slide slide-list'>
-			<h2>Bonus: CSS patterns for fun</h2>
-			<p>CSS is great because it can reduce the number of image files you need to create. You can even create <a href="http://lea.verou.me/css3patterns/#" target="_blank">patterns purely out of CSS</a>!</p>
-			<ol>
-				<li>Click on a pattern that you like.</li>
-				<li>Copy the supplied CSS.</li>
-				<li>Instead of an "ad" in your sidebar, paste the CSS into your <code>aside</code> selector. Or apply it to your <code>body</code> selector to change up the entire page.</li>
-				<li>Important: Due to the differences in CSS support in web browsers, you will need to duplicate the <code>background-image</code> property-value set and replace <code>linear-gradient</code> with <code>-webkit-linear-gradient</code>.</li>
-			</ol>
-<pre style="font-size: 14px;">
-/* Based on Cicada stripes from http://lea.verou.me/css3patterns/#cicada-stripes */
-background-color: #026873;
-background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
-									linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
-									linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
-									linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
-<strong>background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,.07) 50%, transparent 50%),
-									-webkit-linear-gradient(0deg, rgba(255,255,255,.13) 50%, transparent 50%),
-									-webkit-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.17) 50%),
-									-webkit-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.19) 50%);</strong>
-background-size: 13px, 29px, 37px, 53px;
-</pre>
+			<h2>Code examples</h2>
+			<p>Here's some inspiration:</p>
+			<ul>
+				<li><a href="http://codepen.io/" target="_blank">http://codepen.io/</a></li>
+				<li><a href="http://cssdeck.com/" target="_blank">http://cssdeck.com/</a></li>
+				<li><a href="http://tympanus.net/codrops/" target="_blank">http://tympanus.net/codrops/</a></li>
+			</ul>
 		</article>
-
+		
 		<!-- SLIDE 96: CSS -->
 		<article class='slide slide-list'>
 			<h2>CSS reference</h2>
-			<ul class="spacey_list">
+			<ul>
 				<li>Download a <a href="http://www.cheatography.com/davechild/cheat-sheets/css2/" target="_blank">cheatsheet of CSS selectors and properties</a>.</li>
-				<li>Try looking up individual selectors and propertie using the CSS section of <a href="https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference" target="_blank">Mozilla's Developer Network</a> for further breakdown.</li>
+				<li>Try looking up individual selectors and propertie using the CSS section of <a href="https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference" target="_blank">Mozilla's Developer Network</a> or <a href="http://dochub.io/#css/">dochum.io</a> for further breakdown.</li>
 				<li>Read articles from <a href="http://www.alistapart.com/" target="_blank">A List Apart</a> and <a href="http://css-tricks.com/">CSS Tricks</a>.</li>
-				<li>And don't forget the "inspect element" option!</li>
+				<li>And don't forget the "inspect element" option or the developer tools when you see a site that you like!</li>
 			</ul>
 		</article> 
 
@@ -2229,14 +2213,6 @@ background-size: 13px, 29px, 37px, 53px;
 		<article class='slide slide-subhead'>
 			<h1>Additional Resources</h1>
 			<p>Some tips and tricks for the future</p>
-			<!-- The W3C has extensive guidelines and 
-recommendations about these languages (and more).
-RESOURCES:
-HTML: http://www.w3.org/TR/1999/REC-html401-19991224/
-XHTML: http://www.w3.org/TR/xhtml1/
-HTML5: http://www.w3.org/TR/html5/
-Full list of recommendations: http://www.w3.org/TR/
-Browser compatibilty table: http://caniuse.com/ -->
 		</article>
 
 		<!-- SLIDE 103: FTP -->
@@ -2244,16 +2220,21 @@ Browser compatibilty table: http://caniuse.com/ -->
 			<h3>Books</h3>
 			<p><a href="http://htmlandcssbook.com/">HTML and CSS: Design and Build Websites</a> by Jon Duckett</p>
 			<br />
+
 			<h3>Validating your HTML</h3>
-			<div>
-				<p>One of the best ways to make sure that your HTML &amp; CSS is correct is to run it through a validator.</p>
-				<p><a href="http://validator.w3.org/">HTML validator</a><br />
-					<a href="http://jigsaw.w3.org/css-validator/">CSS validator</a></p>
-			</div>
+			<p>One of the best ways to make sure that your HTML &amp; CSS is correct is to run it through a validator.</p>
+			<p>
+				<a href="http://validator.w3.org/">HTML validator</a><br />
+				<a href="http://jigsaw.w3.org/css-validator/">CSS validator</a>
+			</p>
+			<br />
+			
 			<h3>Online resources</h3>
-			<p><a href="http://learn.shayhowe.com/html-css/">A Beginners Guide to HTML & CSS</a><br>
-				<a href=http://learnlayout.com/>Learn CSS Layout</a>
-			<a href="http://dochub.io/#css/">Documentation for HTML, CSS and more</a></p>
+			<p>
+				<a href="http://learn.shayhowe.com/html-css/">A Beginners Guide to HTML & CSS</a><br>
+				<a href="http://learnlayout.com/">Learn CSS Layout</a><br>
+				<a href="http://dochub.io/#css/">Documentation for HTML, CSS and more</a>
+			</p>
 		</article>
 
 		<!-- SLIDE 104: TIPS -->
@@ -2265,7 +2246,7 @@ Browser compatibilty table: http://caniuse.com/ -->
 		</article>
 
 		<article class='slide slide-subhead'>
-			<h1>Thank you!</h1>
+			<h1>Merci!</h1>
 		</article>
   
 	</div><!-- END div id=presentation 104 slides total -->
