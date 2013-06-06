@@ -1824,18 +1824,18 @@ h1 {
 			<h2>Laying out web pages with CSS</h2>
 			<p>Layout is one of the most challenging things to do in CSS because it requires you to think about the whole picture and plan ahead.</p>
 			<p>To creating a standard 2-column layout requires us to give dimensions to some of our content, and position it accordingly.</p>
-			<p class="centered"><img src="assets/2-column-web page.png" width="703" height="411" alt="" /></p>
+			<img src="assets/2-column-webpage.png" width="703" height="411" alt="">
 		</article>
 
 		<!-- SLIDE 81: CSS -->
 		<article class='slide slide-list'>
 			<h2>Generic Container Tags</h2>
-			<p>Sometimes content you might want to group together (and treat differently with CSS) shouldn't be defined as a <code>h1</code> or <code>h2</code> or even a <code>p</code> paragraph. There are two kinds of generic containers available:</p>
+			<p>Sometimes you might want to group content together to style them blocks on the page instead of individual paragraphs, lists, etc. There are two kinds of generic containers available:</p>
 			<ul>
-				<li><code>span</code> - An <span class="keyword">inline</span> container.<br />
-					Good for highlighting keywords like I did in this bullet.</li>
-				<li><code>div</code> - An <span class="keyword">block</span> container.<br />
-					Much like a paragraph, it creates a line break above and below to create a box.</li>
+				<li><code>span</code> is an <i>inline</i> container and is good for highlighting keywords and other smaller, reusable styles. By default, they are as wide as there content and line up side by side.
+				<p class="icon-tip">Remember using <code>display:inline</code> to align the navigation list items?</p>
+				</li>
+				<li><code>div</code> is a <i>block</i> container. Much like a paragraph, it creates a line break above and below and elements are stacked on top of eachother.  It is useful for grouping together larger blocks of your page layout.</li>
 			</ul>
 <pre class="prettyprint">&lt;span&gt;I'm a span!&lt;/span&gt;
 &lt;span&gt;I'm another span!&lt;/span&gt;
@@ -1853,22 +1853,25 @@ h1 {
 		<!-- SLIDE 82: CSS -->
 		<article class='slide slide-list'>
 			<h2>Semantic HTML Tags</h2>
-			<p>When making websites, it requires nesting <code>div</code> tags, sometimes within other<code>div</code> tags like this:</p>
+			<p>Web page layouts requires nesting <code>div</code> tags, sometimes within other<code>div</code> tags like this:</p>
 <pre class="prettyprint">&lt;div&gt;
-	&lt;a&gt;Home&lt;/a&gt;
-	&lt;a&gt;About&lt;/a&gt;
-	&lt;a&gt;Contact&lt;/a&gt;
+    &lt;h1&gt;Christina Truong | Web Developer&lt;/h1&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div&gt;
-	Welcome to my blog!
-	&lt;div&gt;[...Blog Post...]&lt;/div&gt;
-	&lt;div&gt;[...Blog Post...]&lt;/div&gt;
+    &lt;h2&gt;Welcome to my blog!&lt;/h2&gt;
+    &lt;p&gt;[...content...]&lt;/p&gt;
+    &lt;p&gt;[...content...]&lt;/p&gt;
 &lt;/div&gt;
 &lt;div&gt;
-	[...Sidebar Ad...]
+    [...Sidebar content...]
 &lt;/div&gt;
 &lt;div&gt;
-	Copyright 2012
+    Copyright 2013
 &lt;/div&gt;
 </pre>
 		</article>
@@ -1876,24 +1879,27 @@ h1 {
 		<!-- SLIDE 83: CSS -->
 		<article class='slide slide-list'>
 			<h2>Semantic HTML Tags</h2>
-			<p>With HTML5, there are an increasing number of semantic tags that better describe larger blocks of content such as: <code>header</code>, <code>footer</code>, <code>nav</code>, <code>section</code>, <code>article</code>, and <code>aside</code>.</p>
+			<p>With HTML5, there are an increasing number of semantic tags that better describe larger blocks of content such as: <code>header</code>, <code>footer</code>, <code>nav</code>, <code>section</code>, and <code>aside</code>.</p>
 <pre class="prettyprint">&lt;header&gt;
-	&lt;nav&gt;
-		&lt;a&gt;Home&lt;/a&gt;
-		&lt;a&gt;About&lt;/a&gt;
-		&lt;a&gt;Contact&lt;/a&gt;
-	&lt;/nav&gt;
+    &lt;h1&gt;Christina Truong | Web Developer&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
 &lt;/header&gt;  
 &lt;section&gt;
-	Welcome to my blog!
-	&lt;article&gt;[...Blog Post...]&lt;/article&gt;
-	&lt;article&gt;[...Blog Post...]&lt;/article&gt;
+    &lt;h2&gt;Welcome to my blog!&lt;/h2&gt;
+    &lt;p&gt;[...content...]&lt;/p&gt;
+    &lt;p&gt;[...content...]&lt;/p&gt;
 &lt;/section&gt;
 &lt;aside&gt;
-	[...Sidebar Ad...]
+	[...Sidebar content...]
 &lt;/aside&gt;
 &lt;footer&gt;
-	Copyright 2012
+	Copyright 2013
 &lt;/footer&gt;
 </pre>
 		</article>
@@ -1902,36 +1908,37 @@ h1 {
 		<article class='slide slide-list'>
 			<h2>Semantic HTML Tags</h2>
 			<p>This helps <span class="keyword">web crawlers</span> from search engines like Google or Bing better understand your content.</p>
-			<p>Even better, it helps <strong>you</strong> from missing a closing <code>&lt;/div&gt;</code> tag and makes your HTML easier to read for everyone.</p>
-			<p><strong>Important:</strong> HTML5 is not supported in older browsers such as Internet Explorer 8 and previous versions.<br><br>
-			Further reading: <a href="http://diveintohtml5.info/semantics.html#new-elements">Dive Into HTML5</a></p>
+			<p>Even better, it helps <strong>you</strong> from missing a closing <code>&lt;/div&gt;</code> tag and makes your HTML easier to read. However, there is still al place for the <code>&lt;div&gt;</code> and it is still widely used.</p>
+			<p class="icon-warning">Important: HTML5 is not supported in older browsers such as Internet Explorer 8 and below.</p>
+			<p class="icon-note">Further reading: <a href="http://diveintohtml5.info/semantics.html#new-elements">Dive Into HTML5</a></p>
 		</article>
 
 		<!-- SLIDE 85: CSS -->
 		<article class='slide slide-list'>
 			<h2>Preparing for our group exercise</h2>
-			<p>Using <code>index.html</code> from the <code>website</code> folder, let's update it with the code below.</p>
-			<p>It should replace everything in between the opening and closing <code>&lt;body&gt;</code> tags.</p>
-<pre class="prettyprint">&lt;div&gt;
-	&lt;header&gt;
-		&lt;nav&gt;
-			&lt;a href="index.html"&gt;Home&lt;/a&gt;
-			&lt;a href="about.html"&gt;About&lt;/a&gt;
-			&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-		&lt;/nav&gt;
-	&lt;/header&gt;  
-	&lt;section&gt;
-		Welcome to my blog!
-		&lt;article&gt;[...Blog Post...]&lt;/article&gt;
-		&lt;article&gt;[...Blog Post...]&lt;/article&gt;
-	&lt;/section&gt;
-	&lt;aside&gt;
-		[...Sidebar Ad...]
-	&lt;/aside&gt;
-	&lt;footer&gt;
-		Copyright 2012
-	&lt;/footer&gt;
-&lt;/div&gt;
+			<p>Using <code>index.html</code> from the <code>website</code> folder, update it with the code below. It should replace everything in between the opening and closing <code>&lt;body&gt;</code> tags.</p>
+			<p class="sidenote">If you added a <code>class</code> to your navigation list, be sure to add that back in.</p>
+<pre class="prettyprint">&lt;header&gt;
+    &lt;h1&gt;Main Heading&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;  
+&lt;section&gt;
+    &lt;h2&gt;Welcome to my blog!&lt;/h2&gt;
+    &lt;p&gt;[...content...]&lt;/p&gt;
+    &lt;p&gt;[...content...]&lt;/p&gt;
+&lt;/section&gt;
+&lt;aside&gt;
+	[...Sidebar content...]
+&lt;/aside&gt;
+&lt;footer&gt;
+	Copyright 2013
+&lt;/footer&gt;
 </pre>
 		</article>
 
