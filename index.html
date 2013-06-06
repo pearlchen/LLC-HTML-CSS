@@ -213,14 +213,14 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		<!-- SLIDE 12 -->
 		<article class='slide slide-list'>
 			<h2>Good file naming habits</h2>
-			<p>To create an HTML web page, just name your file using the <strong>.html</strong> extension (much like .pdf for PDF files or .doc for Word files).</p>
+			<p>To create an HTML web page, just name your file using the <code>.html</code> extension (much like .pdf for PDF files or .doc for Word files).</p>
 			<ul>
 				<li>
 					Use lowercase letters.<br>
 					<span class="sidenote"><code>about.html</code> instead of <code>About.html</code> or <code>ABOUT.html</code></span>
 				</li>
 				<li>
-					Avoid <code>s p a c e s</code>. Use underscores <code>(_)</code> or dashes <code>(-)</code>. Dashes are generally preferred for SEO (search engine optimization).<br />
+					Avoid <strong>s p a c e s</strong>. Use underscores (<code>_</code>) or dashes (<code>-</code>). Dashes are generally preferred for SEO (search engine optimization).<br />
 					<span class="sidenote"><code>business_hours.html</code> or <code>business-hours.html</code> instead of <code>business hours.html</code><br />
 					(The browser will interpret it as <code>business%20hours.html</code>)</span>
 				</li>
@@ -250,11 +250,11 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		<!-- SLIDE 14: HTML -->
 		<article class='slide slide-list'>
 			<h2>What is HTML?</h2>
-			<p>HTML stands for <em>HyperText Markup Language</em>. It was created for <em>web browsers</em> to easily read.</p>
+			<p>HTML stands for <i>HyperText Markup Language</i>. It was created for <em>web browsers</em> to easily read.</p>
 			<p>Below are the basic HTML tags required for all web pages. This makes perfect sense to a web browser:</p>
 <pre class="prettyprint">&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</pre>
 			<p>Just like the different languages that we speak and write, HTML has to follow proper "grammar" rules as well to make sense.</p>
-			<p>This is referred to as <em>syntax</em>.</p>
+			<p>This is referred to as <i>syntax</i>.</p>
 		</article>
 
 		<!-- SLIDE 15: HTML -->
@@ -275,7 +275,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		<!-- SLIDE 16: HTML -->
 		<article class='slide slide-list tags'>
 			<h2>HTML tags</h2>
-			<p>The <em>structure</em> of a web page is defined by HTML <span class="keyword">tags</span>. Left & right angled brackets (<code>shift</code> + <code>< </code> and <code>shift</code> + <code> > </code>) surround the tag name like this:</p>
+			<p>The <em>structure</em> of a web page is defined by HTML <i>tags</i>. Left & right angled brackets (<strong>shift</strong> + <strong>< </strong> and <strong>shift</strong> + <strong> > </strong>) surround the tag name like this:</p>
 			<div class="centered">
 				<p><code class="large">&lt;tag&gt;</code></p>
 				<p><img src="assets/house_beam.jpg" width="300" height="232" alt="house beam" /></p>
@@ -288,44 +288,15 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			<h2>HTML tags</h2>
 			<p>Tags typically come in <strong>pairs</strong> &mdash; an <em>opening</em> tag and a <em>closing</em> tag with a forward slash:</p>
 			<p class="centered"><code class="large">&lt;tag&gt;&lt;<span style="color:red;">/</span>tag&gt;</code></p>
-<!-- <div class="column-2">
-	<pre class="prettyprint">&lt;!DOCTYPE html&gt;
-	<strong>&lt;html&gt;</strong>
-		&lt;head&gt;
-			&lt;title&gt; &lt;/title&gt;
-		&lt;/head&gt;
-		&lt;body&gt;
-		&lt;/body&gt;
-	<strong>&lt;/html&gt;</strong></pre> 
-	</div>
-	<div class="column-2">
-	<pre class="prettyprint">&lt;!DOCTYPE html&gt;
-	&lt;html&gt;
-		&lt;head&gt;
-			&lt;title&gt; &lt;/title&gt;
-		&lt;/head&gt;
-		<strong>&lt;body&gt;</strong>
-		<strong>&lt;/body&gt;</strong>
-	&lt;/html&gt;</pre>
-</div> -->
-			<p>The are many different HTML tags. Each are used to create structure and add <em><a href="http://www.adobe.com/devnet/html5/articles/semantic-markup.edu.html" target="_blank">semantics</a></em> (meaning) to the content.</p>
+			<p>The are many different HTML tags. Each are used to create structure and add <i><a href="http://www.adobe.com/devnet/html5/articles/semantic-markup.edu.html" target="_blank">semantics</a></i> (meaning) to the content.</p>
 			<p>For example, any content between the <code>&lt;html&gt;&lt;/html&gt;</code> tag tells the browser that it is HTML code.</p>
 			<p>Content between the <code>&lt;title&gt;&lt;/title&gt;</code> tag describes the web page title.</p>
 		</article>
 
 		<!-- SLIDE 18: HTML -->
-		<!-- <article class='slide slide-list'>
-			<h2>HTML tags</h2>
-			<p>The are many different HTML tags. Each are used to add <span class="keyword"><a href="http://www.adobe.com/devnet/html5/articles/semantic-markup.edu.html" target="_blank" style="color:#B1009A;">semantics</a></span> (meaning) to the content on the as well as for structure.</p>
-			<p>Practice writing a <code>body</code> tag with me here:</p>
-			<textarea class="coder-editor coder-editor-full"></textarea>
-			<script type="coder-solution">&lt;body&gt;&lt;/body&gt;</script>
-		</article> -->
-
-		<!-- SLIDE 18: HTML -->
 		<article class='slide slide-list tags-nesting'>
 			<h2>HTML tags: nesting</h2>
-			<p>Tags can also be <em>nested</em> within other tags.<!--  This relationship is often referred to as <em>parent</em>, <em>child</em>, <em>descendant</em>, <em>ancestor</em>, etc nodes.--></p>
+			<p>Tags can also be <i>nested</i> within other tags.</p>
 			<p class="centered"><code>&lt;tag&gt;<span class="nested">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code> </p>
 			
 			<p>Let's look at the HTML tags that are required for a basic web page and take a closer look at how they are nested.</p>
@@ -354,7 +325,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		<!-- SLIDE 19: HTML -->
 		<article class='slide slide-list tags-nesting'>
 			<h2>HTML tags: nesting</h2>
-			<p>Nested elements make up the <em>document tree</em> & the relationships are just like a family tree; branches of ancestors, parents, children, siblings, etc.</p>
+			<p>Nested elements make up the <i>document tree</i> & the relationships are just like a family tree; branches of ancestors, parents, children, siblings, etc.</p>
 <pre class="prettyprint">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;&lt;!-- child of <strong>html</strong> tag, parent of <strong>title</strong> tag --&gt;
@@ -365,7 +336,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 &lt;/html&gt;</pre>
 			<ul>
 				<li>
-					<code>&lt;html&gt;</code> is always first and known as the <em>root</em> node. It has <strong>no</strong> parent nodes.<br> All other HTML tags are nested within <code>&lt;html&gt;</code>.
+					<code>&lt;html&gt;</code> is always first and known as the <i>root</i> node. It has <strong>no</strong> parent nodes.<br> All other HTML tags are nested within <code>&lt;html&gt;</code>.
 				</li>
 				<li>
 					<code>&lt;head&gt;</code> is the child of <code>&lt;html&gt;</code> and the parent node of the <code>&lt;title&gt;</code> tag.
@@ -386,8 +357,8 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			<p class="centered"><code>&lt;tag&gt;<span class="nested">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>         
 <textarea class="coder-editor coder-editor-full"></textarea>
 <script type="coder-solution">&lt;html&gt;
-	&lt;head&gt;&lt;/head&gt;
-	&lt;body&gt;&lt;/body&gt;
+    &lt;head&gt;&lt;/head&gt;
+    &lt;body&gt;&lt;/body&gt;
 &lt;/html&gt;</script>
 			<p class="icon-tip">Tags must be closed from inside out.</p>
 		</article>
@@ -425,29 +396,12 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			<p class="icon-tip">You can also use your <a href="index.html#slide-5" target="_blank">developer tools</a>.</p>
 		</article>
 
-
-		<!-- SLIDE 23: HTML -->
-		<!-- <article class='slide slide-list'>
-			<h2>HTML in a web browser</h2>
-			<p>But remember: HTML tags are like the beams of a house -- they denote structure, not content.)  </p>
-			<p>So if I view <a href="exercises/barebones.html" target="_blank"><code>barebones.html</code></a> in a web browser, I don't see anything interesting yet...</p>
-			<div class="reminders single-line"><p>If Chrome is not your default web browser, <strong>right-click</strong> and select the "<strong>open with...</strong>" option.</p></div>
-		</article> -->
-
-		<!-- SLIDE 24: HTML -->
-		<!-- <article class='slide slide-list'>
-			<h2>HTML in a web browser</h2>
-			<p>But I can right-click and select <strong>View Page Source</strong> to see what the HTML is to confirm that it's not a blank file.</p>
-			<p class="sidenote">(I suggest that you do this any time you see something you like so you can reverse-engineer it.)</p>
-			<p class="centered"><img src="assets/llcodedotcom_viewsource.gif" width="468" height="362" alt="view source" style="margin-right: 30px;" /></p>
-		</article> -->
-
 		<!-- SLIDE 23: HTML -->
 		<article class='slide slide-list'>
 			<h2>HTML Document Type</h2>
 			<p>What about the 1st line?</p>
             <pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
-			<p>This is a <em>Document Type Declaration</em> a.k.a <code>DOCTYPE</code> and <strong>must always be included as the first line of the document</strong>.</p>
+			<p>This is a <i>Document Type Declaration</i> a.k.a <code>DOCTYPE</code> and <strong>must always be included as the first line of the document</strong>.</p>
 			<p>This tells the web browser what <strong>version</strong> of HTML the document is written in and helps the browser render the content based on the rules specific to that version of HTML.</p>
             <p class="icon-note">The W3C (World Wide Web Consortium) governs web standards with 
 specifications, guidelines, tools and recommendations. They also provides a free service to check if your 
@@ -457,7 +411,7 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 		<!-- SLIDE 24: HTML -->
 		<article class='slide slide-list'>
 			<h2>HTML, XHTML, HTML5</h2>
-			<p>These terms refer to different versions of the same language though the rules, syntax and features may differ. However, the HTML5 DOCTYPE is <em>backwards compatible</em> and can be used in place of the older versions.</p>
+			<p>These terms refer to different versions of the same language though the rules, syntax and features may differ. However, the HTML5 DOCTYPE is <i>backwards compatible</i> and can be used in place of the older versions.</p>
 			<p class="sidenote">Consider how old versions of MS Word or Photoshop have problems opening files created in later versions of the software.</p>
 			
 			<h4>HTML5 DOCTYPE</h4>
@@ -520,7 +474,7 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
         <!-- SLIDE 28: Adding text -->
         <article class='slide slide-list'>
             <h2>HTML content: ADDING TEXT</h2>
-            <p><em>Heading</em> tags are used for headings/page titles.</p>
+            <p><i>Heading</i> tags are used for headings/page titles.</p>
 
             <p>There are six levels of ranging from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. They follow a hierarchy with <code>&lt;h1&gt;</code> being the most significant heading on the page.</p>
 <pre class="prettyprint"><code>&lt;h1&gt;Name of blog&lt;/h1&gt;
@@ -528,12 +482,12 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 &lt;h3&gt;Sub headings within blog post&lt;/h3&gt;
 </code></pre>
 
-            <p><em>Paragraphs</em> are represented by the <code>&lt;p&gt;</code> tag.</p>
+            <p><i>Paragraphs</i> are represented by the <code>&lt;p&gt;</code> tag.</p>
 <pre class="prettyprint"><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
 &lt;p&gt;This is another paragraph.&lt;/p&gt;
 </code></pre>
             
-            <p><code>&lt;b&gt;</code> or <code>&lt;strong&gt;</code>, <code>&lt;i&gt;</code> or <code>&lt;em&gt;</code></p>
+            <p><code>&lt;b&gt;</code> or <code>&lt;strong&gt;</code> (bold), <code>&lt;i&gt;</code> or <code>&lt;em&gt;</code> (italics)</p>
 
             <p class="icon-note">In XHTML, &lt;b&gt; and &lt;i&gt; were no longer used. In HTML5, they were re-introduced with a slightly different meaning/usage. See <a href="http://html5doctor.com/i-b-em-strong-element/">here</a> for more info.</p>
 
@@ -633,7 +587,7 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 		<!-- SLIDE 35: HTML -->
 		<article class='slide slide-list'>
 			<h2>Void (or empty) HTML Tags</h2>
-			<p><em>Void tags</em> don't format content &mdash; instead, they render or embed objects in our page. These tags <strong>do not</strong> come in pairs like <code>h1</code> or <code>p</code> tags.</p>
+			<p><i>Void tags</i> don't format content &mdash; instead, they render or embed objects in our page. These tags <strong>do not</strong> come in pairs like <code>h1</code> or <code>p</code> tags.</p>
 			<p>However, In the XHTML versions <span class="sidenote">(remember the different <code>DOCTYPE</code> rules?)</span> they <em>self-close</em> with a forward slash (<code>/</code>) immediately before the right angled bracket (<code>&gt;</code>).</p>
             <p>In HTML5, void tags are not required to self close but also accepts self-closed void tags as well.</p>
 			<p>A common void tag is the <code>&lt;br /&gt;</code> or <code>&lt;br&gt;</code> tag used to create a <strong>line break</strong>.</p>
@@ -659,16 +613,6 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
         </textarea>
 		</article>
 
-		<!-- SLIDE 36: HTML -->
-		<!-- <article class='slide slide-list'>
-			<h2>Quick review:</h2>
-			<ul>
-				<li><strong>HTML tags</strong> define <em>structure</em>.</li>
-				<li><strong>Text between opening &amp; closing tags</strong> define <em>content</em>.</li>
-				<li><strong>Void HTML tags</strong> render special objects that may sometimes <em>look like content</em> or <em>seem structural</em> depending on the void tag.</li>
-			</ul>     
-		</article> -->
-
         <!-- SLIDE 37: HTML -->
         <article class='slide slide-list'>
             <h2><code>img</code> tag</h2>
@@ -682,7 +626,7 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 		<article class='slide slide-list'>
 			<h2>Attributes</h2>
 			<p>Attributes are used to render special content like hyperlinks, images, or video because they provide additional information or instruction.</p>
-			<p>Here's that same <code>img</code> tag but now it's using an <strong>attribute</strong> (<code>src</code>), to tell the web page where to find the source of the image.</p>
+			<p>Here's that same <code>img</code> tag but now it's using an <i>attribute</i> (<code>src</code>), to tell the web page where to find the source of the image.</p>
 <textarea class="coder-editor coder-editor-full">&lt;p&gt;Kicking up HTML a notch.&lt;/p&gt;
 &lt;img src="http://goo.gl/7eSU5"&gt;
 &lt;p&gt;Do you agree?&lt;/p&gt;</textarea>
@@ -692,11 +636,11 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 		<!-- SLIDE 39: IMAGES -->
 		<article class='slide slide-list'>
 			<h2>Working with images</h2>
-			<p>Images are an example of a <em>void tag</em> with an <em>attribute</em> to define the filepath of the image file.</p>
+			<p>Images are an example of a <i>void tag</i> with an <i>attribute</i> to define the filepath of the image file.</p>
 			<pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5"&gt;</pre>
 			<ul>
-				<li><code>src</code> is the <em>attribute</em></li>
-				<li><code>http://goo.gl/7eSU5</code> is the <em>value</em> of that attribute<br />
+				<li><code>src</code> is the <i>attribute</i></li>
+				<li><code>http://goo.gl/7eSU5</code> is the <i>value</i> of that attribute<br />
 					<span class="sidenote">Values are typically surrounded by <em>single or double quotes</em> since occassionally values may contain spaces.</span></li>
 			</ul>
 			<p>With an <code>img</code> tag, the value of the <code>src</code> attribute tells the browser what the <em>url source</em> of our image is.</p>
@@ -720,7 +664,7 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 	   <!-- SLIDE 41: IMAGES -->
 		<article class='slide slide-list'>
 			<h2>Working with images</h2>
-			<p><code>alt</code> is another optional image attribute and refers to <em>alternative text</em>. It is used to display to visually impaired web visitors using screen readers.</p>
+			<p><code>alt</code> is another optional image attribute and refers to <i>alternative text</i>. It is used to display to visually impaired web visitors using screen readers.</p>
             <p>It also shows up when there's a broken or missing image due to typos or moved files.</p> 
 <textarea class="coder-editor">&lt;img src="http://goo.gl/7eSU5" 
 width="160" height="131" 
@@ -774,10 +718,6 @@ alt="HTML LOLcat" /&gt;
 			<p>Right now, <code>llc.gif</code> is in the <strong>same folder</strong> as <code>index.html</code> so you can link directly to the image file.</p>
             <pre class="prettyprint"><code>&lt;img src="llc.gif"&gt;</code></pre>
             <p>This is an example of a <strong>relative path</strong>.</p>
-            <!-- 
-            <li>Open the <a href="exercises/2_WORKING_WITH_IMAGES/secondary/images.html" target="_blank"><code>images.html</code></a> file in the <em>secondary</em> folder in Sublime Text.</li>
-                <li>Click on the above link to also view <code>images.html</code> in Chrome. </li>
-                <li>Note that there's already an <code>img</code> tag in <code>images.html</code> trying to embed <code>llc.gif</code>.</li> -->
 		</article>
 
         <!-- SLIDE 45: HTML -->
@@ -957,15 +897,15 @@ alt="HTML LOLcat" /&gt;
 				<li>CSS = cascading style sheet</li>
 				<li>stylesheet language with its own syntax rules (different from HTML)</li>
 				<li>Separates content (i.e. text) from presentation (i.e. text colour).</li>
-				<li>a style sheet contains a list of rules that <em>cascade</em> and can help to reduce redundancy and save time</li>
+				<li>a style sheet contains a list of rules that <i>cascade</i> and can help to reduce redundancy and save time</li>
 			</ul>
-			<p>There are three ways to include (otherwise known as <em>referencing</em>)<br /> CSS in an HTML page: <strong>inline</strong>, <strong>internal</strong> and <strong>external</strong>.</p>
+			<p>There are three ways to include (otherwise known as <i>referencing</i>)<br /> CSS in an HTML page: <strong>inline</strong>, <strong>internal</strong> and <strong>external</strong>.</p>
 		</article>    
 
 		<!-- SLIDE 58: CSS -->
 		<article class='slide slide-list'>
 			<h2>Inline CSS</h2>
-			<p>The <code>style</code> <strong>attribute</strong> can be added to any HTML tag and will apply the CSS directly to the element as a <em>value</em> of the attribute. But the CSS properties <em>also</em> require their own values to be declared.</p> 
+			<p>The <code>style</code> <i>attribute</i> can be added to any HTML tag and will apply the CSS directly to the element as a <i>value</i> of the attribute. But the CSS properties <em>also</em> require their own values to be declared.</p> 
 			<pre class="prettyprint">style="css-property: value;"</pre>
 			<p>Let's practice using using the <code>background-color</code>, <code>color</code> and<br> <code>font-size</code> <i>properties</i>.</p>
 <textarea class='coder-editor coder-editor-full'>
@@ -991,7 +931,8 @@ alt="HTML LOLcat" /&gt;
 			<h2>Common CSS terms</h2>
 			<p><strong>Selectors</strong>: used to <em>select</em> which element(s) to apply the styles to. Can target an HTML tag (i.e. <code>&lt;h1&gt;</code> for a heading), class or ID.</p>
 
-			<p><strong>Declaration blocks</strong> consists of a list of declarations (rules to follow) wrapped in curly braces <code>{ }</code> ( <strong>Shift</strong> + <strong>{</strong> and <strong>Shift</strong> + <strong>}</strong> ).</p>
+			<p><strong>Declaration blocks</strong> consists of a list of declarations (rules to follow) wrapped in curly braces <code>{ }</code></p>
+			<p class="icon-tip"><strong>Shift</strong> + <strong>{</strong> and <strong>Shift</strong> + <strong>}</strong></p>
 
 			<p>Declarations are written using CSS <code>property: value</code> pairs.</p>
 <pre class="prettyprint">
@@ -1005,9 +946,9 @@ h1 { color: blue; }
 		<!-- SLIDE 60: CSS -->
 		<article class='slide slide-list'>
 			<h2>Internal CSS</h2>
-			<p>Rather than using a <code>style</code> <em>attribute</em> directly in the HTML tag, a pair of <code>&lt;style&gt;&lt;/style&gt;</code> tags are declared in the <code>head</code> of the document.</p>
-			<p>All the CSS is then included between these tags. Since the element isn't targeted directly in the HTML tag, <em>selectors</em> are required.<p>
-			<p>Let's try using CSS with <em>selectors</em>.</p>
+			<p>Rather than using a <code>style</code> <i>attribute</i> directly in the HTML tag, a pair of <code>&lt;style&gt;&lt;/style&gt;</code> tags are declared in the <code>head</code> of the document.</p>
+			<p>All the CSS is then included between these tags. Since the element isn't targeted directly in the HTML tag, <i>selectors</i> are required.<p>
+			<p>Let's try using CSS with <i>selectors</i>.</p>
 
 <textarea class='coder-editor coder-editor-full'>
 <h1>Welcome!</h1>
