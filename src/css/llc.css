@@ -1,0 +1,263 @@
+/* LLC CUSTOM CHANGES AND CODERDECK OVERRIDES 
+---------------------------------------------------------*/
+/* FONTS 
+---------------------------------------------------------*/
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url('../fonts/opensans-light-webfont.eot');
+  src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-light-webfont.woff') format('woff'), url('../fonts/opensans-light-webfont.ttf') format('truetype'), url('../fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('../fonts/opensans-regular-webfont.eot');
+  src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-regular-webfont.woff') format('woff'), url('../fonts/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans Semibold';
+  src: url('../fonts/opensans-semibold-webfont.eot');
+  src: url('../fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-semibold-webfont.woff') format('woff'), url('../fonts/opensans-semibold-webfont.ttf') format('truetype'), url('../fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Heydings';
+  src: url('../fonts/heydings_icons-webfont.eot');
+  src: url('../fonts/heydings_icons-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/heydings_icons-webfont.woff') format('woff'), url('../fonts/heydings_icons-webfont.ttf') format('truetype'), url('../fonts/heydings_icons-webfont.svg#heydings_iconsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* apply a natural box layout model to all elements */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+/* Added so code editor areas won't resize in height */
+.CodeMirror-scroll {
+  height: auto !important;
+  overflow-y: hidden;
+  overflow-x: auto;
+  width: 100%;
+  min-height: 200px;
+}
+.coder-destination {
+  bottom: auto !important;
+  top: 0 !important;
+}
+.deck-container {
+  /* Global slide styles */
+
+  font-family: 'Open Sans Regular', Arial, sans-serif;
+  padding: 0;
+  /* Slide specific styles 
+	-----------------------------------*/
+
+}
+.deck-container h1,
+.deck-container h2,
+.deck-container h3 {
+  color: #b1009a;
+  padding-top: 0;
+  text-transform: uppercase;
+}
+.deck-container h1 {
+  font-size: 58px;
+}
+.deck-container h2 {
+  font-size: 36px;
+  border: none;
+  background: url(../../assets/hash.gif) no-repeat left 8px;
+  padding-left: 35px;
+}
+.deck-container p {
+  font-size: 28px;
+  line-height: 36px;
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+.deck-container ul li,
+.deck-container ol li {
+  font-size: 28px;
+  line-height: 32px;
+}
+.deck-container a {
+  color: #444444;
+}
+.deck-container a:hover {
+  color: #b1009a;
+}
+.deck-container strong {
+  font-weight: normal;
+  font-family: 'Open Sans Semibold', Arial, sans-serif;
+}
+.deck-container strong,
+.deck-container em {
+  color: #2E2E2E;
+}
+.deck-container i {
+  color: #650057;
+  font-style: italic;
+  padding-right: 4px;
+}
+.deck-container pre.prettyprint {
+  padding: 10px;
+  margin-top: 10px;
+}
+.deck-container code {
+  color: #b1009a;
+}
+.deck-container code.large {
+  font-size: 50px;
+}
+.deck-container code .nested {
+  color: purple;
+  font-size: 40px;
+  vertical-align: top;
+}
+.deck-container .slide {
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  background-clip: padding-box;
+  width: 1050px;
+  min-height: 600px;
+  border: 3px solid #b1009a;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+.deck-container .slide-subhead h1 {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
+  top: 36%;
+}
+.deck-container .slide-subhead p {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 28%;
+}
+.deck-container .coder-wrapper {
+  margin: 10px 0;
+}
+.deck-container [class^="column-"] {
+  float: left;
+}
+.deck-container .column-3 {
+  width: 30%;
+  margin: 0 0.5%;
+}
+.deck-container .column-2 {
+  width: 48%;
+  margin: 0 1%;
+}
+.deck-container .clear {
+  clear: both;
+}
+.deck-container [class^="icon-"] {
+  font-size: 20px;
+  line-height: 24px;
+}
+.deck-container [class^="icon-"]:before {
+  font-family: 'Heydings';
+  padding-right: 5px;
+  color: #b1009a;
+}
+.deck-container .icon-tip:before {
+  content: 'l';
+  /* lightbulb */
+
+}
+.deck-container .icon-note:before {
+  content: 'B';
+}
+.deck-container .icon-warning:before {
+  content: '!';
+  /* warning */
+
+}
+.deck-container .instructions {
+  text-align: center;
+  margin: 5px 0;
+}
+.deck-container .centered {
+  text-align: center;
+  margin: 10px 0;
+}
+.deck-container img.inline {
+  display: inline;
+  vertical-align: top;
+  margin-bottom: 0;
+}
+.deck-container .sidenote,
+.deck-container .show-hint {
+  font-size: 17px;
+  line-height: 24px;
+  color: #777777;
+}
+.deck-container .hint-solution {
+  display: none;
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 22px;
+}
+.deck-container .intro {
+  text-align: center;
+}
+.deck-container .intro h1 {
+  position: static;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
+  margin-bottom: 40px;
+}
+.deck-container .intro img {
+  border-radius: 50%;
+  margin-bottom: 0;
+}
+.deck-container .intro p {
+  font-size: 16px;
+  line-height: 20px;
+}
+.deck-container .outline p {
+  font-size: 28px;
+}
+.deck-container .folder-structure img {
+  float: left;
+}
+.deck-container .triad .column-3 {
+  text-align: center;
+  margin-top: 20px;
+}
+.deck-container .section-intro.slide-subhead h1 {
+  top: 20%;
+}
+.deck-container .section-intro.slide-subhead p {
+  margin-top: 18%;
+}
+.deck-container .tags-nesting ul {
+  clear: both;
+}
+.deck-container .tags-nesting ul li {
+  font-size: 22px;
+  line-height: 26px;
+}
+.deck-container .image-types {
+  margin: 0;
+  padding: 0;
+}
+.deck-container .image-types li {
+  list-style-type: none;
+}
