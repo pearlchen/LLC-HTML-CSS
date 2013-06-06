@@ -1515,55 +1515,75 @@ h1 {
 		<!-- SLIDE 74: CSS -->
 		<article class='slide slide-list'>
 			<h2>CSS interactions &amp; pseudo selectors</h2>
-			<p>CSS is also able to handle some basic UI interactions in our sites, such as allowing a mouse over or "hover" state on various elements. This is frequently done with items such as links.</p>
-			<p>As part of your selector, you need to use the <code>:hover</code> <span class="keyword">pseudo selector</span>.</p>
+			<p>CSS is also able to handle some basic interactions such as a "hover" state on various elements. This is frequently used for links.</p>
+			<p>The <code>:hover</code> <i>psuedo selector</i> can be used to achieve this effect.</p>
 
 <textarea class="coder-editor">
-&lt;style&gt;
-a { 
-	border: 1px solid black;
-	padding: 5px 30px 5px 30px;
-	background-color: black;
-	color: white;
-	text-decoration: none;
-	margin: 15px 10px 0 0;
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+</style>
 
-	border-radius: 6px;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-}
-
-a:hover {
-
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
 </textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-	border: 1px solid black;
-	padding: 5px 30px 5px 30px;
-	background-color: black;
-	color: white;
-	text-decoration: none;
-	margin: 15px 10px 0 0;
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul li:hover {
+    	background-color: purple;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+    ul li a:hover {
+    	color: white;
+    }
+</style>
 
-	border-radius: 6px;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-}
-
-a:hover {
-	background-color: purple;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
 </script>
 
 		</article>
@@ -1571,85 +1591,107 @@ a:hover {
 		<!-- SLIDE 75: CSS -->
 		<article class='slide slide-list'>
 			<h2>CSS classes</h2>
-			<p>Wait! What happens when we add another link to the page and it's not part of our navigation?
-			<span class="sidenote">Putting all the styles inline wouldn't be wise...</span></p>
-<textarea class="coder-editor">
-&lt;style&gt;
-a { 
-	border: 1px solid black;
-	padding: 5px 30px 5px 30px;
-	background-color: black;
-	color: white;
-	text-decoration: none;
-	margin: 15px 10px 0 0;
-}
+			<p>Wait! What happens when we add another list to the page and it's not part of our navigation? Why can't we see the second list at all?</p>
+<textarea class="coder-editor"><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul li:hover {
+    	background-color: purple;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+    ul li a:hover {
+    	color: white;
+    }
+</style>
 
-a:hover {
-	background-color: purple;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-
-&lt;p&gt;Follow me on
-	&lt;a href="http://twitter.com/christinatruong" target="_blank"&gt;Twitter&lt;/a&gt;!
-&lt;/p&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
 </textarea>
-<script type='coder-solution'>&lt;a 
-	href="index.html"
-	style="border: 1px solid black;
-	padding: 5px 30px 5px 30px;
-	background-color: black;
-	color: white;
-	text-decoration: none;
-	margin: 15px 10px 0 0;"&gt;Home&lt;/a&gt;
-&lt;a 
-	href="about.html"
-	style="border: 1px solid black;
-	padding: 5px 30px 5px 30px;
-	background-color: black;
-	color: white;
-	text-decoration: none;
-	margin: 15px 10px 0 0;"&gt;About&lt;/a&gt;
-&lt;a 
-	href="contact.html"
-	style="border: 1px solid black;
-	padding: 5px 30px 5px 30px;
-	background-color: black;
-	color: white;
-	text-decoration: none;
-	margin: 15px 10px 0 0;"&gt;Contact&lt;/a&gt;
+<script type='coder-solution'><style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul li:hover {
+    	background-color: purple;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+    ul li a:hover {
+    	color: white;
+    }
+</style>
 
-&lt;p&gt;Follow me on
-	&lt;a href="http://twitter.com/christinatruong" target="_blank"&gt;Twitter&lt;/a&gt;!
-&lt;/p&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
 </script>
-			<br clear="all" />
-			<p class="sidenote">Now that's a lot of CSS! What if you change your mind and decide that the background color should be blue now? Plus you can't apply pseudo selectors like <code>:hover</code> inline.</p>
 		</article>    
 
 	 <!-- SLIDE 76: CSS -->
 		<article class='slide slide-list'>
 			<h2>CSS classes</h2>
-			<p>If you know that several elements are going to have similiar styles, use CSS classes! A class <span class="keyword">attribute</span> can be added to any element and given any value, defined by you. Once you define a CSS class, you can apply it over and over again, to any element.</p>
+			<p>A <code>class</code> <i>attribute</i> can be added to any HTML element and given any value, defined by you. Once you define a CSS class, you can apply it over and over again, to any element.</p>
 			<ul>
 				<li>Add a class attribute to the HTML element and give it a meaningful class name.
-					e.g. <code>class="nav-button"</code></li>
-				<li>In CSS, a class is defined by a leading <strong>period</strong> (<code>.</code>).  Use the leading period, plus class name to define your CSS selector <br>
-					e.g. <code>.nav-button</code>
+					e.g. <code>class="main-nav"</code></li>
+				<li>In CSS, a class is defined by a leading period (<code>.</code>) followed by the class name with <strong>no spaces</strong> as your CSS selector.
 				</li>
 			</ul>
 
-<pre class="prettyprint">
-&lt;a <strong>class="nav-button"</strong>&gt;Home&lt;/a&gt;
-
-&lt;style&gt;
-<strong>.nav-button</strong> {
-	font-family: Georgia;
+<pre>
+.main-nav {
+    margin: 0;
 }
-&lt;/style&gt;  
+
+&lt;ul class="main-nav"&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;"Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </pre>
 
 		</article>
@@ -1657,80 +1699,110 @@ a:hover {
 	 <!-- SLIDE 77: CSS -->
 		<article class='slide slide-list'>
 			<h2>CSS classes</h2>
-			<p>Let's apply a "nav-button" CSS class to our current navigation links:</p>
+			<p>Let's apply a "main-nav" CSS class to our current navigation list HTML and make the appropriate CSS changes to the selectors.</p>
 			<textarea class="coder-editor">
-&lt;style&gt;
-a { 
-	border: 1px solid black;
-	padding: 5px 30px 5px 30px;
-	background-color: black;
-	color: white;
-	text-decoration: none;
-	margin: 15px 10px 0 0;
-}
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul li:hover {
+    	background-color: purple;
+    }
+    ul li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+    ul li a:hover {
+    	color: white;
+    }
+</style>
 
-a:hover {
-	background-color: purple;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-
-&lt;p&gt;Follow me on
-	&lt;a href="http://twitter.com/christinatruong" target="_blank"&gt;Twitter&lt;/a&gt;!
-&lt;/p&gt;
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
 </textarea>
-<script type='coder-solution'>&lt;style&gt;
-.nav-button { 
-	border: 1px solid black;
-	padding: 5px 30px 5px 30px;
-	background-color: black;
-	color: white;
-	text-decoration: none;
-	margin: 15px 10px 0 0;
-}
+<script type='coder-solution'><style>
+    ul.main-nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+    }
+    ul.main-nav li {
+        background-color: black;
+        display: inline-block;
+        margin: 5px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+    }
+    ul.main-nav li:hover {
+    	background-color: purple;
+    }
+    ul.main-nav li a {
+        padding: 5px 20px;
+        display: block;
+        text-decoration: none; 
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+    ul.main-nav li a:hover {
+    	color: white;
+    }
+</style>
 
-.nav-button:hover {
-	background-color: purple;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html" class="nav-button"&gt;Home&lt;/a&gt;
-&lt;a href="about.html" class="nav-button"&gt;About&lt;/a&gt;
-&lt;a href="contact.html" class="nav-button"&gt;Contact&lt;/a&gt;
-
-&lt;p&gt;Follow me on
-	&lt;a href="http://twitter.com/christinatruong" target="_blank"&gt;Twitter&lt;/a&gt;!
-&lt;/p&gt;
+<ul class="main-nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
 </script>
 		</article>
 
 		<!-- SLIDE 78: CSS -->
 		<article class='slide slide-list'>
 			<h2>External CSS</h2>
-			<p>Instead of duplicating your <code>&lt;style&gt;</code> content for every web page, make one single CSS document ending with a <code>.css</code> extension and link to it in the <code>&lt;head&gt;</code> tag instead of (or in addition to) a <code>&lt;style&gt;</code> tag.</p>
+			<p>Instead of duplicating your <code>&lt;style&gt;</code> content for every web page, make one single CSS document ending with a <code>.css</code> extension and link to it in the <code>&lt;head&gt;</code> tag. That way, any pages that are linked to this one file will be updated all at once.</p>
 <pre class="prettyprint">
 &lt;head&gt;
-	<strong>&lt;link rel="stylesheet" href="styles.css" type="text/css" /&gt;</strong>
-	&lt;style&gt;
-	body {
-		font-size: 14px;
-	}
-	&lt;/style&gt;
+    <strong>&lt;link rel="stylesheet" href="styles.css" type="text/css" /&gt;</strong>
 &lt;/head&gt;
 </pre>
-
-			<p>Inside styles.css, there is <strong>no</strong> <code>&lt;style&gt;</code> tag:</p>
+	<p>Inside the css file, there is <strong>no</strong> <code>&lt;style&gt;</code> tag since it is already a css file! All you need to include are your CSS declaration blocks.</p>
 <pre class="prettyprint">
 body {
-	background-color: black;
-	color: white;
-	font-family: Helvetica, Arial, sans-serif;
+    background-color: black;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
 }
 h1 {
-	font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, "Times New Roman", serif;
 }
 </pre>
 
@@ -1738,10 +1810,10 @@ h1 {
 
 		<!-- SLIDE 79: CSS -->
 		<article class='slide slide-list'>
-			<h2>Exercise #4 (20 minutes)</h2>
+			<h2>Exercise 4 (25 minutes)</h2>
 			<p>Use this time to apply CSS to your 3-page website.</p>
 			<ul>
-				<li>Update your navigation in <code>index.html</code> to look more button-like.</li>
+				<li>Update your navigation in <code>index.html</code> using the group exercise as an example.</li>
 				<li>Create a single <code>styles.css</code> file and link to this external stylesheet from all 3 web pages using the <code>&lt;link&gt;</code> tag. Consolidate all of your CSS into this external stylesheet.</li>
 				<li>If you've got extra time, try out some new CSS properties from the <a href="#slide-96">cheatsheet</a> and other resources listed on the <a href="#slide-94">bonus CSS resources slides</a>.</li>
 			</ul>
