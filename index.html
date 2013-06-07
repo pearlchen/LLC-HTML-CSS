@@ -114,7 +114,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		<!-- SLIDE 4: Code Editor -->
 		<article class='slide slide-list'>
 			<h2>Code Editor</h2>
-			<p>You can write code using your computer's default text editor, Notepad (Windows) or TextEdit (Apple), choosing a text editor with colour highlighting and other helpful features will improve your work flow.</p>
+			<p>You can write code using your computer's default text editor, Notepad (Windows) or TextEdit (Apple), but choosing a text editor with colour highlighting and other helpful features will improve your work flow.</p>
 			<p>There are <a href="http://en.wikipedia.org/wiki/List_of_HTML_editors" target="_blank">many</a> free and paid options. I recommend <a href="http://www.sublimetext.com/2" target="_blank">Sublime Text 2</a><br>(free to evaluate):</p>
 			<a href="http://www.sublimetext.com/2" target="_blank"><img src="assets/SublimeTextIcon.jpg" width="150" height="150" alt="Sublime Text 2" /></a>
 			
@@ -160,15 +160,6 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			<img src="assets/website_structure.gif" width="580" heigth="320" alt="website structure" />
 			<img src="assets/folder-structure.gif" alt="folder structure" />
 		</article>
-
-		<!-- SLIDE 9: What is a website? -->
-		<!-- <article class='slide slide-list'>
-			<h2>What is a website?</h2>
-			<p>These web pages closely match a file folder structure.</p>
-			<div class="centered">
-				<img src="assets/website_structure.gif" width="440" alt="website structure" />&nbsp;<img src="assets/folder_structure-simple.png" width="362" height="152" alt="folder structure" />
-			</div>
-		</article> -->
 
 		<!-- SLIDE 9: What is a website? -->
 		<article class='slide slide-list'>
@@ -279,7 +270,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			<div class="centered">
 				<p><code class="large">&lt;tag&gt;</code></p>
 				<p><img src="assets/house_beam.jpg" width="300" height="232" alt="house beam" /></p>
-				<p class="sidenote">Think about HTML tags like the beams of a house. It's what holds up a web page can creates structure.</p>
+				<p class="sidenote">Think about HTML tags like the beams of a house. It's what holds up a web page creates structure.</p>
 			</div>
 		</article>
 
@@ -411,7 +402,7 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 		<!-- SLIDE 24: HTML -->
 		<article class='slide slide-list'>
 			<h2>HTML, XHTML, HTML5</h2>
-			<p>These terms refer to different versions of the same language though the rules, syntax and features may differ. However, the HTML5 DOCTYPE is <i>backwards compatible</i> and can be used in place of the older versions.</p>
+			<p>These terms refer to different versions of the same language though the rules, syntax and features may differ. However, the <i>HTML5 DOCTYPE</i> is <em>backwards compatible</em> and can be used in place of the older versions.</p>
 			<p class="sidenote">Consider how old versions of MS Word or Photoshop have problems opening files created in later versions of the software.</p>
 			
 			<h4>HTML5 DOCTYPE</h4>
@@ -476,7 +467,7 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
             <h2>HTML content: ADDING TEXT</h2>
             <p><i>Heading</i> tags are used for headings/page titles.</p>
 
-            <p>There are six levels of ranging from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. They follow a hierarchy with <code>&lt;h1&gt;</code> being the most significant heading on the page.</p>
+            <p>There are six levels ranging from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. They follow a hierarchy with <code>&lt;h1&gt;</code> being the most significant heading on the page.</p>
 <pre class="prettyprint"><code>&lt;h1&gt;Name of blog&lt;/h1&gt;
 &lt;h2&gt;Title of blog post&lt;/h2&gt;
 &lt;h3&gt;Sub headings within blog post&lt;/h3&gt;
@@ -537,7 +528,7 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 			<h2>Exercise 1 (20 minutes)</h2>
             <p>Let's go back to <code>index.html</code> and turn it into a real HTML page!</p>
 			<ol>
-				<li>Open <code>index.html</code> in the <strong>exercises</strong> folder in Sublime (text editor).</li>
+				<li>Open your <code>index.html</code> file in the <strong>exercises</strong> folder in Sublime Text.</li>
 				<li>Add all the basic tags required for a web page.  Use <code>barebones.html</code> (or your mentors!) as a guide.</li>
 				<li>Try adding some content using the different content formatting tags discussed.</li>
 				<li>Save frequently and check out your work in Chrome!</li>
@@ -568,16 +559,13 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
         <!-- SLIDE 34: Comments -->
         <article class='slide slide-list'>
         <h2>LEAVE A COMMENT</h2>
-        <p>Sometimes you want to leave notes for yourself (or others) but don't want it to display in the browser. That's when <strong>comments</strong> can be really helpful.</p>
-        <p>Comments can be used for:</p>
+        <p>Sometimes you want to leave notes for yourself (or others) but don't want it to display in the browser. That's when <strong>comments</strong> can be really helpful. Comments can be used for:</p>
         <ul>
             <li>hiding code for later use</li>
             <li>leaving directions</li>
             <li>organizing the document</li>
         </ul>
-        <pre class="prettyprint"><code>
-&lt;!-- This is my comment. Comments should always be included between the dashes. --&gt;
-        </code></pre>
+        <pre class="prettyprint"><code>&lt;!-- This is my comment. Comments should always be included between the dashes. --&gt;</code></pre>
         <textarea class="coder-editor">
 <p>hello!</p>
 <!-- Can't see me in the browser. -->
@@ -588,7 +576,7 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 		<article class='slide slide-list'>
 			<h2>Void (or empty) HTML Tags</h2>
 			<p><i>Void tags</i> don't format content &mdash; instead, they render or embed objects in our page. These tags <strong>do not</strong> come in pairs like <code>h1</code> or <code>p</code> tags.</p>
-			<p>However, In the XHTML versions <span class="sidenote">(remember the different <code>DOCTYPE</code> rules?)</span> they <em>self-close</em> with a forward slash (<code>/</code>) immediately before the right angled bracket (<code>&gt;</code>).</p>
+			<p>However, in the XHTML versions <span class="sidenote">(remember the different <code>DOCTYPE</code> rules?)</span> they <em>self-close</em> with a forward slash (<code>/</code>) immediately before the right angled bracket (<code>&gt;</code>).</p>
             <p>In HTML5, void tags are not required to self close but also accepts self-closed void tags as well.</p>
 			<p>A common void tag is the <code>&lt;br /&gt;</code> or <code>&lt;br&gt;</code> tag used to create a <strong>line break</strong>.</p>
             <pre class="prettyprint">&lt;p&gt;This text&lt;br /&gt;goes over&lt;br /&gt;several&lt;br /&gt;lines.&lt;/p&gt;</pre>
