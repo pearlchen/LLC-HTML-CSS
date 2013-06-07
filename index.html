@@ -141,7 +141,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			<h2>File Transfer Program (FTP)</h2>
 			<p>FTP software will let you copy your files to a <em>server</em> so the rest of the world can see them! Again, there are many free and paid options.</p>
 			<p>I recommend <a href="http://cyberduck.ch/" target="_blank">Cyberduck</a> or <a href="http://filezilla-project.org/" target="_blank">Filezilla</a>.</p>
-			<p>Instructions <a href="index.html#slide-97">here</a></p>
+			<p>Instructions <a href="index.html#slide-97">here</a>.</p>
 			<br>
 			<div class="centered"><a href="http://cyberduck.ch/" target="_blank"><img class="inline" src="assets/CyberduckIcon.png" width="125" height="125" alt="CyberDuck" /></a><a href="http://filezilla-project.org/" target="_blank"><img  class="inline" src="assets/filezilla.jpg" width="150" height="150" alt="Filezilla" /></a></div>
 		</article>
@@ -228,7 +228,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 		<article class='slide slide-list'>
 			<h2>Your First Web Page (sorta)</h2>
 			<ul>
-				<li>Open Sublime (text editor) and select <strong>File > new file</strong></li>
+				<li>Open Sublime Text (text editor) and select <strong>File > new file</strong></li>
 				<li>Type some text. (ex. Hello world!)</li>
 				<li>Select <strong>File > Save</strong> or <strong>CTRL/CMND + S </strong></li>
 				<li>Name the file <code>index.html</code></li>
@@ -290,7 +290,7 @@ https://www.dropbox.com/s/sc9u31mrhvsdcxc/LLC-HTML-CSS-v1.zip
 			<p>Tags can also be <i>nested</i> within other tags.</p>
 			<p class="centered"><code>&lt;tag&gt;<span class="nested">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code> </p>
 			
-			<p>Let's look at the HTML tags that are required for a basic web page and take a closer look at how they are nested.</p>
+			<p>Here are the HTML tags that are required for a basic web page. Let's take a closer look at how they are nested.</p>
 			<div class="column-2">
 <pre class="prettyprint">&lt;!DOCTYPE html&gt;
 <strong>&lt;html&gt;</strong>
@@ -426,16 +426,16 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
     &lt;head&gt;
         &lt;title&gt;<strong>Home</strong>&lt;/title&gt;
     &lt;/head&gt;
-    &lt;body&gt;<strong>
-        Put all the content you want people to see here!
-    </strong>&lt;/body&gt;
+    &lt;body&gt;
+        <strong>Put all the content you want people to see here!</strong>
+    &lt;/body&gt;
 &lt;/html&gt;</pre> 
 		</article>
 
 		<!-- SLIDE 26: HTML -->
 		<article class='slide slide-list'>
 			<h2>HTML content</h2>
-			<p>The human-viewable content of a HTML tag goes in between the opening and closing tags like this:</p>
+			<p>The human-viewable content of an HTML tag goes in between the opening and closing tags like this:</p>
 			<p class="centered"><code class="large">&lt;tag&gt;<span style="color: #333;">Content</span>&lt;/tag&gt;</code></p>
 			<p>Practice writing a <code>body</code> tag with some content here:</p>
 <textarea class="coder-editor"></textarea>
@@ -446,7 +446,7 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 		<!-- SLIDE 27: HTML -->
 		<article class='slide slide-list'>
 			<h2><code>head</code> vs <code>body</code></h2>
-			<p>In your <strong>exercises</strong> folder, open <code>index.html</code> in your editor and type along with me.  <span class="sidenote">(It's just a copy of <code>barebones.html</code>)</span></p>
+			<p>In your <strong>exercises</strong> folder, open <code>barebones.html</code> in your editor and type along with me.</p>
 			<ul>
 				<li>
 					What happens when I change the content in the <code>&lt;title&gt;</code> tag?
@@ -577,7 +577,7 @@ markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a>
 			<h2>Void (or empty) HTML Tags</h2>
 			<p><i>Void tags</i> don't format content &mdash; instead, they render or embed objects in our page. These tags <strong>do not</strong> come in pairs like <code>h1</code> or <code>p</code> tags.</p>
 			<p>However, in the XHTML versions <span class="sidenote">(remember the different <code>DOCTYPE</code> rules?)</span> they <em>self-close</em> with a forward slash (<code>/</code>) immediately before the right angled bracket (<code>&gt;</code>).</p>
-            <p>In HTML5, void tags are not required to self close but also accepts self-closed void tags as well.</p>
+            <p>In HTML5, void tags are not <em>required</em> to self close and accepts both syntaxes.</p>
 			<p>A common void tag is the <code>&lt;br /&gt;</code> or <code>&lt;br&gt;</code> tag used to create a <strong>line break</strong>.</p>
             <pre class="prettyprint">&lt;p&gt;This text&lt;br /&gt;goes over&lt;br /&gt;several&lt;br /&gt;lines.&lt;/p&gt;</pre>
 			<p>This text<br />goes over<br />several<br />lines.</p>
@@ -778,6 +778,7 @@ alt="HTML LOLcat" /&gt;
 
 &lt;a href="#top"&gt;Back to top&lt;/a&gt;
 </code></pre>
+			<p class="icon-warning">An <code>id</code> <em>value</em> must be unique and can only be used <em>once</em> per page.</p>
         </article>
 
 
@@ -834,7 +835,7 @@ alt="HTML LOLcat" /&gt;
 
 		<!-- SLIDE 53 -->
 		<article class='slide slide-list'>
-			<h2>Exercise #3 (now until lunch)</h2>
+			<h2>Exercise 3 (now until lunch)</h2>
 			<ol>
 				<li>Create <strong>two</strong> more HTML pages in the <strong>website</strong> folder and name them <code>about.html</code> and <code>contact.html</code>.</li>
                 <li>Update your navigation code using the <code>&lt;a&gt;</code> tag to link all your pages together.</li> 
@@ -911,7 +912,7 @@ alt="HTML LOLcat" /&gt;
     style="color: red;">Twitter</a>!
 </p>
 </script>
-
+		<p class="icon-warning">Inline CSS referencing should be used sparingly, if at all. There are more efficient ways to include CSS which we'll be exploring throughout the presentation.</p>
 		</article>
 
 		<!-- SLIDE 59: CSS -->
@@ -1783,7 +1784,7 @@ h1 {
 		<!-- SLIDE 82: CSS -->
 		<article class='slide slide-list'>
 			<h2>Semantic HTML Tags</h2>
-			<p>Web page layouts requires nesting <code>div</code> tags, sometimes within other<code>div</code> tags like this:</p>
+			<p>Web page layouts requires nesting <code>div</code> tags, sometimes within other <code>div</code> tags like this:</p>
 <pre class="prettyprint">&lt;div&gt;
     &lt;h1&gt;Christina Truong | Web Developer&lt;/h1&gt;
     &lt;ul&gt;
@@ -1973,7 +1974,7 @@ footer {
 				<li>Use a <strong>hash/number sign</strong> (<code>#</code>) to define CSS selectors that are IDs.<br />
 					e.g. <code>#wrapper</code></li>
 			</ul>
-			<p class="icon-warning">You should only have <strong>one</strong> instance of an ID per page. Any more can cause unexpected things to happen with your CSS -- and later, JavaScript.</p>
+			<p class="icon-warning">You should only have <strong>one</strong> instance of an ID per page. Any more can cause unexpected things to happen with your CSS -- and later, JavaScript. When in doubt, use a class.</p>
 <textarea class="coder-editor">
 &lt;style&gt;
     #wrapper {
