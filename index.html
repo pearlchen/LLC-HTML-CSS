@@ -555,7 +555,8 @@
         <li>A <strong>property</strong> tells the browser what we are modifying (ex. font, colour, size)</li>
         <li>A <strong>value</strong> tells the browser how to modify the property (ex. Arial, green, small)</li>
         <li>A declaration looks like this:</li>
-        <pre><code>background-color: green;</code></pre>        
+        <pre><code>background-color: green;</code></pre>   
+
       </ul>
     </article>
 
@@ -566,36 +567,6 @@
         <li>The <strong>value</strong> (the part <em>after</em> the colon) is specific to the property type</li>
         <li>Ex. size-related properties like <code>height, width</code>, or <code>font-size</code> are usually specified in <code>px</code> (pixels), while colour-related properties are specified with a colour name or code</li>
         <li>It's very important that you write the syntax correctly, with a colon after the property name and a semi-colon after the value</li>
-      </ul>
-    </article>
-
-    <!-- SLIDE: CSS Syntax 3 -->
-    <article class="slide slide-list">
-      <h2>CSS Syntax</h2>
-      <ul>
-        <li>When we put selectors and declarations together, they make a CSS rule, which looks like this: </li>
-<pre><code>
-h2 {
-  background-color: green;
-}
-</code></pre>
-        <li>This rule will select all <code>&lt;h2></code> elements and change their background colour to green</li>
-      </ul>
-    </article>
-
-    <!-- SLIDE: CSS Syntax 4 -->
-    <article class="slide slide-list">
-      <h2>CSS Syntax</h2>
-      <ul>
-        <li>We can add multiple declarations (property: value; sets) to one selector to modify multiple properties:</li>
-<pre><code>
-  h2 {
-    background-color: green;
-    font-weight: bold;
-    font-size: 28px;
-  }
-</code></pre>
-        <li>Make sure you always end each declaration with a semi-colon</li>
       </ul>
     </article>
 
@@ -622,9 +593,42 @@ h2 {
       </ul>
     </article>
 
+    <!-- SLIDE: CSS Syntax 3 -->
+    <article class="slide slide-list">
+      <h2>CSS Syntax</h2>
+      <ul>
+        <li>When we put selectors and declarations together, they make a CSS rule, which looks like this: </li>
+<pre><code>
+h2 {
+  background-color: green;
+}
+</code></pre>
+        <li>This rule will select all <code>&lt;h2></code> elements and change their background colour to green</li>
+        <li>Try copying and pasting the above code in between the <code>&lt;style></code> tags and refreshing the page in your browser</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE: CSS Syntax 4 -->
+    <article class="slide slide-list">
+      <h2>CSS Syntax</h2>
+      <ul>
+        <li>We can add multiple declarations (property: value; sets) to one selector to modify multiple properties:</li>
+<pre><code>
+  h2 {
+    background-color: green;
+    font-weight: bold;
+    font-size: 28px;
+  }
+</code></pre>
+        <li>Make sure you always end each declaration with a semi-colon</li>
+        <li>Try replacing the previous rule for <code>&lt;h2></code> with this one and refreshing your browser</li>
+        <li>Next, clear out all the code you added between the <code>&lt;style></code> tags. We're adding more soon!</li>
+      </ul>
+    </article>
+
     <!-- SLIDE CSS First -->
     <article class="slide slide-list">
-      <h2>Assignment: First CSS Rule</h2>
+      <h2>Exercise: First CSS Rule</h2>
       <ul>
         <li>Find the set of <code>&lt;style></code> tags in the <code>&lt;head></code> of <strong>index.html</strong></li>
         <li>In between the two tags, write a selector for the <code>&lt;body></code> tag of the document</li>
@@ -746,7 +750,7 @@ img {
       <h2>Being More Specific</h2>
       <ul>
         <li>Our border is now applying to <strong>all</strong> images on the page, including our logo. We don't want that, so we need a way to target <strong>only</strong> the profile image</li>
-        <li>HTML gives us a way to attach extra identifying information to HTML elements so that we can target them called classes</li>
+        <li>HTML gives us a way to attach extra identifying information to HTML elements so that we can target them. We call these "classes"</li>
         <li>Classes are attributes that you add on to tags</li>
 <pre><code>
 &lt;p class="classname">&lt;/p>
@@ -771,21 +775,27 @@ p.classname {
       </ul>
     </article>
 
-    <!-- SLIDE CSS Classes Assignment -->
+    <!-- SLIDE CSS Classes Exercise -->
     <article class="slide slide-list">
-      <h2>Assignment: Style Profile Image</h2>
+      <h2>Exercise: Style Profile Image</h2>
       <ul>
         <li>Add some style to your profile image!</li>
         <li>Add a class of <code>profile</code> to the tag for your profile image</li>
         <li>Target that class in your CSS with the selector <code>img.profile</code></li>
         <li>Then add a border of any color you like</li>
-        <li>If your picture is too big, you can resize it using the <code>width</code> and <code>height</code> attributes, which are specified in <code>px</code> (pixels). Try 200 x 200 px.</li>
+        <li>If your picture is too big, you can resize it using the <code>width</code> and <code>height</code> properties, which are specified in <code>px</code> (pixels). Try 200 x 200 px.</li>
+<pre><code>
+img {
+  width: 200px;
+  height: 200px;
+}
+</code></pre>
       </ul>
     </article>
 
-    <!-- SLIDE CSS Classes Assignment Solution -->
+    <!-- SLIDE CSS Classes Exercise Solution -->
     <article class="slide slide-list">
-      <h2>Assignment: Style Profile Image</h2>
+      <h2>Exercise: Style Profile Image</h2>
       <ul>
         <li>Your HTML should look something like this:</li>
 <pre><code>
@@ -945,9 +955,9 @@ h2 {
       </ul>
     </article>
 
-    <!-- SLIDE CSS Box Model Assignment -->
+    <!-- SLIDE CSS Box Model Exercise -->
     <article class="slide slide-list">
-      <h2>Assignment: Box Model</h2>
+      <h2>Exercise: Box Model</h2>
       <ul>
         <li>Add some <code>padding</code> to your profile image. Note that there is now space <em>between</em> the image and the border around it. Try about 5px.</li>
         <li>Add both <code>padding</code> and a <code>margin</code> to your favourite things images. Try 5px for the <code>padding</code> and about 10px for the <code>margin</code></li>
@@ -1032,7 +1042,7 @@ img.logo {
         <li>Our site looks much better now, but now it's time to style the individual sections</li>
         <li>We'll need a way to target each section independently, grouping elements within the same section together</li>
         <li>Conveniently enough, HTML provides the <code>&lt;section></code> tag</li>
-        <li>We'll wrap each section within a <code>&lt;section</code> tag and add a class to each one, so we can style each section in our CSS</li>        
+        <li>We'll wrap each section within a <code>&lt;section></code> tag and add a class to each one, so we can style each section in our CSS</li>        
       </ul>
     </article>
 
@@ -1041,7 +1051,7 @@ img.logo {
       <h2>Banner Section</h2>
       <ul>
         <li>Add an opening <code>&lt;section></code> tag before the logo image</li>
-        <li>Add a closing <code>&lt;/section></code> tag right after the tagline paragraph</li>
+        <li>Add a closing <code>&lt;/section></code> tag right after the "tagline" paragraph</li>
         <li>Add a class called "banner" to the <code>&lt;section></code> tag</li>
 <pre><code>
 &lt;section class="banner">
@@ -1064,8 +1074,8 @@ section.banner {}
         <li>Add some padding to the top and bottom of the section to give our logo and text some space</li>
 <pre><code>
 section.banner {
-  padding-top: 120px;
-  padding-bottom: 90px;
+  padding-top: 110px;
+  padding-bottom: 110px;
 }
 </code></pre>        
       </ul>
@@ -1077,14 +1087,14 @@ section.banner {
       <ul>
         <li>The CSS <code>background-image</code> property lets you specify a path to an image in much the same way as you would in an HTML <code>&lt;img></code> tag</li>
 <pre><code>
-background-image: url('images/image.jpg');
+background-image: url('images/background.jpg');
 </code></pre>               
       </ul>
     </article>
 
-    <!-- SLIDE CSS Layout Banner Assignment -->
+    <!-- SLIDE CSS Layout Banner Exercise -->
     <article class="slide slide-list">
-      <h2>Assignment: Add a background image</h2>
+      <h2>Exercise: Add a background image</h2>
       <ul>
         <li>Find a large image on your computer or on the internet and move it into the <strong>images</strong> folder in your project folder</li>
         <li>Add the image as a <code>background-image</code> for the new banner <code>&lt;section></code> we just made</li>
@@ -1095,7 +1105,7 @@ background-image: url('images/image.jpg');
 
     <!-- SLIDE CSS Layout Banner Assigmment soltuion -->
     <article class="slide slide-list">
-      <h2>Assignment: Add a background image</h2>
+      <h2>Exercise: Add a background image</h2>
       <ul>
         <li>Your CSS should look like this:</li>
 <pre><code>
@@ -1135,7 +1145,7 @@ section.banner {
     <article class="slide slide-list">
       <h2>CSS Child Selectors</h2>
       <ul>
-        <li>You can write a <strong>child selector</strong> to select only those tags which are children of another</li>
+        <li>You can write a <strong>child selector</strong> to select only those tags which are children of another tag</li>
         <li>We add a space between the parent and the child selector to specify</li>
 <pre><code>
 section img {}  
@@ -1144,7 +1154,7 @@ section img {}
       </ul>
     </article>
 
-    <!-- SLIDE CSS Assignment Child Selectors -->
+    <!-- SLIDE CSS Exercise Child Selectors -->
     <article class="slide slide-list">
       <ul>
         <li>To target the <code>&lt;p></code> tag within the banner <code>&lt;section></code>, we use:</li>
@@ -1296,7 +1306,7 @@ section.favourites {
 
     <!-- SLIDE CSS Layout Contact -->
     <article class="slide slide-list">
-      <h2>Assignment: Contact Section</h2>
+      <h2>Exercise: Contact Section</h2>
       <ul>
         <li>Repeat the process of adding a wrapper <code>&lt;section></code> and centre-aligning it in CSS with the Contact section</li>
         <li>Add a background image to the contact section</li>
@@ -1321,7 +1331,7 @@ section.favourites {
 <pre><code>
 section.contact {
   text-align: center;
-  background: url('images/escheresque.png');
+  background: url('images/tile2.png');
 }
 section.contact img {
   margin: 20px;
@@ -1350,7 +1360,7 @@ section.contact img {
     <article class="slide slide-list">
       <h2>Styling Multiple Sections</h2>
       <ul>
-        <li>Let's write a selector for our new classes:</li>
+        <li>Let's write a selector for our new class:</li>
 <pre><code>
 section.box {}
 </code></pre>
@@ -1471,7 +1481,7 @@ h1, h2, h3 {
         <li>Remember how we had <code>display: block;</code> and <code>display:inline;</code> properties?</li>
         <li>Neither of those is quite what we want, because <code>block</code> will create a new line for each element, and <code>inline</code> won't let us add padding to the list items</li>
         <li>There's a third option that gives us the best of both worlds: <code>display: inline-block;</code></li>
-        <li>Write a selector for the list items, and apply <code>display: inline-block;</code> as well as some padding to the top and sides</li>
+        <li>Write a selector for the list items, and apply <code>display: inline-block;</code> as well as some padding to the top, bottom, and sides</li>
 <pre><code>
 .menu li {
   display: inline-block;
@@ -1532,7 +1542,7 @@ h1, h2, h3 {
 
     <!-- SLIDE CSS Finished -->
     <article class="slide slide-subhead">
-      <h1>Assignment: Customize!</h1>
+      <h1>Exercise: Customize!</h1>
       <h2>With whatever time is left, try changing and adding CSS properties to customize the page</h2>
       <h2>Check the <a href="cheatsheets/davechild_css2.pdf">CSS Cheat Sheet</a> to find new properties to try out</h2>
       <h2>Have fun!</h2>
