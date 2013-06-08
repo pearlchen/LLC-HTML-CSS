@@ -21,7 +21,7 @@
   <link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
   <style type="text/css">
-    .deck-container .slide-list ul ul {
+    .deck-container .slide-list ul ul, .deck-container .slide-list ol ul, .deck-container .slide-listol ol, .deck-container .slide-list ul ol {
       font-size: 1em;
     }
   </style>
@@ -97,7 +97,7 @@
     <article class='slide slide-list'>
       <h2>Today's Project</h2>
       <a href="http://#"><img src="assets/project_screenshot.jpg"></a>
-      <p><a href="http://ladieslearningcode.com/LLCProject/step15.html">Click here</a> to see the whole project</p>
+      <p><a href="http://tessa-lt.github.io/LLCProject/" target="_blank">Click here</a> to see the whole project</p>
     </article>
 
     <!-- SLIDE: Course Outline -->
@@ -124,7 +124,7 @@
       <ul>
         <li><strong>Sublime Text</strong> (<a href="http://www.sublimetext.com/">link</a>) - a popular text editor that highlights your code and has other helpful features.</li>
         <li><strong>Google Chrome</strong> (<a href="https://www.google.com/intl/en/chrome/browser/">link</a>) - Choose a modern web browser that has good development tools to help make building web pages easier. <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a> is a good option, too! You'll also want to make one of these modern browsers your <em>default</em> browser. <a href="https://support.google.com/chrome/answer/95417?hl=en">Here are the instructions</a>.</li>
-        <li><strong>Today's slides and files</strong> (<a href="https://github.com/tessa-lt/LLC-HTML-CSS">link</a>)</li>
+        <li><strong>Today's slides and files</strong> (<a href="https://github.com/tessa-lt/LLC-HTML-CSS">link</a>). To open the slides, unzip the folder (on Windows, right click and select "Extract All"). Right click on "index.html" or "index" and "Open in Chrome".</li>
       </ul>
     </article>
 
@@ -136,7 +136,7 @@
     <!-- SLIDE: Opening HTML files in your browser, Part 2 -->
     <article class='slide slide-list'>
       <h2>First, what is a browser?</h2>
-      <p>The browser main functionality is to present the web resource you choose, by requesting it from the server and displaying it on the browser window. The resource is usually an HTML document, but may also be a PDF, image, or other type.<p>
+      <p>The browser's main functionality is to present the "web resource" you choose, by requesting it from the server and displaying it on the browser window. The "web resource" is usually an HTML document, but may also be a PDF, image, or other type.<p>
     </article>
 
     <!-- SLIDE: Opening HTML files in your browser, Part 3 -->
@@ -146,16 +146,18 @@
       <p>We'll learn to write our own HTML today. For now, let's learn to open an HTML document (like the ones we'll create later) in our browser.</p>
       <ol>
         <li>Open Sublime Text and go to "File -> Open".</li>
-        <li>Navigate to the folder called "Exercises" in the folder you downloaded with today's slides.</li>
+        <li>Navigate to the folder called "Project" in the folder you downloaded with today's slides.</li>
         <li>With the entire folder selected (not just one file within it), click "Open".</li>
-        <li>Now that the folder is open in Sublime, click on "Exercise 1" so that it fills the screen. Now, right click and select "Open in Browser". (If your default browser isn't set to Chrome, <a href="https://support.google.com/chrome/answer/95417?hl=en">here are the instructions</a>.)</li>
+        <li>Now that the folder is open in Sublime, click on "blank.html" so that it fills the screen. Now, right click and select "Open in Browser". (If your default browser isn't set to Chrome, <a href="https://support.google.com/chrome/answer/95417?hl=en">here are the instructions</a>.)</li>
       </ol>
     </article>
 
     <!-- SLIDE: Opening HTML files in your browser, Part 4 -->
     <article class='slide slide-list'>
       <h2>You should see something like this:</h2>
-      <!--<img src="">-->
+      <div class="centered">
+        <img src="assets/blank_output.jpg">
+      </div>
     </article>
 
     <!-- SLIDE: Opening HTML files in your browser, Part 5 -->
@@ -204,9 +206,11 @@
         <li>In Sublime Text, click "File -> New File"</li>
         <li>By default, the file type is "Plain Text" not HTML</li>
         <li>You have two choices for saving this file as an HTML file:</li>
+          <ul>
+            <li>On the bottom right corner, you should see the words "Plain Text". Click the words, and select HTML from the list. Save the file by clicking CMD + S or CONTROL + S. Call it anything, save it anywhere. We won't be using it for anything else.</li>
+            <li>Click on "File -> Save As". Give your file a name and add .html at the end (for example, "puppydog.html"). Click save. You can save it anywhere - we won't be using this file for anything else.</li>
+          </ul>
       </ol>
-        <p>Option 1. On the bottom right corner, you should see the words "Plain Text". Click the words, and select HTML from the list. Save the file by clicking CMD + S or CONTROL + S. Call it anything, save it anywhere. We won't be using it for anything else.</p>
-        <p>Option 2. Click on "File -> Save As". Give your file a name and add .html at the end (for example, "puppydog.html"). Click save. You can save it anywhere - we won't be using this file for anything else.</p>
     </article>
 
     <!-- new slide -->
@@ -231,8 +235,8 @@
         <li>&#60;b&#62;I'm Bold text!&#60;/b&#62;</li>
         <li>&#60;i&#62;I'm Italic!&#60;/i&#62;</li>
         <li>&#60;u&#62;I'm underlined!&#60;/u&#62;</li>
-        <li>&#60;font size="large"&#62;Anyone remember the marquee tag?&#60;/marquee&#62;</li>
-        <li>&#60;marquee&#62;HUGE FONTS!&#60;/font&#62;</li>
+        <li>&#60;marquee&#62;Anyone remember the marquee tag?&#60;/marquee&#62;</li>
+        <li>&#60;font size="large"&#62;HUGE FONTS!&#60;/font&#62;</li>
         <li>&#60;center&#62;I'm centered text!&#60;/center&#62;</li>
       </ul>
       <h3>Please don't use any of these tags ever again!</h3>
@@ -261,7 +265,7 @@
     <!-- new slide -->
     <article class='slide slide-list'>
       <h2>Let's add this to our HTML document</h2>
-      <p>To indicate that we're adding CSS, we need to add an opening and closing <code>&#60;style&#62;</code> tag between our opening and closing <code>&#60;head&#62;</code> tags.</p>
+      <p>To indicate that we're adding CSS to blank.html, we need to find the opening and closing <code>&#60;style&#62;</code> tags between our opening and closing <code>&#60;head&#62;</code> tags.</p>
       <pre><code>
         &#60;!doctype html&#62;
           &#60;head&#62;
@@ -290,7 +294,7 @@
     <!-- new slide -->
     <article class='slide slide-list'>
       <h2>A note about HTML and CSS...</h2>
-      <p>HTML and CSS are sort of like languages (HTML is technically a "markup language" and CSS is technically a "syntax"), but they're DIFFERENT languages. Just like French or Italian, they each have rules. It takes time to learn these languages. Don't worry if you don't get it all right away.</p>
+      <p>HTML and CSS are sort of like languages, but they're DIFFERENT languages. Just like French or Italian, they each have their own set of rules. It takes time to learn these languages. Don't worry if you don't get it all right away.</p>
     </article>
 
     <!-- SLIDE: Websites without CSS -->
@@ -317,7 +321,7 @@
     <article class='slide slide-subhead'>
       <h1>Let's focus on HTML for now</h1>
       <p>Time to start writing some HTML (which is also called "markup")</p>
-      <p>You can remove the &#60;style&#62; and &#60;/style&#62; and everything between them for now.</p>
+      <p>You can remove what we added between &#60;style&#62; and &#60;/style&#62; for now. Keep &#60;style&#62; and &#60;/style&#62; there!</p>
     </article>
 
     <!-- SLIDE: HTML -->
@@ -352,12 +356,12 @@
       <p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
       <p class="centered sidenote">(This relationship is often referred to using the terms "parent" node and "child" nodes.)</p>
       <br />
-      <p class="sidenote" style="margin-bottom: 0px;">For example:</p>
+      <p class="sidenote" style="margin-bottom: 0px;">In the example below:</p>
       <ul class="sidenote">
         <li><code>&lt;title&gt;</code> is nested between opening and closing <code>&lt;head&gt;</code> tags so <code>&lt;head&gt;</code> is the parent node and <code>&lt;title&gt;</code> is the child node.</li>
         <li>Going further, <code>&lt;head&gt;</code> is also (at the same time) a child node of <code>&lt;html&gt;</code>.</li>
         <li>While <code>&lt;html&gt;</code> is the always the "root" node and has <strong>no</strong> parent nodes.</li>
-        <li>Notice too that <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> are on the same level. They are both child nodes of <code>&lt;html&gt;</code>.</li>
+        <li>Notice too that <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> are on the same level. They are both child nodes of <code>&lt;html&gt;</code>. They're like sublings!</li>
       </ul>
 <pre style="width: 45%; float: left;">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -388,12 +392,12 @@
     <article class='slide slide-list'>
       <h2>Exercise: Open the file "blank.html" in Sublime Text</h2>
       <ol>
-        <li>Rename the file to "index.html" and save it.</li>
         <li>Change the content within the opening and closing <code>&lt;title&gt;</code> tags, and observe the change in your browser.</li>
         <li>Add an additional paragraph.</li>
         <li>Add a few headers to the page, above each paragraph. Hint: you'll need to use some or all of the following tags: <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code>, <code>&lt;h2&gt;</code> and <code>&lt;/h2&gt;</code>, and you can even try using h3, h4, h5 and h6, if you like.</li>
         <li>Try adding three links. The code for a link looks like this:<br><code>&lt;a href="http://link.com"&gt;Click here&lt;/a&gt;</code>
       </ol>
+      <p>Don't worry too much about WHERE you're putting things for now. Just write some code!</p>
       <p>Don't forget to save and refresh your browser to see your code in action!</p>
     </article>
 
@@ -439,12 +443,12 @@
     <article class='slide slide-list'>
       <h2>Adding images, Part 2</h2>
       <p>You can add images another way - rather than linking to images hosted online, you can link to images in a folder on your computer.</p>
-      <p>In the LLCProject folder, at the same level as "blank.html", there's an image called "logo.png". To include this image on our website, we'll need the following code:</p>
+      <p>In the Project folder, at the same level as "blank.html", there's an image called "logo.png". To include this image on our website, we'll need the following code:</p>
       <pre><code>
         &lt;img src="logo.png"&gt;
       </code></pre>
       <p>Try copying and pasting that line of code into your project, right under the opening <code>&lt;body&gt;</code> tag.</p>
-      <p>Next, try replacing that image with one of the images in the LLCProject "images" folder. Hint: it will look similar, but with "images/" in front of the image name.</p>
+      <p>Next, try replacing that image with one of the images in the Project "images" folder. Hint: it will look similar, but with "images/" in front of the image name. (This is because "images" is the name of the folder - we have to tell our browser where to look.)</p>
     </article>
 
     <!-- SLIDE: HTML -->
@@ -455,15 +459,15 @@
       <pre><code>
         &lt;img alt="An adorable cat" src="http://placekitten.com/g/200/200"&gt;
       </code></pre>
-      <p>Copy and paste the above code into your project to see the result. Try misspelling "placekitten" to create a broken inage link and see what happens.</p>
+      <p>Copy and paste the above code into your project to see the result. Try misspelling "placekitten" to create a broken image link and see what happens.</p>
     </article>
 
     <!-- SLIDE: HTML -->
     <article class='slide slide-list'>
       <h2>Exercise: Add a logo and profile image to your project</h2>
       <p>The output (what you'll see in your browser) of this exercise is on the next slide. Write the HTML.</p>
-      <p><strong>Hint: the logo image is called "logo.png", and the placeholder profile image is called "profile.jpg". Both can be found inside the "assets" folder.</strong></p>
-      <p>Don't forget to add an <code>&lt;alt&gt;</code> attribute for each image,</p>
+      <p><strong>Hint: the logo image is called "logo.png", and the placeholder profile image is called "profile.jpg". Both can be found inside the "images" folder.</strong></p>
+      <p>Don't forget to add an "alt" attribute for each image.</p>
     </article>
 
     <!-- SLIDE: HTML -->
@@ -477,8 +481,8 @@
       <h2>A quick note about image types:</h2>
       <p>There are three main image types: jpg, png and gif. Here's a general rule of thumb:</p>
       <ul>
-        <li>Using a large image: choose jpg</li>
-        <li>For icons, logos or anything that requires transparency: choose png</li>
+        <li>Using a large image or photograph: choose jpg</li>
+        <li>For icons, logos, text or anything that requires transparency: choose png</li>
         <li>For animations, especially of cats: choose gif</li>
       </ul>
       <div class="centered">
@@ -491,8 +495,8 @@
       <h2>Exercise: Add a few more images</h2>
       <p>Your output should look like what's on the following slide.</p>
       <ul>
-        <li>Add images of your favourite things (check out <a href="http://ladieslearningcode.com/LLCProject/step15.html">this link</a> and scroll down to see the section we're talking about)</li>
-        <li>Add Twitter, Facebook and LinkedIn icons to the links - you'll have to use nested tags for this one!</li>
+        <li>Add images of your favourite things (check out <a href="http://tessa-lt.github.io/LLCProject/">this link</a> and scroll down to see the section we're talking about). Try not to choose huge images right now - we'll show you how to resize images using CSS later.</li>
+        <li>Add Twitter, Facebook and LinkedIn icons to the links - you'll have to use nested tags for this one! You'll find logos you can use in the Project/images folder.</li>
       </ul>
     </article>
 
