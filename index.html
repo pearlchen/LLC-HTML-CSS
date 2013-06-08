@@ -15,15 +15,14 @@
   <link rel="stylesheet" href="src/css/deck.coder.css">
   <link rel="stylesheet" href="src/codemirror/lib/codemirror.css">
   <link rel="stylesheet" href="src/codemirror/theme/default.css">
+  <link rel="stylesheet" href="src/prism.css">
 
   <!-- Custom for LLC -->
   <link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
   <style type="text/css">
-    .deck-container .slide-list ul ul, .deck-container .slide-list ol ul, .deck-container .slide-listol ol, .deck-container .slide-list ul ol {
-      font-size: 1em;
-    }
+    
   </style>
 
   <script type="text/javascript">
@@ -254,33 +253,33 @@
       <p>CSS (Cascading Style Sheets) is what makes websites look nice.</p>
       <p>While HTML tells the browser what different parts of the page are, CSS says what those pieces should look like.</p> 
       <p>For example, p means paragraph in HTML. If we wanted to make all of our paragraphs red and underlined, we'd do something like:</p>
-      <pre><code>
-        p {
-        color: red;
-        text-decoration: underline;
-        }
-      </code></pre>
+<pre><code class="language-css">
+p {
+  color: red;
+  text-decoration: underline;
+}
+</code></pre>
     </article>
 
     <!-- new slide -->
     <article class='slide slide-list'>
       <h2>Let's add this to our HTML document</h2>
       <p>To indicate that we're adding CSS to blank.html, we need to find the opening and closing <code>&#60;style&#62;</code> tags between our opening and closing <code>&#60;head&#62;</code> tags.</p>
-      <pre><code>
-        &#60;!doctype html&#62;
-          &#60;head&#62;
-            &#60;title&#62;Ladies Learning Code HTML and CSS&#60;/title&#62;
-            &#60;style&#62;
-              p {
-              color: red;
-              text-decoration: underline;
-              }
-            &#60;/style&#62;
-          &#60;/head&#62;
-          &#60;body&#62;
-            &#60;p&#62;This is a paragraph&#60;/p&#62;
-          &#60;/body&#62;
-        &#60;/html&#62;
+<pre class="language-markup"><code class="">
+  &#60;!doctype html&#62;
+    &#60;head&#62;
+      &#60;title&#62;Ladies Learning Code HTML and CSS&#60;/title&#62;
+      &#60;style&#62;
+        p {
+        color: red;
+        text-decoration: underline;
+        }
+      &#60;/style&#62;
+    &#60;/head&#62;
+    &#60;body&#62;
+      &#60;p&#62;This is a paragraph&#60;/p&#62;
+    &#60;/body&#62;
+  &#60;/html&#62;
       </code></pre>
     </article>
 
@@ -340,17 +339,21 @@
       <p>Tags typically come in <strong>pairs</strong> -- an opening tag and a closing tag with a forward slash:</p>
       <p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;&lt;/tag&gt;</code></p>
       <p class="sidenote">Some examples that you've already seen:</p>
-      <pre>&lt;!DOCTYPE html&gt;
+<pre class="language-markup"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html>
   &lt;head&gt;
     &lt;title&gt; &lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
   &lt;/body&gt;
-&lt;/html&gt;</pre>   
+&lt;/html&gt;
+</code>
+</pre>   
     </article>
 
    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
+    <article class='slide slide-list' >
       <h2>HTML tags</h2>
       <p>Tags can be "nested" within other tags, like this:</p>
       <p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
@@ -363,7 +366,8 @@
         <li>While <code>&lt;html&gt;</code> is the always the "root" node and has <strong>no</strong> parent nodes.</li>
         <li>Notice too that <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> are on the same level. They are both child nodes of <code>&lt;html&gt;</code>. They're like sublings!</li>
       </ul>
-<pre style="width: 45%; float: left;">&lt;!DOCTYPE html&gt;
+<pre style="width: 45%; float: left;">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     <strong>&lt;title&gt;</strong> <strong>&lt;/title&gt;</strong>
@@ -371,7 +375,8 @@
   &lt;body&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre> 
-<pre style="width: 45%; float: right;">&lt;!DOCTYPE html&gt;
+<pre style="width: 45%; float: right;">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   <strong>&lt;head&gt;</strong>
     &lt;title&gt; &lt;/title&gt;
@@ -432,7 +437,7 @@
       <h2>Adding images</h2>
       <p>Let's learn to add images to our webpages. Note that image tags are unique in that they are "self-closing" - there is no closing tag.</p>
       <p>Let's start by adding an image that is hosted online. Here's the code:</p>
-      <pre><code>
+      <pre><code class="language-markup">
         &lt;img src="http://placekitten.com/g/200/200"&gt;
       </code></pre>
       <p>Try copying and pasting that line of code into your project, right under the opening <code>&lt;body&gt;</code> tag.</p>
@@ -444,7 +449,7 @@
       <h2>Adding images, Part 2</h2>
       <p>You can add images another way - rather than linking to images hosted online, you can link to images in a folder on your computer.</p>
       <p>In the Project folder, at the same level as "blank.html", there's an image called "logo.png". To include this image on our website, we'll need the following code:</p>
-      <pre><code>
+      <pre><code class="language-markup">
         &lt;img src="logo.png"&gt;
       </code></pre>
       <p>Try copying and pasting that line of code into your project, right under the opening <code>&lt;body&gt;</code> tag.</p>
@@ -456,7 +461,7 @@
       <h2>The <code>&lt;alt&gt;</code> attribute</h2>
       <p>The alt attribute is used in HTML documents to specify alternative text (alt text) that is to be rendered when the element to which it is applied cannot be rendered. For example, if an image can't be loaded, "alt text" will be displayed instead. Alt text is also read by screen reading software. It is required for HTML to be considered valid.</p>
       <p>Here's an example of how you would use the <code>&lt;alt&gt;</code> attribute:</p>
-      <pre><code>
+      <pre><code class="language-markup">
         &lt;img alt="An adorable cat" src="http://placekitten.com/g/200/200"&gt;
       </code></pre>
       <p>Copy and paste the above code into your project to see the result. Try misspelling "placekitten" to create a broken image link and see what happens.</p>
@@ -543,7 +548,7 @@
         <li>A CSS rule is made up of a <strong>selector</strong> and one or more <strong>declarations</strong></li>
         <li>A <strong>selector</strong> tells the browser what element(s) we are styling.</li>
         <li>It looks like this:</li>
-        <pre><code>h2 {}</code></pre>   
+        <pre><code class="language-css">h2 {}</code></pre>   
         <li>The above selector will select all <code>&lt;h2></code> elements and apply our styles (which will go between the curly brackets) to them</li>     
       </ul>
     </article>
@@ -557,7 +562,7 @@
         <li>A <strong>property</strong> tells the browser what we are modifying (ex. font, colour, size)</li>
         <li>A <strong>value</strong> tells the browser how to modify the property (ex. Arial, green, small)</li>
         <li>A declaration looks like this:</li>
-        <pre><code>background-color: green;</code></pre>   
+        <pre><code class="language-css">background-color: green;</code></pre>   
 
       </ul>
     </article>
@@ -566,7 +571,7 @@
     <article class="slide slide-list">  
       <h2>CSS Syntax</h2>
       <ul>
-        <pre><code>background-color: green;</code></pre>
+        <pre><code class="language-css">background-color: green;</code></pre>
         <li>The <strong>value</strong> (the part <em>after</em> the colon) is specific to the property type</li>
         <li>Ex. size-related properties like <code>height, width</code>, or <code>font-size</code> are usually specified in <code>px</code> (pixels), while colour-related properties are specified with a colour name or code</li>
         <li>It's very important that you write the syntax correctly, with a colon after the property name and a semi-colon after the value</li>
@@ -579,7 +584,7 @@
       <ul>
         <li>You write CSS rules in a set of <code>&lt;style>&lt;/style></code> tags</li>
         <li>You add the style tags to the <code>&lt;head></code> of your HTML document like this:</li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;html>
   &lt;head>
     &lt;style>
@@ -601,7 +606,7 @@
       <h2>CSS Syntax</h2>
       <ul>
         <li>When we put selectors and declarations together, they make a CSS rule, which looks like this: </li>
-<pre><code>
+<pre><code class="language-css">
 h2 {
   background-color: green;
 }
@@ -616,7 +621,7 @@ h2 {
       <h2>CSS Syntax</h2>
       <ul>
         <li>We can add multiple declarations (property: value; sets) to one selector to modify multiple properties:</li>
-<pre><code>
+<pre><code class="language-css">
   h2 {
     background-color: green;
     font-weight: bold;
@@ -636,7 +641,7 @@ h2 {
         <li>Find the set of <code>&lt;style></code> tags in the <code>&lt;head></code> of <strong>index.html</strong></li>
         <li>In between the two tags, write a selector for the <code>&lt;body></code> tag of the document</li>
         <li>Next, add a <code>color: </code> property with a value of <code>blue;</code></li>
-<pre><code>
+<pre><code class="language-css">
 body {
   color: blue;
 }
@@ -653,7 +658,7 @@ body {
         <li>You don't have to understand how they work, just remember that they start with a <code>#</code> sign</li>
         <li>The code for a nice dark grey is <code>#444444</code></li>
         <li>
-<pre><code>
+<pre><code class="language-css">
 body {
   color: #444444;
 }
@@ -683,7 +688,7 @@ body {
     <article class="slide slide-list">    
       <ul>
         <li>Let's change the font to a sans-serif like Helvetica: </li>
-<pre><code>
+<pre><code class="language-css">
   body {
     color: #444444;
     font-family: Helvetica, Arial, sans-serif;    
@@ -705,7 +710,7 @@ body {
     <article class="slide slide-list">
       <ul>
         <li>If we want to make our <code>&lt;h1></code> and <code>&lt;h2></code> tags a bit bigger:</li>
-<pre><code>
+<pre><code class="language-css">
 h1 {
   font-size: 48px;
 }
@@ -721,7 +726,7 @@ h2 {
       <ul>
         <li>We can change the line height (or leading) with the <code>line-height</code> property to make it easier to read</li>
         <li><code>line-height</code> is specified as a multiple of the size of the font: so a value of <code>1.4</code> means the lines will be 1.4x as tall as the text.</li>
-<pre><code>
+<pre><code class="language-css">
 p {
   line-height: 1.4;
 }
@@ -735,12 +740,12 @@ p {
       <ul>
         <li>Let's add a dark border around the profile image</li>
         <li>Write a selector to pick out the <code>&lt;img></code> tag</li>
-<pre><code>
+<pre><code class="language-css">
 img {}
 </code></pre>
         <li>The <code>border</code> property has 3 parts: the width, the style, and the colour</li>
         <li>So if we want a 1px wide, solid, grey border, we use:</li>
-<pre><code>
+<pre><code class="language-css">
 img {
   border: 1px solid grey;
 }
@@ -755,7 +760,7 @@ img {
         <li>Our border is now applying to <strong>all</strong> images on the page, including our logo. We don't want that, so we need a way to target <strong>only</strong> the profile image</li>
         <li>HTML gives us a way to attach extra identifying information to HTML elements so that we can target them. We call these "classes"</li>
         <li>Classes are attributes that you add on to tags</li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;p class="classname">&lt;/p>
 </code></pre>
       </ul>
@@ -766,11 +771,11 @@ img {
       <h2>Targeting an Element with a Class</h2>
       <ul>
         <li>We can write a selector in our css to target the element we added a class to using a <code> . </code></li>
-<pre><code>
+<pre><code class="language-css">
 p.classname {}
 </code></pre>        
         <li>And then apply the styles we want to only the item with the class</li>
-<pre><code>
+<pre><code class="language-css">
 p.classname {
   color: red;
 }
@@ -787,7 +792,7 @@ p.classname {
         <li>Target that class in your CSS with the selector <code>img.profile</code></li>
         <li>Then add a border of any color you like</li>
         <li>If your picture is too big, you can resize it using the <code>width</code> and <code>height</code> properties, which are specified in <code>px</code> (pixels). Try 200 x 200 px.</li>
-<pre><code>
+<pre><code class="language-css">
 img {
   width: 200px;
   height: 200px;
@@ -801,11 +806,11 @@ img {
       <h2>Exercise: Style Profile Image</h2>
       <ul>
         <li>Your HTML should look something like this:</li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;img class="profile" src="images/profile.jpg"> 
 </code></pre>
         <li>And your CSS something like this:</li>
-<pre><code>
+<pre><code class="language-css">
 img.profile {
   border: 1px solid grey;
   width: 200px;
@@ -822,7 +827,7 @@ img.profile {
         <li>We can do the same thing to style our "favourite things" images</li>
         <li>Since we probably want all four images to have the same styles, we can add the same class to each</li>
         <li>Add a class of "favourite" to each of the four images</li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;img class="favourite" src="images/kitten.jpg" >
 </code></pre>   
         <li>Add some styles to your images</li>     
@@ -837,7 +842,7 @@ img.profile {
         <li>Or <code>border: 3px dotted pink;</code></li>
         <li>Or even <code>box-shadow: 0 0 4px grey;</code></li>
         <li>Your CSS might look something like this:</li>
-<pre><code>
+<pre><code class="language-css">
 img.favourite {
   border: 1px solid grey;
   width: 200px;
@@ -887,7 +892,7 @@ img.favourite {
       <ul>
         <li>Say I have 3 elements in my HTML document: a <code>&lt;p></code>, an <code>&lt;h2></code>, and another <code>&lt;p></code></li>
         <li>Let's put a red border around the <code>&lt;h2></code> and a pink background:</li>
-<pre><code>
+<pre><code class="language-css">
 h2 {
   border: 1px solid red;
   background: pink;
@@ -904,7 +909,7 @@ h2 {
       <ul>
         <li>There are 2 CSS properties for adding space around our elements: <code>margin</code>, and <code>padding</code></li>
         <li>The <code>margin</code> property adds space <em>around</em> the element, outside of the border:</li>
-<pre><code>
+<pre><code class="language-css">
 h2 {
   margin: 40px;
 }  
@@ -919,7 +924,7 @@ h2 {
       <h2>Padding</h2>
       <ul>
         <li>If we want to add some space <em>inside</em> the border, we use the <code>padding</code> property</li>
-<pre><code>
+<pre><code class="language-css">
 h2 {
   margin: 40px;
   padding: 40px;
@@ -948,14 +953,14 @@ h2 {
       <h2>More on Margins and Padding</h2>
       <ul>
         <li>You can specify which side of an element you want your margins to apply to with the <code>margin-top, margin-right, margin-bottom,</code> and <code>margin-left</code> properties:</li>
-<pre><code>
+<pre><code class="language-css">
 h2 {
   margin-top: 40px;
   margin-bottom: 40px;
 }
 </code></pre>        
         <li>The same goes for <code>padding</code> and <code>border</code></li>
-<pre><code>
+<pre><code class="language-css">
 h2 {
   padding-bottom: 40px;
   border-left: 1px solid red;
@@ -977,7 +982,7 @@ h2 {
     <article class="slide slide-list">
       <h2>Exercise: Box Model</h2>
       <p>Your code should look something like this:</p>
-<pre><code>
+<pre><code class="language-css">
 img.profile {
   padding: 5px;
 }
@@ -995,7 +1000,7 @@ img.favourite {
         <li>We probably want that logo to be in the centre of the page</li>
         <li>To centre elements in CSS, we set the margins on the sides to <code>auto</code>, which causes the browser to automatically calculate how much margin to add to each side to centre the element</li>
         <li>Instead of specifying both the <code>margin-left</code> and <code>margin-right</code> properties, we can use a shorthand that looks like this:</li>
-<pre><code>
+<pre><code class="language-css">
 img {
   margin: 0 auto;
 }
@@ -1010,11 +1015,11 @@ img {
       <ul>
         <li>We need a way to target our logo element so that we don't end up centering all the images</li>
         <li>Add a class called <code>logo</code> to your logo <code>&lt;img></code> tag:</li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;img class="logo" src="images/logo.png">
 </code></pre>  
         <li>Then write a selector in your CSS to apply the <code>margin</code> property to</li>      
-<pre><code>
+<pre><code class="language-css">
 img.logo {
   margin: 0 auto;
 }
@@ -1041,7 +1046,7 @@ img.logo {
         <li>Most elements, like <code>&lt;h2>, &lt;p>,</code> or <code>&lt;ul></code> take up the whole width of the page, these are called <em>block</em> elements</li>
         <li>Because our logo element is only as wide as the image, we can't centre it relative to the page</li>
         <li>Luckily, this is easy to fix: we just tell the <code>&lt;img></code> tag to behave like a block element instead, by setting the <code>display</code> property</li>
-<pre><code>
+<pre><code class="language-css">
 img.logo {
   margin: 0 auto;
   display: block;
@@ -1077,7 +1082,7 @@ img.logo {
         <li>Add an opening <code>&lt;section></code> tag before the logo image</li>
         <li>Add a closing <code>&lt;/section></code> tag right after the "tagline" paragraph</li>
         <li>Add a class called "banner" to the <code>&lt;section></code> tag</li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;section class="banner">
   &lt;img>
   &lt;h1>...&lt;/h1>
@@ -1092,11 +1097,11 @@ img.logo {
       <h2>Banner Section CSS</h2>
       <ul>
         <li>Target our new <code>&lt;section></code> with a selector in your CSS</li>
-<pre><code>
+<pre><code class="language-css">
 section.banner {}  
 </code></pre>        
         <li>Add some padding to the top and bottom of the section to give our logo and text some space</li>
-<pre><code>
+<pre><code class="language-css">
 section.banner {
   padding-top: 110px;
   padding-bottom: 110px;
@@ -1110,7 +1115,7 @@ section.banner {
       <h2>Adding a background image</h2>
       <ul>
         <li>The CSS <code>background-image</code> property lets you specify a path to an image in much the same way as you would in an HTML <code>&lt;img></code> tag</li>
-<pre><code>
+<pre><code class="language-css">
 background-image: url('images/background.jpg');
 </code></pre>               
       </ul>
@@ -1132,7 +1137,7 @@ background-image: url('images/background.jpg');
       <h2>Exercise: Add a background image</h2>
       <ul>
         <li>Your CSS should look like this:</li>
-<pre><code>
+<pre><code class="language-css">
 section.banner {
   background: url('images/background.jpg');
   color: #ffffff;
@@ -1171,7 +1176,7 @@ section.banner {
       <ul>
         <li>You can write a <strong>child selector</strong> to select only those tags which are children of another tag</li>
         <li>We add a space between the parent and the child selector to specify</li>
-<pre><code>
+<pre><code class="language-css">
 section img {}  
 </code></pre>        
         <li>The above selector will select only those <code>&lt;img></code> tags which are nested within <code>&lt;section></code> tags</li>
@@ -1182,12 +1187,12 @@ section img {}
     <article class="slide slide-list">
       <ul>
         <li>To target the <code>&lt;p></code> tag within the banner <code>&lt;section></code>, we use:</li>
-<pre><code>
+<pre><code class="language-css">
 section.banner p {}  
 </code></pre>     
         <li>Increase the <code>font-size</code> of the selected <code>&lt;p></code> tag</li>   
         <li>Select the <code>&lt;h1></code> tag in the banner section in the same way and capitalize the text using <code>text-transform: uppercase;</code></li>
-<pre><code>
+<pre><code class="language-css">
 section.banner p {
   font-size: 18px;
 }
@@ -1204,7 +1209,7 @@ section.banner h1 {
       <ul>
         <li>Let's repeat the process for the "about" section</li>
         <li>We'll wrap the section in <code>&lt;section></code> tags with a class of "about"</li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;section class="about">
   &lt;h2>...&lt;/h2>
   &lt;img>
@@ -1223,7 +1228,7 @@ section.banner h1 {
         <li>Try <a href="http://subtlepatterns.com/">subtlepatterns.com</a></li>
         <li>Download an image you like and save it to your <strong>images</strong> folder</li>
         <li>Add the image as a background to the about section</li>
-<pre><code>
+<pre><code class="language-css">
 section.about {
   background: url('images/pattern.png');
 }
@@ -1237,11 +1242,11 @@ section.about {
       <ul>
         <li>We want the heading for this section to be centre-aligned</li>
         <li>So let's select it with a child selector:</li>
-<pre><code>
+<pre><code class="language-css">
 section.about h2 {}
 </code></pre>
         <li>And centre-align it with <code>text-align: center;</code></li>
-<pre><code>
+<pre><code class="language-css">
 section.about h2 {
   text-align: center;
 }
@@ -1267,7 +1272,7 @@ section.about h2 {
       <h2>CSS Floats</h2>
       <ul>
         <li>We already wrote the selector for our profile <code>&lt;img></code>, so let's add the declaration <code>float: left;</code> to it:</li>
-<pre><code>
+<pre><code class="language-css">
 img.profile {
   float: left;
 }
@@ -1285,7 +1290,7 @@ img.profile {
         <li>We need to restore the regular stacking of boxes after this section</li>
         <li>We do this by adding <code>overflow: hidden;</code> to the parent element (<code>&lt;section class="about"></code>)</li>
         <li><code>overflow: hidden;</code> forces the element to 'contain' any floated children, so that they don't disrupt the elements after them</li>
-<pre><code>
+<pre><code class="language-css">
 section.about {
   overflow: hidden;
 }
@@ -1300,7 +1305,7 @@ section.about {
         <li>There's not much to do here, but let's centre-align the entire section</li>
         <li>First, we have to add a wrapping <code>&lt;section></code> around the favourites content</li>
         <li>Add an opening <code>&lt;section></code> tag before the favourites heading, and a closing <code>&lt;/section></code> tag after the last image.</li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;section class="favourites">
   &lt;h2>...&lt;/h2>
   &lt;h3>...&lt;/h3>
@@ -1318,11 +1323,11 @@ section.about {
       <h2>Centre-aligning</h2>
       <ul>
         <li>Let's write a selector for the section we just created:</li>
-<pre><code>
+<pre><code class="language-css">
 section.favourites {}  
 </code></pre>
         <li>And centre-align it:</li>        
-<pre><code>
+<pre><code class="language-css">
 section.favourites {
   text-align: center;
 }
@@ -1345,7 +1350,7 @@ section.favourites {
       <h2>Contact Section</h2>
       <ul>
         <li>Your HTML code should look something like this:</li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;section class="contact">
   &lt;h2>Contact Me&lt;/h2>
   &lt;a href="https://">...&lt;/a>
@@ -1354,7 +1359,7 @@ section.favourites {
 &lt;/section>
 </code></pre>
         <li>And your CSS:</li>        
-<pre><code>
+<pre><code class="language-css">
 section.contact {
   text-align: center;
   background: url('images/tile2.png');
@@ -1374,7 +1379,7 @@ section.contact img {
         <li>We'll add some <code>padding</code> to our sections</li>
         <li>Since we're adding the same amount of padding to each section, we can avoid repeating ourselves by adding a class to each section we'd like to style, and then targeting this class in our CSS</li>
         <li>Add a class of <strong>box</strong> to each of the content <code>&lt;section></code>s. (not including the banner section)</li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;section class="about box">&lt;/section>
 &lt;section class="favourites box">&lt;/section>
 &lt;section class="contact box">&lt;/section>
@@ -1387,11 +1392,11 @@ section.contact img {
       <h2>Styling Multiple Sections</h2>
       <ul>
         <li>Let's write a selector for our new class:</li>
-<pre><code>
+<pre><code class="language-css">
 section.box {}
 </code></pre>
         <li>And add a bunch of padding to all our sections:</li>        
-<pre><code>
+<pre><code class="language-css">
 section.box {
   padding: 50px 100px;
 }
@@ -1404,11 +1409,11 @@ section.box {
       <ul>
         <li>We can also use our <code>box</code> class to target the headings in each of these sections</li>
         <li>Since we're targeting both our <code>&lt;h2></code> and <code>&lt;h3></code> tags, we'll write a selector for both, separating them with a comma:</li>
-<pre><code>
+<pre><code class="language-css">
 section.box h2, section.box h3 {}
 </code></pre>        
         <li>And change the colour of our headings:</li>
-<pre><code>
+<pre><code class="language-css">
 section.box h2, section.box h3 {
   color: #A8258D;
 }
@@ -1427,7 +1432,7 @@ section.box h2, section.box h3 {
       <h2>Making our Background image fixed</h2>
       <ul>
         <li>To get that trendy effect where your background image stays put while you scroll, you can adjust the <code>background-attachment</code> property:</li>
-<pre><code>
+<pre><code class="language-css">
 section.banner {
   background-attachment: fixed;
 }
@@ -1443,7 +1448,7 @@ section.banner {
         <li>Go to <a href="http://www.google.com/fonts/">Google Fonts</a> and search around for a font you like</li>
         <li>Click "add to collection" when you find a font you like, then click the "use" button</li>
         <li>Find the code in Step 3 of the instructions, and paste it into the <code>&lt;head></code> of your HTML document (remember how the <code>&lt;head></code> section sends invisible instructions to our browser?)</li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </code></pre>        
       </ul>
@@ -1456,7 +1461,7 @@ section.banner {
         <li>Copy the code from Step 4 of the instructions into your CSS</li>
         <li>Add the line of code anywhere you'd like to use your custom font</li>
         <li>I'm going to add it to all the header tags</li>
-<pre><code>
+<pre><code class="language-css">
 h1, h2, h3 {
   font-family: 'Oswald', sans-serif;
 }
@@ -1473,7 +1478,7 @@ h1, h2, h3 {
         <li>There are two types of lists in HTML: ordered and unordered (numbered and bulleted)</li>
         <li>Since we don't need numbers, we'll use an unordered list, which is marked up with <code>&lt;ul>&lt;/ul></code> tags</li>    
         <li>Each bullet or "list item" in an unordered list is marked up as an <code>&lt;li>&lt;/li></code> tag <strong>nested</strong> within the <code>&lt;ul></code> tag</li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;ul>
   &lt;li>One list item&lt;/li>
   &lt;li>Another list item&lt;/li>
@@ -1487,7 +1492,7 @@ h1, h2, h3 {
       <h2>Adding a Menu</h2>
       <ul>
         <li>Add a <code>&lt;ul></code> with a class of "menu" to the top of your HTML document, just inside the <code>&lt;body></code></li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;ul class="menu">
   &lt;li>&lt;a href="#about">About&lt;/a>&lt;/li>
   &lt;li>&lt;a href="#favourites">Favourites&lt;/a>&lt;/li>
@@ -1502,7 +1507,7 @@ h1, h2, h3 {
       <h2>Adding a Menu</h2>
       <ul>
         <li>Let's add some basic styles to the unordered list item, like a border and background, and lets remove the bullets from the list items:</li>
-<pre><code>
+<pre><code class="language-css">
 .menu {
   list-style: none;
   padding: 0;
@@ -1524,7 +1529,7 @@ h1, h2, h3 {
         <li>Neither of those is quite what we want, because <code>block</code> will create a new line for each element, and <code>inline</code> won't let us add padding to the list items</li>
         <li>There's a third option that gives us the best of both worlds: <code>display: inline-block;</code></li>
         <li>Write a selector for the list items, and apply <code>display: inline-block;</code> as well as some padding to the top, bottom, and sides</li>
-<pre><code>
+<pre><code class="language-css">
 .menu li {
   display: inline-block;
   padding: 20px 35px;
@@ -1538,7 +1543,7 @@ h1, h2, h3 {
       <h2>Styling the Menu Links</h2>
       <ul>
         <li>Add a bit of style to the links in your menu. Remove the default underline with <code>text-decoration: none</code></li>
-<pre><code>
+<pre><code class="language-css">
 .menu a {
   text-decoration: none;
   color: #333333;
@@ -1557,7 +1562,7 @@ h1, h2, h3 {
         <li>We can get our menu to stay at the top of the screen while the user scrolls with the <code>position: fixed;</code> declaration</li>
         <li><code>position: fixed;</code> requires us to set the <code>top</code> and <code>left</code> properties to tell the browser where to fix the menu to</li>
         <li>This destroys the rectangular box around our menu, so we have to set the width back to 100%</li>
-<pre><code>
+<pre><code class="language-css">
 .menu {
   position: fixed;
   top: 0;
@@ -1574,7 +1579,7 @@ h1, h2, h3 {
       <ul>
         <li>We need to match the links in our menu to the sections on our page</li>
         <li>We can do this by adding an <code>id</code> attribute to each section that matches the link <code>href</code> (minus the <code>#</code> part)</li>
-<pre><code>
+<pre><code class="language-markup">
 &lt;section id="about" class="about box">&lt;/section>
 &lt;section id="favourites" class="favourites box">&lt;/section>
 &lt;section id="contact" class="contact box">&lt;/section>
@@ -1631,6 +1636,7 @@ h1, h2, h3 {
   <!-- Prettify -->
   <script src="src/prettify.js"></script>
   <script src="src/lang-css.js"></script>
+  <script src="src/prism.js"></script>
 
   <!-- Deck Core and extensions -->
   <script src="src/deck.js/extensions/status/deck.status.js"></script>

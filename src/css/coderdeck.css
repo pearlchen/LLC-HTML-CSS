@@ -180,6 +180,9 @@ html, body {
 .deck-container code {
   color: #B1009A; 
 }
+.language-markup code, .language-css code {
+  color: #fff;
+}
 .deck-container blockquote {
   font-size: 2em;
   font-style: italic;
