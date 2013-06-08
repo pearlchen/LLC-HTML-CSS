@@ -120,7 +120,6 @@ html, body {
 }
 .deck-container .slide-list li {
   padding-left: .5em;
-  line-height: 1em;
 }
 .deck-container .slide-list li ul {
 	margin-bottom: 0;
@@ -202,7 +201,7 @@ html, body {
   color: #fff; 
 }
 .deck-container a, .deck-container a:hover, .deck-container a:focus, .deck-container a:active, .deck-container a:visited {
-  color: #444;
+  color: #B1009A;
   text-decoration: underline; 
 }
 .deck-container a:hover, .deck-container a:focus {
@@ -389,4 +388,25 @@ pre.prettyprint {
   color: #888;
   font-size: 16px !important;
   font-style: italic !important;
+}
+
+.deck-container pre {
+  margin-top: 15px;
+  padding-top: 0;
+}
+
+.deck-container .slide-list ul ul, 
+.deck-container .slide-list ol ul, 
+.deck-container .slide-list ul ol {
+  font-size: 1em;
+}
+
+.deck-container img {
+  border: 1px solid lightgrey;
+  padding: 8px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+.deck-container a {
+  color: #B1009A;
 }
