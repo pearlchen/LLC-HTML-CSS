@@ -968,6 +968,21 @@ h2 {
       </ul>
     </article>
 
+    <!-- SLIDE CSS Box Model Answer -->
+    <article class="slide slide-list">
+      <h2>Exercise: Box Model</h2>
+      <p>Your code should look something like this:</p>
+<pre><code>
+img.profile {
+  padding: 5px;
+}
+img.favourite {
+  padding: 5px;
+  margin: 10px;
+}
+</code></pre>      
+    </article>
+
     <!-- SLIDE CSS Box Model: Center logo -->
     <article class="slide slide-list">
       <h2>Centering the Logo</h2>
@@ -1236,6 +1251,7 @@ section.about h2 {
         <li>We want to align that image to the left, and allow the text to wrap around it.</li>
         <li>We do this using <strong>CSS Floats</strong></li>
         <li>Remember how all HTML elements are all rectangular boxes stacked on top of each other?</li>
+        <img src="assets/redboxes_small.png">        
         <li>We have to break that stacking flow by <strong>floating</strong> the image to the side</li>
         <li>This will cause the text after the image to move up beside it, because we've disrupted the flow of the rectangular boxes</li>
       </ul>
@@ -1251,7 +1267,8 @@ img.profile {
   float: left;
 }
 </code></pre> 
-        <li>This has 'floated' our image to the left, but there's a problem...</li>       
+        <li>This has 'floated' our image to the left, but there's a problem...</li>   
+        <img src="assets/floatfail.png" height="200">    
       </ul>
     </article>
 
@@ -1420,7 +1437,7 @@ section.banner {
         <li>Services like <a href="http://www.google.com/fonts/">Google Fonts</a> can make it easy for us to use fun fonts that aren't normally supported by all computers</li>
         <li>Go to <a href="http://www.google.com/fonts/">Google Fonts</a> and search around for a font you like</li>
         <li>Click "add to collection" when you find a font you like, then click the "use" button</li>
-        <li>Find the code in Step 3 of the instructions, and paste it into the <code>&lt;head></code> of your HTML document</li>
+        <li>Find the code in Step 3 of the instructions, and paste it into the <code>&lt;head></code> of your HTML document (remember how the <code>&lt;head></code> section sends invisible instructions to our browser?)</li>
 <pre><code>
 &lt;link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </code></pre>        
@@ -1447,7 +1464,23 @@ h1, h2, h3 {
       <h2>Adding a Menu</h2>
       <ul>
         <li>Let's add a menu to the top of our document so our users can navigate</li>
-        <li>Menus are commonly marked up as unordered lists with links inside each list item</li>
+        <li>Menus are commonly marked up as lists with links inside each list item</li>
+        <li>There are two types of lists in HTML: ordered and unordered (numbered and bulleted)</li>
+        <li>Since we don't need numbers, we'll use an unordered list, which is marked up with <code>&lt;ul>&lt;/ul></code> tags</li>    
+        <li>Each bullet or "list item" in an unordered list is marked up as an <code>&lt;li>&lt;/li></code> tag <strong>nested</strong> within the <code>&lt;ul></code> tag</li>
+<pre><code>
+&lt;ul>
+  &lt;li>One list item&lt;/li>
+  &lt;li>Another list item&lt;/li>
+&lt;/ul>
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: MEnu -->
+    <article class="slide slide-list">
+      <h2>Adding a Menu</h2>
+      <ul>
         <li>Add a <code>&lt;ul></code> with a class of "menu" to the top of your HTML document, just inside the <code>&lt;body></code></li>
 <pre><code>
 &lt;ul class="menu">
@@ -1455,7 +1488,7 @@ h1, h2, h3 {
   &lt;li>&lt;a href="#favourites">Favourites&lt;/a>&lt;/li>
   &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
 &lt;/ul>
-</code></pre>        
+</code></pre>    
       </ul>
     </article>
 
@@ -1550,6 +1583,19 @@ h1, h2, h3 {
       <h2>With whatever time is left, try changing and adding CSS properties to customize the page</h2>
       <h2>Check the <a href="cheatsheets/davechild_css2.pdf">CSS Cheat Sheet</a> to find new properties to try out</h2>
       <h2>Have fun!</h2>
+    </article>
+
+    <!-- SLIDE Next Steps -->
+    <article class="slide slide-subhead">
+      <h1>Next Steps: Hosting</h1>
+      <h2>Right now your website only lives on your laptop, but if you'd like to get it hosted online for free, <a href="http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/">check out this tutorial on hosting with Github</a>. If you've purchased website hosting and want to upload your projects, <a href="http://webdesign.com/wordpress-tips/ftp-for-beginners-how-to-upload-your-files/">learn about uploading with FTP</a></h2>
+    </article>
+
+    <!-- SLIDE Next Steps -->
+    <article class="slide slide-subhead">
+      <h1>Next Steps: Mobile</h1>
+      <h2>Your site may be beautiful, but it might not be very mobile-friendly. Luckily, that's easy enough to fix once you learn about mobile web design and development.</h2>
+      <h2>Come out to the Ladies Learning Code <a href="http://llcmobiletoronto.eventbrite.ca/">Intro to Mobile</a> workshop on June 22nd to learn more!</h2>
     </article>
     
     <article class='slide slide-subhead'>
