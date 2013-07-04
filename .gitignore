@@ -1,2 +1,4 @@
 *.sublime-project
 *.sublime-workspace
+.DS_Store
+assets/.DS_Store
