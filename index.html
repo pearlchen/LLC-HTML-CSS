@@ -766,11 +766,11 @@ img {
       <ul>
         <li>We can write a selector in our css to target the element we added a class to using a <code> . </code></li>
 <pre><code class="language-css">
-p.classname {}
+.classname {}
 </code></pre>        
         <li>And then apply the styles we want to only the item with the class</li>
 <pre><code class="language-css">
-p.classname {
+.classname {
   color: red;
 }
 </code></pre>        
@@ -783,7 +783,7 @@ p.classname {
       <ul>
         <li>Add some style to your profile image!</li>
         <li>Add a class of <code>profile</code> to the tag for your profile image</li>
-        <li>Target that class in your CSS with the selector <code>img.profile</code></li>
+        <li>Target that class in your CSS with the selector <code>.profile-image</code></li>
         <li>Then add a border of any color you like</li>
         <li>If your picture is too big, you can resize it using the <code>width</code> and <code>height</code> properties, which are specified in <code>px</code> (pixels). Try 200 x 200 px.</li>
 <pre><code class="language-css">
@@ -801,14 +801,14 @@ img {
       <ul>
         <li>Your HTML should look something like this:</li>
 <pre><code class="language-markup">
-&lt;img class="profile" src="images/profile.jpg"> 
+&lt;img class="profile-image" src="images/profile.jpg"> 
 </code></pre>
         <li>And your CSS something like this:</li>
 <pre><code class="language-css">
-img.profile {
+.profile-image {
   border: 1px solid grey;
   width: 200px;
-  height:200px;  
+  height: 200px;  
 }  
 </code></pre>        
       </ul>
@@ -820,9 +820,9 @@ img.profile {
       <ul>
         <li>We can do the same thing to style our "favourite things" images</li>
         <li>Since we probably want all four images to have the same styles, we can add the same class to each</li>
-        <li>Add a class of "favourite" to each of the four images</li>
+        <li>Add a class of "favourite-image" to each of the four images</li>
 <pre><code class="language-markup">
-&lt;img class="favourite" src="images/kitten.jpg" >
+&lt;img class="favourite-image" src="images/kitten.jpg" >
 </code></pre>   
         <li>Add some styles to your images</li>     
         <li>Things like <code>width, height</code>, and <code>border</code></li>        
@@ -837,7 +837,7 @@ img.profile {
         <li>Or even <code>box-shadow: 0 0 4px grey;</code></li>
         <li>Your CSS might look something like this:</li>
 <pre><code class="language-css">
-img.favourite {
+.favourite-image {
   border: 1px solid grey;
   width: 200px;
   height: 200px;
@@ -977,10 +977,10 @@ h2 {
       <h2>Exercise: Box Model</h2>
       <p>Your code should look something like this:</p>
 <pre><code class="language-css">
-img.profile {
+.profile-image {
   padding: 5px;
 }
-img.favourite {
+.favourite-image {
   padding: 5px;
   margin: 10px;
 }
@@ -1014,7 +1014,7 @@ img {
 </code></pre>  
         <li>Then write a selector in your CSS to apply the <code>margin</code> property to</li>      
 <pre><code class="language-css">
-img.logo {
+.logo {
   margin: 0 auto;
 }
 </code></pre>        
@@ -1041,7 +1041,7 @@ img.logo {
         <li>Because our logo element is only as wide as the image, we can't centre it relative to the page</li>
         <li>Luckily, this is easy to fix: we just tell the <code>&lt;img></code> tag to behave like a block element instead, by setting the <code>display</code> property</li>
 <pre><code class="language-css">
-img.logo {
+.logo {
   margin: 0 auto;
   display: block;
 }
@@ -1092,11 +1092,11 @@ img.logo {
       <ul>
         <li>Target our new <code>&lt;section></code> with a selector in your CSS</li>
 <pre><code class="language-css">
-section.banner {}  
+.banner {}  
 </code></pre>        
         <li>Add some padding to the top and bottom of the section to give our logo and text some space</li>
 <pre><code class="language-css">
-section.banner {
+.banner {
   padding-top: 110px;
   padding-bottom: 110px;
 }
@@ -1132,7 +1132,7 @@ background-image: url('images/background.jpg');
       <ul>
         <li>Your CSS should look like this:</li>
 <pre><code class="language-css">
-section.banner {
+.banner {
   background: url('images/background.jpg');
   color: #ffffff;
   text-align: center;
@@ -1182,15 +1182,15 @@ section img {}
       <ul>
         <li>To target the <code>&lt;p></code> tag within the banner <code>&lt;section></code>, we use:</li>
 <pre><code class="language-css">
-section.banner p {}  
+.banner p {}  
 </code></pre>     
         <li>Increase the <code>font-size</code> of the selected <code>&lt;p></code> tag</li>   
         <li>Select the <code>&lt;h1></code> tag in the banner section in the same way and capitalize the text using <code>text-transform: uppercase;</code></li>
 <pre><code class="language-css">
-section.banner p {
+.banner p {
   font-size: 18px;
 }
-section.banner h1 {
+.banner h1 {
   text-transform: uppercase;
 }
 </code></pre>        
@@ -1223,7 +1223,7 @@ section.banner h1 {
         <li>Download an image you like and save it to your <strong>images</strong> folder</li>
         <li>Add the image as a background to the about section</li>
 <pre><code class="language-css">
-section.about {
+.about {
   background: url('images/pattern.png');
 }
 </code></pre>        
@@ -1237,11 +1237,11 @@ section.about {
         <li>We want the heading for this section to be centre-aligned</li>
         <li>So let's select it with a child selector:</li>
 <pre><code class="language-css">
-section.about h2 {}
+.about h2 {}
 </code></pre>
         <li>And centre-align it with <code>text-align: center;</code></li>
 <pre><code class="language-css">
-section.about h2 {
+.about h2 {
   text-align: center;
 }
 </code></pre>        
@@ -1267,7 +1267,7 @@ section.about h2 {
       <ul>
         <li>We already wrote the selector for our profile <code>&lt;img></code>, so let's add the declaration <code>float: left;</code> to it:</li>
 <pre><code class="language-css">
-img.profile {
+.profile-image {
   float: left;
 }
 </code></pre> 
@@ -1285,7 +1285,7 @@ img.profile {
         <li>We do this by adding <code>overflow: hidden;</code> to the parent element (<code>&lt;section class="about"></code>)</li>
         <li><code>overflow: hidden;</code> forces the element to 'contain' any floated children, so that they don't disrupt the elements after them</li>
 <pre><code class="language-css">
-section.about {
+.about {
   overflow: hidden;
 }
 </code></pre>        
@@ -1318,11 +1318,11 @@ section.about {
       <ul>
         <li>Let's write a selector for the section we just created:</li>
 <pre><code class="language-css">
-section.favourites {}  
+.favourites {}  
 </code></pre>
         <li>And centre-align it:</li>        
 <pre><code class="language-css">
-section.favourites {
+.favourites {
   text-align: center;
 }
 </code></pre>        
@@ -1354,11 +1354,11 @@ section.favourites {
 </code></pre>
         <li>And your CSS:</li>        
 <pre><code class="language-css">
-section.contact {
+.contact {
   text-align: center;
   background: url('images/tile2.png');
 }
-section.contact img {
+.contact img {
   margin: 20px;
 }
 </code></pre>        
@@ -1387,11 +1387,11 @@ section.contact img {
       <ul>
         <li>Let's write a selector for our new class:</li>
 <pre><code class="language-css">
-section.box {}
+.box {}
 </code></pre>
         <li>And add a bunch of padding to all our sections:</li>        
 <pre><code class="language-css">
-section.box {
+.box {
   padding: 50px 100px;
 }
 </code></pre>        
@@ -1404,11 +1404,11 @@ section.box {
         <li>We can also use our <code>box</code> class to target the headings in each of these sections</li>
         <li>Since we're targeting both our <code>&lt;h2></code> and <code>&lt;h3></code> tags, we'll write a selector for both, separating them with a comma:</li>
 <pre><code class="language-css">
-section.box h2, section.box h3 {}
+.box h2, .box h3 {}
 </code></pre>        
         <li>And change the colour of our headings:</li>
 <pre><code class="language-css">
-section.box h2, section.box h3 {
+.box h2, .box h3 {
   color: #A8258D;
 }
 </code></pre>        
@@ -1427,7 +1427,7 @@ section.box h2, section.box h3 {
       <ul>
         <li>To get that trendy effect where your background image stays put while you scroll, you can adjust the <code>background-attachment</code> property:</li>
 <pre><code class="language-css">
-section.banner {
+.banner {
   background-attachment: fixed;
 }
 </code></pre>        
