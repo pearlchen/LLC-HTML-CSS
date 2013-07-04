@@ -15,12 +15,15 @@
   <link rel="stylesheet" href="src/css/deck.coder.css">
   <link rel="stylesheet" href="src/codemirror/lib/codemirror.css">
   <link rel="stylesheet" href="src/codemirror/theme/default.css">
+  <link rel="stylesheet" href="src/prism.css">
 
   <!-- Custom for LLC -->
   <link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
-  <style type="text/css"></style>
+  <style type="text/css">
+    
+  </style>
 
   <script type="text/javascript">
     function showHint(answerContainerId) {
@@ -61,23 +64,39 @@
         <h1>Introduction to HTML &amp; CSS</h1>
       </div>
       <div class="instructor_holder">
-        <h2>Your instructor today</h2>
+        <h2>Your instructors</h2>
         <div>
-          <img src="assets/pearl_avatar.png" width="72" height="72" alt="pearl chen" />
-          <h4>Pearl Chen</h4>
-          pearl [at] karma-laboratory.com
+          <img src="assets/heather_avatar.jpg" width="72" height="72" alt="heather payne" />
+          <h4>Heather Payne</h4>
+          heather [at] heatherpayne.ca
           <br />
-          <a href="http://klab.ca/&plus;" target="_blank">klab.ca/+</a>
+          <a href="http://heatherpayne.ca" target="_blank">heatherpayne.ca</a>
           //
-          <a href="http://twitter.com/@pearlchen" target="_blank">@pearlchen</a>
+          <a href="http://twitter.com/heatherpayne" target="_blank">@heatherpayne</a>
+        </div>
+        <br>
+        <div>
+          <img src="assets/tessa_avatar.jpg" width="72" height="72" alt="pearl chen" />
+          <h4>Tessa Thornton</h4>
+          tessa [at] thephuse.com
+          <br />
+          <a href="http://tessathornton.com/" target="_blank">tessathornton.com</a>
+          //
+          <a href="https://twitter.com/tessthornton" target="_blank">@tessthornton</a>
         </div>
         
         <br  clear="left" />
       </div>
-      <p style="padding-top: 75px; margin-bottom: 0; font-size: 0.9em; color: #999;">
+      <p style="padding-top: 55px; margin-bottom: 0; font-size: 0.9em; color: #999;">
         ( Interactive code slides thanks to
-        <a href="http://cykod.github.com/CoderDeck/" target="_blank" style="color: #999;">CoderDeck</a> )
-      </p>
+        <a href="http://cykod.github.com/CoderDeck/" target="_blank" style="color: #999;">CoderDeck</a>. Also, thanks to <a href="http://twitter.com/pearlchen">Pearl Chen</a> and <a href="http://twitter.com/markreale">Mark Reale</a> for creating the foundation for today's content. )</p>
+    </article>
+
+    <!-- SLIDE: Today's project -->
+    <article class='slide slide-list'>
+      <h2>Today's Project</h2>
+      <a href="http://#"><img src="assets/project_screenshot.jpg"></a>
+      <p><a href="http://tessa-lt.github.io/LLCProject/" target="_blank">Click here</a> to see the whole project</p>
     </article>
 
     <!-- SLIDE: Course Outline -->
@@ -85,223 +104,223 @@
       <h2>Course Outline</h2>
       <h3 style="margin-top: 1em;">Morning</h3>
       <ul>
-        <li>Make sure your computer is setup</li>
-        <li>Web development breakdown</li>
-        <li>Dive into HTML</li>
+        <li>Intro to HTML</li>
+        <li>Write the HTML for your project</li>
+        <li>Intro to CSS</li>
       </ul>
       <h3 style="margin-top: 1em;">Afternoon</h3>
       <ul>
-        <li>CSS basics</li>
-        <li>Getting your website online</li>
-        <li style="color: #ccc;">Upload your website</li>
+        <li>More CSS</li>
+        <li>Final touches</li>
+        <li>Fin! And next steps</li>
       </ul>
     </article>
 
-    <!-- SLIDE: Development Environment -->
-    <article class='slide slide-subhead'>
-      <h1>Development Environment</h1>
-      <p>4 tools you need to get started</p>
+    <!-- SLIDE: Set up -->
+    <article class='slide slide-list'>
+      <h2>Let's get set up</h2>
+      <p>You should have already downloaded the following:</p>
+      <ul>
+        <li><strong>Sublime Text</strong> (<a href="http://www.sublimetext.com/">link</a>) - a popular text editor that highlights your code and has other helpful features.</li>
+        <li><strong>Google Chrome</strong> (<a href="https://www.google.com/intl/en/chrome/browser/">link</a>) - Choose a modern web browser that has good development tools to help make building web pages easier. <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a> is a good option, too! You'll also want to make one of these modern browsers your <em>default</em> browser. <a href="https://support.google.com/chrome/answer/95417?hl=en">Here are the instructions</a>.</li>
+        <li><strong>Today's slides and files</strong> (<a href="https://github.com/tessa-lt/LLC-HTML-CSS">link</a>). To open the slides, unzip the folder (on Windows, right click and select "Extract All"). Right click on "index.html" or "index" and "Open in Chrome".</li>
+      </ul>
     </article>
 
-    <!-- SLIDE: Web Browser -->
+    <!-- SLIDE: Opening HTML files in your browser, Part 1 -->
     <article class='slide slide-list'>
-      <h2>1. Web Browser</h2>
-      <p>
-        Choose a modern web browser that has good development tools to help make building web pages easier.
-      </p>
-      <div class="centered contains_sidebyside_icons">
-        <a href="https://www.google.com/chrome" target="_blank"><img src="assets/ChromeIcon.png" width="125" height="125" alt="Chrome" /></a>
-        <br/>
-        <a href="https://www.google.com/chrome" target="_blank">Google Chrome</a>
-      </div>
-      <br clear="all" />
-      <br />
-      <br />
-      <br />
-      <p class="sidenote centered">
-        (If you are unable to install Chrome:
-        <br />
-        install
-        <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> <b>and</b>
-        <a href="http://getfirebug.com/" target="_blank">Firebug</a>
-        .)
-      </p>
+      <h1>Opening HTML files in your browser</h1>
     </article>
 
-    <!-- SLIDE: Code Editor -->
+    <!-- SLIDE: Opening HTML files in your browser, Part 2 -->
     <article class='slide slide-list'>
-      <h2>2. Code Editor</h2>
-      <p>Although you could write code in Notepad or TextEdit, choose a text editor with code colour highlighting and other helpful features.</p>
-      <p>There are many, <em>many</em> free and paid options. I recommend this one that's free to evaluate:</p>
-      <div class="centered contains_sidebyside_icons">
-        <a href="http://www.sublimetext.com" target="_blank"><img src="assets/SublimeTextIcon.jpg" width="125" height="125" alt="Sublime Text 2" /></a>
-        <br />
-        <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a>
-      </div>
-      <br clear="all" />
+      <h2>First, what is a browser?</h2>
+      <p>The browser's main functionality is to present the "web resource" you choose, by requesting it from the server and displaying it on the browser window. The "web resource" is usually an HTML document, but may also be a PDF, image, or other type.<p>
     </article>
 
-    <!-- SLIDE: Hackasaurus -->
+    <!-- SLIDE: Opening HTML files in your browser, Part 3 -->
     <article class='slide slide-list'>
-      <h2>3. Hackasaurus X-Ray Goggles</h2>
-      <p>
-        Use this bookmarklet to "inspect" any webpage and see how it's built. Click and <strong><em>drag</em></strong> the orange box into your bookmarks bar to install.
-      </p>
-      <p class="sidenote centered">
-        (If you can't see your bookmarks bar, use Ctrl/Cmd+Shift+B in Chrome to toggle visibility.)
-      </p>
-      <br /><br /><br />
-      <div class="centered contains_sidebyside_icons">
-        <a id="hackasaurus" href="javascript:(function(){var script=document.createElement('script');script.src='http://webxray.hackasaurus.org/webxray.js';script.className='webxray';document.head.appendChild(script);})();">X-Ray Goggles</a>
-        <br /><br />
-        (from <a href="http://hackasaurus.org/en-US/goggles/install/" target="_blank">Hackasaurus</a> by Mozilla)
-      </div>
-      <br clear="all" />
-      <br />
-      <br />
-      <br />
-
+      <h2>What is an HTML document?</h2>
+      <p>We'll get into this in more detail shortly. For now, let's check out an example. Go to <a href="http://ladieslearningcode.com">http://ladieslearningcode.com</a>. Right-click and select "View Page Source". That's HTML.</p>
+      <p>We'll learn to write our own HTML today. For now, let's learn to open an HTML document (like the ones we'll create later) in our browser.</p>
+      <ol>
+        <li>Open Sublime Text and go to "File -> Open".</li>
+        <li>Navigate to the folder called "Project" in the folder you downloaded with today's slides.</li>
+        <li>With the entire folder selected (not just one file within it), click "Open".</li>
+        <li>Now that the folder is open in Sublime, click on "blank.html" so that it fills the screen. Now, right click and select "Open in Browser". (If your default browser isn't set to Chrome, <a href="https://support.google.com/chrome/answer/95417?hl=en">here are the instructions</a>.)</li>
+      </ol>
     </article>
 
-    <!-- SLIDE: FTP -->
+    <!-- SLIDE: Opening HTML files in your browser, Part 4 -->
     <article class='slide slide-list'>
-      <h2>4. File Transfer Program (FTP)</h2>
-      <p>
-        Do you already have your own hosted website? FTP software will let you copy the files you work on today to somewhere where the rest of the world can see them!
-      </p>
-      <div class="centered contains_sidebyside_icons">
-        <a href="http://cyberduck.ch/" target="_blank"><img src="assets/CyberduckIcon.png" width="125" height="125" alt="CyberDuck" /></a>
-        <br />
-        <a href="http://cyberduck.ch/" target="_blank">CyberDuck</a>
+      <h2>You should see something like this:</h2>
+      <div class="centered">
+        <img src="assets/blank_output.jpg">
       </div>
-      <br clear="all" />
-      <br />
-      <br />
-      <br />
-      <p class="sidenote centered">
-        Again, there are many, many free and paid options.
-        <br />
-        <a href="http://filezilla-project.org/" target="_blank">FileZilla</a>
-        is good when you're more advanced.
-      </p>
+    </article>
+
+    <!-- SLIDE: Opening HTML files in your browser, Part 5 -->
+    <article class='slide slide-list'>
+      <h1>Now, let's make a change to our file and re-open it in our browser.</h1>
+    </article>
+
+    <!-- SLIDE: Opening HTML files in your browser, Part 6 -->
+    <article class='slide slide-list'>
+      <h2>Dive back in to Sublime Text...</h2>
+      <ol>
+        <li>Change something. For example, change the text within the &#60;p&#62; and &#60;/p&#62; tags.</li>
+        <li>Save your file (CMD + S or CONTROL + S)</li>
+        <li>Right click and select "Open in Browser".</li>
+        <li>Change something else and open it in your browser again, just to make sure you've got it!</li>
+        <li>After saving, you can also just refresh your browser to see the changes (rather than opening your file in a new tab every time!)</li>
+      </ol>
+    </article>
+
+    <!-- SLIDE: You won't break anything -->
+    <article class='slide slide-list'>
+      <h2>A note: don't be scared about breaking anything or doing something wrong. The stuff we're doing today is what computers were designed to do! Feel free to play around, take risks and make mistakes. There will always be a mentor to help you if you need them!</h2>
     </article>
 
     <!-- new slide -->
     <article class='slide slide-subhead'>
-      <h1>Organizing your files</h1>
-      <p>Websites, webpages, and file structures</p>
+      <h1>What are HTML &#38; CSS?</h1>
     </article>
 
-    <!-- SLIDE: What is a website? -->
-    <article class='slide slide-list'>
-      <h2>What is a website?</h2>
-      <p>A
-        <span class="keyword">website</span>
-        is made up of many 
-        <span class="keyword">webpages</span>.
-      </p>
-      <div class="centered">
-        <img src="assets/website_structure.gif" width="580" heigth="320" alt="website structure" />
-      </div>
+    <article class='slide slide-subhead'>
+      <h1>Let's start with HTML...</h1>
+      <p>It's the content layer</p>
     </article>
 
-    <!-- SLIDE: What is a website? -->
+    <!-- new slide -->
     <article class='slide slide-list'>
-      <h2>What is a website?</h2>
-      <p>These webpages closely match a file folder structure.</p>
-      <div class="centered">
-        <img src="assets/website_structure.gif" width="440" alt="website structure" />&nbsp;<img src="assets/folder_structure-simple.png" width="362" height="152" alt="folder structure" />
-      </div>
+      <h2>HTML (HyperText Markup Language) is what webpages are made out of.</h2>
+      <p>We use HTML to describe each part of a webpage is to the browser, so that our content is displayed properly. We help our browsers to understand how we want things displayed by using tags. Here are a few examples of tags that you've probably seen before:</p>
+      <p>To create an HTML file, you need to have .html at the end (sort of like how you need .pdf at the end of PDF documents).</p>
     </article>
 
-    <!-- SLIDE: What is a website? -->
+    <!-- new slide -->
     <article class='slide slide-list'>
-      <h2>What is a website?</h2>
-      <p>Essentially this folder is located on a dedicated computer (also known as a <span class="keyword">server</span>) that <span class="keyword">hosts</span> websites.</p>
-      <div class="centered">
-        <img src="assets/webserver_download.png" width="738" height="531" alt="web request process" />
-      </div>
+      <h2>Quick exercise: Let's save a new file as an HTML file</h2>
+      <ol>
+        <li>In Sublime Text, click "File -> New File"</li>
+        <li>By default, the file type is "Plain Text" not HTML</li>
+        <li>You have two choices for saving this file as an HTML file:</li>
+          <ul>
+            <li>On the bottom right corner, you should see the words "Plain Text". Click the words, and select HTML from the list. Save the file by clicking CMD + S or CONTROL + S. Call it anything, save it anywhere. We won't be using it for anything else.</li>
+            <li>Click on "File -> Save As". Give your file a name and add .html at the end (for example, "puppydog.html"). Click save. You can save it anywhere - we won't be using this file for anything else.</li>
+          </ul>
+      </ol>
     </article>
 
-    <!-- SLIDE: What is a website? -->
+    <!-- new slide -->
     <article class='slide slide-list'>
-      <h2>Good file naming habits</h2>
-      <ul class="spacey_list">
-        <li>
-          Keep your file names in <strong>all lowercase</strong>.<br />
-          <span class="sidenote"><code>about.html</code> instead of <code>About.html</code> or <code>ABOUT.html</code></span>
-        </li>
-        <li>
-          Avoid <code>s p a c e s</code> in your file name. Use underscores instead.<br />
-          <span class="sidenote"><code>business_hours.html</code> instead of <code>business hours.html</code><br />
-            (The browswer will interpret it as <code>business%20hours.html</code>)</span>
-        </li>
-        <li>
-          For the same reason, avoid symbols like <code># &amp; *</code> in your file name.
-        </li>
-        <li>
-          Keep your file names concise, yet meaningful.<br />
-          <span class="sidenote"><code>about.html, contact.html</code> instead of <code>page1.html, page2.html</code></span>
-        </li>
+      <h2>The Nuts and Bolts of HTML</h2>
+      <p>When we write HTML, we create HTML Elements by wrapping our content in tags. These tags describe the content that is inside of them, NOT what they look like. We use different kinds of tags to create multiple elements and all together they make up something called our HTML Document.</p>
+      <p>Here are a few examples of tags that may be familar:</p>
+      <ul>
+        <li>&#60;h1&#62; and &#60;/h1&#62;</li>
+        <li>&#60;p&#62; and &#60;/p&#62;</li>
+        <li>&#60;strong&#62; and &#60;/strong&#62;</li>
       </ul>
+      <p>It is important to understand that HTML has very little to do with the style of your website or the <em>look</em> of the content - that is what CSS is for.</p>
     </article>
 
-    <!-- SLIDE: The Web Triad -->
+    <!-- new slide -->
     <article class='slide slide-list'>
-      <h2>A basic webpage</h2>
-      <p>
-        A webpage is mainly built using 3 web languages:
-      </p>
-      <table width="100%">
-      <tr>
-      <td width="33%" class="centered"><strong>HTML</strong> (Hypertext Markup Language) <br>
-          is the markup language.</td>
-      <td width="33%" class="centered"><strong>CSS</strong> (Cascading Style Sheets) <br>
-          is the style sheet language.</td>
-      <td width="33%" class="centered"><strong>JavaScript</strong><br>
-          is the programming language.</td>
-      </tr>
-            <tr>
-      <td class="centered"><img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer" /></td>
-      <td class="centered"><img src="assets/TRIAD-css.gif" width="261" height="241" alt="Presentation Layer" /></td>
-      <td class="centered"><img src="assets/TRIAD-js.gif" width="274" height="241" alt="Behaviour Layer" /></td>
-      </tr>
-            <tr>
-      <td class="centered">It should define the <strong>content</strong>.</td>
-      <td class="centered">It should define the <strong>presentation</strong></td>
-      <td class="centered">It should define <strong>behaviour</strong>.</td>
-      </tr>
-      </table>
+      <h2>Tags that you should no longer use!</h2>
+      <p>It’s very important to create semantic, clean and valid markup before doing anything else. When we write HTML, we are only describing the content - not defining how out website looks (that's what CSS is for).</p>
+      <p>Here are a few examples of tags you should NEVER use:</p>
+      <ul>
+        <li>&#60;b&#62;I'm Bold text!&#60;/b&#62;</li>
+        <li>&#60;i&#62;I'm Italic!&#60;/i&#62;</li>
+        <li>&#60;u&#62;I'm underlined!&#60;/u&#62;</li>
+        <li>&#60;marquee&#62;Anyone remember the marquee tag?&#60;/marquee&#62;</li>
+        <li>&#60;font size="large"&#62;HUGE FONTS!&#60;/font&#62;</li>
+        <li>&#60;center&#62;I'm centered text!&#60;/center&#62;</li>
+      </ul>
+      <h3>Please don't use any of these tags ever again!</h3>
     </article>
 
     <!-- new slide -->
     <article class='slide slide-subhead'>
-      <h1>Dive into HTML</h1>
-      <p>The content layer</p>
-      <p><img src="assets/TRIAD-html.gif" width="267" height="241" alt="content layer" /></p>
+      <h1>Speaking of CSS...</h1>
+      <p>It's what makes the web look nice.</p>
     </article>
 
-    <!-- SLIDE: HTML -->
+    <!-- new slide -->
     <article class='slide slide-list'>
-      <h2>What is HTML?</h2>
-      <p>HTML was created for <span class="keyword">web browsers</span> to easily read (not humans).</p>
-      <p>So this makes perfect sense to a web browser:</p>
-<pre>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+      <h2>What is CSS?</h2>
+      <p>CSS (Cascading Style Sheets) is what makes websites look nice.</p>
+      <p>While HTML tells the browser what different parts of the page are, CSS says what those pieces should look like.</p> 
+      <p>For example, p means paragraph in HTML. If we wanted to make all of our paragraphs red and underlined, we'd do something like:</p>
+<pre><code class="language-css">
+p {
+  color: red;
+  text-decoration: underline;
+}
+</code></pre>
     </article>
 
-    <!-- SLIDE: HTML -->
+    <!-- new slide -->
     <article class='slide slide-list'>
-      <h2>What is HTML?</h2>
-      <p>Whitespace through indentation (tabs) make your more HTML human-readable.</p>
-<pre class='prettyprint'>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt; &lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre> 
-      <p class="sidenote">(Later on, you might also notice how automatic colour coding in your code editor helps a lot too.)</p>
+      <h2>Let's add this to our HTML document</h2>
+      <p>To indicate that we're adding CSS to blank.html, we need to find the opening and closing <code>&#60;style&#62;</code> tags between our opening and closing <code>&#60;head&#62;</code> tags.</p>
+<pre class="language-markup"><code class="">
+  &#60;!doctype html&#62;
+    &#60;head&#62;
+      &#60;title&#62;Ladies Learning Code HTML and CSS&#60;/title&#62;
+      &#60;style&#62;
+        p {
+        color: red;
+        text-decoration: underline;
+        }
+      &#60;/style&#62;
+    &#60;/head&#62;
+    &#60;body&#62;
+      &#60;p&#62;This is a paragraph&#60;/p&#62;
+    &#60;/body&#62;
+  &#60;/html&#62;
+      </code></pre>
+    </article>
+
+    <!-- new slide -->
+    <article class='slide slide-subhead'>
+      <h1>Ta-da!</h1>
+      <p>You just created your first website.</p>
+      <p>HTML + CSS = website</p>
+    </article>
+
+    <!-- new slide -->
+    <article class='slide slide-list'>
+      <h2>A note about HTML and CSS...</h2>
+      <p>HTML and CSS are sort of like languages, but they're DIFFERENT languages. Just like French or Italian, they each have their own set of rules. It takes time to learn these languages. Don't worry if you don't get it all right away.</p>
+    </article>
+
+    <!-- SLIDE: Websites without CSS -->
+    <article class='slide slide-list'>
+      <h2>Websites without CSS...</h2>
+      <p>This:</p>
+      <img src="assets/llc_site_with_css.jpg">
+    </article>
+
+    <!-- SLIDE: Websites without CSS -->
+    <article class='slide slide-list'>
+      <h2>Websites without CSS...</h2>
+      <p>Becomes this:</p>
+      <img src="assets/llc_site_without_css.jpg">
+    </article>
+
+    <!-- SLIDE: What is a website? -->
+    <article class='slide slide-subhead'>
+      <h1>Why is that again?</h1>
+      <h2>Because HTML defines content, and CSS defines the look and layout (it makes the web look nice).</h2>
+    </article>
+
+    <!-- SLIDE: What is a website? -->
+    <article class='slide slide-subhead'>
+      <h1>Let's focus on HTML for now</h1>
+      <p>Time to start writing some HTML (which is also called "markup")</p>
+      <p>You can remove what we added between &#60;style&#62; and &#60;/style&#62; for now. Keep &#60;style&#62; and &#60;/style&#62; there!</p>
     </article>
 
     <!-- SLIDE: HTML -->
@@ -319,51 +338,36 @@
       <h2>HTML tags</h2>
       <p>Tags typically come in <strong>pairs</strong> -- an opening tag and a closing tag with a forward slash:</p>
       <p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;&lt;/tag&gt;</code></p>
-      <p class="sidenote">Some examples:</p>
-<pre style="width: 45%; float: left;">&lt;!DOCTYPE html&gt;
-<strong>&lt;html&gt;</strong>
+      <p class="sidenote">Some examples that you've already seen:</p>
+<pre class="language-markup"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html>
   &lt;head&gt;
     &lt;title&gt; &lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
   &lt;/body&gt;
-<strong>&lt;/html&gt;</strong></pre> 
-<pre style="width: 45%; float: right;">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt; &lt;/title&gt;
-  &lt;/head&gt;
-  <strong>&lt;body&gt;</strong>
-  <strong>&lt;/body&gt;</strong>
-&lt;/html&gt;</pre> 
-<br clear="all" />
+&lt;/html&gt;
+</code>
+</pre>   
     </article>
 
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML tags</h2>
-      <p>Tags typically come in <strong>pairs</strong> -- an opening tag and a closing tag with a forward slash:</p>
-      <p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;&lt;/tag&gt;</code></p>
-      <p>Practice writing a <code>body</code> tag with me here:</p>
-<textarea class="coder-editor"></textarea>
-<script type="coder-solution">&lt;body&gt;&lt;/body&gt;</script>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
+   <!-- SLIDE: HTML -->
+    <article class='slide slide-list' >
       <h2>HTML tags</h2>
       <p>Tags can be "nested" within other tags, like this:</p>
       <p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
       <p class="centered sidenote">(This relationship is often referred to using the terms "parent" node and "child" nodes.)</p>
       <br />
-      <p class="sidenote" style="margin-bottom: 0px;">For example:</p>
+      <p class="sidenote" style="margin-bottom: 0px;">In the example below:</p>
       <ul class="sidenote">
         <li><code>&lt;title&gt;</code> is nested between opening and closing <code>&lt;head&gt;</code> tags so <code>&lt;head&gt;</code> is the parent node and <code>&lt;title&gt;</code> is the child node.</li>
         <li>Going further, <code>&lt;head&gt;</code> is also (at the same time) a child node of <code>&lt;html&gt;</code>.</li>
         <li>While <code>&lt;html&gt;</code> is the always the "root" node and has <strong>no</strong> parent nodes.</li>
-        <li>Notice too that <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> are on the same level. They are both child nodes of <code>&lt;html&gt;</code>.</li>
+        <li>Notice too that <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> are on the same level. They are both child nodes of <code>&lt;html&gt;</code>. They're like sublings!</li>
       </ul>
-<pre style="width: 45%; float: left;">&lt;!DOCTYPE html&gt;
+<pre style="width: 45%; float: left;">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     <strong>&lt;title&gt;</strong> <strong>&lt;/title&gt;</strong>
@@ -371,7 +375,8 @@
   &lt;body&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre> 
-<pre style="width: 45%; float: right;">&lt;!DOCTYPE html&gt;
+<pre style="width: 45%; float: right;">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   <strong>&lt;head&gt;</strong>
     &lt;title&gt; &lt;/title&gt;
@@ -380,1608 +385,1229 @@
   &lt;/body&gt;
 &lt;/html&gt;</pre> 
 <br clear="all" />
-
     </article>
 
     <!-- SLIDE: HTML -->
     <article class='slide slide-list'>
-      <h2>HTML tags</h2>
-      <p>Tags can be "nested" within other tags, like this:</p>
-      <p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
-      <p>Practice writing a <code>head</code> and <code>body</code> tag nested inside of a <code>html</code> tag with me here:</p>
-<textarea class="coder-editor"></textarea>
-<script type="coder-solution">&lt;html&gt;
-  &lt;head&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</script>
-<br clear="all" />
-       <p class="centered sidenote"><strong>Remember:</strong> The innermost tag must be closed <strong>before</strong>  trying to open up a new tag.<br />
-        This would be incorrect: &lt;html&gt;&lt;head&gt;&lt;body&gt;&lt;/html&gt;&lt;/head&gt;&lt;/body&gt; </p>
+      <h2>What goes in the <code>&lt;head&gt;</code> and what goes in the <code>&lt;body&gt;</code>?</h2>
+      <p>Things that you put in the <code>&lt;body&gt;</code> of your HTML document will show up on your webpage. Things that you put in the <code>&lt;head&gt;</code> of your HTML document won't show up. You can think of the <code>&lt;head&gt;</code> as a place to write secret notes to your browser. For example, our styles go in the head. We don't want our styles to show up on our page, but we do want our browser to apply the styles.</p>
     </article>
 
     <!-- SLIDE: HTML -->
     <article class='slide slide-list'>
-      <h2>HTML tags</h2>
-      <p>Tags can be "nested" within other tags, like this:</p>
-      <p class="centered" style="font-size: 2.5em;"><code>&lt;tag&gt;<span style="font-size: 1.3em; color: purple;">&lt;tag&gt;&lt;/tag&gt;</span>&lt;/tag&gt;</code></p>
-      <p>Now where does the <code>title</code> tag get nested? Practice here:</p>
-<textarea class="coder-editor">&lt;html&gt;
-  &lt;head&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</textarea>
-<script type="coder-solution">&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</script>
-      <br clear="all" />
-      <p class="centered sidenote"><strong>Remember:</strong> The innermost tag must be closed <strong>before</strong>  trying to open up a new tag.<br />
-        This would be incorrect: &lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/html&gt;&lt;/head&gt;&lt;/title&gt; </p>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML in a web browser</h2>
-      <p>If you ever forget the basic tags needed to build a basic webpage, <code>exercises/barebones.html</code> is available to copy and use.</p>
-      <p>Let's open it up in our code editor!</p>
-      <div class="reminders"><p>Most computers are set to open <code>.html</code> files in the default web browser so <strong>right-click</strong> (Command+click or 2-finger click on Mac) and select the "<strong>open with...</strong>" option.</p></div>
-    </article>
-
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML in a web browser</h2>
-      <p>But remember: HTML tags are like the beams of a house -- they denote structure, not content.)  </p>
-      <p>So if I view <a href="exercises/barebones.html" target="_blank"><code>barebones.html</code></a> in a web browser, I don't see anything interesting yet...</p>
-      <div class="reminders single-line"><p>If Chrome is not your default web browser, <strong>right-click</strong> and select the "<strong>open with...</strong>" option.</p></div>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML in a web browser</h2>
-      <p>But I can right-click and select <strong>View Page Source</strong> to see what the HTML is to confirm that it's not a blank file.</p>
-      <p class="sidenote">(I suggest that you do this yourself any time you see something you like so you can reverse-engineer it.)</p>
-      <p class="centered"><img src="assets/llcodedotcom_viewsource.gif" width="468" height="362" alt="view source" style="margin-right: 30px;" /></p>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Sidenote: HTML Document Types</h2>
-      <p>What about the 1st line?</p>
-<pre class='prettyprint'>&lt;!DOCTYPE html&gt;</pre>
-      <p>This is a <span class="keyword">Document Type</span> declaration. <code>DOCTYPE</code> indicates to the web browser what <strong>version</strong> of HTML the file is.</p>
-      <p class="sidenote">(Consider how old versions of Microsoft Office or Photoshop have problems opening files that were created in later versions of the software.)
-      <p class="sidenote">For example, it could be an <a href="http://www.alistapart.com/articles/doctype/">older document type</a> like the ones below, or the newer "HTML5" one that we're using above.
-      </p>
-<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd"&gt;</pre>
-<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</pre>
-      </p>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML content</h2>
-      <p class="sidenote">(If HTML tags are the beams of a house, you still need to put up walls and put in furniture for it to be liveable.)</p>
-      <p>The human-viewable content of a HTML tag goes in between the opening and closing tags like this:</p>
-      <p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;<span style="color: #333;">Content</span>&lt;/tag&gt;</code></p>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;<strong>Home</strong>&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;<strong>
-    You are currently looking at index.html.
-  </strong>&lt;/body&gt;
-&lt;/html&gt;</pre> 
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>HTML content</h2>
-      <p>The human-viewable content of a HTML tag goes in between the opening and closing tags like this:</p>
-      <p class="centered" style="font-size: 3em;"><code>&lt;tag&gt;<span style="color: #333;">Content</span>&lt;/tag&gt;</code></p>
-      <p>Practice writing a <code>body</code> tag with some human-viewable content here:</p>
-<textarea class="coder-editor"></textarea>
-<script type="coder-solution">&lt;body&gt;Hello!&lt;/body&gt;</script>
-      <br clear="all" />
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2><code>&lt;head&gt;</code> vs <code>&lt;body&gt;</code></h2>
-      <p>Using a copy of <code>barebones.html</code>, I'm going to edit it to answer the below questions and prepare you for the following exercise you'll do on your own time.</p>
-      <ul class="spacey_list">
-        <li>
-          What happens when I change the content in the <code>&lt;title&gt;</code> tag?
-          <div class="show-hint" onclick="javascript:showHint('title-tag'); this.style.display = 'none';">click here to show answer...</div>
-          <div id="title-tag" class="hint-solution">It will update the browser tab/window name.</div>
-        </li>
-        <li>
-          What's the difference between putting a tag in-between the <code>&lt;head&gt;</code> tag versus the <code>&lt;body&gt;</code> tag?
-          <div class="show-hint" onclick="javascript:showHint('head-vs-body'); this.style.display = 'none';">click here to show answer...</div>
-          <div id="head-vs-body" class="hint-solution"><code>&lt;head&gt;</code> is for "meta" instructions that the browser will use to render content differently such as the tab title, or the character set to use when displaying a Japanese website, or links to external CSS or JS files.<br />
-            <code>&lt;body&gt;</code> should be used for all the content that actually gets displayed in the main part of the web browser.</div>
-        </li>
-      </ul>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Exercise #1 (15 minutes)</h2>
-      <ol class="spacey_list">
-        <li>View/open <a href="exercises/1_BASIC_HTML_WEBSITE/index.html" target="_blank"><code>exercises/1_BASIC_HTML_WEBSITE/index.html</code></a> in Chrome.</li>
-        <li>Make a local copy of <code>index.html</code> in the same <code>1_BASIC_HTML_WEBSITE</code> folder and rename it <code>copy.html</code>.<div class="sidenote">(This is so you can always refer back to index.html when needed.)</div></li>
-        <li>Open <code>copy.html</code> in Sublime Text and edit some the content within some of the opening and closing tags.</li>
-        <li>Make sure to save <code>copy.html</code> after changes have been made (Ctrl/Cmd+S).</li>
-        <li>View how <code>copy.html</code> has changed in Chrome by refreshing the webpage.</li>
-        <li>Explore some of the HTML tags listed on the <strong>next slide</strong> by adding them to your <code>copy.html</code>. Re-save and re-view in Chrome.</li>
-      </ol>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Exercise #1 - Simple HTML tags</h2>
-      <div class="sidenote">
-        (Don't forget that viewable content goes in-between opening and closing tag pairs. Notice how Sublime Text will hint at you when/where you might not have closed a tag.)
-      </div>
-      <div class="cheatsheet">
-        <div>
-          <h3>Hierarchy</h3>
-          <code>&lt;hl&gt;</code>, <code>&lt;h2&gt;</code>, etc to <code>&lt;h6&gt;</code> - heading levels 1 to 6<br />
-          <code>&lt;p&gt;</code> - paragraph<br />
-        </div>
-        <div>
-          <h3>Text Formatting</h3>
-          <code>&lt;b&gt;</code> or <code>&lt;strong&gt;</code> - bold<br />
-          <code>&lt;i&gt;</code> or <code>&lt;em&gt;</code> - italics or emphasis<br />
-          <code>&lt;center&gt;</code> - centered<br />
-        </div>
-        <div>
-          <h3>Section Formatting</h3>
-          <code>&lt;blockquote&gt;</code> - indented block of code<br />
-        </div>
-        <div>
-          <h3>Input &amp; Forms</h3>
-          <code>&lt;button&gt;</code> - clickable button<br />
-          <code>&lt;textarea&gt;</code> - multiline text area for user input<br />
-        </div>
-      </div>
-      <br clear="all" />
-      <p class="sidenote">You can practice writing some of these tags in the area below:</p>
-<textarea class="coder-editor"></textarea>
- <br clear="all" />
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Exercise #1 - Exploration Questions</h2>
-      <ul class="spacey">
-        <li>What are acceptable tags that lend well to being nested and what should never be nested?</li>
-        <li>How is whitespace treated? What happens when you use multiple spaces or line breaks?</li> 
-      </ul>
-      <h3>Got more questions?</h3>
-      <p>
-        Post them to this Google Moderator: <a href="http://goo.gl/mod/c4cm" target="_blank" >http://goo.gl/mod/c4cm</a><br />
-        <span class="sidenote">(You'll need to be signed into your Gmail or other Google account.)</span>
-      </p>
-    </article>
-
-   <!-- new slide -->
-    <article class='slide slide-subhead'>
-      <h1>Going deeper</h1>
-      <p>Get to know HTML even better</p>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Void (or empty) HTML Tags</h2>
-      <p><span class="keyword">Void tags</span> don't format content -- instead they are used to render or embed objects in our page.</p>
-      <p>These tags <strong>do not</strong> come in pairs like <code>h1</code> or <code>p</code> tags. You only type the tag once.</p>
-      <p>In some versions of HTML <span class="sidenote">(specifically XHTML... remember <code>DOCTYPE</code>?)</span> they "self-close" with a back slash (<code>/</code>) immediately before the left angled bracket (<code>&gt;</code>). The most often used example of this is the <code>&lt;br /&gt;</code> tag used to create a <strong>line break</strong>.</p>
-<pre class="prettyprint">&lt;p&gt;This text&lt;br /&gt;goes over&lt;br /&gt;several&lt;br /&gt;lines.&lt;/p&gt;
-</pre>
-      <p>This text<br />goes over<br />several<br />lines.</p>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Void (or empty) HTML Tags</h2>
-      <div class="cheatsheet">
-        <div>
-          <h3>Void tags</h3>
-          <code>&lt;hr&gt;</code> or <code>&lt;hr /&gt;</code> - horizontal rule<br />
-          <code>&lt;br&gt;</code> or <code>&lt;br /&gt;</code> - line break<br />
-          <code>&lt;input&gt;</code> or <code>&lt;input /&gt;</code> - text input boxes<br />
-          <hr />
-          <code>&lt;img&gt;</code> or <code>&lt;img /&gt;</code> - an image <em>*We'll get to this one very soon.</em><br />
-          <code>&lt;link&gt;</code> or <code>&lt;link /&gt;</code> - define a relationship to an external resource like an external style sheets. <em>*We'll get to this one later today.</em><br />
-        </div>
-      </div>
-      <br clear="all" />
-      <p class="sidenote">Practice some of these tags below:</p>
-<textarea class="coder-editor"></textarea>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Attributes</h2>
-      <p>Quick review:</p>
-      <ul>
-        <li><strong>HTML tags</strong> define <em>structure</em>.</li>
-        <li><strong>Text between opening &amp; closing tags</strong> define <em>content</em>.</li>
-        <li><strong>Void HTML tags</strong> render special objects that are sometimes <em>sort of like content</em> or <em>seem structural</em> depending on the void tag.</li>
-      </ul>
-      <p>Consider the <code>img</code> tag. Not very exciting right?</p>
-<textarea class="coder-editor">&lt;p&gt;Kicking up HTML a notch.&lt;/p&gt;
-&lt;img /&gt;
-&lt;p&gt;Do you agree?&lt;/p&gt;</textarea>      
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Attributes</h2>
-      <p>Sometimes we need to define data that we don't see right away but it's used by the browser to help render special content like hyperlinks, images, or video.</p>
-      <p class="sidenote">Here's that same <code>img</code> tag but now it's using a tag <span class="keyword">attribute</span> to tell my webpage where to find a source image:</p>
-<textarea class="coder-editor coder-editor-full">&lt;p&gt;Kicking up HTML a notch.&lt;/p&gt;
-&lt;img src="http://goo.gl/7eSU5" /&gt;
-&lt;p&gt;Do you agree?&lt;/p&gt;</textarea>
-      <br clear="all" />
-      <div class="reminders single-line"><p>Remember, it's <strong>not</strong> <code>&lt;img&gt;http://goo.gl/7eSU5&lt;/img&gt;</code></p></div>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images</h2>
-      <p>Let's look at that again: images are an example of a <span class="keyword">void tag</span> <strong>with</strong> an <span class="keyword">attribute</span>.</p>
-      <pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5" /&gt;</pre>
-      <ul>
-        <li><code>src</code> is the <em>attribute</em></li>
-        <li><code>http://goo.gl/7eSU5</code> is the <em>value</em> of that attribute<br />
-          <span class="sidenote">Values are typically surrounded by <em>single or double quotes</em> since occassionally values may contain spaces.</span></li>
-      </ul>
-      <p>With an <code>img</code> tag, the value of the <code>src</code> attribute tells the browser what the <em>url source</em> of our image is.</p>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images</h2>
-      <p>Tags can have more than one attribute, some <strong>required</strong> (like <code>src</code>) and others are <strong>optional</strong>:</p>
-      <ul style="margin-top: -1em;">
-        <li><code>width</code> and <code>height</code> tell the browser what dimension to <em>display</em> the image at.<br />
-          <span class="sidenote">(This is useful so the page doesn't jump around when loading very large images, or while on a very slow internet connection such as dial-up or 2G/3G. Also useful to know that width/height values don't necessarily have to match the image's <em>actual</em> width/height.)</span></li>
-      </ul>
-      <hr />
-      <p class="sidenote">For example, without <code>width</code> and <code>height</code> attributes, the browser displays image at original size.</p>
-      <pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5" /&gt;</pre>
-      <img src="http://goo.gl/7eSU5" />
-      <hr />
-      <p class="sidenote">Now with a manipulated width and height (about 50% smaller):</p>
-      <pre class="prettyprint">&lt;img src="http://goo.gl/7eSU5" width="320" height="262" /&gt;</pre>
-      <img src="http://goo.gl/7eSU5" width="320" height="262" />
-    </article>
-
-        <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images</h2>
-        <p>Another optional image attribute:</p>
-        <ul style="margin-top: -1em;">
-          <li><code>alt</code> is <em>alternative text</em> to display to visually impaired web visitors using screen readers. It also shows up when there's a "broken image" due to typos or moved files.<br /> 
-            <span class="sidenote">(Technically, it's required to be "<a href="http://validator.w3.org/"target="_blank">valid</a>" HTML markup which is why you might see <code>alt=""</code> often used.)</span></li>
-        </ul>
-<textarea class="coder-editor">&lt;img 
-  src="http://goo.gl/7eSU5" 
-  width="160" 
-  height="131" 
-  alt="HTML LOLcat" /&gt;</textarea>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images</h2>
-      <p>In the <code>exercises/2_WORKING_WITH_IMAGES</code> folder, there's an <code>index.html</code> file and 3 images of various types.</p>
-      <div class="reminders"><p>To make your web development life easier, turn on the option to see the file extension type in Explorer (<a href="http://windows.microsoft.com/en-US/windows-vista/Show-or-hide-file-name-extensions" target="_blank">Windows instructions</a>) or Finder (<a href="http://osxdaily.com/2012/01/13/show-filename-extensions-in-mac-os-x/" target="_blank">Mac instructions</a>).</p></div>
-      <p>File type advantages for your reference:</p>
-      <ul style="margin-top: -1em;">
-        <li>
-          <span class="keyword">gif</span> - smaller file size when used for line art, charts, and images with minimal colour variation
-        </li>
-        <li>
-          <span class="keyword">jpg</span> - smaller file size when used for photographs with lots of rich colours or gradients
-        </li>
-        <li>
-          <span class="keyword">png</span> - larger file size but has best quality and is great for images with transparent backgrounds
-        </li>
-      </ul>
-
-      <center>
-        <div class="sidenote">As a gif: 600 x 247, 8kb</div>
-        <img src="assets/img-example-gif.gif" />
-        <br />
-        <div class="sidenote">As a jpeg: 600 x 247, 9kb</div>
-        <img src="assets/img-example-jpg.jpg" />
-        <br />
-        <div class="sidenote">As a png: 600 x 247, 18kb</div>
-        <img src="assets/img-example-png.png" />
-      </center>
-
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 1)</span></h2>
-      <p>Code along with me:</p>
-      <ol class="spacey_list">
-        <li>Open <a href="exercises/2_WORKING_WITH_IMAGES/index.html" target="_blank"><code>exercises/2_WORKING_WITH_IMAGES/index.html</code></a> in Sublime Text. <span class="sidenote">(It's simply a copy of <code>barebones.html</code>.)</span></li>
-        <li>Click on the above link to also view <code>index.html</code> in Chrome. </li>
-        <li>Use the <code>img</code> tag to embed an image of our fave LOL cat using <code>http://goo.gl/mod/c4cm</code> for the value of the <code>src</code> attribute.</li>
-        <li>Save and refresh the webpage in the browser to make sure you got it right.</li>
-      </ol>
-      <p class="centered" style="font-size: 2.5em;">This is an example of an <span class="keyword">absolute path</span>.</p>
-      <p>It's "fully resolved" and starts with <code>http://</code> much like typing in a url into the browser's URL bar.</p>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 2)</span></h2>
-      <p>Code along with me:</p>
-      <ol class="spacey_list">
-        <li>Return to our <code>img</code> tag in <code>index.html</code> and let's instead embed <code>llc.gif</code> which we have locally.</li>
-      </ol>
-      <p class="centered" style="font-size: 2.5em;">This is an example of a <span class="keyword">relative path</span>.</p>
-      <p>It's based on using the html file that you're working on as the starting point to find your image source.</p>
-      <p>Right now, <code>llc.gif</code> in the <strong>same folder</strong> as <code>index.html</code>.</p>
-      <ol class="spacey_list" start="2">
-        <li>Open the <a href="exercises/2_WORKING_WITH_IMAGES/images/images.html" target="_blank"><code>images.html</code></a> file in the <code>img</code> folder in Sublime Text.</li>
-        <li>Click on the above link to also view <code>images.html</code> in Chrome. </li>
-        <li>Note that there's already an <code>img</code> tag in <code>images.html</code> trying to embed <code>llc.gif</code>.</li>
-      </ol>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 3)</span></h2>
-      <p>To write a <span class="keyword">relative path</span> that goes <strong><em>up</em></strong> a folder, start path with "<code>../</code>".</p>
-      <pre class="prettyprint">&lt;img src="<strong>../</strong>llc.gif" /&gt;</pre>
-      <p>Code along with me:</p>
-      <ol class="spacey_list">
-        <li>Return to our <code>img</code> tag in <code>images.html</code> and add <code>../</code> infront of <code>llc.gif</code>.</li>
-      </ol>
-      <br /><br /><br />
-      <hr />
-      <p class="sidenote">An aside: <code>../</code> can be used multiple times if you have many nested folders.</p>
-      <pre class="prettyprint">&lt;img src="<strong>../../../../</strong>llc.gif" /&gt;</pre>
-      <div>How many folders does this relative path go up?</div>
-      <div class="show-hint" onclick="javascript:showHint('nested-img-path'); this.style.display = 'none';">click here to show answer...</div>
-      <div id="nested-img-path" class="hint-solution">Four.</div>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 4)</span></h2>
-      <p>However, it's best practice to organize your images into its own folder to keep your website's file structure tidy.</p>
-      <p class="sidenote">We tend to also organize JavaScript files into their own "js" folder and CSS files into their own "css" folder.</p>
-      <p>So let's <strong>move all of our images into the <code>images</code> folder</strong> of <code>2_WORKING_WITH_IMAGES</code>.</p>
-      <p>Uh oh! Now our image will be broken in <code>index.html</code> since the image is no longer in the same folder. Let's fix that...</p>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Working with images <span style="font-size: 22px;">(Group exercise - Part 5)</span></h2>
-      <p>To write a <span class="keyword">relative path</span> that goes <strong><em>into</em></strong> a folder, start path with the <strong>folder name</strong> followed by a backslash (<code>/</code>).</p>
-      <pre class="prettyprint">&lt;img src="<strong>images/</strong>llc.gif" /&gt;</pre>
-      <ol class="spacey_list">
-        <li>Return to <code>index.html</code> and add <code>images/</code> infront of <code>llc.gif</code>.</li>
-      </ol>
-      <br /><br /><br />
-      <hr />
-      <p class="sidenote">An aside: You can go into multiple nested folders:</p>
-      <pre class="prettyprint">&lt;img src="<strong>folder1/folder2/folder3/</strong>llc.gif" /&gt;</pre>
-    </article>
-
-    <!--
-      Bonus: Give this file structure? How would you include the image?
-      <p class="sidenote">Transvering <em>over</em> to a parallel folder level would be:</p>
-      <pre>src="../folder/images/llc.gif"</pre>
-    -->
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Hyperlinks</h2>
-      <p>The <code>&lt;a&gt;</code> <em>anchor</em> tag is used to tell the browser that we want to link to somewhere else on our site or on the web.</p>
-      <p>The <code>a</code> tag comes in pairs and the content between the opening and closing tags is what is displayed as the link text (typically underlined).</p>
-      <br />
-      <pre class="prettyprint">Visit &lt;a&gt;Ladies Learning Code&lt;/a&gt;.</pre>
-      <p>Visit <a>Ladies Learning Code</a>.</p>
-      <br />
-      <p class="sidenote">But wait! This link doesn't take me anywhere!</p>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Hyperlinks</h2>
-      <p>We need a way of setting the URL <span class="sidenote">(e.g. <code>http://ladieslearningcode.com</code>)</span> that the browser will request when someone clicks on the link.</p>
-      <p>Once again, we need to use <span class="keyword">attributes</span>.</p>
-      <pre class="prettyprint">Visit &lt;a <strong>href="http://ladieslearningcode.com"</strong>&gt;Ladies Learning Code&lt;/a&gt;.</pre>
-      <p>Visit <a href="http://ladieslearningcode.com" target="_blank">Ladies Learning Code</a>.</p>
-      <ul>
-        <li><code>href</code> is the <em>attribute</em></li>
-        <li><code>http://ladieslearningcode.com</code> is the <em>value</em> of that attribute</li>
-        <li>And remember that the <strong>clickable text goes in between</strong> the opening and closing <code>a</code> tags.</li>
-      </ul>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Exercise #2 (10-15 minutes)</h2>
-      <ol class="spacey_list">
-        <li>Continue using <code>index.html</code> from the <code>2_WORKING_WITH_IMAGES</code> folder in Sublime Text.</li>
-        <li>Create a text link using the <code>&lt;a&gt;</code> tag that points to "http://ladieslearningcode.com".</li>
-        <li>Using your knowledge of the <code>&lt;a&gt;</code> tag, try to create a <em>clickable image</em> using both the <code>&lt;img&gt;</code> and <code>&lt;a&gt;</code> tags. Clicking on the image should open up "http://ladieslearningcode.com".<br />
-        <span class="sidenote">(Hint: This involves nested HTML tags.)</span>
-        </li>
-      </ol>
-      <p class="sidenote">Make sure to save <code>index.html</code> after changes have been made (Ctrl/Cmd+S) and before confirming your edits in Chrome.</p>
-      <h3>Got questions?</h3>
-      <p>
-        Post them to Google Moderator: <a href="http://goo.gl/mod/c4cm" target="_blank" >http://goo.gl/mod/c4cm</a>
-      </p>
-    </article>
-
-    <article class='slide slide-list'>
-      <h2>Getting ready for Exercise #3</h2>
-      <p>We're eventually aiming to have a <strong>3-page</strong> website that uses a standard 2-column webpage layout.</p>
-      <p class="centered"><img src="assets/2-column-webpage.png" width="703" height="411" alt="" /></p>
-    </article>
-
-    <article class='slide slide-list'>
-      <h2>Getting ready for Exercise #3</h2>
-      <p>Code along and review with me!</p>
-      <p>Make a new <code>index.html</code> in the <code>exercises/website</code> folder.</p>
+      <h2>Exercise: Open the file "blank.html" in Sublime Text</h2>
       <ol>
-        <li>What's the <strong>very first line</strong> we need to type?</li>
-        <li>What <strong>three</strong> HTML tags should every website have?</li>
-        <li>What HTML tag do I need to update the browser tab with a descriptive tab name? And where does it go?</li>
+        <li>Change the content within the opening and closing <code>&lt;title&gt;</code> tags, and observe the change in your browser.</li>
+        <li>Add an additional paragraph.</li>
+        <li>Add a few headers to the page, above each paragraph. Hint: you'll need to use some or all of the following tags: <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code>, <code>&lt;h2&gt;</code> and <code>&lt;/h2&gt;</code>, and you can even try using h3, h4, h5 and h6, if you like.</li>
+        <li>Try adding three links. The code for a link looks like this:<br><code>&lt;a href="http://link.com"&gt;Click here&lt;/a&gt;</code>
       </ol>
-      <p>Here is the start of your top navigation menu.<br /><span class="sidenote">(Don't worry, <code>&lt;nav&gt;</code> is nothing too special but we'll use it later in CSS.)</span></p>
-<pre>
-  &lt;nav&gt;
-    Home About Contact
-  &lt;/nav&gt;
-</pre>
-      <ol start="4">
-        <li>In between which tag do I paste this code since it's content that should be <strong>visible to the user</strong>?</li>
-      </ol>
-    </article>
-
-    <article class='slide slide-list'>
-      <h2>Exercise #3 (now until lunch)</h2>
-      <p>On your own:</p>
-      <ol class="spacey_list">
-        <li>Eventually there will be <code>about.html</code> and <code>contact.html</code>. Use the <code>&lt;a&gt;</code> tag with a <code>href</code> attribute to link all your pages together.</li>
-        <li>Based on <code>index.html</code>, create those 2 new files for About and Contact  in the same <code>website</code> folder as <code>index.html</code>.</li> 
-        <li>Make sure that all your webpages have descriptive and unique <code>&lt;title&gt;</code>'s.</li>
-        <li>Confirm that you can click between all the pages using the navigation links. Fix them if needed.</li>
-        <li>Update <code>about.html</code> with a picture and bio.<br />
-          <span class="sidenote">(You can even try adding a YouTube video based on the notes on the next slide.)</span></li>
-        <li>Update <code>contact.html</code> with contact info.<br />
-         <span class="sidenote">(You can even try adding a Google Map.)</span></li>
-        <li><strong>Don't</strong> update <code>index.html</code> any more!<br/>
-          <span class="sidenote">We'll get to that <strong>after</strong> lunch.</span></li>
-      </ol>
-      
-      <h3>Got questions?</h3>
-      <p>
-        Post them to Google Moderator: <a href="http://goo.gl/mod/c4cm" target="_blank" >http://goo.gl/mod/c4cm</a>
-      </p>
-    </article> 
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
-      <h2>Bonus: Add video to your webpage</h2>
-      <p>As time goes on, it has become easier and easier to embed multimedia content into websites.</p>
-      <p>From YouTube, you can find an <strong>Embed Code</strong> to put into your website <span class="sidenote">(click on "Share" button below video, then "Embed")</span> and YouTube's servers do all the rest of the work via the <code>iframe</code> tag.</p>
-      <pre class="prettyprint">&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/tlnFyjpV5Wo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</pre>
-      <iframe width="560" height="315" src="http://www.youtube.com/embed/tlnFyjpV5Wo" frameborder="0" allowfullscreen></iframe>
-      <p>Adding a Google Map is similiar. <a href="assets/google_map_embed.jpg" target="_blank">Click here for instructional screenshot.</a></p>
+      <p>Don't worry too much about WHERE you're putting things for now. Just write some code!</p>
+      <p>Don't forget to save and refresh your browser to see your code in action!</p>
     </article>
 
     <!-- SLIDE: HTML -->
     <article class='slide slide-list'>
-      <h2>HTML reference</h2>
-      <ul class="spacey_list">
-        <li>Download a <a href="http://woorkup.com/2009/12/16/html5-visual-cheat-sheet-reloaded/" target="_blank">cheatsheet of HTML tags</a>. (Copy in the <code>cheatsheets</code> folder.)</li>
-        <li>Try looking up individual tags using the HTML sections of <a href="https://developer.mozilla.org/en-US/docs/HTML/Element" target="_blank">Mozilla's Developer Network</a> or the <a href="http://www.w3.org/community/webed/wiki/HTML/Elements" target="_blank">W3C</a> for further breakdown.</li>
-        <li>For further exploration, use the <a href="http://hackasaurus.org/en-US/goggles/install/" target="_blank">Hackasaurus X-Ray Goggles</a> to look at any webpage.</li>
-        <li>And don't forget the "view source" option of your web browser!</li>
+      <h2>A note about attributes</h2>
+      <p>Attributes are another important part of HTML markup.</p>
+      <p>An HTML attribute is a modifier of an HTML element. HTML attributes generally appear as name-value pairs, separated by "=", and are written within the start tag of an element, after the element's name:</p>
+        <pre><code>&lt;tag attribute="value"&gt;(content to be modified by the tag)&lt;/tag&gt;</code></pre>
+      <p>Where "tag" names the HTML element and "attribute" is the name of the attribute.</p>
+      <p>Here's an example of an attribute that we've already seen today:</p>
+        <pre><code>&lt;a href="link.com"&gt;Click here&lt;/a&gt;</code></pre>
+      <p>In this case, "a" is the tag, "href" is the attribute and "http://link.com" is the value.</p>
+    </article>
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>Exercise: Let's write the markup for our final project</h2>
+      <p>The output (what you'll see in your browser) of this exercise is on the next slide. Write the HTML.</p>
+    </article>
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>Write the HTML that will output this:</h2>
+      <img src="assets/step_1_output.jpg">
+      <p>Hint: You'll want to use <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code> once, <code>&lt;h2&gt;</code> and <code>&lt;/h2&gt;</code> three times and <code>&lt;h3&gt;</code> and <code>&lt;/h3&gt;</code> once.</p>
+      <p>You can generate your own placeholder text at <a href="http://www.lipsum.com/">http://www.lipsum.com</a>. Or, you can try <a href="http://cupcakeipsum.com/">Cupcake Ipsum</a> or <a href="http://baconipsum.com/">Bacon Ipsum</a>, for something new.
+    </article>
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>Adding images</h2>
+      <p>Let's learn to add images to our webpages. Note that image tags are unique in that they are "self-closing" - there is no closing tag.</p>
+      <p>Let's start by adding an image that is hosted online. Here's the code:</p>
+      <pre><code class="language-markup">
+        &lt;img src="http://placekitten.com/g/200/200"&gt;
+      </code></pre>
+      <p>Try copying and pasting that line of code into your project, right under the opening <code>&lt;body&gt;</code> tag.</p>
+      <p>Next, try finding a different image online and replacing the kitten photo.</p>
+    </article>
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>Adding images, Part 2</h2>
+      <p>You can add images another way - rather than linking to images hosted online, you can link to images in a folder on your computer.</p>
+      <p>In the Project folder, at the same level as "blank.html", there's an image called "logo.png". To include this image on our website, we'll need the following code:</p>
+      <pre><code class="language-markup">
+        &lt;img src="logo.png"&gt;
+      </code></pre>
+      <p>Try copying and pasting that line of code into your project, right under the opening <code>&lt;body&gt;</code> tag.</p>
+      <p>Next, try replacing that image with one of the images in the Project "images" folder. Hint: it will look similar, but with "images/" in front of the image name. (This is because "images" is the name of the folder - we have to tell our browser where to look.)</p>
+    </article>
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>The <code>&lt;alt&gt;</code> attribute</h2>
+      <p>The alt attribute is used in HTML documents to specify alternative text (alt text) that is to be rendered when the element to which it is applied cannot be rendered. For example, if an image can't be loaded, "alt text" will be displayed instead. Alt text is also read by screen reading software. It is required for HTML to be considered valid.</p>
+      <p>Here's an example of how you would use the <code>&lt;alt&gt;</code> attribute:</p>
+      <pre><code class="language-markup">
+        &lt;img alt="An adorable cat" src="http://placekitten.com/g/200/200"&gt;
+      </code></pre>
+      <p>Copy and paste the above code into your project to see the result. Try misspelling "placekitten" to create a broken image link and see what happens.</p>
+    </article>
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>Exercise: Add a logo and profile image to your project</h2>
+      <p>The output (what you'll see in your browser) of this exercise is on the next slide. Write the HTML.</p>
+      <p><strong>Hint: the logo image is called "logo.png", and the placeholder profile image is called "profile.jpg". Both can be found inside the "images" folder.</strong></p>
+      <p>Don't forget to add an "alt" attribute for each image.</p>
+    </article>
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>Write the HTML that will output this:</h2>
+      <img src="assets/step_2_output.jpg">
+    </article>
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>A quick note about image types:</h2>
+      <p>There are three main image types: jpg, png and gif. Here's a general rule of thumb:</p>
+      <ul>
+        <li>Using a large image or photograph: choose jpg</li>
+        <li>For icons, logos, text or anything that requires transparency: choose png</li>
+        <li>For animations, especially of cats: choose gif</li>
       </ul>
-    </article>  
+      <div class="centered">
+        <img src="http://1-ps.googleusercontent.com/h/www.catgifpage.com/gifs/182.gif.pagespeed.ce.S3pBqCa_-u.gif">
+      </div>
+    </article>
 
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>Exercise: Add a few more images</h2>
+      <p>Your output should look like what's on the following slide.</p>
+      <ul>
+        <li>Add images of your favourite things (check out <a href="http://tessa-lt.github.io/LLCProject/">this link</a> and scroll down to see the section we're talking about). Try not to choose huge images right now - we'll show you how to resize images using CSS later.</li>
+        <li>Add Twitter, Facebook and LinkedIn icons to the links - you'll have to use nested tags for this one! You'll find logos you can use in the Project/images folder.</li>
+      </ul>
+    </article>
 
-    <!-- CSS -->
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>Write the HTML that will output this:</h2>
+      <img src="assets/step_3_output.jpg">
+    </article>
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>And that's it!</h2>
+      <p>We've written all of the HTML that we'll need for today's project! Your markup should look like this:</p>
+      <img src="assets/result_after_step_3.jpg">
+    </article>
+
+    <!-- SLIDE: HTML -->
+    <article class='slide slide-list'>
+      <h2>A note about organization</h2>
+      <p>Did you see how the markup in the previous slide was really clean and easy to read? It's because everything is indented properly.</p>
+      <p>Take a few moments now to clean up your code and make it look like the previous slide. Once we get into CSS, you'll be grateful!</p>
+      <p><strong>And now, on to CSS!</strong></p>
+    </article>
+
+    <!-- END OF HTML SECTION -->
+
+    <!-- SLIDE: CSS Basics -->
     <article class='slide slide-subhead'>
-      <h1>CSS basics</h1>
-      <p>The presentation layer</p>
-      <p><img src="assets/TRIAD-css.gif" width="261" height="241" alt="Presentation Layer" /></p>
+      <h1>CSS basics</h1>      
     </article>  
 
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Why use CSS?</h2>
+    <!-- SLIDE: CSS and HTML -->
+    <article class="slide slide-subhead">
+      <h1>CSS is closely paired with HTML</h1>
+      <h2>CSS doesn't do anything on its own, it's the presentation layer on top of a content base</h2>
+      <h2>If HTML is the beams of the house, CSS is the layout, paint, and decorations</h2>
+    </article>
+  
+    <!-- SLIDE: CSS Syntax 1 -->
+    <article class="slide slide-list">
+      <h2>CSS Syntax</h2>
       <ul>
-        <li>Seperates content (text) from presentation (text colour).</li>
-        <li>The "cascading" part of CSS means that it (should) help avoid redundancy in styling your web documents.</li>
+        <li>CSS is made up of <strong>rules</strong> that refer to HTML elements (like <code>&lt;p></code> and <code>&lt;ul></code>), and define what those elements should look like.</li>
+        <li>A CSS rule is made up of a <strong>selector</strong> and one or more <strong>declarations</strong></li>
+        <li>A <strong>selector</strong> tells the browser what element(s) we are styling.</li>
+        <li>It looks like this:</li>
+        <pre><code class="language-css">h2 {}</code></pre>   
+        <li>The above selector will select all <code>&lt;h2></code> elements and apply our styles (which will go between the curly brackets) to them</li>     
       </ul>
-    </article>    
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Inline CSS using the <code>style</code> attribute</h2>
-      <p>The <code>style</code> <em><strong>attribute</strong></em> can be added to any visible HTML tag.</p>
-
-<textarea class='coder-editor coder-editor-full'>
-<h1>Welcome!</h1>
-<p>This is my website.</p>
-
-<h1>Social Media</h1>
-<p>Follow me on 
-  <a href="http://twitter.com/@pearlchen" target="_blank">Twitter</a>!
-</p>
-</textarea>
-<script type='coder-solution'><h1 style="background-color: black; color: white;">Welcome!</h1>
-<p style="font-size: 18px;">This is my website.</p>
-
-<h1 style="background-color: black; color: white;">Social Media</h1>
-<p style="font-size: 18px;">Follow me on 
-  <a href="http://twitter.com/@pearlchen" target="_blank"
-  style="color: red;">Twitter</a>!
-</p>
-</script>
-
     </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Using selectors to apply CSS</h2>
-      <p>Here's the same result but using CSS <span class="keyword">selectors</span>.</p>
-      <p>The <code>&lt;style&gt;</code> tag (placed between the <code>&lt;head&gt;</code> tags) is where CSS commonly goes.</p>
-
-<textarea class='coder-editor coder-editor-full'>
-<h1>Welcome!</h1>
-<p>This is my website.</p>
-
-<h1>Social Media</h1>
-<p>Follow me on 
-  <a href="http://twitter.com/@pearlchen" target="_blank">Twitter</a>!
-</p>
-</textarea>
-<script type='coder-solution'>
-<h1>Welcome!</h1>
-<p>This is my website.</p>
-
-<h1>Social Media</h1>
-<p>Follow me on 
-  <a href="http://twitter.com/@pearlchen" target="_blank">Twitter</a>!
-</p>
-
-<style>
-  h1 { background-color: black; color: white; }
-  p { font-size: 18apx; }
-  a { color: red; }
-</style>
-</script>
-
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS selectors and properties</h2>
-      <p>Here's a CSS declaration dissected:</p>
-      <p class="centered"><img src="assets/css.png" /></p>
+      
+    <!-- SLIDE: CSS Syntax 2 -->
+    <article class="slide slide-list">
+      <h2>CSS Syntax</h2>
       <ul>
-        <li>A <strong>basic</strong> <span class="keyword">selector</span> will match its HTML tag name. In this case, all content that is a <code>&lt;h1&gt;</code> will be applied this style.<br /><span class="sidenote">(We'll get into more complex ones later.)</span></li>
-        <li>A <span class="keyword">property</span> is a special label for some visual aspect of the selector such as color or size. You can see a list of them in this <a href="http://www.cheatography.com/davechild/cheat-sheets/css2/">cheatsheet</a>.</li>
-        <li>The property <strong>value</strong> is specific to the property type. For example, <code>color</code> properties accept colour values like <code>blue</code> or <code>#FFFF00</code>. <code>font-size</code> properties accept units of measurements like <code>12px</code> (where "px" stands for pixels).</li>
-      </ul>
-    </article>  
+        <li>A <strong>declaration</strong> tells the browser what style we want to apply to our element</li>
+        <li>A declaration is always made up of two parts: a <strong>property</strong> and a <strong>value</strong></li>
+        <li>A <strong>property</strong> tells the browser what we are modifying (ex. font, colour, size)</li>
+        <li>A <strong>value</strong> tells the browser how to modify the property (ex. Arial, green, small)</li>
+        <li>A declaration looks like this:</li>
+        <pre><code class="language-css">background-color: green;</code></pre>   
 
- <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS selectors and properties</h2>
-      <p>Here's a CSS declaration dissected:</p>
-      <p class="centered"><img src="assets/css.png" /></p>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Syntax 2.1 -->
+    <article class="slide slide-list">  
+      <h2>CSS Syntax</h2>
       <ul>
-        <li>Use <strong>curly braces</strong> (<code>{}</code>) to hold a list of the property:value sets.</li> 
-        <li>You can define multiple property:value sets but you must end each one with a <strong>semi-colon</strong> (<code>;</code>).</li>
+        <pre><code class="language-css">background-color: green;</code></pre>
+        <li>The <strong>value</strong> (the part <em>after</em> the colon) is specific to the property type</li>
+        <li>Ex. size-related properties like <code>height, width</code>, or <code>font-size</code> are usually specified in <code>px</code> (pixels), while colour-related properties are specified with a colour name or code</li>
+        <li>It's very important that you write the syntax correctly, with a colon after the property name and a semi-colon after the value</li>
       </ul>
-    </article>  
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Changing the page's background colour</h2>
-      <p>View <code><a href="exercises/3_CSS/index.html" target="_blank">exercises/3_CSS/index.html</a></code> in your browser. Notice how we're using a transparent PNG so it's hard to read all the white letters on a white background.</p>
-      <p>Let's add a <code>&lt;style&gt;</code> tag between the <code>&lt;head&gt;</code>. Then add this:</p>
-<pre>body { background-color: gray; }</pre>
     </article>
 
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Changing the font colour</h2>
-      <p>Now the text is a bit hard to read on the gray background. Because the <code>&lt;body&gt;</code> tag is the highest possible visible HTML tag, the <code>body</code> selector will also allow us to target the font color on the <em>entire</em> page.</p>
-<pre>body { background-color: gray; <strong>color: white;</strong> }</pre>
-    </article>    
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Changing the font family</h2>
-      <p>The web has a number of fonts that are considered "web safe". Some of the most used fonts are:</p>
+    <!-- SLIDE Adding Style Tags -->
+    <article class="slide slide-list">
+      <h2>Adding CSS to HTML</h2>
       <ul>
-        <li style="font-family: Arial;">Arial</li>
-        <li style="font-family: Verdana;">Verdana</li>
-        <li style="font-family: 'Times New Roman';">Times New Roman</li>
-        <li style="font-family: Georgia;">Georgia</li>
-        <li style="font-family: Courier;">Courier</li>
+        <li>You write CSS rules in a set of <code>&lt;style>&lt;/style></code> tags</li>
+        <li>You add the style tags to the <code>&lt;head></code> of your HTML document like this:</li>
+<pre><code class="language-markup">
+&lt;html>
+  &lt;head>
+    &lt;style>
+      h2 {
+        background-color: green;
+      }
+    &lt;/style>
+  &lt;/head>
+  &lt;body>
+    
+  &lt;/body>
+&lt;/html>
+</code></pre>
       </ul>
-      <p>Let's add a bit of contrast to our headers by using the Courier font on them.</p>
-<pre>h1 { font-family: Courier; }
-h2 { font-family: Courier; }</pre>
     </article>
 
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Changing the font family</h2>
-      <p>Not all fonts are installed on all computers so it's recommended that you use a list of fonts. If the first font in the list isn't available, it will try to use the next.</p>
-<pre>body { background-color: gray; color: white; <strong>font-family: Helvetica, Verdana, Arial, sans-serif;</strong> }</pre>
-      <p class="sidenote">(Notice how the font-family for the headers are still Courier? That's the "cascading" part of Cascading Style Sheets in action. Inline styles take precedence, then innermost tags, then outer tags.)</p>
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Changing the font size</h2>
-      <p>Font sizes are typically defined in pixels (px) or "ems" (em).</p>
+    <!-- SLIDE: CSS Syntax 3 -->
+    <article class="slide slide-list">
+      <h2>CSS Syntax</h2>
       <ul>
-        <li style="font-size: 10px;">20px</li>
-        <li style="font-size: 20px;">45px</li>
-        <li style="font-size: 1em;">0.5em</li>
-        <li style="font-size: 1.5em;">1em</li>
+        <li>When we put selectors and declarations together, they make a CSS rule, which looks like this: </li>
+<pre><code class="language-css">
+h2 {
+  background-color: green;
+}
+</code></pre>
+        <li>This rule will select all <code>&lt;h2></code> elements and change their background colour to green</li>
+        <li>Try copying and pasting the above code in between the <code>&lt;style></code> tags and refreshing the page in your browser</li>
       </ul>
-      <p>Headers have default font-sizes defined by the browser. Let's override them. </p>
-<pre>h1 { font-family: Courier; <strong>font-size: 25px;</strong> }
-h2 { font-family: Courier; <strong>font-size: 22px;</strong> }</pre>
-<p class="sidenote">(When you've got more time, read <a href="http://kyleschaeffer.com/best-practices/css-font-size-em-vs-px-vs-pt-vs/" target="_blank">this article</a> for more info on font unit sizes.</p>
     </article>
 
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Changing the font weight</h2>
-      <p>In its simplest form, there are 2 weights:</p>
+    <!-- SLIDE: CSS Syntax 4 -->
+    <article class="slide slide-list">
+      <h2>CSS Syntax</h2>
       <ul>
-        <li style="font-weight: normal;">normal</li>
-        <li style="font-weight: bold;">bold</li>
-      </ul>
-      <p>By default, headers are already bolded. Let's remove the bold by applying the <em>normal</em> font weight on them.</p>
-<pre>h1 { font-family: Courier; font-size: 25px; <strong>font-weight: normal;</strong> }
-h2 { font-family: Courier; font-size: 22px; <strong>font-weight: normal;</strong> }</pre>
-    </article>
-
-    <article class='slide slide-list'>
-      <h2>Formatting CSS</h2>
-      <p>As with HTML, extra whitespace and line breaks add to readability.</p>
-      <p>Our current CSS can be written like this:</p>
-<pre class="prettyprint lang-css">
-&lt;style&gt;
-
-  body { 
-    background-color: gray; 
-    color: white; 
-    font-family: Helvetica, Verdana, Arial, sans-serif; 
+        <li>We can add multiple declarations (property: value; sets) to one selector to modify multiple properties:</li>
+<pre><code class="language-css">
+  h2 {
+    background-color: green;
+    font-weight: bold;
+    font-size: 28px;
   }
+</code></pre>
+        <li>Make sure you always end each declaration with a semi-colon</li>
+        <li>Try replacing the previous rule for <code>&lt;h2></code> with this one and refreshing your browser</li>
+        <li>Next, clear out all the code you added between the <code>&lt;style></code> tags. We're adding more soon!</li>
+      </ul>
+    </article>
 
-  h1 { 
-    font-family: Courier; 
-    font-size: 25px;
-    font-weight: normal; 
+    <!-- SLIDE CSS First -->
+    <article class="slide slide-list">
+      <h2>Exercise: First CSS Rule</h2>
+      <ul>
+        <li>Find the set of <code>&lt;style></code> tags in the <code>&lt;head></code> of <strong>index.html</strong></li>
+        <li>In between the two tags, write a selector for the <code>&lt;body></code> tag of the document</li>
+        <li>Next, add a <code>color: </code> property with a value of <code>blue;</code></li>
+<pre><code class="language-css">
+body {
+  color: blue;
+}
+</code></pre>
+      <li>All the text on the page is now blue: this is because the <code>&lt;body></code> tag is the highest-level tag we can see on the page, so the <code>color</code> property applies to the body AND all its children, including every heading, paragraph, and list item</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Color Change -->
+    <article class="slide slide-list">
+      <ul>
+        <li>Let's change the text to something easier to read</li>
+        <li>We're going to use a <strong>hex code</strong>, which is a 6-character code that specifies a colour</li>
+        <li>You don't have to understand how they work, just remember that they start with a <code>#</code> sign</li>
+        <li>The code for a nice dark grey is <code>#444444</code></li>
+        <li>
+<pre><code class="language-css">
+body {
+  color: #444444;
+}
+</code></pre>          
+        </li>
+        <li>You can find hex codes for any colours you like at a website like <a href="http://www.colorpicker.com/">colorpicker.com</a></li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Fonts -->
+    <article class="slide slide-list">
+      <h2>Styling Type with CSS</h2>
+      <ul>
+        <li>There are lots of CSS properties which let us style the text in our HTML:</li>
+        <ul>
+          <li><code>font-size</code></li>
+          <li><code>font-weight</code></li>
+          <li><code>font-style</code></li>
+          <li><code>font-family</code></li>
+          <li><code>color</code></li>
+          <li><code>line-height</code></li>
+        </ul>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Fonts 2 -->
+    <article class="slide slide-list">    
+      <ul>
+        <li>Let's change the font to a sans-serif like Helvetica: </li>
+<pre><code class="language-css">
+  body {
+    color: #444444;
+    font-family: Helvetica, Arial, sans-serif;    
   }
-
-  h2 { 
-    font-family: Courier;
-    font-size: 22px; 
-    font-weight: normal; 
-  }
-
-&lt;/style&gt;
-</pre>
+</code></pre>
+        <li>The font-family property accepts a list of font names: the first font is your first-choice font, the next ones are fallbacks in case that font is not available</li>
+        <li>Not all fonts are commonly available, so try to stick to 'web-safe' fonts like:</li>
+        <ul>
+          <li style="font-family: Arial;">Arial</li>
+          <li style="font-family: Verdana;">Verdana</li>
+          <li style="font-family: 'Times New Roman';">Times New Roman</li>
+          <li style="font-family: Georgia;">Georgia</li>
+          <li style="font-family: Courier;">Courier</li>
+        </ul>
+      </ul>
     </article>
 
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>The "Box Model"</h2>
-      <p>Most HTML elements on a webpage look like this to the browser:</p>
-      <p class="centered"><img src="assets/box-model.gif" width="536" height="289" alt="box model" /></p>
-      <p>This is the same but visualized differently:</p>
-      <p class="centered"><img src="assets/box-model.png" width="517" height="476" alt="box model" /></p>
+        <!-- SLIDE CSS Fonts 2 -->
+    <article class="slide slide-list">
+      <ul>
+        <li>If we want to make our <code>&lt;h1></code> and <code>&lt;h2></code> tags a bit bigger:</li>
+<pre><code class="language-css">
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 32px;
+}
+</code></pre>
+      </ul>
     </article>
 
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p>To add a border you need to set 3 properties:<br />
-        <code>border-weight</code>, <code>border-style</code>, and <code>border-color</code>.</p>
-      <p class="sidenote">You can define them seperately, or using shorthand.</p>
-      <p class="sidenote">Note: CSS comments use the format <code>/* comment */</code></p>
-
-<textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-  border-width: 1px;
-  border-style: solid;
-  border-color: black;
+    <!-- SLIDE CSS Fonts 4 -->
+    <article class="slide slide-list">
+      <ul>
+        <li>We can change the line height (or leading) with the <code>line-height</code> property to make it easier to read</li>
+        <li><code>line-height</code> is specified as a multiple of the size of the font: so a value of <code>1.4</code> means the lines will be 1.4x as tall as the text.</li>
+<pre><code class="language-css">
+p {
+  line-height: 1.4;
 }
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-  /*
-  border-width: 1px;
-  border-style: solid;
-  border-color: black;
-  */
-  border: 1px solid black;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</script>
-
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p>To add padding you set 4 properties:<br />
-        <code>padding-top</code>, <code>padding-left</code>, <code>padding-bottom</code>, and <code>padding-left</code>.</p>
-      <p class="sidenote">You can define them seperately, or using shorthand (in a clockwise direction).</p>
-
-<textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-
-  padding-top: 5px;
-  padding-right: 30px;
-  padding-bottom: 5px;
-  padding-left: 30px; 
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-  border: 1px solid black;
-  /*
-  padding-top: 5px;
-  padding-right: 30px;
-  padding-bottom: 5px;
-  padding-left: 30px; 
-  */
-  padding: 5px 30px 5px 30px;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</script>
-
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p>Add a background colour and change the font colour.</p>
-      <p>To get rid of the underline, use the <code>text-decoration</code> property.</p>
-
-<textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-
-  background-color: black;
-  color: white;
-  text-decoration: none;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</script>
-
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p>To add margins you set 4 properties:<br />
-        <code>margin-top</code>, <code>margin-left</code>, <code>margin-bottom</code>, and <code>margin-left</code>.</p>
-      <p class="sidenote">You can define them seperately, or using shorthand (in a clockwise direction).</p>
-
-
-<textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-
-  margin-top: 15px;
-  margin-right: 10px;
-  margin-bottom: 0;
-  margin-left: 0;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-
-  /*
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  */
-  margin: 15px 10px 0 0;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</script>
-
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <p style="color: #B1009A;">Example: Let's make our links look more button-like</p>
-      <p>Here's the final button code!</p>
-
-<textarea class='coder-editor'>
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;
-
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</script>
-
-      <br clear="all" />
-      <p class="sidenote"><strong>Advanced topic:</strong> To get it looking even more like a button, use the <code>border-radius</code> property.<br />
-      <span class="sidenote">(We won't get into browser pre-fixes today but do know that newer CSS features require you to re-state the property for each browser vendor.)</span></p>
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS interactions &amp; pseudo selectors</h2>
-      <p>CSS is also able to handle some basic UI interactions in our sites, such as allowing a mouse over or "hover" state on various elements. This is frequently done with items such as links.</p>
-      <p>As part of your selector, you need to use the <code>:hover</code> <span class="keyword">pseudo selector</span>.</p>
-
-<textarea class="coder-editor">
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;
-
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-}
-
-a:hover {
-
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;
-
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-}
-
-a:hover {
-  background-color: purple;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-</script>
-
+</code></pre>
+      </ul>
     </article>
     
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS classes</h2>
-      <p>Wait! What happens when we add another link to the page and it's not part of our navigation?
-      <span class="sidenote">Putting all the styles inline wouldn't be wise...</span></p>
-<textarea class="coder-editor">
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;
-}
-
-a:hover {
-  background-color: purple;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-
-&lt;p&gt;Follow me on
-  &lt;a href="http://twitter.com/pearlchen" target="_blank"&gt;Twitter&lt;/a&gt;!
-&lt;/p&gt;
-</textarea>
-<script type='coder-solution'>&lt;a 
-  href="index.html"
-  style="border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;"&gt;Home&lt;/a&gt;
-&lt;a 
-  href="about.html"
-  style="border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;"&gt;About&lt;/a&gt;
-&lt;a 
-  href="contact.html"
-  style="border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;"&gt;Contact&lt;/a&gt;
-
-&lt;p&gt;Follow me on
-  &lt;a href="http://twitter.com/pearlchen" target="_blank"&gt;Twitter&lt;/a&gt;!
-&lt;/p&gt;
-</script>
-      <br clear="all" />
-      <p class="sidenote">Now that's a lot of CSS! What if you change you mind and decide that the background color should be blue now? Plus you can't apply pseudo selectors like <code>:hover</code> inline.</p>
-    </article>    
-
-   <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS classes</h2>
-      <p>If you know that several elements are going to have similiar styles, use CSS classes! Once you define one CSS class, you can apply it over and over again!</p>
+    <!-- SLIDE CSS Images 1 -->
+    <article class="slide slide-list">
+      <h2>Styling Images</h2>
       <ul>
-        <li>Use a <strong>period</strong> (<code>.</code>) to define CSS selectors that are classes.<br />
-          e.g. <code>.nav_button</code></li>
-        <li>Then apply that class to any element using the <code>class</code> attribute.<br />
-          e.g. <code>class="nav_button"</code></li>
-      </ul>
-
-<pre>
-&lt;a <strong>class="nav_button"</strong>&gt;Home&lt;/a&gt;
-
-&lt;style&gt;
-<strong>.nav_button</strong> {
-  font-family: Georgia;
+        <li>Let's add a dark border around the profile image</li>
+        <li>Write a selector to pick out the <code>&lt;img></code> tag</li>
+<pre><code class="language-css">
+img {}
+</code></pre>
+        <li>The <code>border</code> property has 3 parts: the width, the style, and the colour</li>
+        <li>So if we want a 1px wide, solid, grey border, we use:</li>
+<pre><code class="language-css">
+img {
+  border: 1px solid grey;
 }
-&lt;/style&gt;  
-</pre>
-
+</code></pre>        
+      </ul>
     </article>
 
-   <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS classes</h2>
-      <p>Let's apply a "nav_button" CSS class to our current navigation links:</p>
-      <textarea class="coder-editor">
-&lt;style&gt;
-a { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
+    <!-- SLIDE CSS Classes 1 -->
+    <article class="slide slide-list">
+      <h2>Being More Specific</h2>
+      <ul>
+        <li>Our border is now applying to <strong>all</strong> images on the page, including our logo. We don't want that, so we need a way to target <strong>only</strong> the profile image</li>
+        <li>HTML gives us a way to attach extra identifying information to HTML elements so that we can target them. We call these "classes"</li>
+        <li>Classes are attributes that you add on to tags</li>
+<pre><code class="language-markup">
+&lt;p class="classname">&lt;/p>
+</code></pre>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Classes 2 -->
+    <article class="slide slide-list">
+      <h2>Targeting an Element with a Class</h2>
+      <ul>
+        <li>We can write a selector in our css to target the element we added a class to using a <code> . </code></li>
+<pre><code class="language-css">
+p.classname {}
+</code></pre>        
+        <li>And then apply the styles we want to only the item with the class</li>
+<pre><code class="language-css">
+p.classname {
+  color: red;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Classes Exercise -->
+    <article class="slide slide-list">
+      <h2>Exercise: Style Profile Image</h2>
+      <ul>
+        <li>Add some style to your profile image!</li>
+        <li>Add a class of <code>profile</code> to the tag for your profile image</li>
+        <li>Target that class in your CSS with the selector <code>img.profile</code></li>
+        <li>Then add a border of any color you like</li>
+        <li>If your picture is too big, you can resize it using the <code>width</code> and <code>height</code> properties, which are specified in <code>px</code> (pixels). Try 200 x 200 px.</li>
+<pre><code class="language-css">
+img {
+  width: 200px;
+  height: 200px;
+}
+</code></pre>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Classes Exercise Solution -->
+    <article class="slide slide-list">
+      <h2>Exercise: Style Profile Image</h2>
+      <ul>
+        <li>Your HTML should look something like this:</li>
+<pre><code class="language-markup">
+&lt;img class="profile" src="images/profile.jpg"> 
+</code></pre>
+        <li>And your CSS something like this:</li>
+<pre><code class="language-css">
+img.profile {
+  border: 1px solid grey;
+  width: 200px;
+  height:200px;  
+}  
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Classes on multiple elements -->
+    <article class="slide slide-list">
+      <h2>Adding More Classes</h2>
+      <ul>
+        <li>We can do the same thing to style our "favourite things" images</li>
+        <li>Since we probably want all four images to have the same styles, we can add the same class to each</li>
+        <li>Add a class of "favourite" to each of the four images</li>
+<pre><code class="language-markup">
+&lt;img class="favourite" src="images/kitten.jpg" >
+</code></pre>   
+        <li>Add some styles to your images</li>     
+        <li>Things like <code>width, height</code>, and <code>border</code></li>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Classes on fav images -->
+    <article class="slide slide-list">
+      <ul>
+        <li>Try something fun like <code>border-radius: 50%;</code></li>
+        <li>Or <code>border: 3px dotted pink;</code></li>
+        <li>Or even <code>box-shadow: 0 0 4px grey;</code></li>
+        <li>Your CSS might look something like this:</li>
+<pre><code class="language-css">
+img.favourite {
+  border: 1px solid grey;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Properties -->
+    <article class="slide slide-subhead">
+      <h1>Don't worry if it seems like there are a lot of CSS properties to remember. Keep looking them up in the cheetsheets or on the internet and they'll sink in eventually. Even the pros have to look things up every once in a while :)</h1>      
+    </article>
+
+    <!-- SLIDE CSS Box Model -->
+    <article class="slide slide-list">
+    <h2>The Box Model</h2>
+    <h3>This is the trickiest part of CSS, don't worry if it seems confusing at first!</h3>
+      <ul>
+        <li>The CSS "Box Model" describes the way CSS styles the size and spacing of HTML elements</li>
+        <li>To understand the box model, we need to understand how the browser "sees" HTML elements</li>
+        <li>To the browser, <strong>every</strong> HTML element is a  rectangular box</li>
+        <li>If we show the outlines of all the elements in an HTML document, it looks a bit like the next slide:</li>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Box Model 2 -->
+    <article class="slide slide-list">      
+     <img src="assets/redboxes.png"></li>
+    </article>
+
+    <!-- SLIDE CSS Box Model 3 -->
+    <article class="slide slide-list">
+      <h2>The Box Model</h2>
+      <ul>
+        <li>CSS uses 5 properties to determine the size and spacing of these boxes:</li>
+        <li><code>margin</code>, <code>padding</code>, <code>border</code>, <code>width</code>, and <code>height</code></li>
+        <li>These 5 properties make up the <strong>Box Model</strong></li>
+        <img src="assets/border-box-model.gif">
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Box Model: Margin & Padding -->
+    <article class="slide slide-list">
+      <h2>Margin and Padding</h2>
+      <ul>
+        <li>Say I have 3 elements in my HTML document: a <code>&lt;p></code>, an <code>&lt;h2></code>, and another <code>&lt;p></code></li>
+        <li>Let's put a red border around the <code>&lt;h2></code> and a pink background:</li>
+<pre><code class="language-css">
+h2 {
+  border: 1px solid red;
+  background: pink;
+}
+</code></pre>
+      <li>So far, this looks pretty awfull, all the elements are too close to each other</li>        
+      <img src="assets/bm1.png">
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Box Model: Margin-->
+    <article class="slide slide-list">  
+      <h2>Margins</h2>
+      <ul>
+        <li>There are 2 CSS properties for adding space around our elements: <code>margin</code>, and <code>padding</code></li>
+        <li>The <code>margin</code> property adds space <em>around</em> the element, outside of the border:</li>
+<pre><code class="language-css">
+h2 {
+  margin: 40px;
+}  
+</code></pre>  
+        <li>This code adds 40px of space on every side of the element.</li>      
+        <img src="assets/bm2.png" alt="">
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Box Model: Padding -->
+    <article class="slide slide-list">
+      <h2>Padding</h2>
+      <ul>
+        <li>If we want to add some space <em>inside</em> the border, we use the <code>padding</code> property</li>
+<pre><code class="language-css">
+h2 {
+  margin: 40px;
+  padding: 40px;
+}
+</code></pre> 
+        <li>This code adds 40px of space to every side of the element, but it does so within the border</li>       
+        <img src="assets/bm3.png" alt="">        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Box Model: Margin & Padding -->
+    <article class="slide slide-list">
+      <h2>Margin vs. Padding</h2>
+      <ul>
+        <li>Adding <code>padding</code> to an element makes the element <strong>bigger</strong>, whereas adding a <code>margin</code> adds space around the element</li>
+        <li>If you make a 100px wide element, and then add 40px of padding to it, it will become 180px wide</li>
+        <li>If you add a 40px margin to a 100px wide element, it stays 100px wide</li>
+        <li>If you add a 1px border to a 100px wide element, it will become 102px wide</li>
+        <li>If your element doesn't have a border or a background, you may not be able to see the difference between margin and padding</li>
+        <!-- TODO: diagram of h2 thing -->
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Box Mdoel: Margin & Padding Sides -->
+    <article class="slide slide-list">
+      <h2>More on Margins and Padding</h2>
+      <ul>
+        <li>You can specify which side of an element you want your margins to apply to with the <code>margin-top, margin-right, margin-bottom,</code> and <code>margin-left</code> properties:</li>
+<pre><code class="language-css">
+h2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+</code></pre>        
+        <li>The same goes for <code>padding</code> and <code>border</code></li>
+<pre><code class="language-css">
+h2 {
+  padding-bottom: 40px;
+  border-left: 1px solid red;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Box Model Exercise -->
+    <article class="slide slide-list">
+      <h2>Exercise: Box Model</h2>
+      <ul>
+        <li>Add some <code>padding</code> to your profile image. Note that there is now space <em>between</em> the image and the border around it. Try about 5px.</li>
+        <li>Add both <code>padding</code> and a <code>margin</code> to your favourite things images. Try 5px for the <code>padding</code> and about 10px for the <code>margin</code></li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Box Model Answer -->
+    <article class="slide slide-list">
+      <h2>Exercise: Box Model</h2>
+      <p>Your code should look something like this:</p>
+<pre><code class="language-css">
+img.profile {
+  padding: 5px;
+}
+img.favourite {
+  padding: 5px;
+  margin: 10px;
+}
+</code></pre>      
+    </article>
+
+    <!-- SLIDE CSS Box Model: Center logo -->
+    <article class="slide slide-list">
+      <h2>Centering the Logo</h2>
+      <ul>
+        <li>We probably want that logo to be in the centre of the page</li>
+        <li>To centre elements in CSS, we set the margins on the sides to <code>auto</code>, which causes the browser to automatically calculate how much margin to add to each side to centre the element</li>
+        <li>Instead of specifying both the <code>margin-left</code> and <code>margin-right</code> properties, we can use a shorthand that looks like this:</li>
+<pre><code class="language-css">
+img {
+  margin: 0 auto;
+}
+</code></pre>    
+        <li>The <code>0</code> sets both the top margin and the bottom margin, and the <code>auto</code> sets both the left and right margins. </li>    
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Box Model: Center Logo 2 -->
+    <article class="slide slide-list">
+      <h2>Centering the Logo</h2>
+      <ul>
+        <li>We need a way to target our logo element so that we don't end up centering all the images</li>
+        <li>Add a class called <code>logo</code> to your logo <code>&lt;img></code> tag:</li>
+<pre><code class="language-markup">
+&lt;img class="logo" src="images/logo.png">
+</code></pre>  
+        <li>Then write a selector in your CSS to apply the <code>margin</code> property to</li>      
+<pre><code class="language-css">
+img.logo {
+  margin: 0 auto;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Box Model: Center logo 3 -->
+    <article class="slide slide-list">
+      <h2>Nothing Happened!</h2>
+      <ul>
+        <li>Let's take a few steps back:</li>
+        <li>Remember the boxes with the red outlines?</li>
+        <img src="assets/redboxes.png" width="400px;">
+        <li>Did you notice that the red outlines around the images don't stretch accross the whole screen like the other boxes do?</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Box Model: Block vs. Inline -->
+    <article class="slide slide-list">      
+      <ul>
+        <li>This is because images are <em>inline</em> elements</li>
+        <li>Inline elements do not take up the full width of the page, they only take up as much space as the content requires</li>
+        <li>Most elements, like <code>&lt;h2>, &lt;p>,</code> or <code>&lt;ul></code> take up the whole width of the page, these are called <em>block</em> elements</li>
+        <li>Because our logo element is only as wide as the image, we can't centre it relative to the page</li>
+        <li>Luckily, this is easy to fix: we just tell the <code>&lt;img></code> tag to behave like a block element instead, by setting the <code>display</code> property</li>
+<pre><code class="language-css">
+img.logo {
+  margin: 0 auto;
+  display: block;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Box Model: Inline -->
+    <article class="slide slide-list">
+      <h2>Other Inline Elements</h2>
+      <ul>
+        <li>Other common inline elements include <code>&lt;a>, &lt;strong>,</code> and <code>&lt;em></code></li>
+        <li>Inline elements don't create line breaks, so they are usually tags that you might find inside a paragraph or in the middle of a sentence.</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Intro -->
+    <article class="slide slide-list">
+      <h2>Layout: Section by Section</h2>
+      <ul>
+        <li>Our site looks much better now, but now it's time to style the individual sections</li>
+        <li>We'll need a way to target each section independently, grouping elements within the same section together</li>
+        <li>Conveniently enough, HTML provides the <code>&lt;section></code> tag</li>
+        <li>We'll wrap each section within a <code>&lt;section></code> tag and add a class to each one, so we can style each section in our CSS</li>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout  -->
+    <article class="slide slide-list">
+      <h2>Banner Section</h2>
+      <ul>
+        <li>Add an opening <code>&lt;section></code> tag before the logo image</li>
+        <li>Add a closing <code>&lt;/section></code> tag right after the "tagline" paragraph</li>
+        <li>Add a class called "banner" to the <code>&lt;section></code> tag</li>
+<pre><code class="language-markup">
+&lt;section class="banner">
+  &lt;img>
+  &lt;h1>...&lt;/h1>
+  &lt;p>...&lt;/p>
+&lt;/section>  
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Banner 2 -->
+    <article class="slide slide-list">
+      <h2>Banner Section CSS</h2>
+      <ul>
+        <li>Target our new <code>&lt;section></code> with a selector in your CSS</li>
+<pre><code class="language-css">
+section.banner {}  
+</code></pre>        
+        <li>Add some padding to the top and bottom of the section to give our logo and text some space</li>
+<pre><code class="language-css">
+section.banner {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Banner 3 -->
+    <article class="slide slide-list">
+      <h2>Adding a background image</h2>
+      <ul>
+        <li>The CSS <code>background-image</code> property lets you specify a path to an image in much the same way as you would in an HTML <code>&lt;img></code> tag</li>
+<pre><code class="language-css">
+background-image: url('images/background.jpg');
+</code></pre>               
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Banner Exercise -->
+    <article class="slide slide-list">
+      <h2>Exercise: Add a background image</h2>
+      <ul>
+        <li>Find a large image on your computer or on the internet and move it into the <strong>images</strong> folder in your project folder</li>
+        <li>Add the image as a <code>background-image</code> for the new banner <code>&lt;section></code> we just made</li>
+        <li>Adjust the <code>color</code> property for the section to something that contrasts with your background image</li>
+        <li>Set the <code>text-align</code> property to <code>center</code> to centre the text</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Banner Assigmment soltuion -->
+    <article class="slide slide-list">
+      <h2>Exercise: Add a background image</h2>
+      <ul>
+        <li>Your CSS should look like this:</li>
+<pre><code class="language-css">
+section.banner {
+  background: url('images/background.jpg');
+  color: #ffffff;
+  text-align: center;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Normalize -->
+    <article class="slide slide-list">
+      <h2>Browser default styles</h2>
+      <ul>
+        <li>We have an ugly white margin around our whole background image!</li>
+        <li>This is because the browser adds a bunch of default margins to HTML elements, including the <code>&lt;body></code></li>
+        <li>We can get rid of many of these unwanted styles with a snippet of code called <strong>normalize.css</strong></li>
+        <li>Open up the <strong>normalize.css</strong> file and copy and paste the contents to the top of your CSS</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Banner: Typography -->
+    <article class="slide slide-list">
+      <h2>CSS Child Selectors</h2>
+      <ul>
+        <li>Let's adjust some of the text in our banner section</li>
+        <li>We probably want the paragraph text to be bigger, and the <code>&lt;h1></code> to have less of a margin at the bottom</li>
+        <li>We need a way to select the paragraph tags in the banner section and <strong>only</strong> in the banner section</li>
+        <li>We could add a class to it like we did with the images, but there's an easier way</li>
+        <li>We can use the class we added to the <code>&lt;section></code> element to target the elements that are nested within it</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Child Selectors -->
+    <article class="slide slide-list">
+      <h2>CSS Child Selectors</h2>
+      <ul>
+        <li>You can write a <strong>child selector</strong> to select only those tags which are children of another tag</li>
+        <li>We add a space between the parent and the child selector to specify</li>
+<pre><code class="language-css">
+section img {}  
+</code></pre>        
+        <li>The above selector will select only those <code>&lt;img></code> tags which are nested within <code>&lt;section></code> tags</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Exercise Child Selectors -->
+    <article class="slide slide-list">
+      <ul>
+        <li>To target the <code>&lt;p></code> tag within the banner <code>&lt;section></code>, we use:</li>
+<pre><code class="language-css">
+section.banner p {}  
+</code></pre>     
+        <li>Increase the <code>font-size</code> of the selected <code>&lt;p></code> tag</li>   
+        <li>Select the <code>&lt;h1></code> tag in the banner section in the same way and capitalize the text using <code>text-transform: uppercase;</code></li>
+<pre><code class="language-css">
+section.banner p {
+  font-size: 18px;
+}
+section.banner h1 {
+  text-transform: uppercase;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout About Section -->
+    <article class="slide slide-list">
+      <h2>About Section</h2>
+      <ul>
+        <li>Let's repeat the process for the "about" section</li>
+        <li>We'll wrap the section in <code>&lt;section></code> tags with a class of "about"</li>
+<pre><code class="language-markup">
+&lt;section class="about">
+  &lt;h2>...&lt;/h2>
+  &lt;img>
+  &lt;p>...&lt;/p>
+&lt;/section>
+</code></pre>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout About 2 -->
+    <article class="slide slide-list">
+      <h2>About Section</h2>
+      <ul>
+        <li>Add a tiled background image to this section</li>
+        <li>Use the image in the <strong>images</strong> folder, or look for one online</li>
+        <li>Try <a href="http://subtlepatterns.com/">subtlepatterns.com</a></li>
+        <li>Download an image you like and save it to your <strong>images</strong> folder</li>
+        <li>Add the image as a background to the about section</li>
+<pre><code class="language-css">
+section.about {
+  background: url('images/pattern.png');
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout About 3 -->
+    <article class="slide slide-list">
+      <h2>Centre-aligning the header</h2>
+      <ul>
+        <li>We want the heading for this section to be centre-aligned</li>
+        <li>So let's select it with a child selector:</li>
+<pre><code class="language-css">
+section.about h2 {}
+</code></pre>
+        <li>And centre-align it with <code>text-align: center;</code></li>
+<pre><code class="language-css">
+section.about h2 {
+  text-align: center;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout About 4 -->
+    <article class="slide slide-list">
+      <h2>CSS Floats</h2>
+      <ul>
+        <li>We want to align that image to the left, and allow the text to wrap around it.</li>
+        <li>We do this using <strong>CSS Floats</strong></li>
+        <li>Remember how all HTML elements are all rectangular boxes stacked on top of each other?</li>
+        <img src="assets/redboxes_small.png">        
+        <li>We have to break that stacking flow by <strong>floating</strong> the image to the side</li>
+        <li>This will cause the text after the image to move up beside it, because we've disrupted the flow of the rectangular boxes</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout About 5 -->
+    <article class="slide slide-list">
+      <h2>CSS Floats</h2>
+      <ul>
+        <li>We already wrote the selector for our profile <code>&lt;img></code>, so let's add the declaration <code>float: left;</code> to it:</li>
+<pre><code class="language-css">
+img.profile {
+  float: left;
+}
+</code></pre> 
+        <li>This has 'floated' our image to the left, but there's a problem...</li>   
+        <img src="assets/floatfail.png" height="200">    
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout About 5 -->
+    <article class="slide slide-list">
+      <h2>CSS Floats</h2>
+      <ul>
+        <li>We broke the flow of rectangular boxes by adding <code>float: left;</code> to our image</li>
+        <li>We need to restore the regular stacking of boxes after this section</li>
+        <li>We do this by adding <code>overflow: hidden;</code> to the parent element (<code>&lt;section class="about"></code>)</li>
+        <li><code>overflow: hidden;</code> forces the element to 'contain' any floated children, so that they don't disrupt the elements after them</li>
+<pre><code class="language-css">
+section.about {
+  overflow: hidden;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Favourites -->
+    <article class="slide slide-list">
+      <h2>Next Section: Favourites</h2>
+      <ul>
+        <li>There's not much to do here, but let's centre-align the entire section</li>
+        <li>First, we have to add a wrapping <code>&lt;section></code> around the favourites content</li>
+        <li>Add an opening <code>&lt;section></code> tag before the favourites heading, and a closing <code>&lt;/section></code> tag after the last image.</li>
+<pre><code class="language-markup">
+&lt;section class="favourites">
+  &lt;h2>...&lt;/h2>
+  &lt;h3>...&lt;/h3>
+  &lt;img class="favourite" src="images/kitten.jpg">
+  &lt;img class="favourite" src="images/kitten.jpg">
+  &lt;img class="favourite" src="images/kitten.jpg">
+  &lt;img class="favourite" src="images/kitten.jpg">
+&lt;/section>
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Favourites 2 -->
+    <article class="slide slide-list">
+      <h2>Centre-aligning</h2>
+      <ul>
+        <li>Let's write a selector for the section we just created:</li>
+<pre><code class="language-css">
+section.favourites {}  
+</code></pre>
+        <li>And centre-align it:</li>        
+<pre><code class="language-css">
+section.favourites {
+  text-align: center;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Contact -->
+    <article class="slide slide-list">
+      <h2>Exercise: Contact Section</h2>
+      <ul>
+        <li>Repeat the process of adding a wrapper <code>&lt;section></code> and centre-aligning it in CSS with the Contact section</li>
+        <li>Add a background image to the contact section</li>
+        <li>Add <code>margin</code>s around the images in the contact section</li>
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Contact 2 -->
+    <article class="slide slide-list">
+      <h2>Contact Section</h2>
+      <ul>
+        <li>Your HTML code should look something like this:</li>
+<pre><code class="language-markup">
+&lt;section class="contact">
+  &lt;h2>Contact Me&lt;/h2>
+  &lt;a href="https://">...&lt;/a>
+  &lt;a href="https://">...&lt;/a>
+  &lt;a href="https://">...&lt;/a>
+&lt;/section>
+</code></pre>
+        <li>And your CSS:</li>        
+<pre><code class="language-css">
+section.contact {
+  text-align: center;
+  background: url('images/tile2.png');
+}
+section.contact img {
+  margin: 20px;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Classes -->
+    <article class="slide slide-list">
+      <h2>Styling Multiple Sections at Once</h2>
+      <ul>
+        <li>All our sections could use some spacing, they're a bit too squished together</li>
+        <li>We'll add some <code>padding</code> to our sections</li>
+        <li>Since we're adding the same amount of padding to each section, we can avoid repeating ourselves by adding a class to each section we'd like to style, and then targeting this class in our CSS</li>
+        <li>Add a class of <strong>box</strong> to each of the content <code>&lt;section></code>s. (not including the banner section)</li>
+<pre><code class="language-markup">
+&lt;section class="about box">&lt;/section>
+&lt;section class="favourites box">&lt;/section>
+&lt;section class="contact box">&lt;/section>
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Classes -->
+    <article class="slide slide-list">
+      <h2>Styling Multiple Sections</h2>
+      <ul>
+        <li>Let's write a selector for our new class:</li>
+<pre><code class="language-css">
+section.box {}
+</code></pre>
+        <li>And add a bunch of padding to all our sections:</li>        
+<pre><code class="language-css">
+section.box {
+  padding: 50px 100px;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Layout Classes 3 -->
+    <article class="slide slide-list">      
+      <ul>
+        <li>We can also use our <code>box</code> class to target the headings in each of these sections</li>
+        <li>Since we're targeting both our <code>&lt;h2></code> and <code>&lt;h3></code> tags, we'll write a selector for both, separating them with a comma:</li>
+<pre><code class="language-css">
+section.box h2, section.box h3 {}
+</code></pre>        
+        <li>And change the colour of our headings:</li>
+<pre><code class="language-css">
+section.box h2, section.box h3 {
+  color: #A8258D;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras -->
+    <article class="slide slide-subhead">
+      <h1>Now we have a nice-looking website with all the elements nicely styled!</h1>
+      <h2>But there's still more we can do to make our site extra special</h2>
+    </article>
+
+    <!-- SLIDE CSS Extras: Background -->
+    <article class="slide slide-list">
+      <h2>Making our Background image fixed</h2>
+      <ul>
+        <li>To get that trendy effect where your background image stays put while you scroll, you can adjust the <code>background-attachment</code> property:</li>
+<pre><code class="language-css">
+section.banner {
+  background-attachment: fixed;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Custom Fonts -->
+    <article class="slide slide-list">
+      <h2>Adding Custom Fonts</h2>
+      <ul>
+        <li>Services like <a href="http://www.google.com/fonts/">Google Fonts</a> can make it easy for us to use fun fonts that aren't normally supported by all computers</li>
+        <li>Go to <a href="http://www.google.com/fonts/">Google Fonts</a> and search around for a font you like</li>
+        <li>Click "add to collection" when you find a font you like, then click the "use" button</li>
+        <li>Find the code in Step 3 of the instructions, and paste it into the <code>&lt;head></code> of your HTML document (remember how the <code>&lt;head></code> section sends invisible instructions to our browser?)</li>
+<pre><code class="language-markup">
+&lt;link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Custom Fonts -->
+    <article class="slide slide-list">
+      <h2>Adding Custom Fonts</h2>
+      <ul>
+        <li>Copy the code from Step 4 of the instructions into your CSS</li>
+        <li>Add the line of code anywhere you'd like to use your custom font</li>
+        <li>I'm going to add it to all the header tags</li>
+<pre><code class="language-css">
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Menu -->
+    <article class="slide slide-list">
+      <h2>Adding a Menu</h2>
+      <ul>
+        <li>Let's add a menu to the top of our document so our users can navigate</li>
+        <li>Menus are commonly marked up as lists with links inside each list item</li>
+        <li>There are two types of lists in HTML: ordered and unordered (numbered and bulleted)</li>
+        <li>Since we don't need numbers, we'll use an unordered list, which is marked up with <code>&lt;ul>&lt;/ul></code> tags</li>    
+        <li>Each bullet or "list item" in an unordered list is marked up as an <code>&lt;li>&lt;/li></code> tag <strong>nested</strong> within the <code>&lt;ul></code> tag</li>
+<pre><code class="language-markup">
+&lt;ul>
+  &lt;li>One list item&lt;/li>
+  &lt;li>Another list item&lt;/li>
+&lt;/ul>
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: MEnu -->
+    <article class="slide slide-list">
+      <h2>Adding a Menu</h2>
+      <ul>
+        <li>Add a <code>&lt;ul></code> with a class of "menu" to the top of your HTML document, just inside the <code>&lt;body></code></li>
+<pre><code class="language-markup">
+&lt;ul class="menu">
+  &lt;li>&lt;a href="#about">About&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#favourites">Favourites&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
+&lt;/ul>
+</code></pre>    
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Menu 2 -->
+    <article class="slide slide-list">
+      <h2>Adding a Menu</h2>
+      <ul>
+        <li>Let's add some basic styles to the unordered list item, like a border and background, and lets remove the bullets from the list items:</li>
+<pre><code class="language-css">
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  border-bottom: 1px solid #434A5C;
+  background: #ffffff;
+}
+</code></pre>       
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Menu 3 -->
+    <article class="slide slide-list">
+      <h2>Styling the Menu</h2>
+      <ul>
+        <li>We need to get our list items in a row</li>
+        <li>Remember how we had <code>display: block;</code> and <code>display:inline;</code> properties?</li>
+        <li>Neither of those is quite what we want, because <code>block</code> will create a new line for each element, and <code>inline</code> won't let us add padding to the list items</li>
+        <li>There's a third option that gives us the best of both worlds: <code>display: inline-block;</code></li>
+        <li>Write a selector for the list items, and apply <code>display: inline-block;</code> as well as some padding to the top, bottom, and sides</li>
+<pre><code class="language-css">
+.menu li {
+  display: inline-block;
+  padding: 20px 35px;
+}
+</code></pre>        
+      </ul>
+    </article>
+
+    <!-- SLIDE CSS Extras: Menu 4 -->
+    <article class="slide slide-list">
+      <h2>Styling the Menu Links</h2>
+      <ul>
+        <li>Add a bit of style to the links in your menu. Remove the default underline with <code>text-decoration: none</code></li>
+<pre><code class="language-css">
+.menu a {
   text-decoration: none;
-  margin: 15px 10px 0 0;
+  color: #333333;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
 }
-
-a:hover {
-  background-color: purple;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html"&gt;Home&lt;/a&gt;
-&lt;a href="about.html"&gt;About&lt;/a&gt;
-&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-
-&lt;p&gt;Follow me on
-  &lt;a href="http://twitter.com/pearlchen" target="_blank"&gt;Twitter&lt;/a&gt;!
-&lt;/p&gt;
-</textarea>
-<script type='coder-solution'>&lt;style&gt;
-.nav_button { 
-  border: 1px solid black;
-  padding: 5px 30px 5px 30px;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  margin: 15px 10px 0 0;
-}
-
-.nav_button:hover {
-  background-color: purple;
-}
-&lt;/style&gt;
-
-&lt;a href="index.html" class="nav_button"&gt;Home&lt;/a&gt;
-&lt;a href="about.html" class="nav_button"&gt;About&lt;/a&gt;
-&lt;a href="contact.html" class="nav_button"&gt;Contact&lt;/a&gt;
-
-&lt;p&gt;Follow me on
-  &lt;a href="http://twitter.com/pearlchen" target="_blank"&gt;Twitter&lt;/a&gt;!
-&lt;/p&gt;
-</script>
+</code></pre>        
+      </ul>
     </article>
 
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>External CSS</h2>
-      <p>Instead of duplicating your <code>&lt;style&gt;</code> content for every webpage, make one single CSS document ending with a <code>.css</code> extension and link to it in the <code>&lt;head&gt;</code> tag instead of (or in addition to) a <code>&lt;style&gt;</code> tag.</p>
-<pre>
-&lt;head&gt;
-  <strong>&lt;link rel="stylesheet" href="styles.css" type="text/css" /&gt;</strong>
-  &lt;style&gt;
-  body {
-    font-size: 14px;
-  }
-  &lt;/style&gt;
-&lt;/head&gt;
-</pre>
-
-      <p>Inside styles.css, there is <strong>no</strong> <code>&lt;style&gt;</code> tag:</p>
-<pre>
-body {
-  background-color: black;
-  color: white;
-  font-family: Helvetica, Arial, sans-serif;
-}
-h1 {
-  font-family: Georgia, "Times New Roman", serif;
-}
-</pre>
-
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Exercise #4 (20 minutes)</h2>
-      <p>Use this time to apply CSS to your 3-page website.</p>
+    <!-- SLIDE CSS Extras: Menu 5 -->
+    <article class="slide slide-list">
+      <h2>Making the menu "sticky"</h2>
       <ul>
-        <li>Update your navigation in <code>index.html</code> to look more button-like.</li>
-        <li>Create a single <code>styles.css</code> file and link to this external stylesheet from all 3 webpages using the <code>&lt;link&gt;</code> tag. Consolidate all of your CSS into this external stylesheet.</li>
-        <li>If you've got extra time, try out some new CSS properties from the cheatsheet and other resources listed on the <a href="#slide-94">CSS resources slide</a>.</li>
+        <li>We can get our menu to stay at the top of the screen while the user scrolls with the <code>position: fixed;</code> declaration</li>
+        <li><code>position: fixed;</code> requires us to set the <code>top</code> and <code>left</code> properties to tell the browser where to fix the menu to</li>
+        <li>This destroys the rectangular box around our menu, so we have to set the width back to 100%</li>
+<pre><code class="language-css">
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+</code></pre>        
       </ul>
-      <h3>Got questions?</h3>
-      <p>
-        Post them to Google Moderator: <a href="http://goo.gl/mod/c4cm" target="_blank" >http://goo.gl/mod/c4cm</a>
-      </p>
     </article>
 
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Laying out webpages with CSS</h2>
-      <p>Layout is one of the most challenging things to do in CSS because it requires you to think about the whole picture and plan ahead.</p>
-      <p>To creating a standard 2-column layout requires us to give dimensions to some of our content, and position it accordingly.</p>
-      <p class="centered"><img src="assets/2-column-webpage.png" width="703" height="411" alt="" /></p>
-    </article>
-
-    <article class='slide slide-list'>
-      <h2>Generic Container Tags</h2>
-      <p>Sometimes content you might want to group together (and treat differently with CSS) shouldn't be defined as a <code>h1</code> or <code>h2</code> or even a <code>p</code> paragraph. There are two kinds of generic containers available:</p>
+    <!-- SLIDE CSS Extras: Menu 6 -->
+    <article class="slide slide-list">
+      <h2>Getting the links to work</h2>
       <ul>
-        <li><code>span</code> - An <span class="keyword">inline</span> container.<br />
-          Good for highlighting keywords like I did in this bullet.</li>
-        <li><code>div</code> - An <span class="keyword">block</span> container.<br />
-          Much like a paragraph, it creates a line break above and below to create a box.</li>
+        <li>We need to match the links in our menu to the sections on our page</li>
+        <li>We can do this by adding an <code>id</code> attribute to each section that matches the link <code>href</code> (minus the <code>#</code> part)</li>
+<pre><code class="language-markup">
+&lt;section id="about" class="about box">&lt;/section>
+&lt;section id="favourites" class="favourites box">&lt;/section>
+&lt;section id="contact" class="contact box">&lt;/section>
+</code></pre>        
       </ul>
-<pre>&lt;div&gt;I'm a div!&lt;/div&gt;
-&lt;div&gt;I'm another div!&lt;/div&gt;
-</pre>
-      <div>I'm a div!</div>
-      <div>I'm another div!</div>
     </article>
 
-    <article class='slide slide-list'>
-      <h2>Semantic HTML Tags</h2>
-      <p>Historically, when making non-trivial websites, it required nesting lots of <code>div</code> tags within <code>div</code> tags (within <code>div</code> tags!) like this:</p>
-<pre>&lt;div&gt;
-  &lt;div&gt;
-    &lt;div&gt;Home&lt;/div&gt;
-    &lt;div&gt;About&lt;/div&gt;
-    &lt;div&gt;Contact&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;  
-&lt;div&gt;
-  Welcome to my blog!
-  &lt;div&gt;[...Blog Post...]&lt;/div&gt;
-  &lt;div&gt;[...Blog Post...]&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  [...Sidebar Ad...]
-&lt;/div&gt;
-&lt;div&gt;
-  Copyright 2012
-&lt;/div&gt;
-</pre>
+    <!-- SLIDE CSS Finished -->
+    <article class="slide slide-subhead">
+      <h1>Exercise: Customize!</h1>
+      <h2>With whatever time is left, try changing and adding CSS properties to customize the page</h2>
+      <h2>Check the <a href="cheatsheets/davechild_css2.pdf">CSS Cheat Sheet</a> to find new properties to try out</h2>
+      <h2>Have fun!</h2>
     </article>
 
-    <article class='slide slide-list'>
-      <h2>Semantic HTML Tags</h2>
-      <p>With HTML5, there are an increasing number of semantic tags that better describe larger blocks of content such as: <code>header</code>, <code>footer</code>, <code>nav</code>, <code>section</code>, <code>article</code>, and <code>aside</code>.</p>
-<pre>&lt;header&gt;
-  &lt;nav&gt;
-    &lt;div&gt;Home&lt;/div&gt;
-    &lt;div"&gt;About&lt;/div&gt;
-    &lt;div"&gt;Contact&lt;/div&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;  
-&lt;section&gt;
-  Welcome to my blog!
-  &lt;article&gt;[...Blog Post...]&lt;/article&gt;
-  &lt;article&gt;[...Blog Post...]&lt;/article&gt;
-&lt;/section&gt;
-&lt;aside&gt;
-  [...Sidebar Ad...]
-&lt;/aside&gt;
-&lt;footer&gt;
-  Copyright 2012
-&lt;/footer&gt;
-</pre>
+    <!-- SLIDE Next Steps -->
+    <article class="slide slide-subhead">
+      <h1>Next Steps: Hosting</h1>
+      <h2>Right now your website only lives on your laptop, but if you'd like to get it hosted online for free, <a href="http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/">check out this tutorial on hosting with Github</a>. If you've purchased website hosting and want to upload your projects, <a href="http://webdesign.com/wordpress-tips/ftp-for-beginners-how-to-upload-your-files/">learn about uploading with FTP</a></h2>
     </article>
 
-    <article class='slide slide-list'>
-      <h2>Semantic HTML Tags</h2>
-      <p>This helps <span class="keyword">web crawlers</span> from search engines like Google or Bing better understand your content.</p>
-      <p>Even better, it helps <strong>you</strong> from missing a closing <code>&lt;/div&gt;</code> tag and makes your HTML easier to read for everyone.</p>
+    <!-- SLIDE Next Steps -->
+    <article class="slide slide-subhead">
+      <h1>Next Steps: Mobile</h1>
+      <h2>Your site may be beautiful, but it might not be very mobile-friendly. Luckily, that's easy enough to fix once you learn about mobile web design and development.</h2>
+      <h2>Come out to the Ladies Learning Code <a href="http://llcmobiletoronto.eventbrite.ca/">Intro to Mobile</a> workshop on June 22nd to learn more!</h2>
     </article>
-
-    <article class='slide slide-list'>
-      <h2>Preparing for our group exercise</h2>
-      <p>Using <code>index.html</code> from the <code>website</code> folder, let's update it with the code below.</p>
-      <p>It should replace everything in between the opening and closing <code>&lt;body&gt;</code> tags.</p>
-<pre>&lt;div&gt;
-  &lt;header&gt;
-    &lt;nav&gt;
-      &lt;a href="index.html"&gt;Home&lt;/a&gt;
-      &lt;a href="about.html"&gt;About&lt;/a&gt;
-      &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
-    &lt;/nav&gt;
-  &lt;/header&gt;  
-  &lt;section&gt;
-    Welcome to my blog!
-    &lt;article&gt;[...Blog Post...]&lt;/article&gt;
-    &lt;article&gt;[...Blog Post...]&lt;/article&gt;
-  &lt;/section&gt;
-  &lt;aside&gt;
-    [...Sidebar Ad...]
-  &lt;/aside&gt;
-  &lt;footer&gt;
-    Copyright 2012
-  &lt;/footer&gt;
-&lt;/div&gt;
-</pre>
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Assigning widths</h2>
-      <p>It is important to know the overall width of your site so you can select column widths for the main <code>&lt;section&gt;</code> and the <code>&lt;aside&gt;</code> sidebar that will make sense.</p>
-      <p>Let's go ahead and set the <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> to be 960 pixels wide. We'll add a gray border too, so we can see what's going on.</p>
-<pre>
-header {
-  <strong>width: 960px;</strong>
-  border: 1px solid gray;
-}
-
-footer {
-  <strong>width: 960px;</strong>
-  border: 1px solid gray;
-}
-</pre>
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Assigning widths</h2>
-      <p>If our site is 960px wide, we need to ensure that our columns don't exceed 960 - <strong>including margins!</strong> (e.g. 640 + 20 + 300 = 960)</p>
-<pre>
-section {
-  <strong>width: 640px;</strong>
-  padding: 30px;
-  border: 1px solid gray;
-}
-
-aside {
-  <strong>margin-left: 20px;</strong>
-  <strong>width: 300px;</strong>
-  border: 1px solid gray;
-}
-</pre>
-      <p class="sidenote"><strong>PRO TIP:</strong> Historically, padding wrecked havoc on our math. To avoid headaches, use the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank">box-sizing property</a> for every website you make to make sure your math adds up.</p>
-<pre>
-/* apply a natural box layout model to all elements */
-<strong>* { 
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box; 
-}</strong>
-</pre>
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Getting columns to be side-by-side</h2>
-      <p>Block-style HTML containers like <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;aside&gt;</code> automatically start on a new line.</p>
-      <p>To get our two columns to be side-by-side, use the <code>float</code> property. Values can be <code>left</code>, <code>right</code>, or <code>none</code>.</p>
-<pre>
-section {
-  width: 560px;
-  padding: 30px;
-  border: 1px solid gray;
-  <strong>float: left;</strong>
-}
-
-aside {
-  margin-left: 20px;
-  width: 300px;
-  border: 1px solid gray;
-  <strong>float: left;</strong>
-}
-</pre>
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Clearing floats</h2>
-        <p>You may notice that floats have the ability to affect the rest of the webpage in unexpected ways. It's important to always clear your floats.</p>
-        <p>One way is to use the <code>clear</code> property on an element that comes <em>directly</em> after the containers that are floating. Values can be <code>left</code>, <code>right</code>, or <code>both</code>.</p>
-<pre>
-footer {
-  width: 960px;
-  border: 1px solid gray;
-  <strong>clear: both;</strong>
-}
-</pre>
-      <br /><br /><br />
-      <hr />
-      <p class="sidenote">If the elements that are floating are enclosed in another container, you can you apply <code>overflow:auto</code> to the parent container:</p>
-<pre>nav {
-  <strong>overflow: auto;</strong>
-}</pre>
-
-      <p class="sidenote">Another way (when all else fails) is via a line break tag with a clear attribute:  <code>&lt;br clear="all" /&gt;</code></p>
-     
-    </article>
-
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS id's</h2>
-      <p>CSS classes are great when you want to re-apply the same style to multiple HTML elements but sometimes you need to only target an HTML container <strong>once</strong>. This is where an <span class="keyword">ID</span> is useful.</p>
-      <ul>
-        <li>Use a <strong>hash</strong> (<code>#</code>) to define CSS selectors that are IDs.<br />
-          e.g. <code>#centered_on_page</code></li>
-        <li>Use the <code>id</code> attribute to apply the styles to that element.<br />
-          e.g. <code>id="centered_on_page"</code><br />
-        </li>
-      </ul>
-      <p class="sidenote"><strong>Important!</strong> You should only have <strong>one</strong> instance of an ID per page. Any more can cause unexpected things to happen with your CSS -- and later, JavaScript.</p>
-<textarea class="coder-editor">
-&lt;style&gt;
-  #centered_on_page {
-    margin: 0 auto 0 auto;
-  }
-  div {
-    width: 200px;
-    border: 1px solid black;
-  } 
-&lt;/style&gt;
-
-&lt;div&gt;
-  Cupcake ipsum dolor sit amet halvah muffin apple pie. Pastry sweet jelly soufflé icing cake carrot cake tart chupa chups. Topping cookie bear claw.
-&lt;/div&gt;
-</textarea>
-<script type="coder-solution">&lt;style&gt;
-  #centered_on_page {
-    margin: 0 auto 0 auto;
-  }
-  div {
-    width: 200px;
-    border: 1px solid black;
-  } 
-&lt;/style&gt;
-
-&lt;div id="centered_on_page"&gt;
-  Cupcake ipsum dolor sit amet halvah muffin apple pie. Pastry sweet jelly soufflé icing cake carrot cake tart chupa chups. Topping cookie bear claw.
-&lt;/div&gt;
-</script>
-    </article>
-
-        <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS id's</h2>
-      <p>Let's add <code>#centered_on_page</code> to <code>styles.css</code> and apply the id to the <code>div</code> container immediately after the opening <code>&lt;body&gt;</code> tag in <code>index.html</code>.</p>
-<pre>
-#centered_on_page {
-  margin: 0 auto 0 auto;
-  width: 960px;
-}
-</pre>
-<pre>
-&lt;body&gt;
-  &lt;div id="centered_on_page"&gt;
-
-  &lt;/div&gt;
-&lt;/body&gt;
-</pre>
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Custom colours</h2>
-      <p>Often, the CSS colours "gray", "blue", or "purple" are boring and limiting. You can define your own custom colour using hex colours.</p>
-<pre>h1 {
-  color: <strong>#026873;</strong> /* a unique shade of blue */
-}</pre>
-      <p class="centered"><img src="assets/lg_hex_codes.png" widht="500" height="283" alt="" /></p>
-      <p class="sidenote">Image source: <a href="http://websiteincite.com/create-your-website/hexadecimal-color-codes" target="_blank">http://websiteincite.com/create-your-website/hexadecimal-color-codes</a></p>
-      <p class="sidenote">Chart of many hex colours: <a href="http://www.visibone.com/color/chart_847.gif" target="_blank">http://www.visibone.com/color/chart_847.gif</a></p>
-    </article>    
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Hands-on time (now until end)</h2>
-      <p>Use this time to apply CSS to your 3-page website. Review the afternoon's slides and experiment with some of the properties on the cheatsheet. If you're stuck, here are some suggestions:</p>
-      <ul>
-        <li>Apply <code>width</code>s and <code>float</code>s to <code>&lt;section&gt;</code> and <code>&lt;aside&gt;</code> to make a standard 2-column layout.</li>
-        <li>Update your <code>about.html</code> and <code>contact.html</code> with some of your own CSS.</li>
-        <li>Apply some custom colours to your text in any of your web pages.</li>
-        <li>Research the <code>background-image</code> property and add a background image to webpages.</li>
-      </ul>
-      <h3>Got questions?</h3>
-      <p>
-        Post them to Google Moderator: <a href="http://goo.gl/mod/c4cm" target="_blank">http://goo.gl/mod/c4cm</a>
-      </p>
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Bonus: Try out web fonts</h2>
-      <p>When you get bored of Arial and Georgia, go to the <a href="http://www.google.com/webfonts/" target="_blank">Google Web Fonts</a> website and find a font that you like.</p>
-      <ol>
-        <li>Click on the "Quick-use" button for that font.</li>
-        <li>Scroll down to find the supplied <code>&lt;link&gt;</code> tag. Copy and paste it into your own HTML file.</li>
-        <li>Integrate the fonts into your CSS by using their supplied <code>font-family</code>. For example, add their <code>font-family</code> to your <code>h1</code> CSS selector.</li>
-        <li>Make sure your files are saved and view your web page in the browser. New fonts are that easy!</li>
-      </ol>
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>Bonus: CSS patterns for fun</h2>
-      <p>CSS is great because it can reduce the number of image files you need to create. You can even create <a href="http://lea.verou.me/css3patterns/#" target="_blank">patterns purely out of CSS</a>!</p>
-      <ol>
-        <li>Click on a pattern that you like.</li>
-        <li>Copy the supplied CSS.</li>
-        <li>Instead of an "ad" in your sidebar, paste the CSS into your <code>aside</code> selector. Or apply it to your <code>body</code> selector to change up the entire page.</li>
-        <li>Important: Due to the differences in CSS support in web browsers, you will need to duplicate the <code>background-image</code> property-value set and replace <code>linear-gradient</code> with <code>-webkit-linear-gradient</code>.</li>
-      </ol>
-<pre style="font-size: 14px;">
-/* Based on Cicada stripes from http://lea.verou.me/css3patterns/#cicada-stripes */
-background-color: #026873;
-background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
-                  linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
-                  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
-                  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
-<strong>background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,.07) 50%, transparent 50%),
-                  -webkit-linear-gradient(0deg, rgba(255,255,255,.13) 50%, transparent 50%),
-                  -webkit-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.17) 50%),
-                  -webkit-linear-gradient(0deg, transparent 50%, rgba(255,255,255,.19) 50%);</strong>
-background-size: 13px, 29px, 37px, 53px;
-</pre>
-    </article>
-
-    <!-- SLIDE: CSS -->
-    <article class='slide slide-list'>
-      <h2>CSS reference</h2>
-      <ul class="spacey_list">
-        <li>Download a <a href="http://www.cheatography.com/davechild/cheat-sheets/css2/" target="_blank">cheatsheet of CSS selectors and properties</a>.</li>
-        <li>Try looking up individual selectors and propertie using the CSS section of <a href="https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference" target="_blank">Mozilla's Developer Network</a> for further breakdown.</li>
-        <li>Read articles from <a href="http://www.alistapart.com/" target="_blank">A List Apart</a>.</li>
-        <li>And don't forget the "inspect element" option!</li>
-      </ul>
-    </article> 
-
-    <!-- FTP -->
-    <article class='slide slide-subhead'>
-      <h1>Getting your website online</h1>
-      <p>Using FTP</p>
-    </article>
-
-    <!-- SLIDE: FTP -->
-    <article class='slide slide-list'>
-      <h2>Déjà vu: What is a website?</h2>
-      <p>Remember how a website is essentially a folder located on a dedicated computer (a <span class="keyword">server</span>)?</p>
-      <div class="centered">
-        <img src="assets/webserver_download.png" width="738" height="531" alt="web request process" />
-      </div>
-    </article>
-
-
-    <!-- SLIDE: FTP -->
-    <article class='slide slide-list'>
-      <h2>Using FTP to put your site online</h2>
-      <div>
-        <p style="line-height: 32px;margin-top: 30px;">If you have access to web hosting and would like to put your site online, there are a few vital pieces of information you need:</p>
-        <ol>
-        <li>FTP Address</li>
-        <li>Username</li>
-        <li>Password</li>
-        <li>Any special security info</li>
-        <li>Which directory to transfer your files to</li>
-        </ol>
-      </div>
-    </article>
-
-    <!-- SLIDE: FTP -->
-    <article class='slide slide-list'>
-      <h2>Where to get this information</h2>
-      <div>
-        <p>This information will generaly be provided to you by your hosting service provider.</p>
-        <p>There ARE conventions regarding what directory your files go into once you have connected to your server via FTP:</p>
-        <ul>
-        <li>www</li>
-        <li>public</li>
-        <li>public_html</li>
-        <li>htdocs</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- SLIDE: FTP -->
-    <article class='slide slide-list'>
-      <h2>Transferring your files</h2>
-      <div>
-        <p>Once you have identified where your files need to go, it is often just a matter of dragging and dropping into your FTP program.</p>
-        <p>Once this is done, you can check your web address to see how things are looking!</p>
-      </div>
-    </article>  
-
-    <!-- FTP -->
-    <article class='slide slide-subhead'>
-      <h1>Additional Resources</h1>
-      <p>Some tips and tricks for the future</p>
-    </article>
-
-    <article class='slide slide-list'>
-      <h2>Books</h2>
-      <ul><a href="http://htmlandcssbook.com/">HTML and CSS: Design and Build Websites</a> by Jon Duckett</ul>
-    </article>
-
-    <!-- SLIDE: FTP -->
-    <article class='slide slide-list'>
-      <h2>Validating your HTML</h2>
-      <div>
-        <p>One of the best ways to make sure that your HTML is being done correctly is to run it through an HTML validator on occasion.</p>
-        <p>You can find the HTML validator at <a href="http://validator.w3.org/">http://validator.w3.org/</a></p>
-      </div>
-    </article> 
-
-    <!-- SLIDE: TIPS -->
-    <article class='slide slide-list'>
-      <h2>One last peice of advice:<br />Clear your cache</h2>
-      <p>Hitting refresh and still seeing old stuff? The browser cache is the rip-your-hair-out <em>gotcha!</em> of every web developer.</p>
-      <p>Instructions for every browser (including the archaic one your client is running): <a href="http://www.wikihow.com/Clear-Your-Browser's-Cache" target="_blank">http://www.wikihow.com/Clear-Your-Browser's-Cache</a></p>
-      <p>Also try out "Incognito Mode" in Chrome: Ctrl/Cmd+Shift+N</p>
-    </article>
-
+    
     <article class='slide slide-subhead'>
       <h1>Thank you!</h1>
       <p></p>
@@ -2010,6 +1636,7 @@ background-size: 13px, 29px, 37px, 53px;
   <!-- Prettify -->
   <script src="src/prettify.js"></script>
   <script src="src/lang-css.js"></script>
+  <script src="src/prism.js"></script>
 
   <!-- Deck Core and extensions -->
   <script src="src/deck.js/extensions/status/deck.status.js"></script>
