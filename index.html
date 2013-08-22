@@ -123,7 +123,7 @@
       <ul>
         <li><strong>Sublime Text</strong> (<a href="http://www.sublimetext.com/">link</a>) - a popular text editor that highlights your code and has other helpful features.</li>
         <li><strong>Google Chrome</strong> (<a href="https://www.google.com/intl/en/chrome/browser/">link</a>) - Choose a modern web browser that has good development tools to help make building web pages easier. <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a> is a good option, too! You'll also want to make one of these modern browsers your <em>default</em> browser. <a href="https://support.google.com/chrome/answer/95417?hl=en">Here are the instructions</a>.</li>
-        <li><strong>Today's slides and files</strong> (<a href="https://github.com/tessa-lt/LLC-HTML-CSS">link</a>). To open the slides, unzip the folder (on Windows, right click and select "Extract All"). Right click on "index.html" or "index" and "Open in Chrome".</li>
+        <li><strong>Today's slides and files</strong> (<a href="https://github.com/tessa-lt/LLC-HTML-CSS">link</a>). You'll see a "Download Zip" button on the bottom right of the page. Click it! To open the slides, unzip the folder (on Windows, right click and select "Extract All"). Right click on "index.html" or "index" and "Open in Chrome".</li>
       </ul>
     </article>
 
@@ -135,7 +135,7 @@
     <!-- SLIDE: Opening HTML files in your browser, Part 2 -->
     <article class='slide slide-list'>
       <h2>First, what is a browser?</h2>
-      <p>The browser's main functionality is to present the "web resource" you choose, by requesting it from the server and displaying it on the browser window. The "web resource" is usually an HTML document, but may also be a PDF, image, or other type.<p>
+      <p>The browser's main functionality is to present the "web resource" you choose, by requesting it from the server and displaying it in the browser window. The "web resource" is usually an HTML document, but may also be a PDF, image, or other type.<p>
     </article>
 
     <!-- SLIDE: Opening HTML files in your browser, Part 3 -->
@@ -178,7 +178,7 @@
 
     <!-- SLIDE: You won't break anything -->
     <article class='slide slide-list'>
-      <h2>A note: don't be scared about breaking anything or doing something wrong. The stuff we're doing today is what computers were designed to do! Feel free to play around, take risks and make mistakes. There will always be a mentor to help you if you need them!</h2>
+      <h2>A note: don't be scared about breaking anything or doing something wrong. The stuff we're doing today is what computers were designed to do! Feel free to play around, take risks and make mistakes. That's the best way to learn.</h2>
     </article>
 
     <!-- new slide -->
@@ -195,6 +195,11 @@
     <article class='slide slide-list'>
       <h2>HTML (HyperText Markup Language) is what webpages are made out of.</h2>
       <p>We use HTML to describe each part of a webpage is to the browser, so that our content is displayed properly. We help our browsers to understand how we want things displayed by using tags. Here are a few examples of tags that you've probably seen before:</p>
+      <ul>
+        <li>&#60;h1&#62; and &#60;/h1&#62;</li>
+        <li>&#60;p&#62; and &#60;/p&#62;</li>
+        <li>&#60;strong&#62; and &#60;/strong&#62;</li>
+      </ul>
       <p>To create an HTML file, you need to have .html at the end (sort of like how you need .pdf at the end of PDF documents).</p>
     </article>
 
@@ -216,12 +221,6 @@
     <article class='slide slide-list'>
       <h2>The Nuts and Bolts of HTML</h2>
       <p>When we write HTML, we create HTML Elements by wrapping our content in tags. These tags describe the content that is inside of them, NOT what they look like. We use different kinds of tags to create multiple elements and all together they make up something called our HTML Document.</p>
-      <p>Here are a few examples of tags that may be familar:</p>
-      <ul>
-        <li>&#60;h1&#62; and &#60;/h1&#62;</li>
-        <li>&#60;p&#62; and &#60;/p&#62;</li>
-        <li>&#60;strong&#62; and &#60;/strong&#62;</li>
-      </ul>
       <p>It is important to understand that HTML has very little to do with the style of your website or the <em>look</em> of the content - that is what CSS is for.</p>
     </article>
 
@@ -458,21 +457,9 @@ p {
 
     <!-- SLIDE: HTML -->
     <article class='slide slide-list'>
-      <h2>The <code>&lt;alt&gt;</code> attribute</h2>
-      <p>The alt attribute is used in HTML documents to specify alternative text (alt text) that is to be rendered when the element to which it is applied cannot be rendered. For example, if an image can't be loaded, "alt text" will be displayed instead. Alt text is also read by screen reading software. It is required for HTML to be considered valid.</p>
-      <p>Here's an example of how you would use the <code>&lt;alt&gt;</code> attribute:</p>
-      <pre><code class="language-markup">
-        &lt;img alt="An adorable cat" src="http://placekitten.com/g/200/200"&gt;
-      </code></pre>
-      <p>Copy and paste the above code into your project to see the result. Try misspelling "placekitten" to create a broken image link and see what happens.</p>
-    </article>
-
-    <!-- SLIDE: HTML -->
-    <article class='slide slide-list'>
       <h2>Exercise: Add a logo and profile image to your project</h2>
       <p>The output (what you'll see in your browser) of this exercise is on the next slide. Write the HTML.</p>
       <p><strong>Hint: the logo image is called "logo.png", and the placeholder profile image is called "profile.jpg". Both can be found inside the "images" folder.</strong></p>
-      <p>Don't forget to add an "alt" attribute for each image.</p>
     </article>
 
     <!-- SLIDE: HTML -->
@@ -488,7 +475,7 @@ p {
       <ul>
         <li>Using a large image or photograph: choose jpg</li>
         <li>For icons, logos, text or anything that requires transparency: choose png</li>
-        <li>For animations, especially of cats: choose gif</li>
+        <li>For animations, especially of cats: choose gif (this is a joke)</li>
       </ul>
       <div class="centered">
         <img src="http://1-ps.googleusercontent.com/h/www.catgifpage.com/gifs/182.gif.pagespeed.ce.S3pBqCa_-u.gif">
@@ -500,8 +487,8 @@ p {
       <h2>Exercise: Add a few more images</h2>
       <p>Your output should look like what's on the following slide.</p>
       <ul>
-        <li>Add images of your favourite things (check out <a href="http://tessa-lt.github.io/LLCProject/">this link</a> and scroll down to see the section we're talking about). Try not to choose huge images right now - we'll show you how to resize images using CSS later.</li>
-        <li>Add Twitter, Facebook and LinkedIn icons to the links - you'll have to use nested tags for this one! You'll find logos you can use in the Project/images folder.</li>
+        <li>Add images of your favourite things (check out <a href="http://tessalt.github.io/LLC-HTML-CSS/Project/final.html">this link</a> and scroll down to see the section we're talking about). Try not to choose huge images right now - we'll show you how to resize images using CSS later.</li>
+        <li>Add Twitter, Facebook and LinkedIn icons to the links - you'll have to use nested tags for this one, so that the image itself is actually a link! You'll find logos you can use in the Project/images folder.</li>
       </ul>
     </article>
 
@@ -543,47 +530,39 @@ p {
     <!-- SLIDE: CSS Syntax 1 -->
     <article class="slide slide-list">
       <h2>CSS Syntax</h2>
-      <ul>
-        <li>CSS is made up of <strong>rules</strong> that refer to HTML elements (like <code>&lt;p></code> and <code>&lt;ul></code>), and define what those elements should look like.</li>
-        <li>A CSS rule is made up of a <strong>selector</strong> and one or more <strong>declarations</strong></li>
-        <li>A <strong>selector</strong> tells the browser what element(s) we are styling.</li>
-        <li>It looks like this:</li>
+        <p>CSS is made up of <strong>rules</strong> that refer to HTML elements (like <code>&lt;p></code> and <code>&lt;ul></code>), and define what those elements should look like.</p>
+        <p>A CSS rule is made up of a <strong>selector</strong> and one or more <strong>declarations</strong></p>
+        <p>A <strong>selector</strong> tells the browser what element(s) we are styling.</p>
+        <p>It looks like this:</p>
         <pre><code class="language-css">h2 {}</code></pre>   
-        <li>The above selector will select all <code>&lt;h2></code> elements and apply our styles (which will go between the curly brackets) to them</li>     
-      </ul>
+        <p>The above selector will select all <code>&lt;h2></code> elements and apply our styles to them. Our styles will go between the curly brackets.</p>     
     </article>
       
     <!-- SLIDE: CSS Syntax 2 -->
     <article class="slide slide-list">
       <h2>CSS Syntax</h2>
-      <ul>
-        <li>A <strong>declaration</strong> tells the browser what style we want to apply to our element</li>
-        <li>A declaration is always made up of two parts: a <strong>property</strong> and a <strong>value</strong></li>
-        <li>A <strong>property</strong> tells the browser what we are modifying (ex. font, colour, size)</li>
-        <li>A <strong>value</strong> tells the browser how to modify the property (ex. Arial, green, small)</li>
-        <li>A declaration looks like this:</li>
+      <p>A <strong>declaration</strong> tells the browser what style we want to apply to our element</p>
+      <p>A declaration is always made up of two parts: a <strong>property</strong> and a <strong>value</strong></p>
+      <p>A <strong>property</strong> tells the browser what we are modifying (ex. font, colour, size)</p>
+      <p>A <strong>value</strong> tells the browser how to modify the property (ex. Arial, green, small)</p>
+      <p>A declaration looks like this:</p>
         <pre><code class="language-css">background-color: green;</code></pre>   
-
-      </ul>
     </article>
 
     <!-- SLIDE CSS Syntax 2.1 -->
     <article class="slide slide-list">  
       <h2>CSS Syntax</h2>
-      <ul>
         <pre><code class="language-css">background-color: green;</code></pre>
-        <li>The <strong>value</strong> (the part <em>after</em> the colon) is specific to the property type</li>
-        <li>Ex. size-related properties like <code>height, width</code>, or <code>font-size</code> are usually specified in <code>px</code> (pixels), while colour-related properties are specified with a colour name or code</li>
-        <li>It's very important that you write the syntax correctly, with a colon after the property name and a semi-colon after the value</li>
-      </ul>
+        <p>The <strong>value</strong> (the part <em>after</em> the colon) is specific to the property type</p>
+        <p>Ex. size-related properties like <code>height, width</code>, or <code>font-size</code> are usually specified in <code>px</code> (pixels), while colour-related properties are specified with a colour name or code</p>
+        <p>It's very important that you write the syntax correctly, with a colon after the property name and a semi-colon after the value.</p>
     </article>
 
     <!-- SLIDE Adding Style Tags -->
     <article class="slide slide-list">
       <h2>Adding CSS to HTML</h2>
-      <ul>
-        <li>You write CSS rules in a set of <code>&lt;style>&lt;/style></code> tags</li>
-        <li>You add the style tags to the <code>&lt;head></code> of your HTML document like this:</li>
+      <p>You write CSS rules in a set of <code>&lt;style>&lt;/style></code> tags</p>
+      <p>You add the style tags to the <code>&lt;head></code> of your HTML document like this:</p>
 <pre><code class="language-markup">
 &lt;html>
   &lt;head>
@@ -604,23 +583,20 @@ p {
     <!-- SLIDE: CSS Syntax 3 -->
     <article class="slide slide-list">
       <h2>CSS Syntax</h2>
-      <ul>
-        <li>When we put selectors and declarations together, they make a CSS rule, which looks like this: </li>
+      <p>When we put selectors and declarations together, they make a CSS rule, which looks like this: </p>
 <pre><code class="language-css">
 h2 {
   background-color: green;
 }
 </code></pre>
-        <li>This rule will select all <code>&lt;h2></code> elements and change their background colour to green</li>
-        <li>Try copying and pasting the above code in between the <code>&lt;style></code> tags and refreshing the page in your browser</li>
-      </ul>
+        <p>This rule will select all <code>&lt;h2></code> elements and change their background colour to green.</p>
+        <p>Try copying and pasting the above code in between the <code>&lt;style></code> tags and refreshing the page in your browser.</p>
     </article>
 
     <!-- SLIDE: CSS Syntax 4 -->
     <article class="slide slide-list">
       <h2>CSS Syntax</h2>
-      <ul>
-        <li>We can add multiple declarations (property: value; sets) to one selector to modify multiple properties:</li>
+      <p>We can add multiple declarations (property: value; sets) to one selector to modify multiple properties:</p>
 <pre><code class="language-css">
   h2 {
     background-color: green;
@@ -628,10 +604,9 @@ h2 {
     font-size: 28px;
   }
 </code></pre>
-        <li>Make sure you always end each declaration with a semi-colon</li>
-        <li>Try replacing the previous rule for <code>&lt;h2></code> with this one and refreshing your browser</li>
-        <li>Next, clear out all the code you added between the <code>&lt;style></code> tags. We're adding more soon!</li>
-      </ul>
+        <p>Make sure you always end each declaration with a semi-colon</p>
+        <p>Try replacing the previous rule for <code>&lt;h2></code> with this one and refreshing your browser</p>
+        <p>Next, clear out all the code you added between the <code>&lt;style></code> tags. We're adding more soon!</p>
     </article>
 
     <!-- SLIDE CSS First -->
@@ -646,33 +621,36 @@ body {
   color: blue;
 }
 </code></pre>
-      <li>All the text on the page is now blue: this is because the <code>&lt;body></code> tag is the highest-level tag we can see on the page, so the <code>color</code> property applies to the body AND all its children, including every heading, paragraph, and list item</li>
       </ul>
+      <p>All the text on the page is now blue: this is because the <code>&lt;body></code> tag is the highest-level tag we can see on the page, so the <code>color</code> property applies to the body AND all its children, including every heading, paragraph, and list item.</p>
     </article>
 
     <!-- SLIDE CSS Color Change -->
     <article class="slide slide-list">
+      <h2>Using Hex Codes</h2>
+      <p>Let's change the text to a colour that's easier to read.</p>
+      <p>We're going to use a <strong>hex code</strong>, which is a 6-character code that specifies a colour.</p>
+      <p>You don't have to understand how they work, just remember that they start with a <code>#</code> sign. It might help you to know the Hex codes for some of the basic colours:</p>
       <ul>
-        <li>Let's change the text to something easier to read</li>
-        <li>We're going to use a <strong>hex code</strong>, which is a 6-character code that specifies a colour</li>
-        <li>You don't have to understand how they work, just remember that they start with a <code>#</code> sign</li>
-        <li>The code for a nice dark grey is <code>#444444</code></li>
-        <li>
+        <li>White: <code>#FFFFFF</code></li>
+        <li>Black: <code>#000000</code></li>
+        <li>Red: <code>#FF0000</code></li>
+        <li>Green: <code>#00FF00</code></li>
+        <li>Blue: <code>#0000FF</code></li>
+      </ul>
+      <p>The code for a nice dark grey is <code>#444444</code>. Let's add it.</p>
 <pre><code class="language-css">
 body {
   color: #444444;
 }
 </code></pre>          
-        </li>
-        <li>You can find hex codes for any colours you like at a website like <a href="http://www.colorpicker.com/">colorpicker.com</a></li>
-      </ul>
+        <p>Check out<a href="http://www.colorpicker.com/">http://colorpicker.com</a> for more awesome colours!</p>
     </article>
 
     <!-- SLIDE CSS Fonts -->
     <article class="slide slide-list">
       <h2>Styling Type with CSS</h2>
-      <ul>
-        <li>There are lots of CSS properties which let us style the text in our HTML:</li>
+        <p>There are lots of CSS properties which let us style the text in our HTML:</p>
         <ul>
           <li><code>font-size</code></li>
           <li><code>font-weight</code></li>
@@ -681,21 +659,19 @@ body {
           <li><code>color</code></li>
           <li><code>line-height</code></li>
         </ul>
-      </ul>
     </article>
 
     <!-- SLIDE CSS Fonts 2 -->
-    <article class="slide slide-list">    
-      <ul>
-        <li>Let's change the font to a sans-serif like Helvetica: </li>
+    <article class="slide slide-list">   
+    <h2>Styling Type with CSS, Part 2</h2> 
+      <p>Let's change the font to a sans-serif like Helvetica: </p>
 <pre><code class="language-css">
   body {
     color: #444444;
     font-family: Helvetica, Arial, sans-serif;    
   }
 </code></pre>
-        <li>The font-family property accepts a list of font names: the first font is your first-choice font, the next ones are fallbacks in case that font is not available</li>
-        <li>Not all fonts are commonly available, so try to stick to 'web-safe' fonts like:</li>
+      <p>The font-family property accepts a list of font names: the first font is your first-choice font, the next ones are fallbacks in case that font is not available. Not all fonts are commonly available, so try to stick to 'web-safe' fonts like:</p>
         <ul>
           <li style="font-family: Arial;">Arial</li>
           <li style="font-family: Verdana;">Verdana</li>
@@ -703,13 +679,12 @@ body {
           <li style="font-family: Georgia;">Georgia</li>
           <li style="font-family: Courier;">Courier</li>
         </ul>
-      </ul>
     </article>
 
         <!-- SLIDE CSS Fonts 2 -->
     <article class="slide slide-list">
-      <ul>
-        <li>If we want to make our <code>&lt;h1></code> and <code>&lt;h2></code> tags a bit bigger:</li>
+      <h2>Changing Font Sizes</h2> 
+        <p>If we want to make our <code>&lt;h1></code> and <code>&lt;h2></code> tags a bit bigger:</p>
 <pre><code class="language-css">
 h1 {
   font-size: 48px;
@@ -718,14 +693,13 @@ h2 {
   font-size: 32px;
 }
 </code></pre>
-      </ul>
     </article>
 
     <!-- SLIDE CSS Fonts 4 -->
     <article class="slide slide-list">
-      <ul>
-        <li>We can change the line height (or leading) with the <code>line-height</code> property to make it easier to read</li>
-        <li><code>line-height</code> is specified as a multiple of the size of the font: so a value of <code>1.4</code> means the lines will be 1.4x as tall as the text.</li>
+      <h2>Changing Line Height</h2>
+      <p>We can change the line height (or leading) with the <code>line-height</code> property to make it easier to read</p>
+      <p><code>line-height</code> is specified as a multiple of the size of the font: so a value of <code>1.4</code> means the lines will be 1.4x as tall as the text.</p>
 <pre><code class="language-css">
 p {
   line-height: 1.4;
@@ -737,14 +711,11 @@ p {
     <!-- SLIDE CSS Images 1 -->
     <article class="slide slide-list">
       <h2>Styling Images</h2>
-      <ul>
-        <li>Let's add a dark border around the profile image</li>
-        <li>Write a selector to pick out the <code>&lt;img></code> tag</li>
+      <p>Let's add a dark border around the profile image. Start by writing a selector to pick out the <code>&lt;img></code> tag.</p>
 <pre><code class="language-css">
 img {}
 </code></pre>
-        <li>The <code>border</code> property has 3 parts: the width, the style, and the colour</li>
-        <li>So if we want a 1px wide, solid, grey border, we use:</li>
+        <p>The <code>border</code> property has 3 parts: the width, the style, and the colour. So, if we want a 1px wide, solid, grey border, we use:</p>
 <pre><code class="language-css">
 img {
   border: 1px solid grey;
@@ -756,31 +727,27 @@ img {
     <!-- SLIDE CSS Classes 1 -->
     <article class="slide slide-list">
       <h2>Being More Specific</h2>
-      <ul>
-        <li>Our border is now applying to <strong>all</strong> images on the page, including our logo. We don't want that, so we need a way to target <strong>only</strong> the profile image</li>
-        <li>HTML gives us a way to attach extra identifying information to HTML elements so that we can target them. We call these "classes"</li>
-        <li>Classes are attributes that you add on to tags</li>
+        <p>Our border is now applying to <strong>all</strong> images on the page, including our logo. We don't want that, so we need a way to target <strong>only</strong> the profile image.</p>
+        <p>HTML gives us a way to attach extra identifying information to HTML elements so that we can target them. We call these "classes".</p>
+        <p>Classes are attributes that you add on to tags.</p>
 <pre><code class="language-markup">
 &lt;p class="classname">&lt;/p>
 </code></pre>
-      </ul>
     </article>
 
     <!-- SLIDE CSS Classes 2 -->
     <article class="slide slide-list">
       <h2>Targeting an Element with a Class</h2>
-      <ul>
-        <li>We can write a selector in our css to target the element we added a class to using a <code> . </code></li>
+      <p>We can write a selector in our css to target the element we added a class to using a <code> . </code></p>
 <pre><code class="language-css">
 p.classname {}
 </code></pre>        
-        <li>And then apply the styles we want to only the item with the class</li>
+        <p>And then apply the styles we want to only the item with the class:</p>
 <pre><code class="language-css">
 p.classname {
   color: red;
 }
 </code></pre>        
-      </ul>
     </article>
 
     <!-- SLIDE CSS Classes Exercise -->
@@ -791,7 +758,7 @@ p.classname {
         <li>Add a class of <code>profile</code> to the tag for your profile image</li>
         <li>Target that class in your CSS with the selector <code>img.profile</code></li>
         <li>Then add a border of any color you like</li>
-        <li>If your picture is too big, you can resize it using the <code>width</code> and <code>height</code> properties, which are specified in <code>px</code> (pixels). Try 200 x 200 px.</li>
+        <li>If your picture is too big, you can resize it using the <code>width</code> and <code>height</code> properties, which are specified in <code>px</code> (pixels). Try 200 x 200 px. An example of how to use <code>width</code> and <code>height</code> is below:</li>
 <pre><code class="language-css">
 img {
   width: 200px;
@@ -803,13 +770,12 @@ img {
 
     <!-- SLIDE CSS Classes Exercise Solution -->
     <article class="slide slide-list">
-      <h2>Exercise: Style Profile Image</h2>
-      <ul>
-        <li>Your HTML should look something like this:</li>
+      <h2>Solution: Style Profile Image</h2>
+      <p>Your HTML should look something like this:</p>
 <pre><code class="language-markup">
 &lt;img class="profile" src="images/profile.jpg"> 
 </code></pre>
-        <li>And your CSS something like this:</li>
+        <p>And your CSS should look something like this:</p>
 <pre><code class="language-css">
 img.profile {
   border: 1px solid grey;
@@ -817,26 +783,23 @@ img.profile {
   height:200px;  
 }  
 </code></pre>        
-      </ul>
     </article>
 
     <!-- SLIDE CSS Classes on multiple elements -->
     <article class="slide slide-list">
       <h2>Adding More Classes</h2>
-      <ul>
-        <li>We can do the same thing to style our "favourite things" images</li>
-        <li>Since we probably want all four images to have the same styles, we can add the same class to each</li>
-        <li>Add a class of "favourite" to each of the four images</li>
+      <p>We can do the same thing to style our "favourite things" images.</p>
+      <p>Since we probably want all four images to have the same styles, we can add the same class to each.</p>
+      <p>Add a class of "favourite" to each of the four images.</p>
 <pre><code class="language-markup">
 &lt;img class="favourite" src="images/kitten.jpg" >
 </code></pre>   
-        <li>Add some styles to your images</li>     
-        <li>Things like <code>width, height</code>, and <code>border</code></li>        
-      </ul>
+      <p>Add some styles to your images, using things like <code>width</code>, <code>height</code>, and <code>border</code>.</p>        
     </article>
 
     <!-- SLIDE CSS Classes on fav images -->
     <article class="slide slide-list">
+      <h2>More Stuff You Can Do</h2>
       <ul>
         <li>Try something fun like <code>border-radius: 50%;</code></li>
         <li>Or <code>border: 3px dotted pink;</code></li>
@@ -855,19 +818,17 @@ img.favourite {
 
     <!-- SLIDE CSS Properties -->
     <article class="slide slide-subhead">
-      <h1>Don't worry if it seems like there are a lot of CSS properties to remember. Keep looking them up in the cheetsheets or on the internet and they'll sink in eventually. Even the pros have to look things up every once in a while :)</h1>      
+      <h1>Don't worry if it seems like there are a lot of CSS properties to remember. Keep looking them up on the internet and they'll sink in eventually. Even the pros have to look things up every once in a while :)</h1>      
     </article>
 
     <!-- SLIDE CSS Box Model -->
     <article class="slide slide-list">
     <h2>The Box Model</h2>
     <h3>This is the trickiest part of CSS, don't worry if it seems confusing at first!</h3>
-      <ul>
-        <li>The CSS "Box Model" describes the way CSS styles the size and spacing of HTML elements</li>
-        <li>To understand the box model, we need to understand how the browser "sees" HTML elements</li>
-        <li>To the browser, <strong>every</strong> HTML element is a  rectangular box</li>
-        <li>If we show the outlines of all the elements in an HTML document, it looks a bit like the next slide:</li>        
-      </ul>
+    <p>The CSS "Box Model" describes the way CSS styles the size and spacing of HTML elements.</p>
+    <p>To understand the box model, we need to understand how the browser "sees" HTML elements.</p>
+    <p>To the browser, <strong>every</strong> HTML element is a  rectangular box.</p>
+    <p>If we show the outlines of all the elements in an HTML document, it looks a bit like the next slide:</p>        
     </article>
 
     <!-- SLIDE CSS Box Model 2 -->
@@ -878,9 +839,9 @@ img.favourite {
     <!-- SLIDE CSS Box Model 3 -->
     <article class="slide slide-list">
       <h2>The Box Model</h2>
+      <p>CSS uses 5 properties to determine the size and spacing of these boxes:</p>
       <ul>
-        <li>CSS uses 5 properties to determine the size and spacing of these boxes:</li>
-        <li><code>margin</code>, <code>padding</code>, <code>border</code>, <code>width</code>, and <code>height</code></li>
+        <li><code>Margin</code>, <code>padding</code>, <code>border</code>, <code>width</code>, and <code>height</code></li>
         <li>These 5 properties make up the <strong>Box Model</strong></li>
         <img src="assets/border-box-model.gif">
       </ul>
@@ -890,15 +851,15 @@ img.favourite {
     <article class="slide slide-list">
       <h2>Margin and Padding</h2>
       <ul>
-        <li>Say I have 3 elements in my HTML document: a <code>&lt;p></code>, an <code>&lt;h2></code>, and another <code>&lt;p></code></li>
-        <li>Let's put a red border around the <code>&lt;h2></code> and a pink background:</li>
+        <li>Let's say we have 3 elements in our HTML document: a <code>&lt;p></code>, an <code>&lt;h2></code>, and another <code>&lt;p></code></li>
+        <li>Let's put a red border around the <code>&lt;h2></code> and add a pink background:</li>
 <pre><code class="language-css">
 h2 {
   border: 1px solid red;
   background: pink;
 }
 </code></pre>
-      <li>So far, this looks pretty awfull, all the elements are too close to each other</li>        
+      <li>So far, this looks pretty awfull. All the elements are too close to each other!</li>        
       <img src="assets/bm1.png">
       </ul>
     </article>
@@ -906,15 +867,14 @@ h2 {
     <!-- SLIDE CSS Box Model: Margin-->
     <article class="slide slide-list">  
       <h2>Margins</h2>
-      <ul>
-        <li>There are 2 CSS properties for adding space around our elements: <code>margin</code>, and <code>padding</code></li>
-        <li>The <code>margin</code> property adds space <em>around</em> the element, outside of the border:</li>
+      <p>There are two CSS properties for adding space around our elements: <code>margin</code>, and <code>padding</code></p>
+      <p>The <code>margin</code> property adds space <em>around</em> the element, outside of the border:</p>
 <pre><code class="language-css">
 h2 {
   margin: 40px;
 }  
 </code></pre>  
-        <li>This code adds 40px of space on every side of the element.</li>      
+      <p>This code adds 40px of space on every side of the element.</p>      
         <img src="assets/bm2.png" alt="">
       </ul>
     </article>
@@ -922,15 +882,14 @@ h2 {
     <!-- SLIDE CSS Box Model: Padding -->
     <article class="slide slide-list">
       <h2>Padding</h2>
-      <ul>
-        <li>If we want to add some space <em>inside</em> the border, we use the <code>padding</code> property</li>
+      <p>If we want to add some space <em>inside</em> the border, we use the <code>padding</code> property:</li>
 <pre><code class="language-css">
 h2 {
   margin: 40px;
   padding: 40px;
 }
 </code></pre> 
-        <li>This code adds 40px of space to every side of the element, but it does so within the border</li>       
+      <p>This code adds 40px of space to every side of the element, but it does so within the border.</p>       
         <img src="assets/bm3.png" alt="">        
       </ul>
     </article>
@@ -938,49 +897,45 @@ h2 {
     <!-- SLIDE CSS Box Model: Margin & Padding -->
     <article class="slide slide-list">
       <h2>Margin vs. Padding</h2>
-      <ul>
-        <li>Adding <code>padding</code> to an element makes the element <strong>bigger</strong>, whereas adding a <code>margin</code> adds space around the element</li>
-        <li>If you make a 100px wide element, and then add 40px of padding to it, it will become 180px wide</li>
-        <li>If you add a 40px margin to a 100px wide element, it stays 100px wide</li>
-        <li>If you add a 1px border to a 100px wide element, it will become 102px wide</li>
-        <li>If your element doesn't have a border or a background, you may not be able to see the difference between margin and padding</li>
+      <p>Adding <code>padding</code> to an element makes the element <strong>bigger</strong>, whereas adding a <code>margin</code> adds space around the element.</p>
+      <p>If you make a 100px wide element, and then add 40px of padding to it, it will become 180px wide.</p>
+      <p>If you add a 40px margin to a 100px wide element, it stays 100px wide.</p>
+      <p>If you add a 1px border to a 100px wide element, it will become 102px wide.</p>
+      <p>If your element doesn't have a border or a background, you may not be able to see the difference between margin and padding.</p>
         <!-- TODO: diagram of h2 thing -->
-      </ul>
     </article>
 
     <!-- SLIDE CSS Box Mdoel: Margin & Padding Sides -->
     <article class="slide slide-list">
       <h2>More on Margins and Padding</h2>
-      <ul>
-        <li>You can specify which side of an element you want your margins to apply to with the <code>margin-top, margin-right, margin-bottom,</code> and <code>margin-left</code> properties:</li>
+      <p>You can specify which side of an element you want your margins to apply to with the <code>margin-top, margin-right, margin-bottom,</code> and <code>margin-left</code> properties:</p>
 <pre><code class="language-css">
 h2 {
   margin-top: 40px;
   margin-bottom: 40px;
 }
 </code></pre>        
-        <li>The same goes for <code>padding</code> and <code>border</code></li>
+      <p>The same goes for <code>padding</code> and <code>border</code>:</p>
 <pre><code class="language-css">
 h2 {
   padding-bottom: 40px;
   border-left: 1px solid red;
 }
 </code></pre>        
-      </ul>
     </article>
 
     <!-- SLIDE CSS Box Model Exercise -->
     <article class="slide slide-list">
       <h2>Exercise: Box Model</h2>
       <ul>
-        <li>Add some <code>padding</code> to your profile image. Note that there is now space <em>between</em> the image and the border around it. Try about 5px.</li>
-        <li>Add both <code>padding</code> and a <code>margin</code> to your favourite things images. Try 5px for the <code>padding</code> and about 10px for the <code>margin</code></li>
+        <li>Add some <code>padding</code> to your profile image. This should create  space <em>between</em> the image and the border around it. Try about 5px.</li>
+        <li>Add both <code>padding</code> and a <code>margin</code> to your 'favourite things' images. Try 5px for the <code>padding</code> and about 10px for the <code>margin.</code></li>
       </ul>
     </article>
 
     <!-- SLIDE CSS Box Model Answer -->
     <article class="slide slide-list">
-      <h2>Exercise: Box Model</h2>
+      <h2>Solution: Box Model</h2>
       <p>Your code should look something like this:</p>
 <pre><code class="language-css">
 img.profile {
@@ -996,35 +951,30 @@ img.favourite {
     <!-- SLIDE CSS Box Model: Center logo -->
     <article class="slide slide-list">
       <h2>Centering the Logo</h2>
-      <ul>
-        <li>We probably want that logo to be in the centre of the page</li>
-        <li>To centre elements in CSS, we set the margins on the sides to <code>auto</code>, which causes the browser to automatically calculate how much margin to add to each side to centre the element</li>
-        <li>Instead of specifying both the <code>margin-left</code> and <code>margin-right</code> properties, we can use a shorthand that looks like this:</li>
+      <p>We probably want that logo to be in the centre of the page. To centre elements in CSS, we set the margins on the sides to <code>auto</code>, which causes the browser to automatically calculate how much margin to add to each side to centre the element.</p>
+      <p>Instead of specifying both the <code>margin-left</code> and <code>margin-right</code> properties, we can use a shorthand that looks like this:</p>
 <pre><code class="language-css">
 img {
   margin: 0 auto;
 }
 </code></pre>    
-        <li>The <code>0</code> sets both the top margin and the bottom margin, and the <code>auto</code> sets both the left and right margins. </li>    
-      </ul>
+      <p>The <code>0</code> sets both the top margin and the bottom margin, and the <code>auto</code> sets both the left and right margins. </p>    
     </article>
 
     <!-- SLIDE CSS Box Model: Center Logo 2 -->
     <article class="slide slide-list">
       <h2>Centering the Logo</h2>
-      <ul>
-        <li>We need a way to target our logo element so that we don't end up centering all the images</li>
-        <li>Add a class called <code>logo</code> to your logo <code>&lt;img></code> tag:</li>
+      <p>We need a way to target our logo element so that we don't end up centering all the images.</p>
+      <p>Add a class called <code>logo</code> to your logo <code>&lt;img></code> tag:</p>
 <pre><code class="language-markup">
 &lt;img class="logo" src="images/logo.png">
 </code></pre>  
-        <li>Then write a selector in your CSS to apply the <code>margin</code> property to</li>      
+      <p>Then write a selector in your CSS to apply the <code>margin</code> property to</p>      
 <pre><code class="language-css">
 img.logo {
   margin: 0 auto;
 }
 </code></pre>        
-      </ul>
     </article>
 
     <!-- SLIDE CSS Box Model: Center logo 3 -->
