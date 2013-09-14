@@ -54,6 +54,9 @@ body {
   bottom: auto !important;
   top: 0 !important;
 }
+.csstransforms .deck-container h1 {
+  padding: 0 150px;
+}
 .deck-container {
   /* Global slide styles */
 
@@ -68,7 +71,6 @@ body {
 .deck-container h3 {
   color: #b1009a;
   padding-top: 0;
-  text-transform: uppercase;
 }
 .deck-container h1 {
   font-size: 58px;
@@ -88,13 +90,14 @@ body {
 .deck-container ul li,
 .deck-container ol li {
   font-size: 28px;
-  line-height: 32px;
+  line-height: 38px;
 }
 .deck-container a {
   color: #444444;
 }
 .deck-container a:hover {
   color: #b1009a;
+  text-decoration: none;
 }
 .deck-container strong {
   font-weight: normal;
@@ -223,6 +226,9 @@ body {
   transform: translate3d(0, 0, 0);
   margin-bottom: 40px;
 }
+.deck-container .intro h3 {
+  color: #444444;
+}
 .deck-container .intro img {
   border-radius: 50%;
   margin-bottom: 0;
@@ -230,6 +236,9 @@ body {
 .deck-container .intro p {
   font-size: 16px;
   line-height: 20px;
+}
+.deck-container .intro a {
+  color: #b1009a;
 }
 .deck-container .outline p {
   font-size: 28px;

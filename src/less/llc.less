@@ -1,6 +1,6 @@
 /* LLC CUSTOM CHANGES AND CODERDECK OVERRIDES 
 ---------------------------------------------------------*/
-@import url('mixins-variables.less');
+@import 'mixins-variables.less';
 
 /* FONTS 
 ---------------------------------------------------------*/
@@ -71,6 +71,9 @@ body {
  	bottom: auto !important;
   	top: 0 !important;
 }
+.csstransforms .deck-container h1 {
+	padding: 0 150px;
+}
 
 .deck-container {
 
@@ -81,7 +84,7 @@ body {
 	h1, h2, h3 {
 		color: @llcPink;
 		padding-top: 0;
-		text-transform: uppercase;
+		//text-transform: uppercase;
 	}
 	h1 {
 		font-size: 58px;
@@ -102,7 +105,7 @@ body {
 
 		li {
 			font-size: 28px;
-			line-height: 32px;
+			line-height: 38px;
 		}
 	}
 	a {
@@ -110,6 +113,7 @@ body {
 
 		&:hover {
 			color: @llcPink;
+			text-decoration: none;
 		}
 	}
 	strong {
@@ -234,6 +238,9 @@ body {
 			.reset-transform;
 			margin-bottom: 40px;
 		}
+		h3 {
+			color: @gray;
+		}
 		img {
 			border-radius: 50%;
 			margin-bottom: 0;
@@ -241,6 +248,9 @@ body {
 		p {
 			font-size: 16px;
 			line-height: 20px;
+		}
+		a {
+			color: @llcPink;
 		}
 	}
 
