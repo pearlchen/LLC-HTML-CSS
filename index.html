@@ -595,7 +595,7 @@ p {
       <img src="assets/result_after_step_3.jpg">
     </article>
 
-    <!-- SLIDE: HTML -->
+    <!-- SLIDE 43: HTML -->
     <article class='slide slide-list'>
       <h2>A note about organization</h2>
       <p>Did you see how the markup in the previous slide was clean, organized and easy to read? It's because everything is indented properly.</p>
@@ -604,54 +604,67 @@ p {
    
 <!-- //// END OF HTML SECTION //// -->
 
-    <!-- SLIDE: CSS Basics -->
+    <!-- SLIDE 44: CSS Basics -->
     <article class='slide slide-subhead'>
-      <h1>CSS basics</h1>      
+      <h1>CSS basics</h1>
+      <p>The presentation layer</p>    
     </article>  
 
-    <!-- SLIDE: CSS and HTML -->
-    <article class="slide slide-subhead">
-      <h1>CSS is closely paired with HTML</h1>
-      <h2>CSS doesn't do anything on its own, it's the presentation layer on top of a content base</h2>
-      <h2>If HTML is the beams of the house, CSS is the layout, paint, and decorations</h2>
+    <!-- SLIDE 45: CSS and HTML -->
+    <article class="slide slide-list">
+      <h2>CSS & HTML</h2>
+      <p>CSS is closely paired with HTML and doesn't do anything on its own. It's the presentation layer on top of a content base.</p>
+      <p>If HTML is the beams of the house, CSS is the layout, paint, and decorations.</p>
     </article>
   
-    <!-- SLIDE: CSS Syntax 1 -->
+    <!-- SLIDE 46: CSS Syntax 1 -->
     <article class="slide slide-list">
       <h2>CSS Syntax</h2>
         <p>CSS is made up of <strong>rules</strong> that refer to HTML elements (like <code>&lt;p></code> and <code>&lt;ul></code>), and define what those elements should look like.</p>
-        <p>A CSS rule is made up of a <strong>selector</strong> and one or more <strong>declarations</strong></p>
-        <p>A <strong>selector</strong> tells the browser what element(s) we are styling.</p>
-        <p>It looks like this:</p>
+        <p>A CSS rule is made up of a <i>selector</i> and one or more <i>declarations</i>.</p>
+        <p>A <i>selector</i> tells the browser which element(s) to style. It looks like this:</p>
         <pre><code class="language-css">h2 {}</code></pre>   
-        <p>The above selector will select all <code>&lt;h2></code> elements and apply our styles to them. Our styles will go between the curly brackets.</p>     
+        <p>The above selector will select all <code>&lt;h2></code> elements and apply our styles to them. The styles (or <i>declarations</i>) will go between the curly brackets.</p>
+
+        <p class="icon-tip">The curly braces on your keyboard are located beside the "p" key. <strong>Shift</strong> + <strong>{</strong> and <strong>Shift</strong> + <strong>}</strong></p>   
     </article>
       
-    <!-- SLIDE: CSS Syntax 2 -->
+    <!-- SLIDE 47: CSS Syntax 2 -->
     <article class="slide slide-list">
       <h2>CSS Syntax</h2>
-      <p>A <strong>declaration</strong> tells the browser what style we want to apply to our element</p>
-      <p>A declaration is always made up of two parts: a <strong>property</strong> and a <strong>value</strong></p>
-      <p>A <strong>property</strong> tells the browser what we are modifying (ex. font, colour, size)</p>
-      <p>A <strong>value</strong> tells the browser how to modify the property (ex. Arial, green, small)</p>
+      <p>A <i>declaration</i> tells the browser what style to apply to the selected element.</p>
+      <p>A declaration is always made up of two parts: a <i>property</i> and a <i>value</i>.</p>
+      <p>A <i>property</i> tells the browser <strong>what</strong> we are modifying (ex. font, colour, size).</p>
+      <p>A <i>value</i> tells the browser <strong>how</strong> to modify the property (ex. Arial, green, small).</p>
       <p>A declaration looks like this:</p>
         <pre><code class="language-css">background-color: green;</code></pre>   
     </article>
 
-    <!-- SLIDE CSS Syntax 2.1 -->
+    <!-- SLIDE 48 CSS Syntax 2.1 -->
     <article class="slide slide-list">  
       <h2>CSS Syntax</h2>
         <pre><code class="language-css">background-color: green;</code></pre>
-        <p>The <strong>value</strong> (the part <em>after</em> the colon) is specific to the property type</p>
-        <p>Ex. size-related properties like <code>height, width</code>, or <code>font-size</code> are usually specified in <code>px</code> (pixels), while colour-related properties are specified with a colour name or code</p>
-        <p>It's very important that you write the syntax correctly, with a colon after the property name and a semi-colon after the value.</p>
+        <p>The <strong>value</strong> (the part <em>after</em> the colon) is specific to the property type.</p>
+        <p>Ex. Size-related properties like <code>height, width</code>, or <code>font-size</code> are usually specified in <code>px</code> (pixels), while colour-related properties are specified with a colour name or code.</p>
+        <p>It's very important to write the syntax correctly, with a colon after the property name and a semi-colon after the value.</p>
     </article>
 
-    <!-- SLIDE Adding Style Tags -->
+    <!-- SLIDE 49: CSS -->
+    <article class='slide slide-list'>
+      <h2>Recap: CSS terminology</h2>
+      <p><strong>Selectors</strong>: used to <em>select</em> which element(s) to apply the styles to.</p>
+
+      <p><strong>Declaration blocks</strong>: consists of a list of declarations (rules to follow) wrapped in curly braces <code>{ }</code>.</p>
+
+      <p><strong>Declarations</strong> are written using CSS <code>property:value</code> pairs.</p>
+      <pre><code class="language-css">selector { property: value; }</code></pre>
+      <pre><code class="language-css">h1 { color: blue; }</code></pre>
+    </article>
+
+    <!-- SLIDE 50 Adding Style Tags -->
     <article class="slide slide-list">
       <h2>Adding CSS to HTML</h2>
-      <p>You write CSS rules in a set of <code>&lt;style>&lt;/style></code> tags</p>
-      <p>You add the style tags to the <code>&lt;head></code> of your HTML document like this:</p>
+      <p>You write CSS rules in a set of <code>&lt;style>&lt;/style></code> tags included in the <code>&lt;head></code> section of your HTML document like this:</p>
 <pre><code class="language-markup">
 &lt;html>
   &lt;head>
@@ -669,7 +682,7 @@ p {
       </ul>
     </article>
 
-    <!-- SLIDE: CSS Syntax 3 -->
+    <!-- SLIDE 51: CSS Syntax 3 -->
     <article class="slide slide-list">
       <h2>CSS Syntax</h2>
       <p>When we put selectors and declarations together, they make a CSS rule, which looks like this: </p>
@@ -682,30 +695,28 @@ h2 {
         <p>Try copying and pasting the above code in between the <code>&lt;style></code> tags and refreshing the page in your browser.</p>
     </article>
 
-    <!-- SLIDE: CSS Syntax 4 -->
+    <!-- SLIDE 52: CSS Syntax 4 -->
     <article class="slide slide-list">
       <h2>CSS Syntax</h2>
       <p>We can add multiple declarations (property: value; sets) to one selector to modify multiple properties:</p>
-<pre><code class="language-css">
-  h2 {
-    background-color: green;
-    font-size: 28px;
-  }
+<pre><code class="language-css">h2 {
+  background-color: green;
+  font-size: 28px;
+}
 </code></pre>
-        <p>Make sure you always end each declaration with a semi-colon</p>
-        <p>Try replacing the previous rule for <code>&lt;h2></code> with this one and refreshing your browser</p>
+        <p>Make sure you always end each declaration with a semi-colon.</p>
+        <p>Try adding another declaration, using this example. Save & refresh your browser.</p>
         <p>Next, clear out all the code you added between the <code>&lt;style></code> tags. We're adding more soon!</p>
     </article>
 
-    <!-- SLIDE CSS First -->
+    <!-- SLIDE 53: CSS First -->
     <article class="slide slide-list">
       <h2>Exercise: First CSS Rule</h2>
       <ul>
         <li>Find the set of <code>&lt;style></code> tags in the <code>&lt;head></code> of <strong>blank.html</strong></li>
         <li>In between the two tags, write a selector for the <code>&lt;body></code> tag of the document</li>
         <li>Next, add a <code>color: </code> property with a value of <code>blue;</code></li>
-<pre><code class="language-css">
-body {
+<pre><code class="language-css">body {
   color: blue;
 }
 </code></pre>
@@ -713,29 +724,22 @@ body {
       <p>All the text on the page is now blue: this is because the <code>&lt;body></code> tag is the highest-level tag we can see on the page, so the <code>color</code> property applies to the body AND all its children, including every heading, paragraph, and list item.</p>
     </article>
 
-    <!-- SLIDE CSS Color Change -->
+    <!-- SLIDE 54: CSS Color Change -->
     <article class="slide slide-list">
       <h2>Using Hex Codes</h2>
       <p>Let's change the text to a colour that's easier to read.</p>
-      <p>We're going to use a <strong>hex code</strong>, which is a 6-character code that specifies a colour.</p>
-      <p>You don't have to understand how they work, just remember that they start with a <code>#</code> sign. It might help you to know the Hex codes for some of the basic colours:</p>
-      <ul>
-        <li>White: <code>#FFFFFF</code></li>
-        <li>Black: <code>#000000</code></li>
-        <li>Red: <code>#FF0000</code></li>
-        <li>Green: <code>#00FF00</code></li>
-        <li>Blue: <code>#0000FF</code></li>
-      </ul>
-      <p>The code for a nice dark grey is <code>#444444</code>. Let's add it.</p>
+      <p>We're going to use a <strong>hex code</strong>, which is a 6-character code that allows the usage of more specific colours.</p>
+      <p>The code for a nice dark grey is <code>#444444</code>.</p>
 <pre><code class="language-css">
 body {
   color: #444444;
 }
 </code></pre>          
-        <p>Check out<a href="http://www.colorpicker.com/">http://colorpicker.com</a> for more awesome colours!</p>
+        <p class="icon-note">Check out these sites for color inspiration and more hex codes: <a href="http://www.colourlovers.com/" target="_blank">COLOURlovers</a>, <a href="http://color.hailpixel.com/" target="_blank">color.hailpixel.com</a> </p>
+        <p class="icon-warning">Remember, hex codes always have to start with a "#".</p>
     </article>
 
-    <!-- SLIDE CSS Fonts -->
+    <!-- SLIDE 55: CSS Fonts -->
     <article class="slide slide-list">
       <h2>Styling Type with CSS</h2>
         <p>There are lots of CSS properties which let us style the text in our HTML:</p>
@@ -747,19 +751,20 @@ body {
           <li><code>color</code></li>
           <li><code>line-height</code></li>
         </ul>
+        <p class="icon-note">See more info about typography related CSS properties <a href="http://reference.sitepoint.com/css/typography">here</a>.</p>
     </article>
 
-    <!-- SLIDE CSS Fonts 2 -->
+    <!-- SLIDE 56: CSS Fonts 2 -->
     <article class="slide slide-list">   
     <h2>Styling Type with CSS, Part 2</h2> 
       <p>Let's change the font to a sans-serif like Helvetica: </p>
-<pre><code class="language-css">
-  body {
+<pre><code class="language-css">body {
     color: #444444;
     font-family: Helvetica, Arial, sans-serif;    
   }
 </code></pre>
-      <p>The font-family property accepts a list of font names: the first font is your first-choice font, the next ones are fallbacks in case that font is not available. Not all fonts are commonly available, so try to stick to 'web-safe' fonts like:</p>
+      <p>The <code>font-family</code> property accepts a list of font names:<br>
+      the first is your first-choice font, the next ones are fallbacks in case that font is not available. Not all fonts are commonly available on all computers, so try to stick to 'web-safe' fonts like:</p>
         <ul>
           <li style="font-family: Arial;">Arial</li>
           <li style="font-family: Verdana;">Verdana</li>
@@ -767,14 +772,44 @@ body {
           <li style="font-family: Georgia;">Georgia</li>
           <li style="font-family: Courier;">Courier</li>
         </ul>
+      <p class="icon-note">Here's a handy resource, <a href="http://cssfontstack.com/">CSS Font Stack</a>.</p>
     </article>
 
-        <!-- SLIDE CSS Fonts 2 -->
+    <!-- SLIDE 57 -->
+    <article class='slide slide-list'>
+      <h2>Cascading, Inheritance and Specificity</h2>
+      <p>In the previous example, we added all our CSS properties to the <code>body</code> <i>selector</i>. Therefore, all of the children and descendants <em>inherited</em> the styles. However, if a more specific <i>selector</i> was used, it would override the inherited values.</p>
+<pre><code class="language-css">body { 
+    background-color: blue; 
+    color: white; 
+    font-family: Helvetica, Arial, sans-serif;
+}
+h1 {
+    color: black; /* only the h1 text will be black */
+}
+
+/* This is a CSS comment by the way. The syntax is different from an HTML comment. */
+</code></pre>
+      <p class="icon-note">More resources <a href="http://www.w3.org/TR/CSS2/cascade.html" target="_blank">here</a>, <a href="http://css-tricks.com/specifics-on-css-specificity/" target="_blank">here</a> and <a href="http://coding.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/" target="_blank">here</a>.</p>
+    </article>
+
+    <!-- SLIDE 58: CSS -->
+    <article class='slide slide-list'>
+      <h2>Bonus: Try out web fonts</h2>
+      <p>When you get bored of Arial and Georgia, go to the <a href="http://www.google.com/webfonts/" target="_blank">Google Web Fonts</a> website and find a font that you like.</p>
+      <ol>
+        <li>Click on the "Quick-use" button for that font.</li>
+        <li>Scroll down to find the supplied <code>&lt;link&gt;</code> tag. Copy and paste it into your own HTML file.</li>
+        <li>Integrate the fonts into your CSS by using their supplied <code>font-family</code>. For example, add their <code>font-family</code> to your <code>h1</code> CSS selector.</li>
+        <li>Make sure your files are saved and view your web page in the browser. New fonts are that easy!</li>
+      </ol>
+    </article>
+
+    <!-- SLIDE 59: CSS Fonts 2 -->
     <article class="slide slide-list">
       <h2>Changing Font Sizes</h2> 
         <p>If we want to make our <code>&lt;h1></code> and <code>&lt;h2></code> tags a bit bigger:</p>
-<pre><code class="language-css">
-h1 {
+<pre><code class="language-css">h1 {
   font-size: 48px;
 }
 h2 {
@@ -783,43 +818,39 @@ h2 {
 </code></pre>
     </article>
 
-    <!-- SLIDE CSS Fonts 4 -->
+    <!-- SLIDE 60: CSS Fonts 4 -->
     <article class="slide slide-list">
       <h2>Changing Line Height</h2>
       <p>We can change the line height (or leading) with the <code>line-height</code> property to make it easier to read</p>
       <p><code>line-height</code> is specified as a multiple of the size of the font: so a value of <code>1.4</code> means the lines will be 1.4x as tall as the text.</p>
-<pre><code class="language-css">
-p {
+<pre><code class="language-css">p {
   line-height: 1.4;
 }
 </code></pre>
       </ul>
     </article>
     
-    <!-- SLIDE CSS Images 1 -->
+    <!-- SLIDE 61: CSS Images 1 -->
     <article class="slide slide-list">
       <h2>Styling Images</h2>
-      <p>Let's add a dark border around the profile image. Start by writing a selector to pick out the <code>&lt;img></code> tag.</p>
-<pre><code class="language-css">
-img {}
+      <p>Let's add a dark border around the profile image. Use the <code>img</code> selector to target the <code>&lt;img></code> tag.</p>
+<pre><code class="language-css">img {}
 </code></pre>
         <p>The <code>border</code> property has 3 parts: the width, the style, and the colour. So, if we want a 1px wide, solid, grey border, we use:</p>
-<pre><code class="language-css">
-img {
+<pre><code class="language-css">img {
   border: 1px solid grey;
 }
 </code></pre>        
       </ul>
     </article>
 
-    <!-- SLIDE CSS Classes 1 -->
+    <!-- SLIDE 62: CSS Classes 1 -->
     <article class="slide slide-list">
-      <h2>Being More Specific</h2>
+      <h2>Being More Specific: using a <code>class</code></h2>
         <p>Our border is now applying to <strong>all</strong> images on the page, including our logo. We don't want that, so we need a way to target <strong>only</strong> the profile image.</p>
-        <p>HTML gives us a way to attach extra identifying information to HTML elements so that we can target them. We call these "classes".</p>
-        <p>Classes are attributes that you add on to tags.</p>
-<pre><code class="language-markup">
-&lt;p class="classname">&lt;/p>
+        <p>HTML gives us a way to attach extra identifying information to HTML elements so that we can target them. This is called a <code>class</code>.</p>
+        <p><code>Classes</code> are <i>attributes</i> than can be added to any tag.</p>
+<pre><code class="language-markup">&lt;p class="classname">This is a paragraph.&lt;/p>
 </code></pre>
     </article>
 
