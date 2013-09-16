@@ -1,11 +1,10 @@
-#Ladies Learning Code
-###Intro to HTML and CSS
+Ladies Learning Code HTML/CSS Workshop Slides
+=============================================
 
-A full-day introductory workshop to HTML and CSS.
+A full day introductory HTML/CSS workshop.
 
-Course content has been refreshed. 
+Updated by [Heather Payne](https://github.com/heatherpayne) and [Tessa Thornton](https://github.com/tessalt) for June 2013 Workshop in Toronto. Forked from [Pearl Chen's awesome original](https://github.com/pchen/LLC-HTML-CSS).
 
-Slide deck markup and CSS has been revamped and refactored. Also incorporated LESS. 
+Previous versions are still available via [releases](https://github.com/christinatruong/LLC-HTML-CSS/releases).
 
-The pre-refresh zip file can be downloaded here: http://db.tt/4AInBRmn 
-
+**Workshop attendees**: click the "zip" download button above. Open `index.html` to view the slides in your browser. Project files can be found in the /Project folder.  
