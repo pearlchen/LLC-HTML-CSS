@@ -793,19 +793,7 @@ h1 {
       <p class="icon-note">More resources <a href="http://www.w3.org/TR/CSS2/cascade.html" target="_blank">here</a>, <a href="http://css-tricks.com/specifics-on-css-specificity/" target="_blank">here</a> and <a href="http://coding.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/" target="_blank">here</a>.</p>
     </article>
 
-    <!-- SLIDE 58: CSS -->
-    <article class='slide slide-list'>
-      <h2>Bonus: Try out web fonts</h2>
-      <p>When you get bored of Arial and Georgia, go to the <a href="http://www.google.com/webfonts/" target="_blank">Google Web Fonts</a> website and find a font that you like.</p>
-      <ol>
-        <li>Click on the "Quick-use" button for that font.</li>
-        <li>Scroll down to find the supplied <code>&lt;link&gt;</code> tag. Copy and paste it into your own HTML file.</li>
-        <li>Integrate the fonts into your CSS by using their supplied <code>font-family</code>. For example, add their <code>font-family</code> to your <code>h1</code> CSS selector.</li>
-        <li>Make sure your files are saved and view your web page in the browser. New fonts are that easy!</li>
-      </ol>
-    </article>
-
-    <!-- SLIDE 59: CSS Fonts 2 -->
+    <!-- SLIDE 58: CSS Fonts 2 -->
     <article class="slide slide-list">
       <h2>Changing Font Sizes</h2> 
         <p>If we want to make our <code>&lt;h1></code> and <code>&lt;h2></code> tags a bit bigger:</p>
@@ -818,7 +806,7 @@ h2 {
 </code></pre>
     </article>
 
-    <!-- SLIDE 60: CSS Fonts 4 -->
+    <!-- SLIDE 59: CSS Fonts 4 -->
     <article class="slide slide-list">
       <h2>Changing Line Height</h2>
       <p>We can change the line height (or leading) with the <code>line-height</code> property to make it easier to read</p>
@@ -830,13 +818,14 @@ h2 {
       </ul>
     </article>
     
-    <!-- SLIDE 61: CSS Images 1 -->
+    <!-- SLIDE 60: CSS Images 1 -->
     <article class="slide slide-list">
       <h2>Styling Images</h2>
       <p>Let's add a dark border around the profile image. Use the <code>img</code> selector to target the <code>&lt;img></code> tag.</p>
 <pre><code class="language-css">img {}
 </code></pre>
-        <p>The <code>border</code> property has 3 parts: the width, the style, and the colour. So, if we want a 1px wide, solid, grey border, we use:</p>
+        <p>The <code>border</code> property can hold 3 values: width, style, and colour.<br>
+        To create a 1px wide, solid line, grey border, we use:</p>
 <pre><code class="language-css">img {
   border: 1px solid grey;
 }
@@ -844,42 +833,40 @@ h2 {
       </ul>
     </article>
 
-    <!-- SLIDE 62: CSS Classes 1 -->
+    <!-- SLIDE 61: CSS Classes 1 -->
     <article class="slide slide-list">
-      <h2>Being More Specific: using a <code>class</code></h2>
-        <p>Our border is now applying to <strong>all</strong> images on the page, including our logo. We don't want that, so we need a way to target <strong>only</strong> the profile image.</p>
-        <p>HTML gives us a way to attach extra identifying information to HTML elements so that we can target them. This is called a <code>class</code>.</p>
-        <p><code>Classes</code> are <i>attributes</i> than can be added to any tag.</p>
-<pre><code class="language-markup">&lt;p class="classname">This is a paragraph.&lt;/p>
+      <h2>Being more specific: using a <code>class</code></h2>
+      <p>Because we used <code>img</code> as the selector, the border style now applies to <strong>all</strong> images. We don't want that, so we need a way to target <strong>only</strong> the profile image.</p>
+      <p>HTML gives us a way to attach extra identifying information to HTML elements so that we can target them. This is called a <code>class</code>.</p>
+      <p><code>Classes</code> are <i>attributes</i> than can be added to any tag and the value is define by you.</p>
+<pre><code class="language-markup">&lt;p class="classname">&lt;/p>
 </code></pre>
+      <p class="icon-tip">When choosing a class name, you can follow the same best practices for choosing file names that was discussed <a href="/#slide-14">earlier</a>.</p>
     </article>
 
-    <!-- SLIDE CSS Classes 2 -->
+    <!-- SLIDE 62: CSS Classes 2 -->
     <article class="slide slide-list">
       <h2>Targeting an Element with a Class</h2>
-      <p>We can write a selector in our css to target the element we added a class to using a <code> . </code></p>
-<pre><code class="language-css">
-p.classname {}
+      <p>Selecting a class in CSS requires a leading period (<code>.</code>) followed by the class name with <em>no spaces</em>.</p>
+<pre><code class="language-css">.classname {}
 </code></pre>        
-        <p>And then apply the styles we want to only the item with the class:</p>
-<pre><code class="language-css">
-p.classname {
+      <p>This will only apply the styles to the item with the class:</p>
+<pre><code class="language-css">.classname {
   color: red;
 }
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Classes Exercise -->
+    <!-- SLIDE 63: CSS Classes Exercise -->
     <article class="slide slide-list">
       <h2>Exercise: Style Profile Image</h2>
+      <p>Add some style to your profile image.</p>
       <ul>
-        <li>Add some style to your profile image!</li>
-        <li>Add a class of <code>profile</code> to the tag for your profile image</li>
-        <li>Target that class in your CSS with the selector <code>img.profile</code></li>
+        <li>Add a class of <code>profile-img</code> to the <code>img</code> tag containing your profile pic</li>
+        <li>Target the class in your CSS with the selector <code>.profile-img</code></li>
         <li>Then add a border of any color you like</li>
         <li>If your picture is too big, you can resize it using the <code>width</code> and <code>height</code> properties, which are specified in <code>px</code> (pixels). Try 200 x 200 px. An example of how to use <code>width</code> and <code>height</code> is below:</li>
-<pre><code class="language-css">
-img {
+<pre><code class="language-css">.profile-img {
   width: 200px;
   height: 200px;
 }
@@ -887,190 +874,194 @@ img {
       </ul>
     </article>
 
-    <!-- SLIDE CSS Classes Exercise Solution -->
+    <!-- SLIDE 64: CSS Classes Exercise Solution -->
     <article class="slide slide-list">
       <h2>Solution: Style Profile Image</h2>
       <p>Your HTML should look something like this:</p>
-<pre><code class="language-markup">
-&lt;img class="profile" src="images/profile.jpg"> 
+<pre><code class="language-markup">&lt;img class="profile-img" src="images/profile.jpg"> 
 </code></pre>
-        <p>And your CSS should look something like this:</p>
-<pre><code class="language-css">
-img.profile {
+      <p>And your CSS should look something like this:</p>
+<pre><code class="language-css">.profile-img {
   border: 1px solid grey;
   width: 200px;
-  height:200px;  
+  height: 200px;  
 }  
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Classes on multiple elements -->
+    <!-- SLIDE 65: CSS Classes on multiple elements -->
     <article class="slide slide-list">
       <h2>Adding More Classes</h2>
-      <p>We can do the same thing to style our "favourite things" images.</p>
-      <p>Since we probably want all four images to have the same styles, we can add the same class to each.</p>
-      <p>Add a class of "favourite" to each of the four images.</p>
-<pre><code class="language-markup">
-&lt;img class="favourite" src="images/kitten.jpg" >
+      <p>Once you define a CSS class, you can apply it over and over again, to any element. This is handy for applying the same style to multiple elements.</p>
+      <p>We can create another class to style our <strong>Favourite Things</strong> images. To style all four images, add the same class to each.</p>
+      <p>Add a class of <code>favourite-img</code> to each of the four images.</p>
+<pre><code class="language-markup">&lt;img class="favourite-img" src="images/kitten.jpg" >
 </code></pre>   
-      <p>Add some styles to your images, using things like <code>width</code>, <code>height</code>, and <code>border</code>.</p>        
+      <p>Try adding some styles to your images, using <code>width</code>, <code>height</code>, and <code>border</code>.</p>        
     </article>
 
-    <!-- SLIDE CSS Classes on fav images -->
+    <!-- SLIDE 66: CSS Classes on fav images -->
     <article class="slide slide-list">
       <h2>More Stuff You Can Do</h2>
+      <p>Try out some of the properties and see what they do.</p>
       <ul>
-        <li>Try something fun like <code>border-radius: 50%;</code></li>
-        <li>Or <code>border: 3px dotted pink;</code></li>
-        <li>Or even <code>box-shadow: 0 0 4px grey;</code></li>
-        <li>Your CSS might look something like this:</li>
-<pre><code class="language-css">
-img.favourite {
-  border: 1px solid grey;
+        <li><code>border-radius: 50%;</code></li>
+        <li><code>border: 3px dotted pink;</code></li>
+        <li><code>box-shadow: 0 0 4px grey;</code></li>
+      </ul>
+      <p>Your CSS might look something like this:</p>
+<pre><code class="language-css">.favourite-img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  border: 3px dotted pink;
+  box-shadow: 0 0 4px grey;
 }
 </code></pre>        
-      </ul>
+      <p class="icon-note">We won't get into browser pre-fixes today but keep in mind that newer CSS features, such as <code>border-radius</code> require you to re-state the property for each browser vendor. More info <a href="https://developer.mozilla.org/en-US/docs/CSS/border-radius" target="_blank">here</a>.</p>
     </article>
 
-    <!-- SLIDE CSS Properties -->
-    <article class="slide slide-subhead">
-      <h1>Don't worry if it seems like there are a lot of CSS properties to remember. Keep looking them up on the internet and they'll sink in eventually. Even the pros have to look things up every once in a while :)</h1>      
+    <!-- SLIDE 67: CSS Properties -->
+    <article class="slide slide-list">
+      <h2>Don't worry if it seems like there are a lot of CSS properties to remember (because there are lots). Keep some handy resources near by and you can always search the internet. Even the pros have to look things up :)</h2>
+      <p>Here are some resources to get you started. Bookmark these!</p>
+      <ul>
+           <li><a href="http://dochub.io/#css/">dochub.io</a> </li>
+           <li><a href="http://reference.sitepoint.com/css/propertyref">Sitepoint Reference</a></li>
+           <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">Mozilla Developer Network</a></li>
+           <li><a href="http://www.cheatography.com/davechild/cheat-sheets/css2/">Printable cheat sheet</a></li>
+         </ul>   
     </article>
 
-    <!-- SLIDE CSS Box Model -->
+    <!-- SLIDE 68: CSS Box Model -->
     <article class="slide slide-list">
     <h2>The Box Model</h2>
     <h3>This is the trickiest part of CSS, don't worry if it seems confusing at first!</h3>
-    <p>The CSS "Box Model" describes the way CSS styles the size and spacing of HTML elements.</p>
+    <p>The CSS <i>Box Model</i> describes the way CSS styles the size and spacing of HTML elements.</p>
     <p>To understand the box model, we need to understand how the browser "sees" HTML elements.</p>
     <p>To the browser, <strong>every</strong> HTML element is a  rectangular box.</p>
     <p>If we show the outlines of all the elements in an HTML document, it looks a bit like the next slide:</p>        
     </article>
 
-    <!-- SLIDE CSS Box Model 2 -->
+    <!-- SLIDE 69: CSS Box Model 2 -->
     <article class="slide slide-list">      
      <img src="assets/redboxes.png"></li>
     </article>
 
-    <!-- SLIDE CSS Box Model 3 -->
+    <!-- SLIDE 70: CSS Box Model 3 -->
     <article class="slide slide-list">
       <h2>The Box Model</h2>
       <p>CSS uses 5 properties to determine the size and spacing of these boxes:</p>
       <ul>
-        <li><code>Margin</code>, <code>padding</code>, <code>border</code>, <code>width</code>, and <code>height</code></li>
+        <li><code>margin</code>, <code>padding</code>, <code>border</code>, <code>width</code>, and <code>height</code></li>
         <li>These 5 properties make up the <strong>Box Model</strong></li>
         <img src="assets/border-box-model.gif">
       </ul>
+      <p>The <i>content</i> is the text or image visible to the user. The <code>border</code> is... the border. <code>padding</code> adds space <em>inside</em> of the box and <code>margin</code> adds space <em>outside</em> of the box.</p>
+      <p>Let's look at each property in more detail.</p>
     </article>
 
-    <!-- SLIDE CSS Box Model: Margin & Padding -->
+    <!-- SLIDE 71: CSS Box Model: Margin & Padding -->
     <article class="slide slide-list">
       <h2>Margin and Padding</h2>
-      <ul>
-        <li>Let's say we have 3 elements in our HTML document: a <code>&lt;p></code>, an <code>&lt;h2></code>, and another <code>&lt;p></code></li>
-        <li>Let's put a red border around the <code>&lt;h2></code> and add a pink background:</li>
-<pre><code class="language-css">
-h2 {
+      <p>There are two CSS properties for adding space around our elements: <code>margin</code> and <code>padding</code>. Let's take a look at an example.</p>
+      <p>First, adding a border and background color to an element will make it easier to see how these two properties add space to the element.</p>
+      <p>Let's say we have 3 elements in our HTML document: a <code>&lt;p></code>, an <code>&lt;h2></code>, and another <code>&lt;p></code>. Adding a solid red border and pink background to the <code>&lt;h2></code> will look like this:</p>
+<pre><code class="language-css">h2 {
   border: 1px solid red;
   background: pink;
 }
 </code></pre>
-      <li>So far, this looks pretty awfull. All the elements are too close to each other!</li>        
-      <img src="assets/bm1.png">
-      </ul>
+      <br>
+      <img src="assets/bm1.png"> 
+      <p>So far, this looks pretty awful. All the elements are too close to each other.</p>        
+      
     </article>
 
-    <!-- SLIDE CSS Box Model: Margin-->
+    <!-- SLIDE 72: CSS Box Model: Margin-->
     <article class="slide slide-list">  
       <h2>Margins</h2>
-      <p>There are two CSS properties for adding space around our elements: <code>margin</code>, and <code>padding</code></p>
       <p>The <code>margin</code> property adds space <em>around</em> the element, outside of the border:</p>
-<pre><code class="language-css">
-h2 {
+<pre><code class="language-css">h2 {
   margin: 40px;
 }  
 </code></pre>  
-      <p>This code adds 40px of space on every side of the element.</p>      
-        <img src="assets/bm2.png" alt="">
-      </ul>
+      <p>The example adds 40px of space on every side of the element.</p> 
+      <br>     
+      <img src="assets/bm2.png" alt="">
     </article>
 
-    <!-- SLIDE CSS Box Model: Padding -->
+    <!-- SLIDE 73: CSS Box Model: Padding -->
     <article class="slide slide-list">
       <h2>Padding</h2>
-      <p>If we want to add some space <em>inside</em> the border, we use the <code>padding</code> property:</li>
-<pre><code class="language-css">
-h2 {
+      <p>To add some space <em>inside</em> the border, use the <code>padding</code> property:</li>
+<pre><code class="language-css">h2 {
   margin: 40px;
   padding: 40px;
 }
 </code></pre> 
-      <p>This code adds 40px of space to every side of the element, but it does so within the border.</p>       
-        <img src="assets/bm3.png" alt="">        
-      </ul>
+      <p>This example adds 40px of space to every side of the element, but it does so within the border.</p> 
+      <br>      
+      <img src="assets/bm3.png" alt="">
+      <p class="icon-warning">Note that the background colour extends when using padding but not margin.</p>
     </article>
 
-    <!-- SLIDE CSS Box Model: Margin & Padding -->
+    <!-- SLIDE CSS 74: Box Model: Margin & Padding -->
     <article class="slide slide-list">
       <h2>Margin vs. Padding</h2>
       <p>Adding <code>padding</code> to an element makes the element <strong>bigger</strong>, whereas adding a <code>margin</code> adds space around the element.</p>
-      <p>If you make a 100px wide element, and then add 40px of padding to it, it will become 180px wide.</p>
+      <p>If you make a 100px wide element, and then add 40px of padding to it, it will become 180px wide. <span class="sidenote">(100px width + 40px padding left + 40px padding right)</span></p>
       <p>If you add a 40px margin to a 100px wide element, it stays 100px wide.</p>
-      <p>If you add a 1px border to a 100px wide element, it will become 102px wide.</p>
+      <p>If you add a 1px border to a 100px wide element, it will become 102px wide. <span class="sidenote">(100px width + 1px border left + 1px border right)</span></p>
       <p>If your element doesn't have a border or a background, you may not be able to see the difference between margin and padding.</p>
         <!-- TODO: diagram of h2 thing -->
     </article>
 
-    <!-- SLIDE CSS Box Mdoel: Margin & Padding Sides -->
+    <!-- SLIDE CSS 75: Box Mdoel: Margin & Padding Sides -->
     <article class="slide slide-list">
       <h2>More on Margins and Padding</h2>
-      <p>You can specify which side of an element you want your margins to apply to with the <code>margin-top, margin-right, margin-bottom,</code> and <code>margin-left</code> properties:</p>
-<pre><code class="language-css">
-h2 {
+      <p>You can also target a specific side of an element by using these properties: <code>margin-top, margin-right, margin-bottom,</code> and <code>margin-left</code>.</p>
+<pre><code class="language-css">h2 {
   margin-top: 40px;
   margin-bottom: 40px;
 }
 </code></pre>        
       <p>The same goes for <code>padding</code> and <code>border</code>:</p>
-<pre><code class="language-css">
-h2 {
+<pre><code class="language-css">h2 {
   padding-bottom: 40px;
   border-left: 1px solid red;
 }
-</code></pre>        
+</code></pre> 
+      <p class="icon-note">Using just <code>padding</code>, <code>border</code> and <code>margin</code> are actually shorthand properties. These properties, as well as many others, can also be defined using shorthand. More info <a href="http://www.webcredible.co.uk/user-friendly-resources/css/css-shorthand-properties.shtml" target="_blank">here</a>.</p>     
     </article>
 
-    <!-- SLIDE CSS Box Model Exercise -->
+    <!-- SLIDE 76: CSS Box Model Exercise -->
     <article class="slide slide-list">
       <h2>Exercise: Box Model</h2>
       <ul>
         <li>Add some <code>padding</code> to your profile image. This should create  space <em>between</em> the image and the border around it. Try about 5px.</li>
-        <li>Add both <code>padding</code> and a <code>margin</code> to your 'favourite things' images. Try 5px for the <code>padding</code> and about 10px for the <code>margin.</code></li>
+        <li>Add both <code>padding</code> and a <code>margin</code> to your <strong>Favourite Things</strong> images. Try 5px for the <code>padding</code> and about 10px for the <code>margin.</code></li>
       </ul>
     </article>
 
-    <!-- SLIDE CSS Box Model Answer -->
+    <!-- SLIDE 77: CSS Box Model Answer -->
     <article class="slide slide-list">
       <h2>Solution: Box Model</h2>
       <p>Your code should look something like this:</p>
-<pre><code class="language-css">
-img.profile {
+<pre><code class="language-css">.profile-img {
   padding: 5px;
 }
-img.favourite {
+.favourite-img {
   padding: 5px;
   margin: 10px;
 }
 </code></pre>      
     </article>
 
-    <!-- SLIDE CSS Box Model: Center logo -->
+    <!-- SLIDE 78: CSS Box Model: Center logo -->
     <article class="slide slide-list">
       <h2>Centering the Logo</h2>
-      <p>We probably want that logo to be in the centre of the page. To centre elements in CSS, we set the margins on the sides to <code>auto</code>, which causes the browser to automatically calculate how much margin to add to each side to centre the element.</p>
+      <p>To centre elements in CSS, we set the margins to <code>auto</code>, which causes the browser to <em>automatically</em> calculate how much margin to add to each side to centre the element.</p>
       <p>Instead of specifying both the <code>margin-left</code> and <code>margin-right</code> properties, we can use a shorthand that looks like this:</p>
 <pre><code class="language-css">
 img {
@@ -1080,69 +1071,69 @@ img {
       <p>The <code>0</code> sets both the top margin and the bottom margin, and the <code>auto</code> sets both the left and right margins. </p>    
     </article>
 
-    <!-- SLIDE CSS Box Model: Center Logo 2 -->
+    <!-- SLIDE 79: CSS Box Model: Center Logo 2 -->
     <article class="slide slide-list">
       <h2>Centering the Logo</h2>
-      <p>We need a way to target our logo element so that we don't end up centering all the images.</p>
-      <p>Add a class called <code>logo</code> to your logo <code>&lt;img></code> tag:</p>
+      <p>But remember, if we use just <code>img</code> as the selector, it will target all the images.  Let's create another class to target only the logo.</p>
+      <p>Add a class of <code>logo</code> to your logo <code>&lt;img></code> tag:</p>
 <pre><code class="language-markup">
 &lt;img class="logo" src="images/logo.png">
 </code></pre>  
-      <p>Then write a selector in your CSS and apply the <code>margin</code> property:</p>      
-<pre><code class="language-css">
-img.logo {
+      <p>Then target the class selector in your CSS and apply the <code>margin</code> property:</p>      
+<pre><code class="language-css">.logo {
   margin: 0 auto;
 }
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Box Model: Center logo 3 -->
+    <!-- SLIDE 80: CSS Box Model: Center logo 3 -->
     <article class="slide slide-list">
       <h2>Nothing Happened!</h2>
-      <p>Let's take a few steps back:</p>
+      <p>Let's take a few steps back.</p>
       <p>Remember the boxes with the red outlines?</p>
         <img src="assets/redboxes.png" width="400px;">
-      <p>Did you notice that the red outlines around the images don't stretch accross the whole screen like the other boxes do?</p>
+      <p>Did you notice that the red outlines around the images don't stretch across the whole screen like the other boxes do?</p>
     </article>
 
-    <!-- SLIDE CSS Box Model: Block vs. Inline -->
+    <!-- SLIDE 81: CSS Box Model: Block vs. Inline -->
     <article class="slide slide-list">  
-    <h2>Nothing Happened, Part 2</h2>    
+    <h2>Inline vs Block</h2>    
       <p>This is because images are <em>inline</em> elements. Inline elements do not take up the full width of the page, they only take up as much space as the content requires.</p>
       <p>Most elements, like <code>&lt;h2>, &lt;p>,</code> or <code>&lt;ul></code> take up the whole width of the page, these are called <em>block</em> elements.</p>
-      <p>Because our logo element is only as wide as the image, we can't centre it relative to the page. Luckily, this is easy to fix: we just tell the <code>&lt;img></code> tag to behave like a block element instead, by setting the <code>display</code> property.</p>
-<pre><code class="language-css">
-img.logo {
+      <p>Because our logo element is only as wide as the image, we can't center it relative to the page. Luckily, this is easy to fix: we just tell the <code>&lt;img></code> tag to behave like a block element instead, by setting the <code>display</code> property.</p>
+<pre><code class="language-css">.logo {
   margin: 0 auto;
   display: block;
 }
-</code></pre>        
+</code></pre>       
     </article>
 
-    <!-- SLIDE CSS Box Model: Inline -->
+    <!-- SLIDE 82: CSS Box Model: Inline -->
     <article class="slide slide-list">
       <h2>Other Inline Elements</h2>
       <p>Other common inline elements include <code>&lt;a>, &lt;strong>,</code> and <code>&lt;em></code>.</p>
       <p>Inline elements don't create line breaks, so they are usually tags that you might find inside a paragraph or in the middle of a sentence.</p>
+      <p class="icon-note">More info on block & inline level elements <a href="https://developer.mozilla.org/en-US/docs/HTML/Block-level_elements">here</a>.</p>
     </article>
 
-    <!-- SLIDE CSS Layout Intro -->
+    <!-- SLIDE 83: CSS Layout Intro -->
     <article class="slide slide-list">
       <h2>Layout: Section by Section</h2>
       <p>Our site looks much better now, but now it's time to style the individual sections.</p>
       <p>We'll need a way to target each section independently, grouping elements within the same section together, creating a layout.</p>
-      <p>Conveniently enough, HTML provides the <code>&lt;section></code> tag. We'll wrap each section within a <code>&lt;section></code> tag and add a class to each one, so we can style each section using CSS.</li>        
+      <p>Conveniently enough, HTML provides the <code>&lt;section></code> tag. We'll wrap each section within a <code>&lt;section></code> tag and add a class to each one, so we can style each section using CSS.</li>
+      <p class="icon-warning"><code>section</code> is specific to the latest version of HTML which is HTML5 and is not supported in older browsers such as Internet Explorer 8 and below.</p>
+      <p class="icon-note">Further reading: <a href="http://diveintohtml5.info/semantics.html#new-elements">Dive Into HTML5</a></p>      
     </article>
 
-    <!-- SLIDE CSS Layout  -->
+    <!-- SLIDE 84: CSS Layout  -->
     <article class="slide slide-list">
       <h2>Banner Section</h2>
       <ul>
         <li>Add an opening <code>&lt;section></code> tag before the logo image</li>
         <li>Add a closing <code>&lt;/section></code> tag right after the "tagline" paragraph</li>
-        <li>Add a class called "banner" to the <code>&lt;section></code> tag</li>
-<pre><code class="language-markup">
-&lt;section class="banner">
+        <li>Add a class of <code>banner</code> to the <code>&lt;section></code> tag</li>
+<pre><code class="language-markup">&lt;section class="banner">
   &lt;img>
   &lt;h1>...&lt;/h1>
   &lt;p>...&lt;/p>
@@ -1151,117 +1142,107 @@ img.logo {
       </ul>
     </article>
 
-    <!-- SLIDE CSS Layout Banner 2 -->
+    <!-- SLIDE 85: CSS Layout Banner 2 -->
     <article class="slide slide-list">
       <h2>Banner Section CSS</h2>
-      <ul>
-        <li>Target our new <code>&lt;section></code> with a selector in your CSS</li>
-<pre><code class="language-css">
-section.banner {}  
+      <p>Target our new <code>&lt;section></code> with a selector in your CSS</p>
+<pre><code class="language-css">.banner {}  
 </code></pre>        
-        <li>Add some padding to the top and bottom of the section to give our logo and text some space</li>
-<pre><code class="language-css">
-section.banner {
+      <p>Add some padding to the top and bottom of the section to give our logo and text some space.</p>
+<pre><code class="language-css">.banner {
   padding-top: 110px;
   padding-bottom: 110px;
 }
-</code></pre>        
-      </ul>
+</code></pre>
     </article>
 
-    <!-- SLIDE CSS Layout Banner 3 -->
+    <!-- SLIDE 86: CSS Layout Banner 3 -->
     <article class="slide slide-list">
       <h2>Adding a background image</h2>
-      <ul>
-        <li>The CSS <code>background-image</code> property lets you specify a path to an image in much the same way as you would in an HTML <code>&lt;img></code> tag:</li>
-<pre><code class="language-css">
-background-image: url('images/background.jpg');
+      <p>The CSS <code>background-image</code> property lets you specify a path to an image similar to the way you would for an HTML <code>&lt;img></code> tag.</p>
+<pre><code class="language-css">background-image: url('images/background.jpg');
 </code></pre>               
       </ul>
     </article>
 
-    <!-- SLIDE CSS Layout Banner Exercise -->
+    <!-- SLIDE 87: CSS Layout Banner Exercise -->
     <article class="slide slide-list">
       <h2>Exercise: Add a background image</h2>
       <ul>
         <li>Find a large image on your computer or on the internet and move it into the <strong>images</strong> folder in your project folder</li>
-        <li>Add the image as a <code>background-image</code> for the new banner <code>&lt;section></code> we just made</li>
+        <li>
+          Add the image as a <code>background-image</code> for the new banner <code>&lt;section></code> we just made<br>
+          <span class="icon-note">Read more about the <code><a href="http://coding.smashingmagazine.com/2009/09/02/backgrounds-in-css-everything-you-need-to-know/" target="_blank">background</a></code> property.</span>
+        </li>
         <li>Adjust the <code>color</code> property for the section to something that contrasts with your background image</li>
         <li>Set the <code>text-align</code> property to <code>center</code> to centre the text</li>
       </ul>
     </article>
 
-    <!-- SLIDE CSS Layout Banner Assigmment soltuion -->
+    <!-- SLIDE 88: CSS Layout Banner Assigmment soltuion -->
     <article class="slide slide-list">
       <h2>Solution: Add a background image</h2>
-      <ul>
-        <li>Your CSS should look like this:</li>
-<pre><code class="language-css">
-section.banner {
+      <p>Your CSS should look like this:</p>
+<pre><code class="language-css">.banner {
   background: url('images/background.jpg');
   color: #ffffff;
   text-align: center;
 }
-</code></pre>        
-      </ul>
+</code></pre>
     </article>
 
-    <!-- SLIDE CSS Normalize -->
+    <!-- SLIDE 89: CSS Normalize -->
     <article class="slide slide-list">
       <h2>Browser default styles</h2>
-      <p>We have an ugly white margin around our whole background image!</p>
-      <p>This is because browsers (like Chrome) add a bunch of default styles, including margins, to HTML elements, such as on the <code>&lt;body></code>.</p>
-      <p>We can get rid of many of these unwanted styles with a snippet of code called <strong>normalize.css</strong>.</p>
+      <p>Why do we have a white margin around our whole background image?</p>
+      <p>Because browsers (like Chrome) add a bunch of default styles, including margins, to HTML elements, such as on the <code>&lt;body></code>.</p>
+      <p>We can get rid of many of these unwanted styles with a snippet of code called <strong>normalize.css</strong>, which is a <em>reset stylesheet</em>.</p>
       <p>Open up the <strong>normalize.css</strong> file and copy and paste the contents to the top of your CSS.</li>
+      <p class="icon-note"><a href="http://www.cssreset.com/what-is-a-css-reset/">What is a CSS reset?</a><br></p>
     </article>
 
-    <!-- SLIDE CSS Banner: Typography -->
+    <!-- SLIDE 90: CSS Banner: Typography -->
     <article class="slide slide-list">
       <h2>CSS Child Selectors</h2>
-      <p>Let's adjust some of the text in our banner section.</p>
-      <p>We probably want the paragraph text to be bigger, and the <code>&lt;h1></code> to have less of a margin at the bottom.</p>
-      <p>We need a way to select the paragraph tags in the banner section and <strong>only</strong> in the banner section.</p>
-      <p>We could add a class to it like we did with the images, but there's an easier way.</p>
-      <p>We can use the class we added to the <code>&lt;section></code> element to target the elements that are nested within it.</p>
+      <p>Let's adjust some of the text in our banner section and make the paragraph text bigger and reduce the bottom margin of the <code>&lt;h1></code>.</p>
+      <p>We need a way to select the paragraph tags in the banner section and <strong>only</strong> in the banner section. We could add a class to it like we did with the images, but there's a better way.</p>
+      <p>Remember the parent-child relationship of HTML elements? We can use that relationship to write CSS using the existing class added to the <code>&lt;section></code> element.</p>
     </article>
 
-    <!-- SLIDE CSS Child Selectors -->
+    <!-- SLIDE 91: CSS Child Selectors -->
     <article class="slide slide-list">
       <h2>CSS Child Selectors</h2>
-      <p>>You can write a <strong>child selector</strong> to select only those tags which are children of another tag.</p>
-      <p>We add a space between the parent and the child selector to specify:</p>
-<pre><code class="language-css">
-section img {}  
+      <p>CSS <i>child selectors</i> are used to select only those tags which are children of another tag.</p>
+      <p>To use a child selector, <em>add a space</em> between the parent and the child selector.</p>
+<pre><code class="language-css">section img {}  
 </code></pre>        
       <p>The above selector will select only those <code>&lt;img></code> tags which are nested within <code>&lt;section></code> tags.</p>
     </article>
 
-    <!-- SLIDE CSS Exercise Child Selectors -->
+    <!-- SLIDE 92: CSS Exercise Child Selectors -->
     <article class="slide slide-list">
       <h2>CSS Child Selectors</h2>
-      <p>To target the <code>&lt;p></code> tag within the banner <code>&lt;section></code>, we use:</p>
-<pre><code class="language-css">
-section.banner p {}  
+      <p>Targeting the <code>&lt;p></code> tag within the banner <code>&lt;section></code> should look like this:</p>
+<pre><code class="language-css">.banner p {}  
 </code></pre>     
       <p>Try increasing the <code>font-size</code> of the selected <code>&lt;p></code> tag.</p>   
-      <p>Select the <code>&lt;h1></code> tag in the banner section in the same way and capitalize the text using <code>text-transform: uppercase</code>. Your CSS should look something like this:</p>
-<pre><code class="language-css">
-section.banner p {
+      <p>Use a child selector to select the <code>&lt;h1></code> tag in the banner section and capitalize the text using <code>text-transform: uppercase</code>.</p>
+      <p>Your CSS should look something like this:</p>
+<pre><code class="language-css">.banner p {
   font-size: 18px;
 }
-section.banner h1 {
+.banner h1 {
   text-transform: uppercase;
 }
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Layout About Section -->
+    <!-- SLIDE 93: CSS Layout About Section -->
     <article class="slide slide-list">
-      <h2>The "About" Section</h2>
-      <p>Let's repeat the process for the "about" section.</p>
-      <p>We'll wrap the section in <code>&lt;section></code> tags with a class of "about":</p>
-<pre><code class="language-markup">
-&lt;section class="about">
+      <h2>The About Section</h2>
+      <p>Let's repeat the process for the <strong>About</strong> section.</p>
+      <p>Wrap the section using the <code>&lt;section></code> tags and add a class of <code>about</code>.</p>
+<pre><code class="language-markup">&lt;section class="about">
   &lt;h2>...&lt;/h2>
   &lt;img>
   &lt;p>...&lt;/p>
@@ -1269,35 +1250,29 @@ section.banner h1 {
 </code></pre>
     </article>
 
-    <!-- SLIDE CSS Layout About 2 -->
+    <!-- SLIDE 94: CSS Layout About 2 -->
     <article class="slide slide-list">
-      <h2>The "About" Section</h2>
-      <p>Let's add a tiled background image to this section.</p>
-      <p>Use one of the "tile" image in the <strong>images</strong> folder, or look for one online. Try <a href="http://subtlepatterns.com/">http://subtlepatterns.com</a>. Download an image you like and save it to your <strong>images</strong> folder. Add the image as a background to the "about" section:</p>
-<pre><code class="language-css">
-section.about {
+      <h2>The About Section</h2>
+      <p>Add a tiled background image to this section.</p>
+      <p>Use one of the <strong>tile</strong> images in the <strong>images</strong> folder, or look for one online. Try <a href="http://subtlepatterns.com/">http://subtlepatterns.com</a>. Download an image you like and save it to your <strong>images</strong> folder.</p>
+      <p>Add the image as a background to the <strong>about</strong> section.</p>
+<pre><code class="language-css">.about {
   background: url('images/pattern.png');
 }
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Layout About 3 -->
+    <!-- SLIDE 95: CSS Layout About 3 -->
     <article class="slide slide-list">
       <h2>Centre-aligning the header</h2>
-      <p>We want the heading for this section to be centre-aligned.</p>
-      <p>So, let's select it with a child selector:</li>
-<pre><code class="language-css">
-section.about h2 {}
-</code></pre>
-      <p>And centre-align it with <code>text-align: center</code>:</p>
-<pre><code class="language-css">
-section.about h2 {
+      <p>Use a child selector and the <code>text-align</code> property.</p>
+<pre><code class="language-css">.about h2 {
   text-align: center;
 }
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Layout About 4 -->
+    <!-- SLIDE 96: CSS Layout About 4 -->
     <article class="slide slide-list">
       <h2>CSS Floats</h2>
       <p>We want to align the profile image to the left, and allow the text to wrap around it. We do this using <strong>CSS Floats</strong>.</p>
@@ -1306,12 +1281,11 @@ section.about h2 {
       <p>We have to break that stacking flow by <strong>floating</strong> the image to the side. This will cause the text after the image to move up beside it, because we've disrupted the flow of the rectangular boxes.</p>
     </article>
 
-    <!-- SLIDE CSS Layout About 5 -->
+    <!-- SLIDE 97: CSS Layout About 5 -->
     <article class="slide slide-list">
       <h2>CSS Floats</h2>
-      <p>We already wrote the selector for our profile <code>&lt;img></code>, so let's add the declaration <code>float: left;</code> to it:</p>
-<pre><code class="language-css">
-img.profile {
+      <p>Using the existing selector for our profile <code>&lt;img></code>, add the declaration <code>float: left;</code> to it:</p>
+<pre><code class="language-css">.profile-img {
   float: left;
 }
 </code></pre> 
@@ -1320,69 +1294,65 @@ img.profile {
       </ul>
     </article>
 
-    <!-- SLIDE CSS Layout About 5 -->
+    <!-- SLIDE 98: CSS Layout About 5 -->
     <article class="slide slide-list">
       <h2>CSS Floats</h2>
       <p>We broke the flow of rectangular boxes by adding <code>float: left;</code> to our image.</p>
       <p>We need to restore the regular stacking of boxes after this section.</p>
-      <p>We do this by adding <code>overflow: hidden;</code> to the parent element (<code>&lt;section class="about"></code>).</p>
-      <code>overflow: hidden;</code> forces the element to 'contain' any floated children, so that they don't disrupt the elements after them</p>
-<pre><code class="language-css">
-section.about {
+      <p>We do this by adding <code>overflow: hidden;</code> to the parent element, <code>&lt;section class="about"></code>.</p>
+      <p><code>overflow: hidden;</code> forces the element to 'contain' any floated children, so that they don't disrupt the elements after them.</p>
+<pre><code class="language-css">.about {
   overflow: hidden;
 }
-</code></pre>        
+</code></pre>
+      <p class="icon-note">See more info <a href="http://net.tutsplus.com/tutorials/html-css-techniques/css-fudamentals-containing-children/">here</a>.</p>        
     </article>
 
-    <!-- SLIDE CSS Layout Favourites -->
+    <!-- SLIDE 99: CSS Layout Favourites -->
     <article class="slide slide-list">
       <h2>Next Section: Favourites</h2>
       <p>There's not much to do here, but let's centre-align the entire section.</p>
       <p>First, we have to add a wrapping <code>&lt;section></code> around the favourites content.</p>
       <p>Add an opening <code>&lt;section></code> tag before the favourites heading, and a closing <code>&lt;/section></code> tag after the last image:</p>
-<pre><code class="language-markup">
-&lt;section class="favourites">
+<pre><code class="language-markup">&lt;section class="favourites">
   &lt;h2>...&lt;/h2>
   &lt;h3>...&lt;/h3>
-  &lt;img class="favourite" src="images/kitten.jpg">
-  &lt;img class="favourite" src="images/kitten.jpg">
-  &lt;img class="favourite" src="images/kitten.jpg">
-  &lt;img class="favourite" src="images/kitten.jpg">
+  &lt;img class="favourite-img" src="images/kitten.jpg">
+  &lt;img class="favourite-img" src="images/kitten.jpg">
+  &lt;img class="favourite-img" src="images/kitten.jpg">
+  &lt;img class="favourite-img" src="images/kitten.jpg">
 &lt;/section>
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Layout Favourites 2 -->
+    <!-- SLIDE 100: CSS Layout Favourites 2 -->
     <article class="slide slide-list">
       <h2>Centre-aligning</h2>
-      <p>Let's write a selector for the section we just created:</p>
-<pre><code class="language-css">
-section.favourites {}  
+      <p>Write a selector for the section we just created.</p>
+<pre><code class="language-css">.favourites {}  
 </code></pre>
-      <p>And centre-align it:</p>        
-<pre><code class="language-css">
-section.favourites {
+      <p>Then centre-align it.</p>        
+<pre><code class="language-css">.favourites {
   text-align: center;
 }
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Layout Contact -->
+    <!-- SLIDE 101: CSS Layout Contact -->
     <article class="slide slide-list">
-      <h2>Exercise: "Contact" Section</h2>
+      <h2>Exercise: Contact Section</h2>
       <ul>
-        <li>Repeat the process of adding a <code>&lt;section></code> wrapper to the "Contact" section and centre-aligning using CSS.</li>
+        <li>Repeat the process of adding a <code>&lt;section></code> wrapper to the <strong>Contact</strong> section and centre-aligning using CSS.</li>
         <li>Add a background image to the contact section.</li>
         <li>Add <code>margin</code>s around the images in the contact section.</li>
       </ul>
     </article>
 
-    <!-- SLIDE CSS Layout Contact 2 -->
+    <!-- SLIDE 102: CSS Layout Contact 2 -->
     <article class="slide slide-list">
       <h2>Solution: Contact Section</h2>
       <p>Your HTML should look something like this:</p>
-<pre><code class="language-markup">
-&lt;section class="contact">
+<pre><code class="language-markup">&lt;section class="contact">
   &lt;h2>Contact Me&lt;/h2>
   &lt;a href="https://">...&lt;/a>
   &lt;a href="https://">...&lt;/a>
@@ -1390,143 +1360,138 @@ section.favourites {
 &lt;/section>
 </code></pre>
       <p>And your CSS:</p>        
-<pre><code class="language-css">
-section.contact {
+<pre><code class="language-css">.contact {
   text-align: center;
   background: url('images/tile2.png');
 }
-section.contact img {
+.contact img {
   margin: 20px;
 }
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Layout Classes -->
+    <!-- SLIDE 103: CSS Layout Classes -->
     <article class="slide slide-list">
       <h2>Styling Multiple Sections at Once</h2>
-      <p>All ofour sections could use some spacing - they're a bit too squished together.</p>
-      <p>Let's add some <code>padding</code> to our sections. Since we're adding the same amount of padding to each section, we can avoid repeating ourselves by adding a class to each section we'd like to style, and then targeting this class in our CSS.</p>
-      <p>Add a class of <strong>box</strong> to each of the content <code>&lt;section></code>s (not including the banner section):</p>
-<pre><code class="language-markup">
-&lt;section class="about box">&lt;/section>
+      <p>The About, Favourites and Contact sections could use some spacing. Let's add some <code>padding</code> to it.</p>
+      <p>Since we're adding the same amount of padding to each section, we can create a new class rather than repeating the same declaration in each of these section's CSS. That way, if we want to change or add some CSS for these sections, we can update just one class, instead of three.</p>
+      <p>Add a class of <strong>box</strong> to each of the content <code>&lt;section></code>s (not including the banner section).</p>
+<pre><code class="language-markup">&lt;section class="about box">&lt;/section>
 &lt;section class="favourites box">&lt;/section>
 &lt;section class="contact box">&lt;/section>
 </code></pre>        
-      </ul>
+      <p class="icon-warning">When using more than one class, be sure to separate the class names with a space.</p>
     </article>
 
-    <!-- SLIDE CSS Layout Classes -->
+    <!-- SLIDE 104: CSS Layout Classes -->
     <article class="slide slide-list">
       <h2>Styling Multiple Sections</h2>
       <p>Let's write a selector for our new class:</p>
-<pre><code class="language-css">
-section.box {}
+<pre><code class="language-css">.box {}
 </code></pre>
-      <p>And add a bunch of padding to all our sections:</p>        
-<pre><code class="language-css">
-section.box {
+      <p>Add some padding to all our sections:</p>        
+<pre><code class="language-css">.box {
   padding: 50px 100px;
 }
 </code></pre>        
-      </ul>
+      <p class="icon-note">Reminder: <code>padding</code> is a shortcut for targeting all sides of an element and can take up to 4 values:<br><br>
+      <code>padding: all-sides;</code><br>
+      <code>padding: top-bottom left-right;</code><br>
+      <code>padding: top left-right bottom;</code><br>
+      <code>padding: top right bottom left;</code>
+      </p>
     </article>
 
-    <!-- SLIDE CSS Layout Classes 3 -->
+    <!-- SLIDE 105: CSS Layout Classes 3 -->
     <article class="slide slide-list"> 
     <h2>Styling Multiple Sections, Continued</h2>     
-      <p>We can also use our <code>box</code> class to target the headings in each of these sections.</p>
-      <p>Since we're targeting both our <code>&lt;h2></code> and <code>&lt;h3></code> tags, we'll write a selector for both, separating them with a comma:</p>
-<pre><code class="language-css">
-section.box h2, section.box h3 {}
+      <p>We can also use our <code>box</code> class to target all the headings in each of these sections.</p>
+      <p>Since we're targeting both our <code>&lt;h2></code> and <code>&lt;h3></code> tags, we'll write a selector for both, <em>separating them with a comma</em>.  This will allow us to use the same declaration block for multiple selectors.</p>
+<pre><code class="language-css">.box h2, .box h3 {}
 </code></pre>        
-      <p>And change the colour of our headings:</p>
-<pre><code class="language-css">
-section.box h2, section.box h3 {
+      <p>Change the colour of our headings.</p>
+<pre><code class="language-css">.box h2, .box h3 {
   color: #A8258D;
 }
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Extras -->
-    <article class="slide slide-subhead">
-      <h1>Now we have a nice-looking website with all the elements nicely styled!</h1>
-      <h2>But there's still more we can do to make our site extra special...</h2>
+    <!-- SLIDE 106: CSS Extras -->
+    <article class="slide slide-list">
+      <h2>Now we have a nice-looking website with all the elements nicely styled!</h2>
+      <p>But there's still more we can do to make our site extra special...</p>
     </article>
 
-    <!-- SLIDE CSS Extras: Background -->
+    <!-- SLIDE 107: CSS Extras: Background -->
     <article class="slide slide-list">
       <h2>Making our background image fixed</h2>
       <p>To get that trendy effect where your background image stays put while you scroll, you can adjust the <code>background-attachment</code> property:</p>
-<pre><code class="language-css">
-section.banner {
+<pre><code class="language-css">.banner {
   background-attachment: fixed;
 }
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Extras: Custom Fonts -->
+    <!-- SLIDE 108: CSS Extras: Custom Fonts -->
     <article class="slide slide-list">
       <h2>Adding Custom Fonts</h2>
-      <p>Services like <a href="http://www.google.com/fonts/">Google Fonts</a> can make it easy for us to use fun fonts that aren't normally supported by all computers.</p>
-      <p>Go to <a href="http://www.google.com/fonts/">Google Fonts</a> and search around for a font you like.</p>
-      <p>Click "add to collection" when you find a font you like, then click the "use" button.</p>
-      <p>Find the code in Step 3 of the instructions, and paste it into the <code>&lt;head></code> of your HTML document (remember how the <code>&lt;head></code> section sends invisible instructions to our browser?)</p>
-<pre><code class="language-markup">
-&lt;link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+      <p>When you get bored of using Arial, services like <a href="http://www.google.com/fonts/">Google Fonts</a> can make it easy for us to use a variety of fonts that aren't normally supported by all computers.</p>
+      <p>Go to <a href="http://www.google.com/fonts/">Google Fonts</a> and find a font you like and click <strong>add to collection</strong></p>
+      <p>Then click the <strong>use</strong> button.</p>
+      <p>Find the code in Step 3 of the instructions, and paste it into the <code>&lt;head></code> of your HTML document.<br>
+      <span class="icon-tip">Remember, the <code>&lt;head></code> section sends invisible instructions to our browser</span></p>
+<pre><code class="language-markup">&lt;link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Extras: Custom Fonts -->
+    <!-- SLIDE 109: CSS Extras: Custom Fonts -->
     <article class="slide slide-list">
       <h2>Adding Custom Fonts, Part 2</h2>
       <p>Copy the code from Step 4 of the instructions into your CSS.</p>
-      <p>Add the line of code anywhere you'd like to use your custom font.</p>
-      <p>Let's add it to all the header tags:</p>
-<pre><code class="language-css">
-h1, h2, h3 {
+      <p>Try adding it to all the header tags.</p>
+<pre><code class="language-css">h1, h2, h3 {
   font-family: 'Oswald', sans-serif;
 }
 </code></pre>        
-      </ul>
+      <p>If you want to change the default text for the <em>entire page</em>, just add it to the <code>body</code>. Since CSS <em>cascades</em>, all the children will inherit this style.</p>
     </article>
 
-    <!-- SLIDE CSS Extras: Menu -->
+    <!-- SLIDE 110: CSS Extras: Menu -->
     <article class="slide slide-list">
       <h2>Adding a Menu</h2>
-      <p>Let's add a menu to the top of our document so our users can navigate.</p>
+      <p>Even though this is a one page website, we can still add a menu to the top of our document so our users can navigate the page without scrolling up and down.</p>
       <p>Menus are commonly marked up as lists with links inside each list item.</p>
-      <p>There are two types of lists in HTML: ordered and unordered (numbered and bulleted).</li>
-      <p>Since we don't need numbers, we'll use an unordered list, which is marked up with <code>&lt;ul>&lt;/ul></code> tags to indicate where the list starts and ends.</li>    
-      <p>Each bullet or "list item" in an unordered list is marked up as an <code>&lt;li>&lt;/li></code> tag <strong>nested</strong> within the <code>&lt;ul></code> tag.</p>
-<pre><code class="language-markup">
-&lt;ul>
+      <p>There are two types of lists in HTML: ordered and unordered (numbered and bulleted). Since we don't need numbers, we'll use an unordered list.</p>
+      <p>Lists require two tags. <code>&lt;ul>&lt;/ul></code> indicates where the list starts and ends. For each bullet or <i>list item</i>, use <code>&lt;li>&lt;/li></code> which is <strong>nested</strong> within the <code>&lt;ul></code> tag. All content <em>must</em> be contained between the <code>&lt;li>&lt;/li></code>.</p>
+<pre><code class="language-markup">&lt;ul>
   &lt;li>One list item&lt;/li>
   &lt;li>Another list item&lt;/li>
 &lt;/ul>
-</code></pre>        
+</code></pre>
+      <p class="icon-note">Ordered lists have the same syntax except <code>&lt;ol>&lt;/ol></code> is used instead of <code>&lt;ul>&lt;/ul></code>.</p>     
     </article>
 
-    <!-- SLIDE CSS Extras: MEnu -->
+    <!-- SLIDE 111: CSS Extras: MEnu -->
     <article class="slide slide-list">
       <h2>Adding a Menu, Continued</h2>
-      <p>Add a <code>&lt;ul></code> with a class of "menu" to the top of your HTML document, just inside the <code>&lt;body></code>, and add each <code>&lt;section></code> header as a list item inside. Note that we made each list item a link (more on that in a second). And don't forget the closing tag for your unordered list!</p>
-<pre><code class="language-markup">
-&lt;ul class="menu">
+      <p>Add a <code>&lt;ul></code> with a class of <code>menu</code> to the top of your HTML document, just inside the <code>&lt;body></code>.</p>
+      <p>For each list item, add the section headings. Also include a link in each list item. Note the values of the link (more on that later).</p>
+      <p class="icon-warning">Don't forget the closing tag for your unordered list!</p>
+<pre><code class="language-markup">&lt;ul class="menu">
   &lt;li>&lt;a href="#about">About&lt;/a>&lt;/li>
   &lt;li>&lt;a href="#favourites">Favourites&lt;/a>&lt;/li>
   &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
 &lt;/ul>
-</code></pre>    
-      </ul>
+</code></pre>
     </article>
 
-    <!-- SLIDE CSS Extras: Menu 2 -->
+    <!-- SLIDE 112: CSS Extras: Menu 2 -->
     <article class="slide slide-list">
       <h2>Adding a Menu, Continued</h2>
-      <p>Let's add some basic styles to the unordered list item, like a border and background, and lets remove the bullets from the list items:</p>
-<pre><code class="language-css">
-.menu {
-  list-style: none;
+      <p>Because lists have distinct default styles, we'll have to apply many different CSS properties to get it to look more like a navigation bar.</p>
+      <p>Below are some basic styles to get us started.</p>
+<pre><code class="language-css">.menu {
+  list-style: none; /* removes bullets */
   padding: 0;
   margin: 0;
   text-align: center;
@@ -1536,14 +1501,14 @@ h1, h2, h3 {
 </code></pre>       
     </article>
 
-    <!-- SLIDE CSS Extras: Menu 3 -->
+    <!-- SLIDE 113: CSS Extras: Menu 3 -->
     <article class="slide slide-list">
       <h2>Styling the Menu</h2>
-      <p>We need to get our list items in a row.</p>
-      <p>Remember how we had <code>display: block;</code> and <code>display:inline;</code> properties?</p>
-      <p>Neither of those is quite what we want, because <code>block</code> will create a new line for each element, and <code>inline</code> won't let us add padding to the list items.</p>
+      <p>We need to get our list items to line up in a row.</p>
+      <p>Remember the <code>display: block;</code> and <code>display: inline;</code> declarations?</p>
+      <p>Neither of those is quite what we want, because <code>block</code> will create a new line for each element, and <code>inline</code> won't render padding in the list items.</p>
       <p>There's a third option that gives us the best of both worlds: <code>display: inline-block;</code></p>
-      <p>Write a selector for the list items, and apply <code>display: inline-block;</code> as well as some padding to the top, bottom, and sides:</p>
+      <p>Write a selector for the list items, and apply <code>display: inline-block;</code> as well as some padding.</p>
 <pre><code class="language-css">
 .menu li {
   display: inline-block;
@@ -1552,12 +1517,11 @@ h1, h2, h3 {
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Extras: Menu 4 -->
+    <!-- SLIDE 114: CSS Extras: Menu 4 -->
     <article class="slide slide-list">
       <h2>Styling the Menu Links</h2>
-      <p>Add a bit of style to the links in your menu. Remove the default underline with <code>text-decoration: none</code></p>
-<pre><code class="language-css">
-.menu a {
+      <p>Remove the default underline with <code>text-decoration: none;</code></p>
+<pre><code class="language-css">.menu a {
   text-decoration: none;
   color: #333333;
   font-weight: bold;
@@ -1567,55 +1531,61 @@ h1, h2, h3 {
 </code></pre>        
     </article>
 
-    <!-- SLIDE CSS Extras: Menu 5 -->
+    <!-- SLIDE 115: CSS Extras: Menu 5 -->
     <article class="slide slide-list">
       <h2>Making the menu "sticky"</h2>
       <p>We can get our menu to stay at the top of the screen while the user scrolls with the <code>position: fixed;</code> declaration.</p>
-      <p><code>position: fixed;</code> requires us to set the <code>top</code> and <code>left</code> properties to tell the browser where to fix the menu to.</p>
-      <p>This destroys the rectangular box around our menu, so we have to set the width back to 100%:</p>
-<pre><code class="language-css">
-.menu {
+      <p>The <code>position</code> property requires additional properties to align the element (<code>top</code>, <code>bottom</code>, <code>left</code> and <code>right</code>). All four properties don't have to be used at once, just the direction you need to position the element.</p>
+      <p>The <code>position</code> property also takes the element out of the natural flow so the rectangular box around the menu is no longer a block element (it won't naturally span the width of the page anymore), so we have to set the width to 100%.</p>
+<pre><code class="language-css">.menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
-</code></pre>        
+</code></pre>
+      <p class="icon-note">More about positioning: <a href="http://alistapart.com/article/css-positioning-101">A List Apart: CSS Positioning 101</a></p>      
     </article>
 
-    <!-- SLIDE CSS Extras: Menu 6 -->
+    <!-- SLIDE 116: CSS Extras: Menu 6 -->
     <article class="slide slide-list">
       <h2>Getting the links to work</h2>
-      <p>We need to match the links in our menu to the sections on our page.</p>
-      <p>We can do this by adding an <code>id</code> attribute to each section that matches the link <code>href</code> (minus the <code>#</code> part):</p>
-<pre><code class="language-markup">
-&lt;section id="about" class="about box">&lt;/section>
+      <p>Remember these <code>href</code> values?</p> 
+<pre><code class="language-markup">&lt;ul class="menu">
+  &lt;li>&lt;a href="#about">About&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#favourites">Favourites&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
+&lt;/ul>
+</code></pre> 
+      <p>Since we are creating a link to specific sections on the same page rather than an external page, value for the <code>href</code> is a bit different.</p>
+      <p>The links in our menu need to match the sections on our page. We can do this by adding an <code>id</code> attribute to each section that matches the link <code>href</code> (minus the <code>#</code> part):</p>
+<pre><code class="language-markup">&lt;section id="about" class="about box">&lt;/section>
 &lt;section id="favourites" class="favourites box">&lt;/section>
 &lt;section id="contact" class="contact box">&lt;/section>
 </code></pre>        
-      </ul>
+      <p class="icon-warning">An <code>id</code> <em>value</em> must be unique and can only be used <em>once</em> per page.</p>
     </article>
 
-    <!-- SLIDE CSS Finished -->
-    <article class="slide slide-subhead">
-      <h1>Exercise: Customize!</h1>
-      <h2>Try changing and adding CSS properties to customize the page.</h2>
-      <h2>Check the <a href="cheatsheets/davechild_css2.pdf">CSS Cheat Sheet</a> to find new properties to try out.</h2>
-      <h2>Have fun!</h2>
+    <!-- SLIDE 117: CSS Finished -->
+    <article class="slide slide-sublist">
+      <h2>Final Exercise: Customize!</h2>
+      <p>Try changing and adding more CSS properties to customize the page.</p>
+      <p>There are so many more properties to explore. Remember the references and cheat sheets listed <a href="#slide-67">here</a>.</p>
+      <p>Have fun!</p>
     </article>
 
-    <!-- SLIDE Next Steps -->
-    <article class="slide slide-subhead">
-      <h1>Next Steps: Hosting</h1>
-      <h2>Right now your website only lives on your laptop, but if you'd like to get it hosted online for free, <a href="http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/">check out this tutorial on hosting with Github</a>. If you've purchased website hosting and want to upload your projects, <a href="http://webdesign.com/wordpress-tips/ftp-for-beginners-how-to-upload-your-files/">learn about uploading with FTP.</a></h2>
+    <!-- SLIDE 118: Next Steps -->
+    <article class="slide slide-sublist">
+      <h2>Next Steps: Hosting</h2>
+      <p>Right now your website only lives on your laptop, but if you'd like to get it hosted online for free, <a href="http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/">check out this tutorial on hosting with Github</a>. If you've purchased website hosting and want to upload your projects, <a href="http://webdesign.com/wordpress-tips/ftp-for-beginners-how-to-upload-your-files/">learn about uploading with FTP.</a></p>
     </article>
 
-    <!-- SLIDE Next Steps -->
-    <article class="slide slide-subhead">
-      <h1>Next Steps: Mobile</h1>
-      <h2>Your site may be beautiful, but it might not be very mobile-friendly. Luckily, that's easy enough to fix once you learn about mobile web design and development.</h2>
-      <h2>Ladies Learning Code regularly offers "Intro to Mobile Web" workshops - perhaps we'll see you at the next one?</h2>
-      <h2><a href="http://ladieslearningcode.com/events">Check out our upcoming events across Canada here.</a></h2>
+    <!-- SLIDE 119: Next Steps -->
+    <article class="slide slide-sublist">
+      <h2>Next Steps: Mobile</h2>
+      <p>Your site may be beautiful, but it might not be very mobile-friendly. Luckily, that's easy enough to fix once you learn about mobile web design and development.</p>
+      <p>Ladies Learning Code regularly offers "Intro to Mobile Web" workshops - perhaps we'll see you at the next one?</p>
+      <p><a href="http://ladieslearningcode.com/events">Check out our upcoming events across Canada here.</a></p>
     </article>
     
     <article class='slide slide-subhead'>
