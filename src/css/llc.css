@@ -116,6 +116,9 @@ body {
   padding: 10px;
   margin-top: 10px;
 }
+.deck-container pre code {
+  font-size: 22px;
+}
 .deck-container code {
   color: #b1009a;
 }
@@ -204,8 +207,8 @@ body {
 }
 .deck-container .sidenote,
 .deck-container .show-hint {
-  font-size: 17px;
-  line-height: 24px;
+  font-size: 22px;
+  line-height: 26px;
   color: #777777;
 }
 .deck-container .hint-solution {

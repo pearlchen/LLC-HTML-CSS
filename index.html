@@ -141,13 +141,13 @@
     <!-- SLIDE 6 -->
     <article class='slide slide-list'>
       <h2>What is an HTML document?</h2>
-      <p>Let's check out an example. Go to <a href="http://ladieslearningcode.com">http://ladieslearningcode.com</a>. Right-click and select "View Page Source". That's HTML.</p>
+      <p>Let's check out an example. Go to <a href="http://ladieslearningcode.com">http://ladieslearningcode.com</a>. Right-click and select <strong>View Page Source</strong>. That's HTML.</p>
       <p>We'll be learning to write our own HTML today. But first, let's open an HTML document (like the ones we'll create later) in our browser.</p>
       <ol>
         <li>Open Sublime Text and go to <strong>File > Open</strong>.</li>
         <li>Navigate to the <strong>Project</strong> folder (in the folder you downloaded with today's slides).</li>
         <li>With the <em>entire</em> folder selected, click <strong>Open</strong>.</li>
-        <li>Now that the folder is open in Sublime, click on <code>blank.html</code> so that it fills the screen. Now, right click and select "Open in Browser".<br>
+        <li>Now that the folder is open in Sublime, click on <code>blank.html</code> so that it fills the screen. Now, right click and select <strong>Open in Browser</strong>.<br>
         <span class="icon-tip">(If your default browser isn't set to Chrome, <a href="https://support.google.com/chrome/answer/95417?hl=en">here are the instructions</a>.)</span></li>
       </ol>
     </article>
@@ -198,7 +198,7 @@
     <!-- Slide 13 -->
     <article class='slide slide-list'>
       <h2>HTML (HyperText Markup Language) is what webpages are made out of.</h2>
-      <p>HTML is used to describe each part of a webpage to the browser. To display content properlyin the browser, we use <i>tags</i>. Here are a few examples of common HTML <i>tags</i>:</p>
+      <p>HTML is used to describe each part of a webpage to the browser. To display content properly in the browser, we use <i>tags</i>. Here are a few examples of common HTML <i>tags</i>:</p>
       <ul>
         <li><code>&#60;h1&#62;</code> and <code>&#60;/h1&#62;</code></li>
         <li><code>&#60;p&#62;</code> and <code>&#60;/p&#62;</code></li>
@@ -282,9 +282,8 @@
       <h2>What is CSS?</h2>
       <p>CSS (Cascading Style Sheets) is the presentation layer. In other words, it makes websites look nice.</p>
       <p>HTML tells the browser what different parts of the page <em>mean</em>, CSS tells the browser what those parts should <em>look</em> like.</p> 
-      <p>For example, <code>p</code> means paragraph in HTML. But if we wanted to make all of our paragraphs red and underlined, we'd do something like this:</p>
-<pre><code class="language-css">
-p {
+      <p>For example, <code>p</code> means paragraph in HTML. But if we wanted to make all of our paragraphs red and underlined, in CSS we'd do something like this:</p>
+<pre><code class="language-css">p {
   color: red;
   text-decoration: underline;
 }
@@ -296,22 +295,21 @@ p {
       <h2>Your first web page</h2>
       <p>Let's add the previous slide's CSS snippit to our HTML document.</p>
       <p>To indicate that we're adding CSS to <code>blank.html</code>, we need to find the opening and closing <code>&#60;style&#62;</code> tags between our <code>&#60;head&#62;</code> tags.</p>
-<pre class="language-markup"><code class="">
-  &#60;!doctype html&#62;
-    &#60;head&#62;
-      &#60;title&#62;Ladies Learning Code HTML and CSS&#60;/title&#62;
-      &#60;style&#62;
-        p {
+<pre class="language-markup"><code>&#60;!doctype html&#62;
+  &#60;head&#62;
+    &#60;title&#62;Ladies Learning Code HTML and CSS&#60;/title&#62;
+    &#60;style&#62;
+      p {
         color: red;
         text-decoration: underline;
-        }
-      &#60;/style&#62;
-    &#60;/head&#62;
-    &#60;body&#62;
-      &#60;p&#62;This is a paragraph&#60;/p&#62;
-    &#60;/body&#62;
-  &#60;/html&#62;
-      </code></pre>
+      }
+    &#60;/style&#62;
+  &#60;/head&#62;
+  &#60;body&#62;
+    &#60;p&#62;This is a paragraph&#60;/p&#62;
+  &#60;/body&#62;
+&#60;/html&#62;
+</code></pre>
       <p class="icon-tip">Don't forget to save and refresh the browser!</p>
     </article>
 
@@ -343,10 +341,6 @@ p {
     </article>
 
     <!-- SLIDE 25 -->
-    <!-- <article class='slide slide-subhead'>
-      <h1>Why is that again?</h1>
-      <h2>Because HTML defines content, and CSS defines the look and layout (it makes the web look nice).</h2>
-    </article> -->
     <article class='slide slide-subhead'>
       <h1>Recap</h1>
       <p>HTML defines <strong>content</strong>.<br><br>
@@ -354,11 +348,6 @@ p {
     </article>
 
     <!-- SLIDE 26 -->
-    <!-- <article class='slide slide-subhead'>
-      <h1>Let's focus on HTML for now</h1>
-      <p>Time to start writing some HTML (which is also called "markup")<br><br>
-      You can remove what we added between &#60;style&#62; and &#60;/style&#62; for now. Keep &#60;style&#62; and &#60;/style&#62; there!</p>
-    </article> -->
     <article class='slide slide-subhead'>
       <h1>Going Deeper with HTML</h1>
       <p>Writing HTML <i>markup</i><br><br>
@@ -382,8 +371,7 @@ p {
       <p>Tags typically come in <strong>pairs</strong> &mdash; an opening tag and a closing tag with a forward slash:</p>
       <p class="centered"><code class="large">&lt;tag&gt;&lt;<span style="color:red;">/</span>tag&gt;</code></p>
       <p class="sidenote">Some examples that you've already seen:</p>
-<pre class="language-markup"><code>
-&lt;!DOCTYPE html&gt;
+<pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
 &lt;html>
   &lt;head&gt;
     &lt;title&gt; &lt;/title&gt;
@@ -391,8 +379,7 @@ p {
   &lt;body&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-</code>
-</pre>   
+</code></pre>   
     </article>
 
     <!-- SLIDE 29: HTML -->
@@ -428,14 +415,14 @@ p {
     <article class='slide slide-list tags-nesting'>
       <h2>HTML tags: nesting</h2>
       <p>Nested elements make up the <i>document tree</i> & the relationships are just like a family tree; branches of ancestors, parents, children, siblings, etc.</p>
-<pre class="prettyprint">&lt;!DOCTYPE html&gt;
+<pre class="language-markup"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;&lt;!-- child of <strong>html</strong> tag, parent of <strong>title</strong> tag --&gt;
         &lt;title&gt;&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;&lt;!-- child of <strong>html</strong> tag --&gt;
     &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;</code></pre>
       <ul>
         <li>
           <code>&lt;html&gt;</code> is always first and known as the <i>root</i> node. It has <strong>no</strong> parent nodes.<br> All other HTML tags are nested within <code>&lt;html&gt;</code>.
@@ -465,18 +452,18 @@ p {
       <h2>HTML content: adding text</h2>
       <p><i>Heading</i> tags are used for headings/page titles.</p>
       <p>There are six levels ranging from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. They follow a hierarchy with <code>&lt;h1&gt;</code> being the most significant heading on the page.</p>
-<pre class="prettyprint"><code>&lt;h1&gt;Name of blog&lt;/h1&gt;
+<pre class="language-markup"><code>&lt;h1&gt;Name of blog&lt;/h1&gt;
 &lt;h2&gt;Title of blog post&lt;/h2&gt;
 &lt;h3&gt;Sub headings within blog post&lt;/h3&gt;
 </code></pre>
 
       <p><i>Paragraphs</i> are represented by the <code>&lt;p&gt;</code> tag.</p>
-<pre class="prettyprint"><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+<pre class="language-markup"><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
 &lt;p&gt;This is another paragraph.&lt;/p&gt;
 </code></pre>
       
       <p>Links are represented by the <code>&lt;a&gt;</code> (anchor) tag. The <code>href</code> <em>attribute</em> is needed to specify the link location (more on this later).</p>
-<pre class="prettyprint">Visit &lt;a <strong>href="http://ladieslearningcode.com"</strong>&gt;Ladies Learning Code&lt;/a&gt;.</pre>
+<pre class="language-markup"><code>Visit &lt;a <strong>href="http://ladieslearningcode.com"</strong>&gt;Ladies Learning Code&lt;/a&gt;.</code></pre>
     </article>
         
     <!-- SLIDE 33: HTML -->
@@ -488,7 +475,7 @@ p {
         <li>Add additional paragraphs.</li>
         <li>Add some headers (<code>&lt;h1&gt;</code>, <code>&lt;/h2&gt;</code> ... <code>&lt;/h6&gt;</code>), above each paragraph.<br><span class="icon-note">Note how different heading tags look based on their hierarchy.</span></li>
         <li>Try adding three links. Example:<br>
-<code class="prettyprint" style="border:none;">&lt;a href="http://link-location.com"&gt;Click here&lt;/a&gt;</code>
+<pre class="language-markup"><code>&lt;a href="http://link-location.com"&gt;Click here&lt;/a&gt;</code></pre>
         </li>
       </ol>
       <p>Don't worry too much about WHERE you're putting the content for now. Just make sure it's inside the <code>&lt;body&gt;</code> tags and have fun experimenting with the code.</p>
@@ -500,9 +487,9 @@ p {
       <h2>More about attributes</h2>
       <p>An <i>attribute</i> is a modifier of an HTML element and are used to render special content such as links, images, or videos because they provide additional information or instruction.</p>
       <p>HTML attributes generally appear as <em>name-value pairs</em>, separated by "=". There are different attributes for different HTML elements. They are written <em>within</em> the opening tag of an element, after the element's name:</p>
-<pre class="prettyprint"><code>&lt;tag attribute="value"&gt;content to be modified by the tag&lt;/tag&gt;</code></pre>
+<pre class="language-markup"><code>&lt;tag attribute="value"&gt;content to be modified by the tag&lt;/tag&gt;</code></pre>
       <p>Here's an example of an attribute that we've seen today:</p>
-<pre class="prettyprint"><code>&lt;a href="link.com"&gt;Click here&lt;/a&gt;</code></pre>
+<pre class="language-markup"><code>&lt;a href="link.com"&gt;Click here&lt;/a&gt;</code></pre>
       <p>In the above example, <code>a</code> is the <i>tag</i>, <code>href</code> is the <i>attribute</i> and <code>http://link.com</code> is the <i>value</i>.</p>
     </article>
 
@@ -512,16 +499,16 @@ p {
       <p>Let's write the HTML markup for our final project using what we just learned about headings, paragraphs and links.</p>
       <p>Your page should look like this:</p>
       <img src="assets/step_1_output.jpg" style="border:1px solid #ccc; padding:10px;">
-      <p class="icon-tip">Use <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code> once, <code>&lt;h2&gt;</code> and <code>&lt;/h2&gt;</code> three times and <code>&lt;h3&gt;</code> and <code>&lt;/h3&gt;</code> once.</p>
+      <p class="icon-tip">Use <code>&lt;h1&gt;&lt;/h1&gt;</code> once, <code>&lt;h2&gt;&lt;/h2&gt;</code> three times and <code>&lt;h3&gt;&lt;/h3&gt;</code> once.</p>
       <p class="icon-note">You can also generate your own placeholder text at <a href="http://www.lipsum.com/">http://www.lipsum.com</a>. Or, you can try <a href="http://cupcakeipsum.com/">Cupcake Ipsum</a>, <a href="http://baconipsum.com/">Bacon Ipsum</a> or <a href="http://slipsum.com/">Samuel L. Ipsum</a> for something fancy!
     </article>
 
     <!-- SLIDE 36: HTML -->
     <article class='slide slide-list'>
       <h2>Adding images</h2>
-      <p>Adding images are a little different than adding text and links because image tags are <em>self-closing</em> &mdash; there is no closing tag.</p>
+      <p>Adding images are a little different than adding text and links because image tags are <em>self-closing</em>, also known as a <em>void element</em> &mdash; there is no closing tag.</p>
       <p>Let's start by adding an image that is hosted online. Just like links, image tags require a <code>src</code> <em>attribute</em> to point to location of the image.</p>
-<pre class="prettyprint"><code>&lt;img src="http://placedog.com/400/300"&gt;</code>
+<pre class="language-markup"><code>&lt;img src="http://placekitten.com/400/300"&gt;</code>
 </pre>
       <p>This is an example of an <strong>absolute path</strong>. Try copying this line of code into your project, right under the opening <code>&lt;body&gt;</code> tag.</p>
       <p>Next, try finding a different image online and replacing this photo.</p>
@@ -532,7 +519,7 @@ p {
     <!-- SLIDE 37: HTML -->
     <article class='slide slide-list'>
       <h2>Adding images, Part 2</h2>
-      <p>You can add images in a folder on your computer - rather than linking to images hosted online.</p>
+      <p>You can add images in a folder on your computer rather than linking to images hosted online.</p>
       <p>In the <strong>Project</strong> folder, at the same level as <code>blank.html</code>, there's an image called <code>logo.png</code>. Including this image on our website will be the same as before <em>except</em> the <em>value</em> of <code>src</code> will point to the image file name instead.</p>
 <pre><code class="language-markup">&lt;img src="logo.png"&gt;</code></pre>
       <p>This is an example of a <strong>relative path</strong>. Try adding this line of code into your project, right under the opening <code>&lt;body&gt;</code> tag.</p>
@@ -545,9 +532,9 @@ p {
     <!-- SLIDE 38: HTML -->
     <article class='slide slide-list'>
       <h2>The <code>alt</code> attribute</h2>
-      <p><code>alt</code> is another optional image attribute and refers to <i>alternative text</i>. Alt text is read by screen reading software used by visually impaired users.</p>
+      <p><code>alt</code> is an optional image attribute and refers to <i>alternative text</i>. Alt text is read by screen reading software used by visually impaired users.</p>
       <p>It also displays when there's a broken or missing image due to typos or moved files. It should be a short description of the image.</p> 
-      <p>HMTL tags can contain more than one attribute. Here's how you would use the <code>alt</code> attribute with the <code>src</code> attribute.</p>
+      <p>HTML tags can contain more than one attribute. Here's how you would use the <code>alt</code> attribute with the <code>src</code> attribute.</p>
 <pre><code class="language-markup"> &lt;img src="<strong>images/</strong>logo.png" alt="logo image"&gt;</code></pre>
       <p class="icon-tip">The img tag will work without the alt attribute but it's required to be "<a href="http://validator.w3.org/"target="_blank">valid</a>" HTML markup.</span>
     </article>
@@ -580,7 +567,7 @@ p {
       <h2>Exercise: Add a few more images</h2>
       <ul>
         <li>Add a few images of your favourite things section.<br>
-        <span class="sidenote">Try not to choose huge images right now - we'll show you how to resize images using CSS later.</span></li>
+        <span class="sidenote">Try not to choose huge images right now - we'll be resizing images using CSS later.</span></li>
         <li>Add your Twitter, Facebook and/or LinkedIn info using image icons to the contact me section. Use nested tags to make your images into links.<br>
         <span class="icon-tip">Logo images can be found in the Project/images folder.</span></li>
       </ul>
@@ -665,8 +652,7 @@ p {
     <article class="slide slide-list">
       <h2>Adding CSS to HTML</h2>
       <p>You write CSS rules in a set of <code>&lt;style>&lt;/style></code> tags included in the <code>&lt;head></code> section of your HTML document like this:</p>
-<pre><code class="language-markup">
-&lt;html>
+<pre><code class="language-markup">&lt;html>
   &lt;head>
     &lt;style>
       h2 {
@@ -686,8 +672,7 @@ p {
     <article class="slide slide-list">
       <h2>CSS Syntax</h2>
       <p>When we put selectors and declarations together, they make a CSS rule, which looks like this: </p>
-<pre><code class="language-css">
-h2 {
+<pre><code class="language-css">h2 {
   background-color: green;
 }
 </code></pre>
@@ -698,7 +683,7 @@ h2 {
     <!-- SLIDE 52: CSS Syntax 4 -->
     <article class="slide slide-list">
       <h2>CSS Syntax</h2>
-      <p>We can add multiple declarations (property: value; sets) to one selector to modify multiple properties:</p>
+      <p>We can add multiple declarations to one selector to modify multiple properties:</p>
 <pre><code class="language-css">h2 {
   background-color: green;
   font-size: 28px;
@@ -730,8 +715,7 @@ h2 {
       <p>Let's change the text to a colour that's easier to read.</p>
       <p>We're going to use a <strong>hex code</strong>, which is a 6-character code that allows the usage of more specific colours.</p>
       <p>The code for a nice dark grey is <code>#444444</code>.</p>
-<pre><code class="language-css">
-body {
+<pre><code class="language-css">body {
   color: #444444;
 }
 </code></pre>          
@@ -757,11 +741,11 @@ body {
     <!-- SLIDE 56: CSS Fonts 2 -->
     <article class="slide slide-list">   
     <h2>Styling Type with CSS, Part 2</h2> 
-      <p>Let's change the font to a sans-serif like Helvetica: </p>
+      <p>Let's change the font to a sans-serif font like Helvetica: </p>
 <pre><code class="language-css">body {
-    color: #444444;
-    font-family: Helvetica, Arial, sans-serif;    
-  }
+  color: #444444;
+  font-family: Helvetica, Arial, sans-serif;    
+}
 </code></pre>
       <p>The <code>font-family</code> property accepts a list of font names:<br>
       the first is your first-choice font, the next ones are fallbacks in case that font is not available. Not all fonts are commonly available on all computers, so try to stick to 'web-safe' fonts like:</p>
@@ -788,7 +772,7 @@ h1 {
     color: black; /* only the h1 text will be black */
 }
 
-/* This is a CSS comment by the way. The syntax is different from an HTML comment. */
+/* This is a CSS comment by the way. It is ignored by browsers so you can use it to leave notes for yourself (or others). */
 </code></pre>
       <p class="icon-note">More resources <a href="http://www.w3.org/TR/CSS2/cascade.html" target="_blank">here</a>, <a href="http://css-tricks.com/specifics-on-css-specificity/" target="_blank">here</a> and <a href="http://coding.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/" target="_blank">here</a>.</p>
     </article>
@@ -903,7 +887,7 @@ h2 {
     <!-- SLIDE 66: CSS Classes on fav images -->
     <article class="slide slide-list">
       <h2>More Stuff You Can Do</h2>
-      <p>Try out some of the properties and see what they do.</p>
+      <p>Try out some of these properties and see what they do.</p>
       <ul>
         <li><code>border-radius: 50%;</code></li>
         <li><code>border: 3px dotted pink;</code></li>
@@ -1014,7 +998,7 @@ h2 {
       <p>If you add a 40px margin to a 100px wide element, it stays 100px wide.</p>
       <p>If you add a 1px border to a 100px wide element, it will become 102px wide. <span class="sidenote">(100px width + 1px border left + 1px border right)</span></p>
       <p>If your element doesn't have a border or a background, you may not be able to see the difference between margin and padding.</p>
-        <!-- TODO: diagram of h2 thing -->
+      <p class="icon-tip">When debugging, it's useful to put a background colour on the elements to see where it begins and ends.</p>
     </article>
 
     <!-- SLIDE CSS 75: Box Mdoel: Margin & Padding Sides -->
@@ -1032,7 +1016,7 @@ h2 {
   border-left: 1px solid red;
 }
 </code></pre> 
-      <p class="icon-note">Using just <code>padding</code>, <code>border</code> and <code>margin</code> are actually shorthand properties. These properties, as well as many others, can also be defined using shorthand. More info <a href="http://www.webcredible.co.uk/user-friendly-resources/css/css-shorthand-properties.shtml" target="_blank">here</a>.</p>     
+      <p class="icon-note">Using just <code>padding</code>, <code>border</code> and <code>margin</code> are actually shorthand properties. These properties, as well as many others, can be defined using shorthand. More info <a href="http://www.webcredible.co.uk/user-friendly-resources/css/css-shorthand-properties.shtml" target="_blank">here</a>.</p>     
     </article>
 
     <!-- SLIDE 76: CSS Box Model Exercise -->
@@ -1436,10 +1420,10 @@ img {
     <article class="slide slide-list">
       <h2>Adding Custom Fonts</h2>
       <p>When you get bored of using Arial, services like <a href="http://www.google.com/fonts/">Google Fonts</a> can make it easy for us to use a variety of fonts that aren't normally supported by all computers.</p>
-      <p>Go to <a href="http://www.google.com/fonts/">Google Fonts</a> and find a font you like and click <strong>add to collection</strong></p>
+      <p>Go to <a href="http://www.google.com/fonts/">Google Fonts</a> and find a font you like and click <strong>add to collection</strong>.</p>
       <p>Then click the <strong>use</strong> button.</p>
       <p>Find the code in Step 3 of the instructions, and paste it into the <code>&lt;head></code> of your HTML document.<br>
-      <span class="icon-tip">Remember, the <code>&lt;head></code> section sends invisible instructions to our browser</span></p>
+      <span class="icon-tip">Remember, the <code>&lt;head></code> section sends invisible instructions to our browser</span>.</p>
 <pre><code class="language-markup">&lt;link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </code></pre>        
     </article>
@@ -1597,7 +1581,7 @@ img {
   </div>
   <!-- END div id=presentation -->
 
-  <div class="centered" style="font-size: 12px; padding-top: 10px;">(Use the left and right arrow keys on your keyboard to navigate.)</div>
+  <div class="centered" style="font-size: 14px; padding-top: 0px;">(Use the left and right arrow keys on your keyboard to navigate.)</div>
 
   <script src='src/jquery.min.js'></script>
   <script src="src/modernizr.js"></script>
