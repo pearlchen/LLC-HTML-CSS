@@ -65,7 +65,7 @@
       <img src="assets/ladieslearningcode-125x125.gif">
       <h1>Introduction to <br>
         HTML &amp; CSS</h1>
-      <!-- <h2>Your instructor today</h2> -->
+      <h3>Your instructor today</h3>
       <img src="assets/christina_avatar.jpg" width="72" height="72" alt="christina truong" />
       <h3>Christina Truong</h3>
       <p>
@@ -81,7 +81,7 @@
     <article class='slide slide-list'>
       <h2>Today's Project</h2>
       <a href="http://#"><img src="assets/project_screenshot.jpg"></a>
-      <p><a href="http://tessalt.github.io/LLC-HTML-CSS/Project/final.html">Click here</a> to see the whole project</p>
+      <p><a href="http://christinatruong.github.io/LLC-HTML-CSS/Project/final.html">Click here</a> to see the whole project</p>
     </article>
 
     <!-- SLIDE 2: Course Outline -->
@@ -268,7 +268,6 @@
         <li>&#60;i&#62;I'm Italic!&#60;/i&#62;<code>*</code></li>
       </ul>
       <p class="icon-note">Different versions of HTML often have different rules.  In HTML5, the <code>&#60;b&#62;</code> and <code>&#60;i&#62;</code> tags were re-introduced but with a slightly different meaning. More info <a href="http://html5doctor.com/i-b-em-strong-element/">here</a>.</p>
-      
     </article>
 
     <!-- slide 18 -->
@@ -1058,10 +1057,9 @@ img {
     <!-- SLIDE 79: CSS Box Model: Center Logo 2 -->
     <article class="slide slide-list">
       <h2>Centering the Logo</h2>
-      <p>But remember, if we use just <code>img</code> as the selector, it will target all the images.  Let's create another class to target only the logo.</p>
+      <p>But remember, if we use just <code>img</code> as the selector, it will target <em>all</em> the images.  Let's create another class to target only the logo.</p>
       <p>Add a class of <code>logo</code> to your logo <code>&lt;img></code> tag:</p>
-<pre><code class="language-markup">
-&lt;img class="logo" src="images/logo.png">
+<pre><code class="language-markup">&lt;img class="logo" src="images/logo.png">
 </code></pre>  
       <p>Then target the class selector in your CSS and apply the <code>margin</code> property:</p>      
 <pre><code class="language-css">.logo {
