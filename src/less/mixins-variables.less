@@ -1,0 +1,34 @@
+//VARIABLES
+//---------------------------------------------------------*/
+@OpenSansRegular: 	'Open Sans Regular', Arial, sans-serif;
+@OpenSansSemibold: 	'Open Sans Semibold', Arial, sans-serif;
+
+@gray:  	#444;
+@grayLight: #777;
+@llcPink: 	#B1009A;
+
+
+//MIXINS
+//---------------------------------------------------------*/
+.list-reset() {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style-type: none;
+	}
+}
+
+.border-radius(@size) {
+	-webkit-border-radius: 12px;          
+	border-radius: 12px;
+	background-clip: padding-box;
+}
+.reset-transform(){
+	//reset transform from deck.core.css
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate3d(0, 0, 0);
+}
