@@ -1173,7 +1173,13 @@ img {
       <p>Why do we have a white margin around our whole background image?</p>
       <p>Because browsers (like Chrome) add a bunch of default styles, including margins, to HTML elements, such as on the <code>&lt;body></code>.</p>
       <p>We can get rid of many of these unwanted styles with a snippet of code called <strong>normalize.css</strong>, which is a <em>reset stylesheet</em>.</p>
-      <p>Open up the <strong>normalize.css</strong> file and copy and paste the contents to the top of your CSS.</li>
+      <p>At the top of <span class="file">index.html</span>, add an external link to <span class="file">normalize.css</span> inside of the <code>head</code> tag.</li>
+<pre><code class="language-html">
+<head>
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+</head> 
+</code></pre>
+
       <p class="icon-note"><a href="http://www.cssreset.com/what-is-a-css-reset/">What is a CSS reset?</a><br></p>
     </article>
 
