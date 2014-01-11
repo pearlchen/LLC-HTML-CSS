@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ladies Learning Code - HTML &plus; CSS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="css/normalize.min.css" rel="stylesheet" type="text/css">
+    <link href="css/slides.css" rel="stylesheet" type="text/css">
+  </head>
+  <body ng-app>
+
+    <header class="sticky-nav">
+      <p>Table of contents</p>
+      <ul>
+        {{{tableOfContents}}}
+      </ul>
+    </header>
+
+    <section ng-controller="SlidesCtrl" id="presentation" class="sticky-nav-active">
+      {{{slidesHTML}}}
+    </section><!-- end #presentation -->
+
+    <footer>
+      Ladies Learning Code - Introduction to HTML &amp; CSS
+    </footer>
+
+    <script src="js/slides.js"></script>
+
+  </body>
+</html>

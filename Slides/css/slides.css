@@ -1,0 +1,369 @@
+/*---------------------------------------------------------*/
+/* FONTS 
+/*---------------------------------------------------------*/
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url('../fonts/opensans-light-webfont.eot');
+  src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-light-webfont.woff') format('woff'), url('../fonts/opensans-light-webfont.ttf') format('truetype'), url('../fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('../fonts/opensans-regular-webfont.eot');
+  src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-regular-webfont.woff') format('woff'), url('../fonts/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans Semibold';
+  src: url('../fonts/opensans-semibold-webfont.eot');
+  src: url('../fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-semibold-webfont.woff') format('woff'), url('../fonts/opensans-semibold-webfont.ttf') format('truetype'), url('../fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Heydings';
+  src: url('../fonts/heydings_icons-webfont.eot');
+  src: url('../fonts/heydings_icons-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/heydings_icons-webfont.woff') format('woff'), url('../fonts/heydings_icons-webfont.ttf') format('truetype'), url('../fonts/heydings_icons-webfont.svg#heydings_iconsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*---------------------------------------------------------*/
+/* RESETS (note: already uses normalize.css)
+/*---------------------------------------------------------*/
+
+/* apply a natural box layout model to all elements */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*---------------------------------------------------------*/
+/* COMMON HTML ELEMENTS 
+/*---------------------------------------------------------*/
+
+body {
+  font-family: 'Open Sans Light', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #222;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Open Sans Regular', Helvetica, Arial, sans-serif;
+  color: #b1009a; /* LLC purple */
+  padding-top: 0;
+}
+
+strong {
+  font-family: 'Open Sans Semibold', Arial, sans-serif;
+  font-weight: normal;
+}
+
+/*---------------------------------------------------------*/
+/* HEADER
+/*---------------------------------------------------------*/
+
+header {
+  background-color: #b1009a;
+  color: white;
+  width: 100%;
+  padding: 0 10px;
+}
+
+header.sticky-nav {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/*---------------------------------------------------------*/
+/* PRESENTATION CONTAINER FOR SLIDES
+/*---------------------------------------------------------*/
+
+#presentation {
+  padding: 10px;
+  position: relative;
+}
+
+#presentation.sticky-nav-active {
+  margin-top: 60px;
+}
+
+/*---------------------------------------------------------*/
+/* SLIDE BLOCKS
+/*---------------------------------------------------------*/
+
+.slide {
+  position: relative;
+  border: 2px solid #b1009a;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  background-clip: padding-box;
+  max-width: 1280px; /* width of a wide-screen laptop */
+  min-width: 600px; /* 600px is approx 1/2 width of such wide-screen laptop */
+  min-height: 600px; /* set min-height so it'll still mostly fill the screen height */
+  margin: 0 auto 20px auto;
+  padding: 30px 40px;
+}
+
+.slide img {
+  max-width: 100%;
+}
+
+.slide .slide-number {
+  font-size: 0.7em;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+/*@media (min-width: 600px) {
+  .slide {
+    font-size: 2em;
+    line-height: 2.2em;
+  }
+}*/
+
+/*---------------------------------------------------------*/
+/* SLIDE TITLE BLOCKS
+/*---------------------------------------------------------*/
+
+.slide-title {
+  text-align: center;
+}
+
+.slide-title .slide-number {
+  display: none;
+}
+
+h1 {
+  font-size: 58px;
+}
+
+/*---------------------------------------------------------*/
+/* SLIDE TEXT
+/*---------------------------------------------------------*/
+
+.slide h2 {
+  font-size: 36px;
+  border: none;
+  background: url(../assets/hash.gif) no-repeat left 8px;
+  padding-left: 35px;
+}
+.slide p {
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+.slide li {
+  font-size: 28px;
+}
+.slide a {
+  color: #444444;
+}
+.slide a:hover {
+  color: #b1009a;
+  text-decoration: none;
+}
+.slide strong,
+.slide em {
+  color: #2E2E2E;
+}
+/*.slide i {
+  color: #650057;
+  font-style: italic;
+  padding-right: 4px;
+}*/
+
+/*---------------------------------------------------------*/
+/* CODE EXAMPLES
+/*---------------------------------------------------------*/
+
+pre.prettyprint {
+  padding: 10px;
+  margin-top: 10px;
+}
+pre code {
+  font-size: 22px;
+}
+code {
+  color: #b1009a;
+}
+code.large {
+  font-size: 50px;
+}
+code .nested {
+  color: purple;
+  font-size: 40px;
+  vertical-align: top;
+}
+
+/*---------------------------------------------------------*/
+/* SLIDE SPECIFIC STYLES  
+/*---------------------------------------------------------*/
+
+.slide-subhead h1 {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
+  top: 36%;
+}
+.slide-subhead p {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 28%;
+}
+
+
+.coder-wrapper {
+  margin: 10px 0;
+}
+[class^="column-"] {
+  float: left;
+}
+.column-3 {
+  width: 30%;
+  margin: 0 0.5%;
+}
+.column-2 {
+  width: 48%;
+  margin: 0 1%;
+}
+.clear {
+  clear: both;
+}
+
+
+.instructions {
+  text-align: center;
+  margin: 5px 0;
+}
+.centered {
+  text-align: center;
+  margin: 10px 0;
+}
+
+img.inline {
+  display: inline;
+  vertical-align: top;
+  margin-bottom: 0;
+}
+.sidenote,
+.show-hint {
+  font-size: 22px;
+  /*line-height: 26px;*/
+  color: #777777;
+}
+.hint-solution {
+  display: none;
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 22px;
+}
+
+
+.intro {
+  text-align: center;
+}
+.intro h1 {
+  position: static;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
+  margin-bottom: 40px;
+}
+.intro h3 {
+  color: #444444;
+}
+.intro img {
+  border-radius: 50%;
+  margin-bottom: 0;
+}
+.intro p {
+  font-size: 16px;
+  /*line-height: 20px;*/
+}
+.intro a {
+  color: #b1009a;
+}
+.outline p {
+  font-size: 28px;
+}
+.folder-structure img {
+  float: left;
+}
+.triad .column-3 {
+  text-align: center;
+  margin-top: 20px;
+}
+.section-intro.slide-subhead h1 {
+  top: 20%;
+}
+.section-intro.slide-subhead p {
+  margin-top: 18%;
+}
+.tags-nesting ul {
+  clear: both;
+}
+.tags-nesting ul li {
+  font-size: 22px;
+  /*line-height: 26px;*/
+}
+.image-types {
+  margin: 0;
+  padding: 0;
+}
+.image-types li {
+  list-style-type: none;
+}
+
+.file {
+   
+}
+
+/*---------------------------------------------------------*/
+/* ICONS
+/*---------------------------------------------------------*/
+
+[class^="icon-"] {
+  font-size: 20px;
+  line-height: 24px;
+}
+[class^="icon-"]:before {
+  font-family: 'Heydings';
+  padding-right: 5px;
+  color: #b1009a;
+}
+.icon-tip:before {
+  content: 'l'; /* lightbulb */
+}
+.icon-note:before {
+  content: 'B';
+}
+.icon-warning:before {
+  content: '!'; /* warning */
+}
+
+/*---------------------------------------------------------*/
+/* FOOTER
+/*---------------------------------------------------------*/
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  padding-bottom: 1em;
+}
+
+

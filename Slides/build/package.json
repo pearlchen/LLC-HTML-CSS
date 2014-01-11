@@ -1,0 +1,10 @@
+{
+  "name": "LLC-Workshop-Presentation-Generator",
+  "version": "0.1.0",
+  "author": "Pearl Chen <pearl@karma-laboratory.com>",
+  "description": "Generate an offline-friendly version of the workshop presentation slide deck using modular slide content",
+  "devDependencies": {
+    "mustache": "~0.8.1",
+    "underscore": "~1.5.2"
+  }
+}
