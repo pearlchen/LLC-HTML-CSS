@@ -22,7 +22,7 @@
   <link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
   <style type="text/css">
-    
+
     .deck-container {
     margin-top: 20px;
     }
@@ -45,7 +45,7 @@
 	    <body>CODE</body>
 	  </html>
 	  </script>
-	
+
 	  <script type='text/coderdeck' id='coderdeck-style-example'>
 	  <html>
 	    <title>test</title>
@@ -59,9 +59,9 @@
 	    </body>
 	  </html>
 	</script>
-	
+
   <div id="presentation">
-  <!-- **************************************** --> 
+  <!-- **************************************** -->
 
     <!-- SLIDE: Workshop intro -->
     <article class='slide slide-title'>
@@ -69,7 +69,7 @@
         <h2>Welcome to Ladies Learning Code's</h2>
         <h1>Introduction to HTML &amp; CSS</h1>
       </div>
-        
+
         <br  clear="left" />
       <p style="padding-top: 55px; margin-bottom: 0; font-size: 0.9em; color: #999;">
         ( Interactive code slides thanks to
@@ -234,7 +234,7 @@
     <article class='slide slide-list'>
       <h2>What is CSS?</h2>
       <p>CSS (Cascading Style Sheets) is what makes websites look nice.</p>
-      <p>While HTML tells the browser what different parts of the page are, CSS says what those pieces should look like.</p> 
+      <p>While HTML tells the browser what different parts of the page are, CSS says what those pieces should look like.</p>
       <p>For example, p means paragraph in HTML. If we wanted to make all of our paragraphs red and underlined, we'd do something like:</p>
 <pre><code class="language-css">
 p {
@@ -250,6 +250,7 @@ p {
       <p>To indicate that we're adding CSS to blank.html, we need to find the opening and closing <code>&#60;style&#62;</code> tags between our opening and closing <code>&#60;head&#62;</code> tags.</p>
 <pre class="language-markup"><code class="">
   &#60;!doctype html&#62;
+  &#60;html&#62;
     &#60;head&#62;
       &#60;title&#62;Ladies Learning Code HTML and CSS&#60;/title&#62;
       &#60;style&#62;
@@ -332,7 +333,7 @@ p {
   &lt;/body&gt;
 &lt;/html&gt;
 </code>
-</pre>   
+</pre>
     </article>
 
    <!-- SLIDE: HTML -->
@@ -357,7 +358,7 @@ p {
   &lt;/head&gt;
   &lt;body&gt;
   &lt;/body&gt;
-&lt;/html&gt;</pre> 
+&lt;/html&gt;</pre>
 <pre style="width: 45%; float: right;">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -366,7 +367,7 @@ p {
   <strong>&lt;/head&gt;</strong>
   &lt;body&gt;
   &lt;/body&gt;
-&lt;/html&gt;</pre> 
+&lt;/html&gt;</pre>
 <br clear="all" />
     </article>
 
@@ -501,8 +502,8 @@ p {
 
     <!-- SLIDE: CSS Basics -->
     <article class='slide slide-subhead'>
-      <h1>CSS basics</h1>      
-    </article>  
+      <h1>CSS basics</h1>
+    </article>
 
     <!-- SLIDE: CSS and HTML -->
     <article class="slide slide-subhead">
@@ -510,7 +511,7 @@ p {
       <h2>CSS doesn't do anything on its own, it's the presentation layer on top of a content base</h2>
       <h2>If HTML is the beams of the house, CSS is the layout, paint, and decorations</h2>
     </article>
-  
+
     <!-- SLIDE: CSS Syntax 1 -->
     <article class="slide slide-list">
       <h2>CSS Syntax</h2>
@@ -518,10 +519,10 @@ p {
         <p>A CSS rule is made up of a <strong>selector</strong> and one or more <strong>declarations</strong></p>
         <p>A <strong>selector</strong> tells the browser what element(s) we are styling.</p>
         <p>It looks like this:</p>
-        <pre><code class="language-css">h2 {}</code></pre>   
-        <p>The above selector will select all <code>&lt;h2></code> elements and apply our styles to them. Our styles will go between the curly brackets.</p>     
+        <pre><code class="language-css">h2 {}</code></pre>
+        <p>The above selector will select all <code>&lt;h2></code> elements and apply our styles to them. Our styles will go between the curly brackets.</p>
     </article>
-      
+
     <!-- SLIDE: CSS Syntax 2 -->
     <article class="slide slide-list">
       <h2>CSS Syntax</h2>
@@ -530,11 +531,11 @@ p {
       <p>A <strong>property</strong> tells the browser what we are modifying (ex. font, colour, size)</p>
       <p>A <strong>value</strong> tells the browser how to modify the property (ex. Arial, green, small)</p>
       <p>A declaration looks like this:</p>
-        <pre><code class="language-css">background-color: green;</code></pre>   
+        <pre><code class="language-css">background-color: green;</code></pre>
     </article>
 
     <!-- SLIDE CSS Syntax 2.1 -->
-    <article class="slide slide-list">  
+    <article class="slide slide-list">
       <h2>CSS Syntax</h2>
         <pre><code class="language-css">background-color: green;</code></pre>
         <p>The <strong>value</strong> (the part <em>after</em> the colon) is specific to the property type</p>
@@ -557,7 +558,7 @@ p {
     &lt;/style>
   &lt;/head>
   &lt;body>
-    
+
   &lt;/body>
 &lt;/html>
 </code></pre>
@@ -626,7 +627,7 @@ body {
 body {
   color: #444444;
 }
-</code></pre>          
+</code></pre>
         <p>Check out<a href="http://www.colorpicker.com/">http://colorpicker.com</a> for more awesome colours!</p>
     </article>
 
@@ -645,13 +646,13 @@ body {
     </article>
 
     <!-- SLIDE CSS Fonts 2 -->
-    <article class="slide slide-list">   
-    <h2>Styling Type with CSS, Part 2</h2> 
+    <article class="slide slide-list">
+    <h2>Styling Type with CSS, Part 2</h2>
       <p>Let's change the font to a sans-serif like Helvetica: </p>
 <pre><code class="language-css">
   body {
     color: #444444;
-    font-family: Helvetica, Arial, sans-serif;    
+    font-family: Helvetica, Arial, sans-serif;
   }
 </code></pre>
       <p>The font-family property accepts a list of font names: the first font is your first-choice font, the next ones are fallbacks in case that font is not available. Not all fonts are commonly available, so try to stick to 'web-safe' fonts like:</p>
@@ -666,7 +667,7 @@ body {
 
         <!-- SLIDE CSS Fonts 2 -->
     <article class="slide slide-list">
-      <h2>Changing Font Sizes</h2> 
+      <h2>Changing Font Sizes</h2>
         <p>If we want to make our <code>&lt;h1></code> and <code>&lt;h2></code> tags a bit bigger:</p>
 <pre><code class="language-css">
 h1 {
@@ -690,7 +691,7 @@ p {
 </code></pre>
       </ul>
     </article>
-    
+
     <!-- SLIDE CSS Images 1 -->
     <article class="slide slide-list">
       <h2>Styling Images</h2>
@@ -703,7 +704,7 @@ img {}
 img {
   border: 1px solid grey;
 }
-</code></pre>        
+</code></pre>
       </ul>
     </article>
 
@@ -724,13 +725,13 @@ img {
       <p>We can write a selector in our css to target the element we added a class to using a <code> . </code></p>
 <pre><code class="language-css">
 p.classname {}
-</code></pre>        
+</code></pre>
         <p>And then apply the styles we want to only the item with the class:</p>
 <pre><code class="language-css">
 p.classname {
   color: red;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Classes Exercise -->
@@ -756,16 +757,16 @@ img {
       <h2>Solution: Style Profile Image</h2>
       <p>Your HTML should look something like this:</p>
 <pre><code class="language-markup">
-&lt;img class="profile" src="images/profile.jpg"> 
+&lt;img class="profile" src="images/profile.jpg">
 </code></pre>
         <p>And your CSS should look something like this:</p>
 <pre><code class="language-css">
 img.profile {
   border: 1px solid grey;
   width: 200px;
-  height:200px;  
-}  
-</code></pre>        
+  height:200px;
+}
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Classes on multiple elements -->
@@ -776,8 +777,8 @@ img.profile {
       <p>Add a class of "favourite" to each of the four images.</p>
 <pre><code class="language-markup">
 &lt;img class="favourite" src="images/kitten.jpg" >
-</code></pre>   
-      <p>Add some styles to your images, using things like <code>width</code>, <code>height</code>, and <code>border</code>.</p>        
+</code></pre>
+      <p>Add some styles to your images, using things like <code>width</code>, <code>height</code>, and <code>border</code>.</p>
     </article>
 
     <!-- SLIDE CSS Classes on fav images -->
@@ -795,13 +796,13 @@ img.favourite {
   height: 200px;
   border-radius: 50%;
 }
-</code></pre>        
+</code></pre>
       </ul>
     </article>
 
     <!-- SLIDE CSS Properties -->
     <article class="slide slide-subhead">
-      <h1>Don't worry if it seems like there are a lot of CSS properties to remember. Keep looking them up on the internet and they'll sink in eventually. Even the pros have to look things up every once in a while :)</h1>      
+      <h1>Don't worry if it seems like there are a lot of CSS properties to remember. Keep looking them up on the internet and they'll sink in eventually. Even the pros have to look things up every once in a while :)</h1>
     </article>
 
     <!-- SLIDE CSS Box Model -->
@@ -811,11 +812,11 @@ img.favourite {
     <p>The CSS "Box Model" describes the way CSS styles the size and spacing of HTML elements.</p>
     <p>To understand the box model, we need to understand how the browser "sees" HTML elements.</p>
     <p>To the browser, <strong>every</strong> HTML element is a  rectangular box.</p>
-    <p>If we show the outlines of all the elements in an HTML document, it looks a bit like the next slide:</p>        
+    <p>If we show the outlines of all the elements in an HTML document, it looks a bit like the next slide:</p>
     </article>
 
     <!-- SLIDE CSS Box Model 2 -->
-    <article class="slide slide-list">      
+    <article class="slide slide-list">
      <img src="assets/redboxes.png"></li>
     </article>
 
@@ -842,22 +843,22 @@ h2 {
   background: pink;
 }
 </code></pre>
-      <li>So far, this looks pretty awfull. All the elements are too close to each other!</li>        
+      <li>So far, this looks pretty awfull. All the elements are too close to each other!</li>
       <img src="assets/bm1.png">
       </ul>
     </article>
 
     <!-- SLIDE CSS Box Model: Margin-->
-    <article class="slide slide-list">  
+    <article class="slide slide-list">
       <h2>Margins</h2>
       <p>There are two CSS properties for adding space around our elements: <code>margin</code>, and <code>padding</code></p>
       <p>The <code>margin</code> property adds space <em>around</em> the element, outside of the border:</p>
 <pre><code class="language-css">
 h2 {
   margin: 40px;
-}  
-</code></pre>  
-      <p>This code adds 40px of space on every side of the element.</p>      
+}
+</code></pre>
+      <p>This code adds 40px of space on every side of the element.</p>
         <img src="assets/bm2.png" alt="">
       </ul>
     </article>
@@ -871,9 +872,9 @@ h2 {
   margin: 40px;
   padding: 40px;
 }
-</code></pre> 
-      <p>This code adds 40px of space to every side of the element, but it does so within the border.</p>       
-        <img src="assets/bm3.png" alt="">        
+</code></pre>
+      <p>This code adds 40px of space to every side of the element, but it does so within the border.</p>
+        <img src="assets/bm3.png" alt="">
       </ul>
     </article>
 
@@ -897,14 +898,14 @@ h2 {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-</code></pre>        
+</code></pre>
       <p>The same goes for <code>padding</code> and <code>border</code>:</p>
 <pre><code class="language-css">
 h2 {
   padding-bottom: 40px;
   border-left: 1px solid red;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Box Model Exercise -->
@@ -928,7 +929,7 @@ img.favourite {
   padding: 5px;
   margin: 10px;
 }
-</code></pre>      
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Box Model: Center logo -->
@@ -940,8 +941,8 @@ img.favourite {
 img {
   margin: 0 auto;
 }
-</code></pre>    
-      <p>The <code>0</code> sets both the top margin and the bottom margin, and the <code>auto</code> sets both the left and right margins. </p>    
+</code></pre>
+      <p>The <code>0</code> sets both the top margin and the bottom margin, and the <code>auto</code> sets both the left and right margins. </p>
     </article>
 
     <!-- SLIDE CSS Box Model: Center Logo 2 -->
@@ -951,13 +952,13 @@ img {
       <p>Add a class called <code>logo</code> to your logo <code>&lt;img></code> tag:</p>
 <pre><code class="language-markup">
 &lt;img class="logo" src="images/logo.png">
-</code></pre>  
-      <p>Then write a selector in your CSS and apply the <code>margin</code> property:</p>      
+</code></pre>
+      <p>Then write a selector in your CSS and apply the <code>margin</code> property:</p>
 <pre><code class="language-css">
 img.logo {
   margin: 0 auto;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Box Model: Center logo 3 -->
@@ -970,8 +971,8 @@ img.logo {
     </article>
 
     <!-- SLIDE CSS Box Model: Block vs. Inline -->
-    <article class="slide slide-list">  
-    <h2>Nothing Happened, Part 2</h2>    
+    <article class="slide slide-list">
+    <h2>Nothing Happened, Part 2</h2>
       <p>This is because images are <em>inline</em> elements. Inline elements do not take up the full width of the page, they only take up as much space as the content requires.</p>
       <p>Most elements, like <code>&lt;h2>, &lt;p>,</code> or <code>&lt;ul></code> take up the whole width of the page, these are called <em>block</em> elements.</p>
       <p>Because our logo element is only as wide as the image, we can't centre it relative to the page. Luckily, this is easy to fix: we just tell the <code>&lt;img></code> tag to behave like a block element instead, by setting the <code>display</code> property.</p>
@@ -980,7 +981,7 @@ img.logo {
   margin: 0 auto;
   display: block;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Box Model: Inline -->
@@ -995,7 +996,7 @@ img.logo {
       <h2>Layout: Section by Section</h2>
       <p>Our site looks much better now, but now it's time to style the individual sections.</p>
       <p>We'll need a way to target each section independently, grouping elements within the same section together, creating a layout.</p>
-      <p>Conveniently enough, HTML provides the <code>&lt;section></code> tag. We'll wrap each section within a <code>&lt;section></code> tag and add a class to each one, so we can style each section using CSS.</li>        
+      <p>Conveniently enough, HTML provides the <code>&lt;section></code> tag. We'll wrap each section within a <code>&lt;section></code> tag and add a class to each one, so we can style each section using CSS.</li>
     </article>
 
     <!-- SLIDE CSS Layout  -->
@@ -1010,8 +1011,8 @@ img.logo {
   &lt;img>
   &lt;h1>...&lt;/h1>
   &lt;p>...&lt;/p>
-&lt;/section>  
-</code></pre>        
+&lt;/section>
+</code></pre>
       </ul>
     </article>
 
@@ -1021,15 +1022,15 @@ img.logo {
       <ul>
         <li>Target our new <code>&lt;section></code> with a selector in your CSS</li>
 <pre><code class="language-css">
-section.banner {}  
-</code></pre>        
+section.banner {}
+</code></pre>
         <li>Add some padding to the top and bottom of the section to give our logo and text some space</li>
 <pre><code class="language-css">
 section.banner {
   padding-top: 110px;
   padding-bottom: 110px;
 }
-</code></pre>        
+</code></pre>
       </ul>
     </article>
 
@@ -1040,7 +1041,7 @@ section.banner {
         <li>The CSS <code>background-image</code> property lets you specify a path to an image in much the same way as you would in an HTML <code>&lt;img></code> tag:</li>
 <pre><code class="language-css">
 background-image: url('images/background.jpg');
-</code></pre>               
+</code></pre>
       </ul>
     </article>
 
@@ -1066,7 +1067,7 @@ section.banner {
   color: #ffffff;
   text-align: center;
 }
-</code></pre>        
+</code></pre>
       </ul>
     </article>
 
@@ -1095,8 +1096,8 @@ section.banner {
       <p>>You can write a <strong>child selector</strong> to select only those tags which are children of another tag.</p>
       <p>We add a space between the parent and the child selector to specify:</p>
 <pre><code class="language-css">
-section img {}  
-</code></pre>        
+section img {}
+</code></pre>
       <p>The above selector will select only those <code>&lt;img></code> tags which are nested within <code>&lt;section></code> tags.</p>
     </article>
 
@@ -1105,9 +1106,9 @@ section img {}
       <h2>CSS Child Selectors</h2>
       <p>To target the <code>&lt;p></code> tag within the banner <code>&lt;section></code>, we use:</p>
 <pre><code class="language-css">
-section.banner p {}  
-</code></pre>     
-      <p>Try increasing the <code>font-size</code> of the selected <code>&lt;p></code> tag.</p>   
+section.banner p {}
+</code></pre>
+      <p>Try increasing the <code>font-size</code> of the selected <code>&lt;p></code> tag.</p>
       <p>Select the <code>&lt;h1></code> tag in the banner section in the same way and capitalize the text using <code>text-transform: uppercase</code>. Your CSS should look something like this:</p>
 <pre><code class="language-css">
 section.banner p {
@@ -1116,7 +1117,7 @@ section.banner p {
 section.banner h1 {
   text-transform: uppercase;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Layout About Section -->
@@ -1142,7 +1143,7 @@ section.banner h1 {
 section.about {
   background: url('images/pattern.png');
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Layout About 3 -->
@@ -1158,7 +1159,7 @@ section.about h2 {}
 section.about h2 {
   text-align: center;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Layout About 4 -->
@@ -1166,7 +1167,7 @@ section.about h2 {
       <h2>CSS Floats</h2>
       <p>We want to align the profile image to the left, and allow the text to wrap around it. We do this using <strong>CSS Floats</strong>.</p>
       <p>Remember how all HTML elements are rectangular boxes stacked on top of each other?</p>
-      <img src="assets/redboxes_small.png">        
+      <img src="assets/redboxes_small.png">
       <p>We have to break that stacking flow by <strong>floating</strong> the image to the side. This will cause the text after the image to move up beside it, because we've disrupted the flow of the rectangular boxes.</p>
     </article>
 
@@ -1178,9 +1179,9 @@ section.about h2 {
 img.profile {
   float: left;
 }
-</code></pre> 
-      <p>This has 'floated' our image to the left, but there's a problem...can you figure out what it is?</p>   
-        <img src="assets/floatfail.png" height="200">    
+</code></pre>
+      <p>This has 'floated' our image to the left, but there's a problem...can you figure out what it is?</p>
+        <img src="assets/floatfail.png" height="200">
       </ul>
     </article>
 
@@ -1195,7 +1196,7 @@ img.profile {
 section.about {
   overflow: hidden;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Layout Favourites -->
@@ -1213,7 +1214,7 @@ section.about {
   &lt;img class="favourite" src="images/kitten.jpg">
   &lt;img class="favourite" src="images/kitten.jpg">
 &lt;/section>
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Layout Favourites 2 -->
@@ -1221,14 +1222,14 @@ section.about {
       <h2>Centre-aligning</h2>
       <p>Let's write a selector for the section we just created:</p>
 <pre><code class="language-css">
-section.favourites {}  
+section.favourites {}
 </code></pre>
-      <p>And centre-align it:</p>        
+      <p>And centre-align it:</p>
 <pre><code class="language-css">
 section.favourites {
   text-align: center;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Layout Contact -->
@@ -1253,7 +1254,7 @@ section.favourites {
   &lt;a href="https://">...&lt;/a>
 &lt;/section>
 </code></pre>
-      <p>And your CSS:</p>        
+      <p>And your CSS:</p>
 <pre><code class="language-css">
 section.contact {
   text-align: center;
@@ -1262,7 +1263,7 @@ section.contact {
 section.contact img {
   margin: 20px;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Layout Classes -->
@@ -1275,7 +1276,7 @@ section.contact img {
 &lt;section class="about box">&lt;/section>
 &lt;section class="favourites box">&lt;/section>
 &lt;section class="contact box">&lt;/section>
-</code></pre>        
+</code></pre>
       </ul>
     </article>
 
@@ -1286,29 +1287,29 @@ section.contact img {
 <pre><code class="language-css">
 section.box {}
 </code></pre>
-      <p>And add a bunch of padding to all our sections:</p>        
+      <p>And add a bunch of padding to all our sections:</p>
 <pre><code class="language-css">
 section.box {
   padding: 50px 100px;
 }
-</code></pre>        
+</code></pre>
       </ul>
     </article>
 
     <!-- SLIDE CSS Layout Classes 3 -->
-    <article class="slide slide-list"> 
-    <h2>Styling Multiple Sections, Continued</h2>     
+    <article class="slide slide-list">
+    <h2>Styling Multiple Sections, Continued</h2>
       <p>We can also use our <code>box</code> class to target the headings in each of these sections.</p>
       <p>Since we're targeting both our <code>&lt;h2></code> and <code>&lt;h3></code> tags, we'll write a selector for both, separating them with a comma:</p>
 <pre><code class="language-css">
 section.box h2, section.box h3 {}
-</code></pre>        
+</code></pre>
       <p>And change the colour of our headings:</p>
 <pre><code class="language-css">
 section.box h2, section.box h3 {
   color: #A8258D;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Extras -->
@@ -1325,7 +1326,7 @@ section.box h2, section.box h3 {
 section.banner {
   background-attachment: fixed;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Extras: Custom Fonts -->
@@ -1337,7 +1338,7 @@ section.banner {
       <p>Find the code in Step 3 of the instructions, and paste it into the <code>&lt;head></code> of your HTML document (remember how the <code>&lt;head></code> section sends invisible instructions to our browser?)</p>
 <pre><code class="language-markup">
 &lt;link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Extras: Custom Fonts -->
@@ -1350,7 +1351,7 @@ section.banner {
 h1, h2, h3 {
   font-family: 'Oswald', sans-serif;
 }
-</code></pre>        
+</code></pre>
       </ul>
     </article>
 
@@ -1360,14 +1361,14 @@ h1, h2, h3 {
       <p>Let's add a menu to the top of our document so our users can navigate.</p>
       <p>Menus are commonly marked up as lists with links inside each list item.</p>
       <p>There are two types of lists in HTML: ordered and unordered (numbered and bulleted).</li>
-      <p>Since we don't need numbers, we'll use an unordered list, which is marked up with <code>&lt;ul>&lt;/ul></code> tags to indicate where the list starts and ends.</li>    
+      <p>Since we don't need numbers, we'll use an unordered list, which is marked up with <code>&lt;ul>&lt;/ul></code> tags to indicate where the list starts and ends.</li>
       <p>Each bullet or "list item" in an unordered list is marked up as an <code>&lt;li>&lt;/li></code> tag <strong>nested</strong> within the <code>&lt;ul></code> tag.</p>
 <pre><code class="language-markup">
 &lt;ul>
   &lt;li>One list item&lt;/li>
   &lt;li>Another list item&lt;/li>
 &lt;/ul>
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Extras: MEnu -->
@@ -1380,7 +1381,7 @@ h1, h2, h3 {
   &lt;li>&lt;a href="#favourites">Favourites&lt;/a>&lt;/li>
   &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
 &lt;/ul>
-</code></pre>    
+</code></pre>
       </ul>
     </article>
 
@@ -1397,7 +1398,7 @@ h1, h2, h3 {
   border-bottom: 1px solid #434A5C;
   background: #ffffff;
 }
-</code></pre>       
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Extras: Menu 3 -->
@@ -1413,7 +1414,7 @@ h1, h2, h3 {
   display: inline-block;
   padding: 20px 35px;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Extras: Menu 4 -->
@@ -1428,7 +1429,7 @@ h1, h2, h3 {
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Extras: Menu 5 -->
@@ -1444,7 +1445,7 @@ h1, h2, h3 {
   left: 0;
   width: 100%;
 }
-</code></pre>        
+</code></pre>
     </article>
 
     <!-- SLIDE CSS Extras: Menu 6 -->
@@ -1456,7 +1457,7 @@ h1, h2, h3 {
 &lt;section id="about" class="about box">&lt;/section>
 &lt;section id="favourites" class="favourites box">&lt;/section>
 &lt;section id="contact" class="contact box">&lt;/section>
-</code></pre>        
+</code></pre>
       </ul>
     </article>
 
@@ -1481,13 +1482,13 @@ h1, h2, h3 {
       <h2>Ladies Learning Code regularly offers "Intro to Mobile Web" workshops - perhaps we'll see you at the next one?</h2>
       <h2><a href="http://ladieslearningcode.com/events">Check out our upcoming events across Canada here.</a></h2>
     </article>
-    
+
     <article class='slide slide-subhead'>
       <h1>Thank you!</h1>
       <p></p>
     </article>
 
-  <!-- **************************************** -->    
+  <!-- **************************************** -->
   </div>
   <!-- END div id=presentation -->
 
